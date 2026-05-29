@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Crear un Sistema de Delivery para Tu Negocio en Venezuela | Neri Colón</title>
+    <meta name="description" content="Guía completa para crear un sistema de delivery en Venezuela. Módulos esenciales, costos, integración de pagos y tracking en tiempo real para tu negocio.">
+    <meta name="author" content="Neri Rafael Colón Suárez">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://neracosu.com/blog/sistema-de-delivery-venezuela.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_VE">
+    <meta property="og:site_name" content="Neri Colón - Desarrollador Web">
+    <meta property="og:title" content="Cómo Crear un Sistema de Delivery para Tu Negocio en Venezuela">
+    <meta property="og:description" content="Guía completa para crear un sistema de delivery en Venezuela. Módulos esenciales, costos, integración de pagos y tracking en tiempo real para tu negocio.">
+    <meta property="og:url" content="https://neracosu.com/blog/sistema-de-delivery-venezuela.html">
+    <meta property="article:published_time" content="2026-02-28">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cómo Crear un Sistema de Delivery para Tu Negocio en Venezuela">
+    <meta name="twitter:description" content="Guía completa para crear un sistema de delivery en Venezuela. Módulos esenciales, costos, integración de pagos y tracking en tiempo real para tu negocio.">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#070b0a">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/unify-2026.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/promo.css">
+
+    <!-- JSON-LD: BlogPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Cómo Crear un Sistema de Delivery para Tu Negocio en Venezuela",
+        "description": "Guía completa para crear un sistema de delivery en Venezuela. Módulos esenciales, costos, integración de pagos y tracking en tiempo real para tu negocio.",
+        "author": {
+            "@type": "Person",
+            "name": "Neri Colón",
+            "url": "https://neracosu.com/#sobre-mi"
+        },
+        "datePublished": "2026-02-28",
+        "dateModified": "2026-02-28",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://neracosu.com/blog/sistema-de-delivery-venezuela.html"
+        }
+    }
+    </script>
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://neracosu.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://neracosu.com/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Sistema de Delivery Venezuela",
+                "item": "https://neracosu.com/blog/sistema-de-delivery-venezuela.html"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+  <!-- ========== PROMO BAR ========== -->
+  <div class="promo-bar" id="promo-bar">
+    <div class="promo-bar__content container">
+      <span class="promo-bar__text"><span class="promo-bar__text-full"><strong>Marzo 2026:</strong> $500 de descuento en tu proyecto</span><span class="promo-bar__text-short"><strong>$500 OFF</strong> en marzo</span></span>
+      <span class="promo-bar__countdown" id="countdown"></span>
+      <a href="/#contacto" class="promo-bar__cta">Cotizar Ahora</a>
+    </div>
+    <button class="promo-bar__close" id="promo-bar-close" aria-label="Cerrar promoci&oacute;n">&times;</button>
+  </div>
+
+    <!-- Header -->
+    <header class="header is-scrolled" id="header">
+        <nav class="nav container" aria-label="Navegación principal">
+            <a href="/" class="nav__logo" aria-label="Neri Colón - Inicio"><span class="nav__logo-text">NERI<span class="nav__logo-accent">.</span>DEV</span></a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span class="nav__toggle-line"></span><span class="nav__toggle-line"></span><span class="nav__toggle-line"></span></button>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="/#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="/#portafolio" class="nav__link">Portafolio</a></li>
+                    <li class="nav__item"><a href="/#proceso" class="nav__link">Proceso</a></li>
+                    <li class="nav__item"><a href="/#sobre-mi" class="nav__link">Sobre Mí</a></li>
+                    <li class="nav__item"><a href="/blog/" class="nav__link is-active">Blog</a></li>
+                    <li class="nav__item"><a href="/#contacto" class="nav__link">Contacto</a></li>
+                    <li class="nav__item nav__item--cta"><a href="/#contacto" class="nav__link nav__link--cta">Hablemos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb container" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Inicio</a></li>
+                <li class="breadcrumb__separator" aria-hidden="true">&rsaquo;</li>
+                <li class="breadcrumb__item"><a href="/blog/" class="breadcrumb__link">Blog</a></li>
+                <li class="breadcrumb__separator" aria-hidden="true">&rsaquo;</li>
+                <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Sistema de Delivery Venezuela</li>
+            </ol>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="article-header container">
+            <span class="article-header__category">Software</span>
+            <h1 class="article-header__title">Cómo Crear un Sistema de Delivery para Tu Negocio en Venezuela</h1>
+            <div class="article-header__meta">
+                <span class="article-header__author">Neri Colón</span>
+                <time class="article-header__date" datetime="2026-02-28">28 de febrero, 2026</time>
+                <span class="article-header__reading-time">6 min de lectura</span>
+            </div>
+        </header>
+
+        <!-- Article Body -->
+        <article class="article container">
+
+            <p>El delivery dejó de ser un lujo para convertirse en una necesidad. En Venezuela, pedir comida, medicinas, productos de supermercado o cualquier artículo desde el teléfono ya forma parte de la rutina diaria de millones de personas. Si tienes un negocio y todavía no ofreces un <strong>sistema de delivery en Venezuela</strong>, estás dejando dinero sobre la mesa. Y si dependes exclusivamente de apps de terceros para hacerlo, estás regalando el control de tu operación y una buena tajada de tus ganancias.</p>
+
+            <p>En esta guía te voy a explicar todo lo que necesitas saber para crear tu propio sistema de delivery: los módulos esenciales, las tecnologías disponibles, cómo integrar métodos de pago locales y cuánto puedes esperar invertir. Al final vas a tener una visión clara de lo que implica montar una operación de delivery profesional adaptada a la realidad venezolana.</p>
+
+            <h2>El boom del delivery en Venezuela</h2>
+
+            <p>Lo que comenzó con restaurantes enviando comida a domicilio se expandió a prácticamente todos los sectores. Hoy en día, las farmacias despachan medicamentos a la puerta de tu casa, los supermercados ofrecen entregas el mismo día, las ferreterías envían materiales de construcción y hasta las licorerías tienen su propio servicio de delivery. <strong>El consumidor venezolano aprendió que puede comprar casi cualquier cosa sin salir de su hogar</strong>, y esa expectativa no va a desaparecer.</p>
+
+            <p>El crecimiento ha sido tan acelerado que muchos negocios se lanzaron a vender por delivery usando solo WhatsApp y una libreta de notas. Funciona cuando recibes cinco pedidos al día, pero cuando la demanda crece, el caos se apodera de todo: pedidos olvidados, direcciones confundidas, riders sin coordinación, cobros sin verificar y clientes frustrados que no saben dónde está su orden. Ahí es donde un <strong>sistema de delivery profesional</strong> marca la diferencia entre un negocio que crece y uno que se ahoga en su propio éxito.</p>
+
+            <h2>¿Por qué necesitas tu propio sistema en lugar de depender de apps de terceros?</h2>
+
+            <p>Las plataformas de delivery como PedidosYa o Yummy cumplen una función importante: te dan visibilidad ante clientes nuevos. Pero tienen limitaciones serias que afectan tu rentabilidad y tu relación con el cliente.</p>
+
+            <p>Primero, <strong>las comisiones</strong>. Estas plataformas cobran entre un 15% y un 35% por cada pedido. Si tu margen de ganancia es del 40%, estás entregando casi la mitad de tu beneficio a un intermediario. Segundo, <strong>no tienes acceso directo a los datos de tus clientes</strong>. La plataforma sabe quiénes son, qué compran y con qué frecuencia, pero tú no. Eso te impide hacer marketing personalizado, crear programas de fidelización o simplemente enviarles una promoción directa. Tercero, <strong>dependes de sus reglas</strong>. Si la plataforma cambia sus políticas, sube las comisiones o decide priorizar a tu competencia, no tienes alternativa.</p>
+
+            <p>Con tu propio sistema de delivery controlas la experiencia completa: desde que el cliente abre la app o la web hasta que recibe su pedido en la puerta. Controlas los precios, las promociones, los datos, la comunicación y, sobre todo, tu margen de ganancia. Eso no significa que debas abandonar las plataformas de terceros, puedes usarlas como canal de captación mientras tu sistema propio se convierte en el canal principal donde ocurren las ventas recurrentes.</p>
+
+            <h2>Módulos esenciales de un sistema de delivery</h2>
+
+            <p>Un <strong>sistema de delivery en Venezuela</strong> que funcione de verdad necesita cinco módulos fundamentales. Cada uno resuelve una parte crítica de la operación:</p>
+
+            <h3>Gestión de pedidos</h3>
+
+            <p>Este es el corazón del sistema. Aquí se reciben, organizan y procesan todos los pedidos en tiempo real. El módulo debe permitir al cliente explorar el catálogo de productos, seleccionar artículos, personalizar su orden (agregar notas, elegir variantes, aplicar cupones) y confirmar la compra. Del lado del negocio, necesitas un panel de administración donde puedas ver todos los pedidos entrantes, asignar prioridades, gestionar el inventario disponible y actualizar el estado de cada orden. <strong>Un buen sistema de gestión de pedidos reduce errores en más del 80%</strong> comparado con el manejo manual por WhatsApp.</p>
+
+            <h3>Tracking en tiempo real</h3>
+
+            <p>El cliente quiere saber dónde está su pedido. No mañana, no en una hora: ahora. Un módulo de tracking en tiempo real muestra la ubicación del repartidor en un mapa, el tiempo estimado de llegada y las etapas del proceso (preparando, en camino, entregado). Esto no solo mejora la experiencia del cliente, sino que <strong>reduce en un 60% las llamadas preguntando "¿dónde está mi pedido?"</strong>, liberando a tu equipo para tareas más productivas.</p>
+
+            <h3>Integración de pagos con Pago Móvil</h3>
+
+            <p>En Venezuela, el <strong>Pago Móvil</strong> es el método de pago digital más usado. Tu sistema de delivery debe integrarlo de forma nativa para que el cliente pueda pagar directamente desde la plataforma y el negocio pueda verificar los pagos automáticamente. Nada de estar revisando SMS del banco uno por uno. Además, es importante ofrecer alternativas: pago en efectivo contra entrega, transferencias bancarias, Zelle para clientes de la diáspora y, si tu negocio lo permite, pagos en divisas. Si te interesa profundizar en la automatización de cobros con Pago Móvil, te recomiendo leer mi guía sobre <a href="/blog/cobrar-con-pago-movil-automatizado.html">cómo cobrar con Pago Móvil automatizado</a>.</p>
+
+            <h3>Gestión de repartidores</h3>
+
+            <p>Coordinar una flota de repartidores sin un sistema es como dirigir tráfico con los ojos vendados. El módulo de gestión de riders permite asignar pedidos automáticamente según la ubicación y disponibilidad del repartidor, optimizar rutas de entrega, registrar tiempos de cada delivery, gestionar pagos y comisiones de los motoristas y monitorear su desempeño con métricas claras. <strong>Cada repartidor tiene su propia app o interfaz</strong> donde recibe los pedidos asignados, ve la dirección de entrega en el mapa, navega con GPS integrado y confirma la entrega con foto o firma digital.</p>
+
+            <h3>Notificaciones al cliente por WhatsApp</h3>
+
+            <p>Enviar correos electrónicos de confirmación está bien para otros mercados, pero en Venezuela la realidad es otra: <strong>tus clientes viven en WhatsApp</strong>. Tu sistema de delivery debe enviar notificaciones automáticas por WhatsApp en cada etapa del proceso. Confirmación del pedido con el resumen de la orden, aviso cuando el pedido está siendo preparado, alerta cuando el repartidor sale hacia la dirección del cliente, y confirmación de entrega con la opción de calificar el servicio. Esto crea una experiencia profesional que genera confianza y fideliza al cliente.</p>
+
+            <h2>App nativa vs. Web: ¿Cuál es mejor para tu delivery?</h2>
+
+            <p>Esta es una de las preguntas que más me hacen. ¿Necesito una app para Android y iOS, o me basta con una página web? La respuesta corta: depende de tu presupuesto y tus objetivos. La respuesta larga merece un análisis detallado.</p>
+
+            <p><strong>Una app nativa</strong> (la que se descarga desde Google Play o App Store) ofrece la mejor experiencia de usuario: es rápida, puede enviar notificaciones push, funciona offline para ciertas funciones y se siente como una herramienta profesional. El problema es el costo. Desarrollar una app nativa para Android e iOS puede costar entre $8,000 y $25,000, y además necesitas mantenerla actualizada, pasar por los procesos de revisión de las tiendas y convencer al cliente de que la descargue.</p>
+
+            <p><strong>Una web responsive</strong> es más económica de desarrollar, funciona en cualquier dispositivo con navegador y no requiere descarga. Pero puede sentirse más lenta, no tiene acceso completo a funciones del teléfono y no envía notificaciones push de forma nativa.</p>
+
+            <p>El punto medio ideal es una <strong>Progressive Web App (PWA)</strong>. Una PWA se comporta como una app nativa pero se accede desde el navegador. Se puede instalar en la pantalla de inicio del teléfono sin pasar por las tiendas de apps, envía notificaciones push, carga rápido incluso con conexiones lentas y funciona offline para funciones básicas. Su costo de desarrollo es significativamente menor que una app nativa porque se construye una sola vez y funciona en todos los dispositivos. <strong>Para la mayoría de los negocios de delivery en Venezuela, una PWA es la opción más inteligente</strong>: ofrece el 90% de la experiencia de una app nativa con la mitad del presupuesto y sin la fricción de la descarga.</p>
+
+            <h2>Costos y tiempos de desarrollo</h2>
+
+            <p>Hablemos de números reales. Estos son los rangos de inversión que puedes esperar para un <strong>sistema de delivery</strong> completo, adaptado al mercado venezolano:</p>
+
+            <ul>
+                <li><strong>Sistema básico (PWA + panel admin):</strong> entre $3,000 y $6,000. Incluye catálogo de productos, carrito de compras, integración con Pago Móvil, panel de gestión de pedidos y notificaciones por WhatsApp. Tiempo de desarrollo: 6 a 10 semanas.</li>
+                <li><strong>Sistema intermedio (PWA + app rider + tracking):</strong> entre $6,000 y $12,000. Todo lo anterior más aplicación para repartidores, tracking en tiempo real, optimización de rutas, reportes y analíticas de ventas. Tiempo de desarrollo: 10 a 16 semanas.</li>
+                <li><strong>Sistema avanzado (apps nativas + IA + multi-sucursal):</strong> entre $12,000 y $25,000. Incluye apps nativas para iOS y Android, inteligencia artificial para predicción de demanda, gestión de múltiples sucursales, programa de fidelización, cupones avanzados y panel de reportes ejecutivos. Tiempo de desarrollo: 16 a 24 semanas.</li>
+            </ul>
+
+            <p>¿Cuándo recuperas la inversión? Hagamos un cálculo simple. Si actualmente pagas un 25% de comisión a una plataforma de terceros y procesas 50 pedidos diarios con un ticket promedio de $10, estás pagando $125 diarios en comisiones. Eso son <strong>$3,750 al mes que podrías ahorrarte</strong> con tu propio sistema. Un sistema básico de $4,500 se paga solo en menos de dos meses. A partir del tercer mes, todo ese dinero vuelve a tu bolsillo.</p>
+
+            <p>Además del ahorro en comisiones, un sistema propio te permite aumentar los pedidos recurrentes gracias a las notificaciones directas, los cupones personalizados y los programas de fidelización. Los negocios que migran a su propia plataforma reportan un <strong>aumento promedio del 30% en pedidos recurrentes</strong> durante los primeros seis meses.</p>
+
+            <h2>Conclusión: Tu delivery merece su propio sistema</h2>
+
+            <p>El mercado de delivery en Venezuela está madurando rápidamente. Los consumidores esperan experiencias cada vez más profesionales: tracking en tiempo real, pagos integrados, notificaciones instantáneas y entregas puntuales. Los negocios que inviertan en construir su propia infraestructura de delivery van a dominar su mercado local, mientras que los que sigan dependiendo exclusivamente de plataformas de terceros van a seguir compitiendo por margen en un juego donde las reglas las pone otro.</p>
+
+            <p>No importa si tienes un restaurante, una farmacia, un supermercado o cualquier negocio que haga entregas a domicilio: <strong>tener tu propio sistema de delivery es una inversión que se paga sola</strong>. Empiezas con lo esencial, validas con tus clientes y escalas a medida que crece tu operación. Es una estrategia probada que funciona en la realidad venezolana.</p>
+
+        </article>
+
+        <!-- CTA Banner -->
+        <div class="article__cta container" style="max-width:720px" data-animate="fade-up">
+            <h3 class="article__cta-title">¿Quieres tu propio sistema de delivery?</h3>
+            <p class="article__cta-text">Desarrollo sistemas de delivery a medida con tracking en tiempo real, integración de pagos y notificaciones por WhatsApp. Agenda una consulta gratuita.</p>
+            <div class="article__cta-buttons">
+                <a href="/servicios/sistemas-de-gestion.html" class="btn btn--primary">Conoce Nuestras Soluciones</a>
+                <a href="https://wa.me/584222707095?text=Hola%20Neri!%20Me%20interesa%20crear%20un%20sistema%20de%20delivery%20para%20mi%20negocio." class="btn btn--outline" target="_blank" rel="noopener noreferrer">Escríbeme por WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <section class="related container">
+            <h2 class="related__title">Artículos Relacionados</h2>
+            <div class="related__grid">
+                <a href="/blog/software-para-farmacias-venezuela.html" class="related__card">
+                    <div class="related__card-image" style="background: linear-gradient(135deg, #1a2744, #2d3a5c);">
+                        <span class="related__card-category">Software</span>
+                    </div>
+                    <div class="related__card-content">
+                        <div class="related__card-meta">
+                            <time datetime="2026-02-28">28 Feb 2026</time>
+                            <span>6 min</span>
+                        </div>
+                        <h3 class="related__card-title">Software para Farmacias en Venezuela</h3>
+                        <p class="related__card-excerpt">Gestión de inventario, recetas y ventas para farmacias venezolanas con software especializado.</p>
+                    </div>
+                </a>
+                <a href="/blog/automatizacion-de-procesos-pymes-venezuela.html" class="related__card">
+                    <div class="related__card-image" style="background: linear-gradient(135deg, #1a3a2a, #22543d);">
+                        <span class="related__card-category">Automatización</span>
+                    </div>
+                    <div class="related__card-content">
+                        <div class="related__card-meta">
+                            <time datetime="2026-02-25">25 Feb 2026</time>
+                            <span>5 min</span>
+                        </div>
+                        <h3 class="related__card-title">Automatización de Procesos: Cómo las PYMEs Venezolanas Ahorran Tiempo</h3>
+                        <p class="related__card-excerpt">Descubre cómo automatizar facturación, inventario y atención al cliente en tu negocio.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <a href="/" style="text-decoration:none"><span class="nav__logo-text">NERI<span class="nav__logo-accent">.</span>DEV</span></a>
+                    <p class="footer__tagline">Hecho con código y café desde La Guaira, Venezuela</p>
+                </div>
+                <div class="footer__social">
+                    <a href="https://linkedin.com/in/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    <a href="https://github.com/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                    <a href="https://instagram.com/Ing.nrcs" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer__bottom"><p>&copy; 2026 Neri Colón. Todos los derechos reservados.</p></div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/countdown.js" defer></script>
+  <script type="module" src="/assets/js/motion.js"></script>
+</body>
+</html>

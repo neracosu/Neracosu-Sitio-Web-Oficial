@@ -1,0 +1,11 @@
+{
+  "name": "Neri Colon - Desarrollador Web y Software",
+  "short_name": "Neri.Dev",
+  "description": "Desarrollador web y full stack en Venezuela. Paginas web, apps, e-commerce y ciberseguridad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0E1A",
+  "theme_color": "#0A0E1A",
+  "lang": "es",
+  "icons": []
+}

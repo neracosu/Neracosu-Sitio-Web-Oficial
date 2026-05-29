@@ -1,0 +1,126 @@
+/* ============================================================
+   Unify 2026 — overrides aplicados sobre style.css + blog.css /
+   landing.css para que blog/* y servicios/* hereden la paleta y
+   tipografía del rediseño 2026 sin reescribir el contenido legacy.
+   Cargar SIEMPRE después de style.css y antes de blog.css/landing.css.
+   ============================================================ */
+:root {
+  /* Paleta 2026 */
+  --bg-primary:       #070b0a;
+  --bg-secondary:     #0d1311;
+  --bg-card:          rgba(255, 255, 255, 0.03);
+  --bg-card-hover:    rgba(255, 255, 255, 0.06);
+  --accent-primary:   #5ed29c;
+  --accent-secondary: #22d3ee;
+  --cta-primary:      #5ed29c;
+  --cta-primary-hover:#7ee0b1;
+  --text-primary:     #ffffff;
+  --text-secondary:   rgba(255, 255, 255, 0.78);
+  --text-muted:       rgba(255, 255, 255, 0.5);
+  --border-color:     rgba(255, 255, 255, 0.08);
+  --border-active:    rgba(94, 210, 156, 0.4);
+  --glass-bg:         rgba(7, 11, 10, 0.8);
+  --glass-border:     rgba(255, 255, 255, 0.08);
+  --shadow-glow:      0 0 30px rgba(94, 210, 156, 0.18);
+  --font-heading:     'Inter', sans-serif;
+  --font-body:        'Inter', sans-serif;
+  --font-mono:        'Plus Jakarta Sans', sans-serif;
+}
+
+/* Forzar fondo nuevo aunque style.css use color hex literal */
+body {
+  background-color: #070b0a !important;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Tipografía editorial en headings */
+h1, h2, h3, h4, h5, h6,
+.section__title, .nav__logo-text, .hero__title, .post__title, .footer h3 {
+  font-family: 'Inter', sans-serif !important;
+  letter-spacing: -0.02em;
+}
+
+/* Italic serif accent reusable */
+.text-accent, em.accent, .italic-serif {
+  font-family: 'Instrument Serif', serif !important;
+  font-style: italic;
+  color: #5ed29c;
+  text-transform: lowercase;
+  font-weight: 400;
+}
+
+/* Promo bar legacy — ocultar si existe (Marzo 2026 ya pasó) */
+.promo-bar, #promo-bar { display: none !important; }
+
+/* Color cta naranja viejo → verde */
+.btn--cta, .nav__link--cta, .cta-button, [class*="cta-primary"] {
+  background: #5ed29c !important;
+  color: #070b0a !important;
+  border-color: #5ed29c !important;
+}
+.btn--cta:hover, .nav__link--cta:hover, .cta-button:hover {
+  background: #7ee0b1 !important;
+}
+
+/* Header viejo (.header.is-scrolled) — reskin a glass */
+.header, .header.is-scrolled {
+  background: rgba(7, 11, 10, 0.78) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Links del nav viejo — color blanco con hover verde */
+.nav__link {
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.nav__link:hover { color: #5ed29c !important; }
+.nav__logo-text { color: #ffffff !important; }
+.nav__logo-accent { color: #5ed29c !important; }
+
+/* Footer viejo (.footer) — paleta nueva */
+.footer, .footer__bottom {
+  background-color: #070b0a !important;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.footer a { color: rgba(255, 255, 255, 0.7); }
+.footer a:hover { color: #5ed29c; }
+
+/* Tarjetas de blog/landing — glass + borde sutil */
+.card, .blog-card, .service-card, .feature-card, .pricing-card,
+.post-preview, .post__meta, .article-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.card:hover, .blog-card:hover, .service-card:hover,
+.feature-card:hover, .post-preview:hover, .article-card:hover {
+  border-color: rgba(94, 210, 156, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Section kicker viejo → eyebrow del rediseño */
+.section__kicker, .kicker, .eyebrow-text {
+  color: #5ed29c !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Texto generic muted */
+.text-muted, p.lead, .post__excerpt, .article-excerpt {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Garantizar que los anchors hereden el verde como accent */
+a { color: inherit; }
+a.is-accent, a.text-accent, .post-tag, .article-tag {
+  color: #5ed29c !important;
+}

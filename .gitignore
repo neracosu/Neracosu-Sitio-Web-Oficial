@@ -1,0 +1,80 @@
+# ============================================================
+# neracosu.com — gitignore
+# Repo: github.com/neracosu/Neracosu-Sitio-Web-Oficial (PÚBLICO)
+# ============================================================
+
+# --- Proyectos de clientes ajenos a neracosu.com ---
+ameb.app/
+zafraclic.com/
+glotracol.neracosu.com/
+ourstory.lat/
+
+# --- Carpetas del servidor ---
+cgi-bin/
+task/
+
+# --- Backups del propio sitio ---
+*.backup-*
+*.bak
+*.old
+*.orig
+*~
+
+# --- Credenciales y datos sensibles (defensa en profundidad) ---
+.env
+.env.*
+*.env
+wp-config.php
+wp-config-sample.php
+.htpasswd
+.htaccess.bak
+credentials*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# --- Dumps de bases de datos ---
+*.sql
+*.sql.gz
+*.dump
+*.mdb
+
+# --- Dependencias y artefactos de build ---
+node_modules/
+vendor/
+.pnpm-store/
+.yarn/
+package-lock.json.bak
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# --- Logs y errores ---
+*.log
+error_log
+access_log
+debug.log
+npm-debug.log*
+yarn-error.log
+
+# --- Archivos del sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.idea/
+.vscode/
+*.iml
+
+# --- Archivos temporales ---
+*.tmp
+*.temp
+_tmp_*
+.tmp/
+
+# --- Claude / IA artifacts ---
+.claude/
+CLAUDE.local.md

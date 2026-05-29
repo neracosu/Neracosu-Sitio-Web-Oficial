@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatización de Procesos: Cómo las PYMEs Venezolanas Ahorran Tiempo y Dinero | Neri Colón</title>
+  <meta name="description" content="Descubre cómo automatizar facturación, inventario, atención al cliente y más. Guía práctica de automatización para PYMEs en Venezuela.">
+  <link rel="canonical" href="https://neracosu.com/blog/automatizacion-de-procesos-pymes-venezuela.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Automatización de Procesos: Cómo las PYMEs Venezolanas Ahorran Tiempo y Dinero">
+  <meta property="og:description" content="Descubre cómo automatizar facturación, inventario, atención al cliente y más. Guía práctica de automatización para PYMEs en Venezuela.">
+  <meta property="og:url" content="https://neracosu.com/blog/automatizacion-de-procesos-pymes-venezuela.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:site_name" content="Neri Colón - Desarrollador Web">
+  <meta property="article:published_time" content="2026-02-25">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Automatización de Procesos: Cómo las PYMEs Venezolanas Ahorran Tiempo y Dinero">
+  <meta name="twitter:description" content="Descubre cómo automatizar facturación, inventario, atención al cliente y más. Guía práctica de automatización para PYMEs en Venezuela.">
+
+  <meta name="theme-color" content="#070b0a">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/unify-2026.css">
+  <link rel="stylesheet" href="/assets/css/blog.css">
+  <link rel="stylesheet" href="/assets/css/promo.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Automatización de Procesos: Cómo las PYMEs Venezolanas Ahorran Tiempo y Dinero",
+    "description": "Descubre cómo automatizar facturación, inventario, atención al cliente y más. Guía práctica de automatización para PYMEs en Venezuela.",
+    "url": "https://neracosu.com/blog/automatizacion-de-procesos-pymes-venezuela.html",
+    "datePublished": "2026-02-25",
+    "author": {
+      "@type": "Person",
+      "name": "Neri Colón",
+      "url": "https://neracosu.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Neri Colón"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://neracosu.com/blog/automatizacion-de-procesos-pymes-venezuela.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://neracosu.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://neracosu.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Automatización de Procesos para PYMEs",
+        "item": "https://neracosu.com/blog/automatizacion-de-procesos-pymes-venezuela.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========== PROMO BAR ========== -->
+  <div class="promo-bar" id="promo-bar">
+    <div class="promo-bar__content container">
+      <span class="promo-bar__text"><span class="promo-bar__text-full"><strong>Marzo 2026:</strong> $500 de descuento en tu proyecto</span><span class="promo-bar__text-short"><strong>$500 OFF</strong> en marzo</span></span>
+      <span class="promo-bar__countdown" id="countdown"></span>
+      <a href="/#contacto" class="promo-bar__cta">Cotizar Ahora</a>
+    </div>
+    <button class="promo-bar__close" id="promo-bar-close" aria-label="Cerrar promoci&oacute;n">&times;</button>
+  </div>
+
+  <!-- Header -->
+  <header class="header is-scrolled" id="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="/" class="nav__logo" aria-label="Neri Colón - Inicio">
+        <span class="nav__logo-text">NERI<span class="nav__logo-accent">.</span>DEV</span>
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="nav__toggle-line"></span><span class="nav__toggle-line"></span><span class="nav__toggle-line"></span>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/#servicios" class="nav__link">Servicios</a></li>
+          <li class="nav__item"><a href="/#portafolio" class="nav__link">Portafolio</a></li>
+          <li class="nav__item"><a href="/#proceso" class="nav__link">Proceso</a></li>
+          <li class="nav__item"><a href="/#sobre-mi" class="nav__link">Sobre Mí</a></li>
+          <li class="nav__item"><a href="/blog/" class="nav__link is-active">Blog</a></li>
+          <li class="nav__item"><a href="/#contacto" class="nav__link">Contacto</a></li>
+          <li class="nav__item nav__item--cta"><a href="/#contacto" class="nav__link nav__link--cta">Hablemos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb container" aria-label="Migas de pan">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Inicio</a></li>
+        <li class="breadcrumb__item"><a href="/blog/" class="breadcrumb__link">Blog</a></li>
+        <li class="breadcrumb__item" aria-current="page">Automatización de Procesos para PYMEs</li>
+      </ol>
+    </nav>
+
+    <!-- Article -->
+    <article class="article container">
+
+      <!-- Article Header -->
+      <header class="article__header" data-animate="fade-up">
+        <span class="article__category">Automatización</span>
+        <h1 class="article__title">Automatización de Procesos: Cómo las PYMEs Venezolanas Ahorran Tiempo y Dinero</h1>
+        <div class="article__meta">
+          <span class="article__author">Por Neri Colón</span>
+          <time class="article__date" datetime="2026-02-25">25 de febrero 2026</time>
+          <span class="article__reading-time">5 min de lectura</span>
+        </div>
+      </header>
+
+      <!-- Article Body -->
+      <div class="article__body" data-animate="fade-up">
+
+        <p>Si todavía estás haciendo facturas en Excel, copiando datos de un lado a otro o enviando los mismos correos una y otra vez, esto te va a cambiar la vida. La <strong>automatización de procesos</strong> no es algo exclusivo de empresas gigantes con presupuestos millonarios. Hoy, cualquier PYME en Venezuela puede automatizar las tareas que le roban horas cada semana, y el resultado es simple: <strong>más tiempo, menos errores y más dinero en tu bolsillo</strong>.</p>
+
+        <p>En este artículo te voy a explicar, sin tecnicismos innecesarios, qué puedes automatizar en tu negocio, cuánto puedes ahorrar y por dónde empezar. Vamos directo al grano.</p>
+
+        <h2>¿Qué es exactamente la automatización de procesos?</h2>
+
+        <p>Automatizar un proceso significa hacer que una tarea que hoy haces manualmente la ejecute un sistema de forma automática, sin que tengas que intervenir cada vez. No estamos hablando de robots ni de inteligencia artificial de ciencia ficción. Estamos hablando de cosas concretas y prácticas:</p>
+
+        <ul>
+          <li>Que tu sistema <strong>genere facturas automáticamente</strong> cuando un cliente hace una compra, en lugar de que tú abras Excel y la hagas a mano.</li>
+          <li>Que los <strong>recordatorios de pago</strong> se envíen solos por WhatsApp cuando se acerca la fecha de vencimiento.</li>
+          <li>Que tu inventario <strong>se actualice en tiempo real</strong> cada vez que vendes un producto, sin que nadie tenga que modificar una hoja de cálculo.</li>
+          <li>Que los <strong>reportes semanales</strong> de ventas lleguen a tu correo cada lunes a las 7 AM, listos para revisar.</li>
+        </ul>
+
+        <p>La clave está en identificar esas tareas repetitivas que consumen tu tiempo y el de tu equipo. Si haces lo mismo más de tres veces por semana de la misma manera, es candidato perfecto para automatizar. No necesitas ser una corporación para beneficiarte de esto. De hecho, las PYMEs son las que más impacto notan porque cada hora ahorrada cuenta mucho más cuando tu equipo es pequeño.</p>
+
+        <h2>Procesos que puedes automatizar hoy mismo</h2>
+
+        <p>Vamos a lo concreto. Estos son los procesos que más automatizan las PYMEs venezolanas con las que trabajo, ordenados por impacto:</p>
+
+        <h3>Facturación y cobros</h3>
+
+        <p>Este es el primero que recomiendo atacar porque el retorno es inmediato. Un sistema de facturación automatizada puede:</p>
+
+        <ul>
+          <li><strong>Generar facturas automáticamente</strong> a partir de pedidos confirmados, con todos los datos del cliente, productos, precios e impuestos calculados.</li>
+          <li><strong>Enviar recordatorios de pago</strong> por WhatsApp o correo electrónico cuando se acerca la fecha de vencimiento, y escalar con mensajes más directos si el pago se retrasa.</li>
+          <li><strong>Integrarse con bancos y plataformas de pago</strong> para conciliar pagos de forma automática. El sistema detecta que el pago entró y actualiza el estado de la factura sin que toques nada.</li>
+          <li><strong>Generar reportes de cuentas por cobrar</strong> en tiempo real, para que siempre sepas cuánto te deben y quién te lo debe.</li>
+        </ul>
+
+        <h3>Gestión de inventario</h3>
+
+        <p>Si vendes productos físicos, sabes lo doloroso que es quedarte sin stock de tu producto estrella o descubrir que tienes un exceso de inventario que no se mueve. La automatización soluciona esto:</p>
+
+        <ul>
+          <li><strong>Actualización en tiempo real:</strong> cada venta, devolución o entrada de mercancía actualiza tu inventario automáticamente.</li>
+          <li><strong>Alertas de stock bajo:</strong> cuando un producto llega a un mínimo que tú defines, el sistema te avisa inmediatamente.</li>
+          <li><strong>Reorden automático:</strong> para productos con demanda predecible, el sistema puede generar órdenes de compra automáticas a tus proveedores.</li>
+          <li><strong>Reportes de rotación:</strong> identifica qué productos se venden rápido y cuáles están estancados, para tomar mejores decisiones de compra.</li>
+        </ul>
+
+        <h3>Atención al cliente</h3>
+
+        <p>Aquí es donde la automatización brilla especialmente en Venezuela, porque el canal principal de comunicación es WhatsApp. Puedes automatizar:</p>
+
+        <ul>
+          <li><strong>Respuestas automáticas</strong> a preguntas frecuentes: horarios, ubicación, precios, disponibilidad de productos.</li>
+          <li><strong>Bots de WhatsApp</strong> que guían al cliente a través de un catálogo, toman pedidos y hasta procesan pagos.</li>
+          <li><strong>Enrutamiento de tickets:</strong> cuando un cliente necesita atención humana, el sistema lo dirige al agente correcto según el tipo de consulta.</li>
+          <li><strong>Seguimiento post-venta:</strong> mensajes automáticos para confirmar satisfacción, pedir reseñas o sugerir productos complementarios.</li>
+        </ul>
+
+        <h3>Reportes y análisis</h3>
+
+        <p>Tomar decisiones a ciegas es caro. La automatización de reportes te da visibilidad sin esfuerzo:</p>
+
+        <ul>
+          <li><strong>Dashboards en tiempo real</strong> con las métricas que más te importan: ventas del día, ticket promedio, productos más vendidos.</li>
+          <li><strong>Reportes semanales automáticos</strong> que llegan a tu correo con un resumen ejecutivo de cómo va el negocio.</li>
+          <li><strong>Análisis de tendencias</strong> que te ayudan a anticipar demanda, detectar estacionalidad y planificar con datos reales.</li>
+        </ul>
+
+        <h2>El ROI de automatizar: números reales</h2>
+
+        <p>Hablemos de plata, que es lo que importa. Veamos un ejemplo real basado en negocios con los que he trabajado:</p>
+
+        <p>Una PYME promedio dedica <strong>2 horas diarias</strong> a generar facturas manualmente, revisar inventario y enviar mensajes de seguimiento a clientes. Eso son <strong>10 horas semanales</strong>, o más de <strong>40 horas al mes</strong> invertidas en tareas repetitivas.</p>
+
+        <p>Ahora piensa en lo que podrías hacer con esas 40 horas. Podrías atender más clientes, desarrollar nuevos productos, negociar mejores precios con proveedores o simplemente tener una vida más equilibrada.</p>
+
+        <p>Pero vamos a los números concretos:</p>
+
+        <ul>
+          <li><strong>Facturación manual:</strong> si un empleado dedica 2 horas/día a facturar y su costo para la empresa es de $5/hora, son $200/mes solo en esa tarea. Automatizando, reduces ese tiempo a 15 minutos de supervisión diarios. <strong>Ahorro: ~$175/mes</strong>.</li>
+          <li><strong>Seguimiento de cobros:</strong> las empresas que automatizan recordatorios de pago reportan una <strong>reducción del 30-40% en cuentas morosas</strong>. Si tienes $5.000 en cuentas por cobrar, eso puede significar $1.500-$2.000 menos en deuda vencida.</li>
+          <li><strong>Atención al cliente:</strong> un bot de WhatsApp bien configurado puede manejar el <strong>60-70% de las consultas</strong> sin intervención humana, liberando a tu equipo para atender casos que realmente necesitan un toque personal.</li>
+        </ul>
+
+        <p>En resumen, una PYME que automatiza sus procesos clave puede ahorrar entre <strong>30 y 50 horas mensuales</strong> y recuperar la inversión en automatización en los primeros 2-3 meses. Después de eso, todo es ganancia.</p>
+
+        <h2>WhatsApp Business API: tu mejor aliado</h2>
+
+        <p>En Venezuela, <strong>más del 95% de las personas</strong> usan WhatsApp como su principal canal de comunicación. Eso hace que la WhatsApp Business API sea probablemente la herramienta de automatización más poderosa que puedes implementar en tu negocio.</p>
+
+        <p>Y no estamos hablando de un simple chatbot que dice "Hola, ¿en qué puedo ayudarte?". La API de WhatsApp Business te permite crear flujos completos de negocio:</p>
+
+        <ul>
+          <li><strong>Confirmaciones automáticas de citas:</strong> el cliente agenda, recibe confirmación inmediata y un recordatorio 24 horas antes.</li>
+          <li><strong>Estado de pedidos:</strong> desde "pedido recibido" hasta "entregado", el cliente recibe actualizaciones automáticas en cada etapa.</li>
+          <li><strong>Comprobantes de pago:</strong> cuando el sistema detecta un pago, envía automáticamente el recibo por WhatsApp.</li>
+          <li><strong>Catálogo interactivo:</strong> el cliente navega tus productos, selecciona lo que quiere y hace el pedido sin salir de WhatsApp.</li>
+          <li><strong>Encuestas de satisfacción:</strong> después de una compra o servicio, el sistema pide feedback automáticamente.</li>
+        </ul>
+
+        <p>La ventaja es que todo esto ocurre en el canal donde tus clientes ya están. No necesitas que descarguen una app, que visiten una página o que revisen su correo. <strong>Les llega directo a WhatsApp</strong>, donde lo van a ver.</p>
+
+        <h2>Herramientas y tecnologías que usamos</h2>
+
+        <p>Para que tengas una idea de lo que hay detrás de estas automatizaciones, estas son las tecnologías principales que utilizo en los proyectos de <strong>automatización de procesos en Venezuela</strong>:</p>
+
+        <ul>
+          <li><strong>Node.js y Python</strong> para desarrollar las automatizaciones del backend. Son rápidos, eficientes y perfectos para manejar tareas programadas y flujos de trabajo.</li>
+          <li><strong>WhatsApp Business API</strong> para toda la comunicación automatizada con clientes. Bots, notificaciones, catálogos y más.</li>
+          <li><strong>React y Next.js</strong> para crear dashboards personalizados donde puedes ver todas las métricas de tu negocio en tiempo real.</li>
+          <li><strong>Integración con sistemas de pago</strong> locales e internacionales para automatizar la conciliación bancaria y la facturación.</li>
+          <li><strong>Sistemas CRM personalizados</strong> que centralizan toda la información de tus clientes, historial de compras, interacciones y preferencias.</li>
+          <li><strong>Bases de datos optimizadas</strong> que garantizan que tu información esté segura, respaldada y disponible 24/7.</li>
+        </ul>
+
+        <p>La clave no es usar la tecnología más moderna por usarla, sino elegir la herramienta correcta para cada problema. Cada negocio es diferente y la solución debe adaptarse a tus necesidades específicas, no al revés.</p>
+
+        <h2>¿Por dónde empezar con la automatización?</h2>
+
+        <p>Si todo esto suena bien pero no sabes por dónde arrancar, aquí tienes un plan de acción en tres pasos:</p>
+
+        <p><strong>Paso 1: Identifica tus tareas más repetitivas.</strong> Durante una semana, anota cada tarea que haces de forma manual y que sigue un patrón predecible. Facturar, enviar mensajes de seguimiento, actualizar inventario, generar reportes. Si se repite y sigue reglas claras, se puede automatizar.</p>
+
+        <p><strong>Paso 2: Prioriza por impacto.</strong> No intentes automatizar todo de golpe. Empieza por la tarea que más tiempo te consume o que más dinero te cuesta en errores. Normalmente es la facturación o la atención al cliente por WhatsApp. Un solo proceso bien automatizado te libera suficiente tiempo para abordar el siguiente.</p>
+
+        <p><strong>Paso 3: Trabaja con alguien que entienda tu negocio.</strong> La automatización no es solo código. Es entender cómo funciona tu negocio, dónde están los cuellos de botella y diseñar una solución que se integre naturalmente con tu forma de trabajar. Busca un desarrollador que haga preguntas sobre tu operación antes de hablar de tecnología.</p>
+
+        <p>La automatización no es un lujo. Es una necesidad competitiva. Las PYMEs que automatizan sus procesos no solo ahorran tiempo y dinero, sino que pueden escalar sin necesidad de multiplicar su equipo. Y en el contexto venezolano, donde la eficiencia es clave para sobrevivir y crecer, <strong>automatizar tu negocio</strong> es una de las mejores inversiones que puedes hacer.</p>
+
+      </div>
+
+    </article>
+
+    <!-- CTA Banner -->
+    <div class="article__cta container" style="max-width:720px" data-animate="fade-up">
+      <h3 class="article__cta-title">¿Listo para dejar de perder tiempo en tareas repetitivas?</h3>
+      <p class="article__cta-text">Agenda una consulta gratuita y analicemos juntos qué procesos de tu negocio podemos automatizar.</p>
+      <div class="article__cta-buttons">
+        <a href="/#contacto" class="btn btn--primary">Agenda tu Consulta Gratis</a>
+        <a href="https://wa.me/584222707095?text=Hola%20Neri!%20Vi%20tu%20artículo%20sobre%20automatización%20y%20quiero%20saber%20más." class="btn btn--outline" target="_blank" rel="noopener noreferrer">Escríbeme por WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Related Articles -->
+    <section class="related container" aria-label="Artículos relacionados">
+      <h2 class="related__title">Artículos Relacionados</h2>
+      <div class="related__grid">
+
+        <a href="/blog/chatbots-whatsapp-para-negocios-venezuela.html" class="blog__card" data-animate="fade-up">
+          <div class="blog__card-image" style="background:linear-gradient(135deg,#2d1b4e,#44337a)">
+            <span class="blog__card-category">Chatbots</span>
+          </div>
+          <div class="blog__card-content">
+            <h3 class="blog__card-title">Chatbots y Bots de WhatsApp: La Herramienta Secreta de los Negocios que Más Venden</h3>
+            <div class="blog__card-meta">
+              <time datetime="2026-02-15">15 Feb 2026</time>
+              <span>5 min de lectura</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/blog/por-que-tu-negocio-necesita-pagina-web-en-venezuela.html" class="blog__card" data-animate="fade-up">
+          <div class="blog__card-image" style="background:linear-gradient(135deg,#0f2b46,#1a365d)">
+            <span class="blog__card-category">Negocios</span>
+          </div>
+          <div class="blog__card-content">
+            <h3 class="blog__card-title">¿Por Qué Tu Negocio en Venezuela Necesita una Página Web en 2026?</h3>
+            <div class="blog__card-meta">
+              <time datetime="2026-02-28">28 Feb 2026</time>
+              <span>6 min de lectura</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="/" style="text-decoration:none"><span class="nav__logo-text">NERI<span class="nav__logo-accent">.</span>DEV</span></a>
+          <p class="footer__tagline">Hecho con código y café desde La Guaira, Venezuela</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://linkedin.com/in/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://github.com/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+          <a href="https://instagram.com/Ing.nrcs" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2026 Neri Colón. Todos los derechos reservados.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/countdown.js" defer></script>
+
+  <script type="module" src="/assets/js/motion.js"></script>
+</body>
+</html>
