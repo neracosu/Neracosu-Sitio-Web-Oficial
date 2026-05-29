@@ -147,10 +147,9 @@ function setupCounters() {
 
         const state = { v: 0 };
         animate(state, {
-          v: target,
+          v: { to: target, modifier: utils.round(1) },
           duration: 1800,
           ease: 'outExpo',
-          modifier: utils.round(1),
           onUpdate: () => {
             el.textContent = `${prefix}${state.v}`;
           },
