@@ -4,8 +4,11 @@
   "description": "Desarrollador web y full stack en Venezuela. Paginas web, apps, e-commerce y ciberseguridad.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0A0E1A",
-  "theme_color": "#0A0E1A",
+  "background_color": "#070b0a",
+  "theme_color": "#070b0a",
   "lang": "es",
-  "icons": []
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
 }
