@@ -174,3 +174,22 @@ El CSS y el JS siguen a un año, pero las páginas los piden con
 `~/build-para/versionar-assets.py`, que **`build.py` ya ejecuta al terminar**.
 Si tocas un asset fuera del build, córrelo a mano o el cambio no le llega a
 quien ya visitó el sitio.
+
+## Los precios viven en un solo sitio
+
+`/para/` es el **único** lugar del sitio con cifras de proyecto. Se decidió el
+2026-09-12, después de que `/servicios/hoteles.html` y `/para/hoteles.html`
+quedaran publicadas a la vez con precios distintos: la primera con el modelo
+viejo (pago único, 90 días de garantía, tabla de costo a 3 años) y la segunda
+con pago único más mensualidad. Un visitante podía caer en cualquiera.
+
+- **`/servicios/`** describe capacidades por tecnología y **no cotiza**: manda a
+  `/para/` y a la calculadora. La única cifra que conserva es el hosting a
+  $8/mes, que es un servicio aparte y no contradice nada.
+- **`/servicios/hoteles.html` ya no existe**: 301 a `/para/hoteles.html` desde
+  el `.htaccess` de `servicios/`. El original quedó en
+  `~/backups/web-20260912-072243/servicios-hoteles-original.html`.
+- La **calculadora** deriva sus precios de `TARIFA_HORA`, así que también sale
+  de la misma fuente.
+
+**Antes de publicar una cifra nueva, preguntarse dónde más vive ese número.**
