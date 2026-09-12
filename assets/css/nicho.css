@@ -1139,3 +1139,66 @@
   letter-spacing: 0;
 }
 .asis-mes.asis-mes-no { font-size: 14px; font-weight: 600; color: var(--accent); letter-spacing: 0; }
+
+/* ============================================================
+   «Se puede comprobar» — prueba social sin testimonios
+   ============================================================ */
+.comprobable-visita,
+.comprobable-ref {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.018);
+}
+.comprobable-visita { margin-bottom: 20px; }
+.comprobable-ref {
+  border-color: rgba(94, 210, 156, 0.28);
+  background: rgba(94, 210, 156, 0.045);
+}
+.comprobable-visita .k,
+.comprobable-ref .k {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.comprobable-ref .k { margin-bottom: 12px; }
+.comprobable-ref p { margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--text-muted); max-width: 70ch; }
+
+.comprobable-enlaces { display: grid; gap: 12px; }
+.comprobable-enlaces a {
+  display: block;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  padding: 18px 20px;
+  transition: border-color .2s ease, background .2s ease, transform .15s ease;
+}
+.comprobable-enlaces a:hover {
+  border-color: var(--accent);
+  background: rgba(94, 210, 156, 0.07);
+  transform: translateY(-2px);
+}
+.comprobable-enlaces .d {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+.comprobable-enlaces .q {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+@media (max-width: 768px) {
+  .comprobable-visita, .comprobable-ref { padding: 24px 20px; border-radius: 16px; }
+  .comprobable-enlaces a { padding: 16px 17px; }
+  .comprobable-ref p { font-size: 15px; }
+}

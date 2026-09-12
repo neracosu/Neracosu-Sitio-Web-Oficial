@@ -16,15 +16,32 @@ Options -Indexes
 </IfModule>
 
 # Browser Cache
+#
+# El HTML NO se cachea. Antes heredaba el "1 month" del ExpiresDefault, asi que
+# cualquiera que ya hubiera visitado el sitio seguia viendo la version vieja
+# durante 30 dias, por mucho que se publicara algo nuevo.
+#
+# El CSS y el JS si van a un anio, pero SOLO porque las paginas los piden con
+# ?v=<hash del contenido>: al cambiar el archivo cambia la URL y el navegador
+# lo vuelve a bajar. El sello lo pone ~/build-para/versionar-assets.py; si se toca
+# un asset y no se corre, el cambio no le llega a quien ya visito el sitio.
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 0 seconds"
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|xml)$">
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </FilesMatch>
 </IfModule>
 
 # php -- BEGIN cPanel-generated handler, do not edit

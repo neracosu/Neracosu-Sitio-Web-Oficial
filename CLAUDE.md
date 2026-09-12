@@ -139,3 +139,38 @@ python3 /home/neracosu/build-para/precios.py
 python3 /home/neracosu/build-para/verificar-sliders.py
 python3 /home/neracosu/build-para/build.py
 ```
+
+## ⚠️ Dos trampas del servidor que ya tumbaron el sitio
+
+### 1. El grupo de `public_html` es `nobody`, no `neracosu`
+
+```
+drwxr-x--- neracosu:nobody 750  public_html/
+```
+
+Apache corre como `nobody` y **entra al sitio por el grupo**. Un
+`chown -R neracosu:neracosu .` dentro del docroot le cambia el grupo al
+directorio raíz y **todo el sitio pasa a 403 al instante** — pasó el
+2026-09-12.
+
+Los archivos de adentro sí van `neracosu:neracosu`. El que no se toca es el
+directorio `public_html` en sí. Si hace falta corregir permisos:
+
+```bash
+chown -R neracosu:neracosu /home/neracosu/public_html/<subdirectorio>
+chown neracosu:nobody /home/neracosu/public_html   # restaurar el raíz
+chmod 750 /home/neracosu/public_html
+```
+
+### 2. El HTML no se cachea; los assets sí, pero con sello
+
+`ExpiresDefault "access plus 1 month"` le estaba aplicando **30 días de caché
+al HTML**: quien ya había visitado el sitio no veía ningún cambio, por mucho que
+se publicara. Corregido con `ExpiresByType text/html "access plus 0 seconds"`
+más un `Cache-Control: no-cache` por `mod_headers`.
+
+El CSS y el JS siguen a un año, pero las páginas los piden con
+`?v=<hash del contenido>`. Ese sello lo pone
+`~/build-para/versionar-assets.py`, que **`build.py` ya ejecuta al terminar**.
+Si tocas un asset fuera del build, córrelo a mano o el cambio no le llega a
+quien ya visitó el sitio.
