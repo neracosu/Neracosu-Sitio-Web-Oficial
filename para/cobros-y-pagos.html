@@ -76,15 +76,15 @@
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "USD",
-      "lowPrice": "900",
-      "highPrice": "2400",
+      "lowPrice": "1300",
+      "highPrice": "3500",
       "offerCount": "3",
       "offers": [
         {
           "@type": "Offer",
           "name": "Un método",
           "description": "validación de pago móvil",
-          "price": "900",
+          "price": "1300",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "priceValidUntil": "2026-12-31",
@@ -94,7 +94,7 @@
           "@type": "Offer",
           "name": "Paquete",
           "description": "con C2P y tasa oficial",
-          "price": "1600",
+          "price": "2400",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "priceValidUntil": "2026-12-31",
@@ -104,7 +104,7 @@
           "@type": "Offer",
           "name": "Completo",
           "description": "con USDT y conciliación",
-          "price": "2400",
+          "price": "3500",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "priceValidUntil": "2026-12-31",
@@ -538,7 +538,8 @@
           <div class="plan">
             <span class="plan-nombre">Un método</span>
             <span class="plan-alcance">validación básica</span>
-            <div class="plan-precio">$900<small>pago único · en 3 partes</small></div>
+            <div class="plan-precio">$1.300<small>50 % al aprobar &middot; 50 % contra entrega</small></div>
+            <div class="plan-mensual plan-sin-mensual">sin mensualidad: se monta sobre lo que ya tienes</div>
             <ul class="plan-lista">
               <li>Pago móvil validado contra el movimiento real del banco</li>
               <li>Control anti-reuso: una referencia se usa una sola vez</li>
@@ -551,7 +552,8 @@
             <span class="plan-cinta">El más pedido</span>
             <span class="plan-nombre">Paquete</span>
             <span class="plan-alcance">+ C2P y tasa oficial</span>
-            <div class="plan-precio">$1.600<small>pago único · en 3 partes</small></div>
+            <div class="plan-precio">$2.400<small>50 % al aprobar &middot; 50 % contra entrega</small></div>
+            <div class="plan-mensual plan-sin-mensual">sin mensualidad: se monta sobre lo que ya tienes</div>
             <ul class="plan-lista">
               <li class="heredado">Todo lo del plan de un método</li>
               <li>C2P con clave temporal: débito en el momento</li>
@@ -564,7 +566,8 @@
           <div class="plan">
             <span class="plan-nombre">Completo</span>
             <span class="plan-alcance">+ USDT y conciliación</span>
-            <div class="plan-precio">$2.400<small>pago único · en 3 partes</small></div>
+            <div class="plan-precio">$3.500<small>50 % al aprobar &middot; 50 % contra entrega</small></div>
+            <div class="plan-mensual plan-sin-mensual">sin mensualidad: se monta sobre lo que ya tienes</div>
             <ul class="plan-lista">
               <li class="heredado">Todo lo del Paquete</li>
               <li>USDT verificado directamente en la cadena</li>
@@ -591,27 +594,29 @@
             </p>
           </div>
           <div class="entrada-precio">
-            <span class="n">$170</span>
+            <span class="n">$250</span>
             <span class="d">pago único · una semana de entrega · se descuenta si contratas</span>
           </div>
         </div>
 
         <div class="precio-notas">
           <div class="precio-nota">
-            <h4>Siempre incluido</h4>
+            <h4>Siempre incluido en el desarrollo</h4>
             <ul>
               <li>Migración de lo que ya tienes, antes de encender nada</li>
-              <li>Servidor y dominio el primer año</li>
+              <li>Puesta en marcha en tu dominio, con certificado de seguridad</li>
               <li>Capacitación del personal y visita guiada dentro del sistema</li>
-              <li>90 días de garantía sobre todo lo entregado</li>
+              <li>60 días de garantía: cualquier falla de funcionamiento se corrige sin costo</li>
             </ul>
           </div>
           <div class="precio-nota">
-            <h4>Lo que sigues pagando después</h4>
+            <h4>Qué cubre la mensualidad</h4>
             <ul>
-              <li>Servidor: unos 25 dólares al mes, contratado por ti</li>
-              <li>Dominio: unos 15 dólares al año</li>
-              <li>Hacia mí: nada obligatorio. Soporte a demanda, cotizado y aprobado antes</li>
+              <li>Hosting, dominio, HTTPS y respaldos automáticos diarios</li>
+              <li>Soporte por WhatsApp en horario laboral; lo crítico, el mismo día</li>
+              <li>Actualizaciones de seguridad y mejoras menores, sin costo aparte</li>
+              <li>Ajustes de contenido: banners, promociones, horarios, zonas de entrega</li>
+              <li>Se cancela avisando con 30 días, y te llevas el sistema y la base de datos</li>
             </ul>
           </div>
         </div>
@@ -621,26 +626,44 @@
     <section class="section">
       <div class="container">
         <div style="max-width:720px;margin-bottom:44px;">
-          <span class="eyebrow">La cuenta de tres años</span>
-          <h2 class="section-title">Lo que te ahorras <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">es la comisión</span></h2>
-          <p class="section-subtitle">Acá no compites contra una mensualidad sino contra un porcentaje: los servicios que se interponen entre tu cliente y tu cuenta cobran por cada transacción, para siempre. Esto se paga una vez y no toca tu dinero.</p>
+          <span class="eyebrow">La diferencia que importa</span>
+          <h2 class="section-title">Las dos mensualidades <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">no compran lo mismo</span></h2>
+          <p class="section-subtitle">
+            Un sistema alquilado y uno propio pueden costarte parecido al mes. Lo que cambia es qué
+            estás pagando, y qué te queda el día que dejas de pagar.
+          </p>
         </div>
 
-        <div class="tabla-wrap" style="max-width:760px;">
-          <table class="compara">
-            <thead>
-              <tr><th>Acumulado</th><th>Comisión por transacción</th><th>Paquete</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Año 1</td><td>$1.440</td><td>$1.600</td></tr>
-              <tr class="win"><td>Año 2</td><td>$2.880</td><td>$1.600</td></tr>
-              <tr class="win"><td>Año 3</td><td>$4.320</td><td>$1.600</td></tr>
-              <tr class="win"><td>Año 5</td><td>$7.200</td><td>$1.600</td></tr>
-            </tbody>
-          </table>
+        <div class="lossgain">
+          <div class="lossgain-col loss">
+            <h3>Alquilado: pagas el permiso de uso</h3>
+            <ul>
+              <li>El día que dejas de pagar, se apaga. No es una amenaza: es el modelo.</li>
+              <li>Tu catálogo, tus clientes y tu histórico viven en el servidor de otro.</li>
+              <li>Exportar tus datos, cuando se puede, es un trámite y sale incompleto.</li>
+              <li>El precio lo suben cuando quieran y no tienes alternativa.</li>
+              <li>Lo que falta se pide por ticket, y a veces la respuesta es no.</li>
+              <li>Si la empresa cierra o se va del país, te quedas sin nada.</li>
+            </ul>
+          </div>
+          <div class="lossgain-col gain">
+            <h3>Propio: pagas que alguien lo sostenga</h3>
+            <ul>
+              <li>El día que dejas de pagar, <strong style="color:#fff;">el sistema sigue siendo tuyo</strong>: lo hospedas tú por unos 25 dólares al mes.</li>
+              <li>El código y la base de datos están en tu servidor, con tu dominio.</li>
+              <li>Te entregamos todo: si mañana trabajas con otro equipo, se lo pasas y sigue.</li>
+              <li>El precio del desarrollo lo fijaste una vez y no vuelve a moverse.</li>
+              <li>Lo que falta se conversa y se construye, sin cola.</li>
+              <li>La mensualidad paga hosting, respaldos, seguridad y alguien que contesta.</li>
+            </ul>
+          </div>
         </div>
-        <p style="font-size:13px;color:var(--text-dim);margin-top:18px;line-height:1.6;max-width:70ch;">
-          Comisión calculada sobre un comercio que mueve 8.000 dólares al mes con un cargo de 1,5 % por transacción, que es una referencia conservadora. Ajusta el supuesto a tu volumen: mientras más cobras, antes se cruza la línea. El Paquete no lleva costo anual porque se monta sobre el servidor que ya tienes.
+
+        <p style="font-size:13px;color:var(--text-dim);margin-top:22px;line-height:1.6;max-width:70ch;">
+          Y para que quede claro: <strong style="color:rgba(255,255,255,0.8);">no te voy a decir que sale más
+          barato que un SaaS.</strong> Sumando la mensualidad, a tres años pueden costar parecido, y en
+          algunos rubros el alquilado sale menos. Lo que compras acá es otra cosa: el sistema hecho a tu
+          operación y la propiedad de lo que pagaste.
         </p>
       </div>
     </section>

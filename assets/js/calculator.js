@@ -3,8 +3,9 @@
 
   /* ========== TARIFA ==========
      Fuente unica de verdad del precio. Sale del costo real de operacion:
-     100 horas facturables al mes (65% de 153 brutas) + $200/mes de costos
-     => $17/h para un ingreso neto de $1.500/mes. El detalle esta en
+     100 horas facturables al mes (65% de 153 brutas) + $200/mes de costos.
+     $17/h es el piso de supervivencia; $25/h es la tarifa comercial, la que
+     usan los planes publicados en /para/. El detalle esta en
      ~/PRECIOS-Y-COSTOS.md (documento interno, fuera del docroot).
 
      Hasta 2026-09-12 cada opcion traia su precio escrito a mano y todas
@@ -14,7 +15,7 @@
 
      Los planes con monthly:true (hosting) llevan precio propio y no se tocan:
      son mensualidades, no horas de trabajo. */
-  var TARIFA_HORA = 17;
+  var TARIFA_HORA = 25;
 
   /* ========== DATA ========== */
   var SERVICES = [
@@ -99,7 +100,7 @@
       monthly: false,
       complexity: [
         { label: 'Integracion Basica', hours: 55, price: 0 },
-        { label: 'Integracion Media', hours: 95, price: 0 },
+        { label: 'Integracion Media', hours: 100, price: 0 },
         { label: 'Integracion Completa', hours: 145, price: 0 }
       ],
       addons: [

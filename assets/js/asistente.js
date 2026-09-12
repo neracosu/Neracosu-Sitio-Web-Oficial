@@ -22,9 +22,9 @@
       url: '/para/hoteles.html',
       descuento: true,
       planes: [
-        { nombre: 'Esencial', alcance: 'hasta 15 habitaciones', precio: 1900 },
-        { nombre: 'Profesional', alcance: '16 a 40 habitaciones', precio: 2900 },
-        { nombre: 'Completo', alcance: 'más de 40 habitaciones', precio: 4500 },
+        { nombre: 'Esencial', alcance: 'hasta 15 habitaciones', precio: 2800, mes: 100 },
+        { nombre: 'Profesional', alcance: '16 a 40 habitaciones', precio: 4300, mes: 130 },
+        { nombre: 'Completo', alcance: 'más de 40 habitaciones', precio: 6600, mes: 170 },
       ],
     },
     restaurantes: {
@@ -32,9 +32,9 @@
       url: '/para/restaurantes-y-bares.html',
       descuento: true,
       planes: [
-        { nombre: 'Esencial', alcance: 'un local', precio: 1700 },
-        { nombre: 'Profesional', alcance: 'con delivery y POS', precio: 2700 },
-        { nombre: 'Completo', alcance: 'multi-sede y fiscal', precio: 4200 },
+        { nombre: 'Esencial', alcance: 'un local', precio: 2500, mes: 100 },
+        { nombre: 'Profesional', alcance: 'con delivery y POS', precio: 4000, mes: 130 },
+        { nombre: 'Completo', alcance: 'multi-sede y fiscal', precio: 6200, mes: 170 },
       ],
     },
     reservas: {
@@ -42,9 +42,9 @@
       url: '/para/reservas.html',
       descuento: true,
       planes: [
-        { nombre: 'Esencial', alcance: 'un espacio', precio: 1600 },
-        { nombre: 'Profesional', alcance: 'varios espacios y eventos', precio: 2600 },
-        { nombre: 'Completo', alcance: 'con taquilla y bot', precio: 3900 },
+        { nombre: 'Esencial', alcance: 'un espacio', precio: 2400, mes: 100 },
+        { nombre: 'Profesional', alcance: 'varios espacios y eventos', precio: 3800, mes: 130 },
+        { nombre: 'Completo', alcance: 'con taquilla y bot', precio: 5700, mes: 170 },
       ],
     },
     cobros: {
@@ -52,9 +52,9 @@
       url: '/para/cobros-y-pagos.html',
       descuento: false,
       planes: [
-        { nombre: 'Un método', alcance: 'validación de pago móvil', precio: 900 },
-        { nombre: 'Paquete', alcance: 'con C2P y tasa oficial', precio: 1600 },
-        { nombre: 'Completo', alcance: 'con USDT y conciliación', precio: 2400 },
+        { nombre: 'Un método', alcance: 'validación de pago móvil', precio: 1300, mes: 0 },
+        { nombre: 'Paquete', alcance: 'con C2P y tasa oficial', precio: 2400, mes: 0 },
+        { nombre: 'Completo', alcance: 'con USDT y conciliación', precio: 3500, mes: 0 },
       ],
     },
     logistica: {
@@ -62,9 +62,9 @@
       url: '/para/logistica-y-aduana.html',
       descuento: true,
       planes: [
-        { nombre: 'Fase 1', alcance: 'solicitudes y recaudos', precio: 3200 },
-        { nombre: 'Fase 2', alcance: 'con portal de clientes', precio: 4800 },
-        { nombre: 'Completo', alcance: 'con trazabilidad', precio: 7500 },
+        { nombre: 'Fase 1', alcance: 'solicitudes y recaudos', precio: 4700, mes: 170 },
+        { nombre: 'Fase 2', alcance: 'con portal de clientes', precio: 7000, mes: 220 },
+        { nombre: 'Completo', alcance: 'con trazabilidad', precio: 11000, mes: 300 },
       ],
     },
     comercio: {
@@ -72,9 +72,9 @@
       url: '/para/comercio-y-tienda.html',
       descuento: true,
       planes: [
-        { nombre: 'Esencial', alcance: 'un local, mostrador', precio: 1700 },
-        { nombre: 'Profesional', alcance: 'con tienda en línea', precio: 2700 },
-        { nombre: 'Completo', alcance: 'varias sucursales', precio: 4200 },
+        { nombre: 'Esencial', alcance: 'un local, mostrador', precio: 2500, mes: 100 },
+        { nombre: 'Profesional', alcance: 'con tienda en línea', precio: 4000, mes: 130 },
+        { nombre: 'Completo', alcance: 'varias sucursales', precio: 6200, mes: 170 },
       ],
     },
     /* Citas no lleva precio cerrado: la agenda por profesional es lo unico
@@ -86,9 +86,9 @@
       descuento: false,
       sinPrecio: true,
       planes: [
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 170 },
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 170 },
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 170 },
+        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
+        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
+        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
       ],
     },
     /* No es un plan: es la respuesta honesta cuando el caso no encaja
@@ -99,9 +99,9 @@
       descuento: false,
       aMedida: true,
       planes: [
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 170 },
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 170 },
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 170 },
+        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
+        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
+        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
       ],
     },
     integraciones: {
@@ -109,9 +109,9 @@
       url: '/para/integraciones-api-y-bots.html',
       descuento: false,
       planes: [
-        { nombre: 'Un conector', alcance: 'un sistema', precio: 800 },
-        { nombre: 'API para bot', alcance: 'hasta 12 rutas', precio: 1800 },
-        { nombre: 'Capa completa', alcance: 'varios sistemas', precio: 3500 },
+        { nombre: 'Un conector', alcance: 'un sistema', precio: 1200, mes: 0 },
+        { nombre: 'API para bot', alcance: 'hasta 12 rutas', precio: 2600, mes: 0 },
+        { nombre: 'Capa completa', alcance: 'varios sistemas', precio: 5200, mes: 0 },
       ],
     },
   };
@@ -244,6 +244,7 @@
               ? '• El asistente dice que mi caso no encaja en un plan cerrado\n'
               : '• Plan sugerido: ' + d.plan.nombre + ' (' + d.plan.alcance + ')\n')
         + (d.datos.sinPrecio ? '' : '• Estimado: ' + money(d.total)
+            + (d.plan.mes ? ' + ' + money(d.plan.mes) + '/mes de servicio' : '')
             + (d.descuento ? ' (ya con el descuento por dejar mi sistema actual)' : '') + '\n')
         + '• Hoy trabajo con: ' + ({
             mensualidad: 'un sistema por mensualidad',
@@ -274,7 +275,7 @@
 
       h += '<div class="asis-precio">';
       if (d.datos.sinPrecio) {
-        h += '<span class="asis-n">$170</span>';
+        h += '<span class="asis-n">$250</span>';
         h += '<span class="asis-d">diagnóstico técnico y plan por fases &middot; se descuenta completo '
            + 'si después contratas</span>';
         h += '</div>';
@@ -283,9 +284,17 @@
         h += '<span class="asis-tachado">' + money(d.plan.precio) + '</span>';
       }
       h += '<span class="asis-n">' + money(d.total) + '</span>';
-      h += '<span class="asis-d">pago único, en 3 partes'
+      h += '<span class="asis-d">desarrollo, 50 % al aprobar y 50 % contra entrega'
          + (d.descuento ? ' &middot; incluye $1.000 de descuento por dejar tu sistema actual' : '')
          + '</span>';
+      if (d.plan.mes) {
+        h += '<span class="asis-mes">+ ' + money(d.plan.mes) + ' / mes de servicio'
+           + '<small>hosting, dominio, respaldos, seguridad y soporte. No es el permiso de usarlo: '
+           + 'si lo cancelas, el sistema sigue siendo tuyo.</small></span>';
+      } else {
+        h += '<span class="asis-mes asis-mes-no">Sin mensualidad: esta capa se monta sobre el sistema '
+           + 'que ya tienes.</span>';
+      }
       h += '</div>';
       }
 
