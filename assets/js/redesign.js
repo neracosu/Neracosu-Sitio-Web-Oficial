@@ -1,4 +1,4 @@
-/* NERI.DEV redesign — vanilla interactivity */
+/* NERACOSU redesign — vanilla interactivity */
 (function () {
   'use strict';
 

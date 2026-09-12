@@ -186,15 +186,20 @@ function setupHeadlineReveal() {
       line.style.display = 'inline-block';
       line.style.overflow = 'hidden';
       line.style.verticalAlign = 'top';
-      // Build per-char inner spans wrapped to allow vertical translate masking
-      for (const ch of original) {
+      // Build per-char inner spans wrapped to allow vertical translate masking.
+      // Los caracteres van agrupados por palabra en un contenedor nowrap: cada
+      // char es inline-block y, sueltos, el navegador parte a mitad de palabra
+      // en pantallas angostas (se veia "PRODUCTOS DIGI / TALES" a 390px).
+      // El espacio entre palabras queda como nodo de texto normal: es la unica
+      // oportunidad de corte de linea.
+      const makeChar = (ch) => {
         const wrap = document.createElement('span');
         wrap.style.display = 'inline-block';
         wrap.style.overflow = 'hidden';
         wrap.style.verticalAlign = 'top';
         const inner = document.createElement('span');
         inner.style.display = 'inline-block';
-        inner.textContent = ch === ' ' ? ' ' : ch;
+        inner.textContent = ch;
         if (PREFERS_REDUCED) {
           inner.style.transform = 'translateY(0)';
           inner.style.opacity = '1';
@@ -203,8 +208,25 @@ function setupHeadlineReveal() {
           inner.style.opacity = '0';
         }
         wrap.appendChild(inner);
-        line.appendChild(wrap);
         allChars.push(inner);
+        return wrap;
+      };
+
+      for (const pieza of original.split(/(\s+)/)) {
+        if (pieza === '') continue;
+        if (/^\s+$/.test(pieza)) {
+          // Se emite tal cual: un espacio normal es oportunidad de corte y un
+          // espacio duro (U+00A0) se mantiene visible sin permitir el corte,
+          // que es justo lo que pide "QUE&nbsp;" antes de la palabra en cursiva.
+          line.appendChild(document.createTextNode(pieza));
+          continue;
+        }
+        const palabra = document.createElement('span');
+        palabra.style.display = 'inline-block';
+        palabra.style.whiteSpace = 'nowrap';
+        palabra.style.verticalAlign = 'top';
+        for (const ch of pieza) palabra.appendChild(makeChar(ch));
+        line.appendChild(palabra);
       }
     });
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   NERI.DEV — Redesign 2026
+   NERACOSU — Redesign 2026
    ============================================================ */
 
 :root {
@@ -486,12 +486,12 @@ img, svg, video { display: block; max-width: 100%; }
   padding-top: 18px; padding-bottom: 18px;
 }
 
-.nav-links { display: none; align-items: center; gap: 44px; margin-left: auto; }
+.nav-links { display: none; align-items: center; gap: 30px; margin-left: auto; }
 .nav-cta-wrap { display: none; align-items: center; gap: 12px; margin-left: 32px; }
 @media (min-width: 1024px) {
   .nav-links { display: flex; }
   .nav-cta-wrap { display: flex; }
-  .nav-burger { display: none; }
+  .site-nav .nav-burger { display: none; }
 }
 @media (max-width: 1023px) {
   .nav-burger { margin-left: auto; }
@@ -504,6 +504,7 @@ img, svg, video { display: block; max-width: 100%; }
   letter-spacing: 0.14em;
   color: rgba(255,255,255,0.7);
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 .nav-link:hover { color: var(--accent); }
 
@@ -838,7 +839,9 @@ img, svg, video { display: block; max-width: 100%; }
 }
 .wordmark {
   font-family: "Inter", sans-serif; font-weight: 900;
-  font-size: clamp(80px, 18vw, 240px);
+  /* 9 caracteres («NERACOSU.») no entran a 80px en un telefono de 390px:
+     se salian y los recortaba el overflow-x del body. */
+  font-size: clamp(44px, 15vw, 240px);
   line-height: 0.9; letter-spacing: -0.05em;
   text-align: center; margin-bottom: 60px;
   background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(94,210,156,0.4) 60%, rgba(7,11,10,0) 100%);
@@ -1671,4 +1674,12 @@ img, svg, video { display: block; max-width: 100%; }
   }
   a { color: #1a6e4f !important; text-decoration: underline; }
   @page { size: A4; margin: 18mm 16mm; }
+}
+
+/* Rango justo del nav: con 7 enlaces + el botón, entre 1024 y 1200 no entra
+   con el gap normal. Se aprieta sólo ahí en vez de sacrificar un enlace. */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .nav-links { gap: 18px; }
+  .nav-link { font-size: 11px; letter-spacing: 0.1em; }
+  .nav-cta-wrap { margin-left: 18px; }
 }

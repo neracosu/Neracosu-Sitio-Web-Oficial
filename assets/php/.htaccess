@@ -1,0 +1,4 @@
+# Único PHP permitido en assets/: el handler del formulario de contacto
+<FilesMatch "^contact\.php$">
+  Require all granted
+</FilesMatch>

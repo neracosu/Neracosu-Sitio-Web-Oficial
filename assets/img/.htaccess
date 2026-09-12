@@ -1,0 +1,4 @@
+# Sin ejecución de PHP en este directorio (endurecimiento post-hackeo ago-2026)
+<FilesMatch "\.(php|php5|php7|php8|phtml)$">
+  Require all denied
+</FilesMatch>

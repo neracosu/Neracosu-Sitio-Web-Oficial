@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Élan · Perfumería — Sitio demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#2c1b2e;
+    --plum-2:#3a2440;
+    --gold:#c9a24b;
+    --gold-soft:#e2c988;
+    --cream:#f6efe4;
+    --blush:#d98f8a;
+    --ink:#1c121e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:
+      radial-gradient(120% 60% at 50% 0%, #40284a 0%, var(--plum) 55%, var(--ink) 100%);
+    font-family:'Jost',sans-serif;
+    color:var(--cream);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px 60px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .demo-tag{
+    position:fixed;top:0;left:0;right:0;
+    background:var(--gold);
+    color:var(--ink);
+    text-align:center;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:7px;
+    z-index:50;
+  }
+  .phone{
+    width:100%;
+    max-width:390px;
+    background:linear-gradient(180deg,#33203a 0%, #221527 100%);
+    border-radius:34px;
+    overflow:hidden;
+    box-shadow:0 30px 70px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(201,162,75,.18);
+    position:relative;
+    margin-top:36px;
+  }
+  /* Header */
+  .top{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 22px 14px;
+  }
+  .brandmark{display:flex;align-items:center;gap:9px}
+  .seal{
+    width:34px;height:34px;border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:grid;place-items:center;
+    font-family:'Fraunces',serif;font-weight:600;color:var(--gold);
+    font-size:17px;
+  }
+  .brand-name{font-family:'Fraunces',serif;font-size:20px;letter-spacing:.02em}
+  .brand-sub{font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);opacity:.85;margin-top:1px}
+  .menu-dots{color:var(--gold-soft);font-size:20px;letter-spacing:2px}
+
+  /* Hero */
+  .hero{padding:8px 22px 26px;position:relative}
+  .eyebrow{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--blush);margin-bottom:14px}
+  .hero h1{
+    font-family:'Fraunces',serif;
+    font-weight:400;
+    font-size:38px;
+    line-height:1.04;
+    letter-spacing:-.01em;
+  }
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero p{
+    font-weight:300;font-size:14px;line-height:1.6;
+    color:rgba(246,239,228,.72);
+    margin-top:14px;max-width:30ch;
+  }
+  .hero-cta{
+    margin-top:20px;display:inline-flex;align-items:center;gap:8px;
+    background:var(--gold);color:var(--ink);
+    font-weight:600;font-size:13px;letter-spacing:.04em;
+    padding:12px 20px;border-radius:100px;text-decoration:none;
+  }
+  .flask{
+    position:absolute;right:14px;top:26px;
+    width:96px;height:132px;opacity:.92;
+  }
+
+  /* Catalog */
+  .section-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:6px 22px 14px;
+  }
+  .section-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:19px}
+  .section-head span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft)}
+  .grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:12px;
+    padding:0 18px 20px;
+  }
+  .card{
+    background:linear-gradient(170deg,rgba(201,162,75,.1), rgba(255,255,255,.02));
+    border:1px solid rgba(201,162,75,.16);
+    border-radius:18px;
+    padding:14px 14px 16px;
+    position:relative;
+  }
+  .card .thumb{
+    height:104px;border-radius:12px;
+    display:grid;place-items:center;
+    margin-bottom:12px;
+  }
+  .t1{background:radial-gradient(80% 80% at 50% 30%, #5a3b63, #2a1930)}
+  .t2{background:radial-gradient(80% 80% at 50% 30%, #7a5138, #2d1c22)}
+  .t3{background:radial-gradient(80% 80% at 50% 30%, #3f5561, #1c2529)}
+  .t4{background:radial-gradient(80% 80% at 50% 30%, #6a3d52, #2a1622)}
+  .card h3{font-family:'Fraunces',serif;font-weight:500;font-size:15px;margin-bottom:2px}
+  .card .notes{font-size:10.5px;letter-spacing:.03em;color:rgba(246,239,228,.55);margin-bottom:10px}
+  .card .row{display:flex;justify-content:space-between;align-items:center}
+  .price{font-weight:600;font-size:15px;color:var(--gold-soft)}
+  .add{
+    width:30px;height:30px;border-radius:50%;
+    background:var(--gold);color:var(--ink);
+    border:none;font-size:18px;line-height:1;
+    display:grid;place-items:center;cursor:pointer;
+  }
+  .tagline-strip{
+    text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--gold-soft);opacity:.8;padding:2px 20px 26px;
+  }
+
+  /* WhatsApp floating */
+  .wa{
+    position:sticky;bottom:16px;margin:0 18px;
+    display:flex;align-items:center;gap:12px;
+    background:#1f8f5f;
+    border-radius:100px;
+    padding:13px 18px;
+    text-decoration:none;color:#fff;
+    box-shadow:0 12px 26px -8px rgba(31,143,95,.7);
+  }
+  .wa svg{flex-shrink:0}
+  .wa b{font-size:14px;font-weight:600;display:block}
+  .wa small{font-size:11px;opacity:.85;font-weight:300}
+</style>
+</head>
+<body>
+  <div class="demo-tag">Sitio demo · así podría verse tu tienda</div>
+
+  <div class="phone">
+    <div class="top">
+      <div class="brandmark">
+        <div class="seal">É</div>
+        <div>
+          <div class="brand-name">Élan</div>
+          <div class="brand-sub">Perfumería</div>
+        </div>
+      </div>
+      <div class="menu-dots">⋯</div>
+    </div>
+
+    <div class="hero">
+      <svg class="flask" viewBox="0 0 96 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="4" width="16" height="14" rx="2" fill="#c9a24b"/>
+        <rect x="36" y="16" width="24" height="8" rx="2" fill="#e2c988"/>
+        <path d="M28 30 h40 a6 6 0 0 1 6 6 v78 a10 10 0 0 1-10 10 H32 a10 10 0 0 1-10-10 V36 a6 6 0 0 1 6-6z" fill="url(#g)" stroke="#c9a24b" stroke-width="1.5"/>
+        <ellipse cx="48" cy="78" rx="16" ry="24" fill="rgba(226,201,136,.25)"/>
+        <defs>
+          <linearGradient id="g" x1="22" y1="30" x2="74" y2="124" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#5a3b63"/><stop offset="1" stop-color="#2a1930"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="eyebrow">Colección 2026</div>
+      <h1>Tu aroma,<br><em>tu firma.</em></h1>
+      <p>Fragancias originales seleccionadas a mano. Envíos a todo Medellín y el Valle de Aburrá.</p>
+      <a href="#" class="hero-cta">Ver colección →</a>
+    </div>
+
+    <div class="section-head">
+      <h2>Más pedidos</h2>
+      <span>Nuevo</span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="thumb t1"></div>
+        <h3>Noir Élan</h3>
+        <div class="notes">Ámbar · vainilla · oud</div>
+        <div class="row"><span class="price">$189.000</span><button class="add">+</button></div>
+      </div>
+      <div class="card">
+        <div class="thumb t2"></div>
+        <h3> Soleil</h3>
+        <div class="notes">Cítrico · neroli · almizcle</div>
+        <div class="row"><span class="price">$165.000</span><button class="add">+</button></div>
+      </div>
+      <div class="card">
+        <div class="thumb t3"></div>
+        <h3>Marée</h3>
+        <div class="notes">Acuático · bergamota</div>
+        <div class="row"><span class="price">$172.000</span><button class="add">+</button></div>
+      </div>
+      <div class="card">
+        <div class="thumb t4"></div>
+        <h3>Rosé Velvet</h3>
+        <div class="notes">Rosa · pimienta · pachulí</div>
+        <div class="row"><span class="price">$198.000</span><button class="add">+</button></div>
+      </div>
+    </div>
+
+    <div class="tagline-strip">— Originales · garantía · envío el mismo día —</div>
+
+    <a href="#" class="wa">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.42 1.27 4.86L2 22l5.28-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.13c-1.55 0-3.03-.42-4.3-1.19l-.31-.18-3.13.82.84-3.05-.2-.32A8.07 8.07 0 0 1 3.87 12c0-4.48 3.65-8.13 8.13-8.13S20.13 7.52 20.13 12 16.48 20.13 12 20.13z"/>
+      </svg>
+      <div>
+        <b>Pedir por WhatsApp</b>
+        <small>Respuesta inmediata</small>
+      </div>
+    </a>
+  </div>
+</body>
+</html>

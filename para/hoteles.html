@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sistema para Hoteles y Posadas en Venezuela | Mapa, caja y cierre firmado — NERACOSU</title>
+  <meta name="description" content="Sistema de gestión hotelera hecho en Venezuela: mapa de habitaciones con los tiempos corriendo, caja en bolívares y divisas, turnos y cierre del día firmado. Operando hoy en un hotel de 12 habitaciones. Se paga una vez y es tuyo.">
+  <meta name="keywords" content="sistema para hoteles venezuela, PMS venezuela, software hotelero a medida, sistema hotel alta rotacion, motor de reservas hotel, pago movil hotel, software posadas venezuela">
+  <meta name="author" content="Neri Rafael Colón Suárez">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://neracosu.com/para/hoteles.html">
+  <meta name="geo.region" content="VE-X">
+  <meta name="geo.placename" content="La Guaira">
+  <meta name="geo.position" content="10.6031;-66.9354">
+  <meta name="ICBM" content="10.6031, -66.9354">
+
+  <meta property="og:title" content="Tu hotel factura toda la noche. Tú te enteras al día siguiente.">
+  <meta property="og:description" content="Sistema de gestión hotelera hecho en Venezuela: mapa de habitaciones con los tiempos corriendo, caja en bolívares y divisas, turnos y cierre del día firmado. Operando hoy en un hotel de 12 habitaciones. Se paga una vez y es tuyo.">
+  <meta property="og:image" content="https://neracosu.com/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://neracosu.com/para/hoteles.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:site_name" content="NERACOSU — Neri Colón">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tu hotel factura toda la noche. Tú te enteras al día siguiente.">
+  <meta name="twitter:description" content="Sistema de gestión hotelera hecho en Venezuela: mapa de habitaciones con los tiempos corriendo, caja en bolívares y divisas, turnos y cierre del día firmado. Operando hoy en un hotel de 12 habitaciones. Se paga una vez y es tuyo.">
+  <meta name="twitter:image" content="https://neracosu.com/assets/img/og-image.jpg">
+
+  <link rel="alternate" hreflang="es" href="https://neracosu.com/para/hoteles.html">
+  <link rel="alternate" hreflang="x-default" href="https://neracosu.com/para/hoteles.html">
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#070b0a">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/redesign.css">
+  <link rel="stylesheet" href="/assets/css/nicho.css">
+
+  <script type="application/ld+json">
+  [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Sistemas de gestión hotelera a medida (PMS) en Venezuela",
+    "serviceType": "Desarrollo de software hotelero",
+    "provider": {
+      "@type": "Person",
+      "name": "Neri Rafael Colón Suárez",
+      "url": "https://neracosu.com",
+      "jobTitle": "Lead Developer & Platform Architect"
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Venezuela"
+      },
+      {
+        "@type": "Country",
+        "name": "Colombia"
+      }
+    ],
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Hoteles, posadas y hospedajes"
+    },
+    "description": "Desarrollo de PMS propios, motores de reserva, integración con PMS existentes, cobros en bolívares y divisas, y bots de atención para hoteles en Venezuela.",
+    "url": "https://neracosu.com/para/hoteles.html",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "lowPrice": "1900",
+      "highPrice": "4500",
+      "offerCount": "3",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Esencial",
+          "description": "hasta 15 habitaciones",
+          "price": "1900",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://neracosu.com/para/hoteles.html#precios"
+        },
+        {
+          "@type": "Offer",
+          "name": "Profesional",
+          "description": "16 a 40 habitaciones",
+          "price": "2900",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://neracosu.com/para/hoteles.html#precios"
+        },
+        {
+          "@type": "Offer",
+          "name": "Completo",
+          "description": "más de 40 habitaciones",
+          "price": "4500",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://neracosu.com/para/hoteles.html#precios"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://neracosu.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Soluciones",
+        "item": "https://neracosu.com/para/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Hoteles y posadas",
+        "item": "https://neracosu.com/para/hoteles.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Tengo que botar el sistema hotelero que ya uso?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No necesariamente. Si su PMS funciona y solo le falta vender en línea o cobrar en bolívares, se construye un conector por encima. Ya existe uno propio funcionando contra un PMS comercial. Reemplazar es una opción, no una obligación."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se pierde la información del sistema hotelero anterior al migrar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. En Hotel Marte se migraron 607 clientes, 1.118 movimientos de caja y 423 estadías desde el sistema que alquilaban. La migración se prueba completa antes de cambiar nada y el sistema anterior se mantiene disponible durante la transición."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta un PMS propio frente a la mensualidad de un SaaS hotelero?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es una inversión única en lugar de una renta perpetua. La comparación práctica es cuántos meses de la mensualidad actual equivalen al desarrollo; a partir de ese punto lo que no se paga queda como margen del hotel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿El bot de reservas puede darle información equivocada a mis huéspedes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Está diseñado para que no pueda. El bot no inventa datos: cada precio, disponibilidad o número de reserva se consulta a la API antes de responder, y el servidor recalcula todo al confirmar la transacción."
+        }
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-inner">
+      <a href="/" class="flex items-center" aria-label="NERACOSU — Inicio">
+        <span class="flex items-center gap-2_5">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#5ed29c"/>
+            <path d="M9 22V10L18 22V10" stroke="#070b0a" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"/>
+            <circle cx="22.5" cy="20.5" r="1.6" fill="#070b0a"/>
+          </svg>
+          <span class="font-jakarta font-extrabold tracking-tight" style="font-size:15px;color:#fff;">NERACOSU<span style="color:#5ed29c;">.</span></span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Principal">
+        <a class="nav-link" href="/para/">SOLUCIONES</a>
+        <a class="nav-link" href="/#servicios">SERVICIOS</a>
+        <a class="nav-link nav-link-featured" href="/calculadora.html">CALCULADORA</a>
+        <a class="nav-link" href="/#portafolio">PORTAFOLIO</a>
+        <a class="nav-link" href="/hoja-de-vida.html">CV</a>
+        <a class="nav-link" href="/blog/">BLOG</a>
+      </nav>
+
+      <div class="nav-cta-wrap">
+        <a href="/#contacto" class="btn-primary" style="padding:11px 20px;font-size:12px;">
+          Hablemos
+          <svg class="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <button class="nav-burger" type="button" data-action="open-menu" aria-label="Abrir menú">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-menu" aria-hidden="true">
+    <div class="flex items-center justify-between" style="margin-bottom:56px;">
+      <span class="flex items-center gap-2_5">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#5ed29c"/>
+          <path d="M9 22V10L18 22V10" stroke="#070b0a" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"/>
+          <circle cx="22.5" cy="20.5" r="1.6" fill="#070b0a"/>
+        </svg>
+        <span class="font-jakarta font-extrabold tracking-tight" style="font-size:15px;color:#fff;">NERACOSU<span style="color:#5ed29c;">.</span></span>
+      </span>
+      <button type="button" data-action="close-menu" aria-label="Cerrar menú" style="width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav-list" aria-label="Móvil">
+      <a class="mobile-nav-link" href="/para/"><span class="mobile-nav-num">01</span>SOLUCIONES</a>
+      <a class="mobile-nav-link" href="/#servicios"><span class="mobile-nav-num">02</span>SERVICIOS</a>
+      <a class="mobile-nav-link mobile-nav-link-featured" href="/calculadora.html"><span class="mobile-nav-num">03</span>CALCULADORA</a>
+      <a class="mobile-nav-link" href="/#portafolio"><span class="mobile-nav-num">04</span>PORTAFOLIO</a>
+      <a class="mobile-nav-link" href="/hoja-de-vida.html"><span class="mobile-nav-num">05</span>HOJA DE VIDA</a>
+      <a class="mobile-nav-link" href="/blog/"><span class="mobile-nav-num">06</span>BLOG</a>
+    </nav>
+    <div style="padding-top:32px;padding-bottom:24px;">
+      <a href="/#contacto" class="btn-primary" style="width:100%;justify-content:center;">
+        Hablemos
+        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <section class="nicho-hero">
+      <div class="container">
+        <div class="crumbs"><a href="/">Inicio</a><span>/</span><a href="/para/">Soluciones</a><span>/</span>Hoteles y posadas</div>
+        <span class="eyebrow">Gestión hotelera · Hecho en Venezuela</span>
+        <h1 class="nicho-hero-title">Tu hotel factura toda la noche. Tú te enteras <span class="font-serif-italic" style="color:#5ed29c;">al día siguiente</span>.</h1>
+        <p class="nicho-hero-sub">
+          Un sistema hecho para cómo se trabaja de verdad en un hotel venezolano: el mapa de habitaciones con
+          los tiempos corriendo, la caja en bolívares y en divisas, y el cierre del día firmado. Todo desde el
+          teléfono.
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="#hablemos" class="btn-primary">Quiero verlo funcionando
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#cuenta" class="btn-ghost">Hacer la cuenta con mis números</a>
+        </div>
+        <p style="font-size:13.5px;color:var(--text-dim);margin-top:26px;max-width:60ch;line-height:1.6;">
+          Operando hoy en un hotel de 12 habitaciones en Valencia, Carabobo, que migró desde su sistema anterior
+          sin perder un registro. Y detrás del sitio de <a href="https://hotelviplaguaira.com" target="_blank" rel="noopener" style="color:#5ed29c;">Hotel VIP La Guaira</a>.
+        </p>
+
+        <div class="proof-strip">
+          <div><div class="v">17</div><div class="l">Módulos en uso, del mapa al cierre de caja</div></div>
+          <div><div class="v">1.011</div><div class="l">Pruebas automáticas antes de cada actualización</div></div>
+          <div><div class="v">2.148</div><div class="l">Registros migrados del sistema anterior, sin pérdidas</div></div>
+          <div><div class="v">62</div><div class="l">Versiones publicadas, todas explicadas al personal</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cuenta">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:44px;">
+          <span class="eyebrow">Haz la cuenta con tus números</span>
+          <h2 class="section-title">Los minutos que regalas <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">tienen precio</span></h2>
+          <p class="section-subtitle">
+            El huésped llega, paga, compra algo, camina hasta el cuarto. En la mayoría de los hoteles el reloj
+            arrancó cuando recepción confirmó, así que esos minutos se los comió él y los pagaste tú. Pon tus
+            números y mira cuánto es al mes.
+          </p>
+        </div>
+
+        <div class="calcfuga">
+          <div class="calcfuga-grid">
+            <div class="calcfuga-field">
+              <label for="cf-entradas">Entradas por día</label>
+              <span class="calcfuga-valor" id="cf-entradas-val" aria-hidden="true">18</span>
+              <input type="range" id="cf-entradas" min="1" max="80" step="1" value="18"
+                     data-salida="cf-entradas-val" data-formato="n">
+              <div class="calcfuga-topes" aria-hidden="true"><span>1</span><span>80</span></div>
+              <div class="hint">Cuántas habitaciones se venden en 24 horas, contando repeticiones.</div>
+            </div>
+            <div class="calcfuga-field">
+              <label for="cf-minutos">Minutos perdidos por entrada</label>
+              <span class="calcfuga-valor" id="cf-minutos-val" aria-hidden="true">12 min</span>
+              <input type="range" id="cf-minutos" min="0" max="60" step="1" value="12"
+                     data-salida="cf-minutos-val" data-formato="n" data-sufijo="min">
+              <div class="calcfuga-topes" aria-hidden="true"><span>0</span><span>60</span></div>
+              <div class="hint">Lo que tarda el cobro, la compra y llegar al cuarto.</div>
+            </div>
+            <div class="calcfuga-field">
+              <label for="cf-precio">Precio del bloque más vendido</label>
+              <span class="calcfuga-valor" id="cf-precio-val" aria-hidden="true">Bs 12.600</span>
+              <input type="range" id="cf-precio" min="1000" max="60000" step="100" value="12600"
+                     data-salida="cf-precio-val" data-formato="bs">
+              <div class="calcfuga-topes" aria-hidden="true"><span>Bs 1.000</span><span>Bs 60.000</span></div>
+              <div class="hint">El de 4 horas, o el que más rote en tu hotel.</div>
+            </div>
+            <div class="calcfuga-field">
+              <label for="cf-horas">Horas de ese bloque</label>
+              <span class="calcfuga-valor" id="cf-horas-val" aria-hidden="true">4 h</span>
+              <input type="range" id="cf-horas" min="1" max="12" step="1" value="4"
+                     data-salida="cf-horas-val" data-formato="n" data-sufijo="h">
+              <div class="calcfuga-topes" aria-hidden="true"><span>1</span><span>12</span></div>
+              <div class="hint">Para saber cuánto vale una hora de habitación.</div>
+            </div>
+          </div>
+
+          <div class="calcfuga-out">
+            <div class="big"><span id="cf-horas-mes">108</span> <small>h de habitación al mes</small></div>
+            <p class="txt">
+              regaladas cada mes, solo en el rato entre que el huésped paga y entra al cuarto.
+              Equivale a <strong id="cf-bs-mes">Bs 340.200</strong> que se van sin que nadie los anote.
+            </p>
+            <p class="calcfuga-note">
+              Es aritmética con tus propios números, no una promesa. Y es una sola de las cuatro fugas de aquí abajo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:48px;">
+          <span class="eyebrow">Lo que cuesta no tener control</span>
+          <h2 class="section-title">Cuatro fugas que <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">nadie anota</span></h2>
+          <p class="section-subtitle">
+            Ninguna es un robo. Son huecos de operación: cosas que pasan a las tres de la mañana, que nadie
+            registra, y que a fin de mes no se pueden explicar.
+          </p>
+        </div>
+
+        <div class="fugas">
+          <div class="fuga">
+            <div class="fuga-num">01</div>
+            <div>
+              <h3>El tiempo que le regalas al huésped</h3>
+              <p>El de la cuenta de arriba. Se paga en habitación disponible, que es lo único que un hotel de alta rotación no puede fabricar.</p>
+              <div class="fuga-fix">
+                <span class="k">Cómo se cierra</span>
+                <p>Minutos de gracia configurables: el reloj arranca cuando el huésped entra, no cuando se firma el papel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fuga">
+            <div class="fuga-num">02</div>
+            <div>
+              <h3>Cada quien cobrando con la tasa que le parece</h3>
+              <p>Tú fijas la tasa en la mañana. Al mediodía alguien cobra con otra porque la vio en el teléfono. No hay mala intención, pero al cerrar el mes los números no dan y no hay manera de saber dónde se torció.</p>
+              <div class="fuga-fix">
+                <span class="k">Cómo se cierra</span>
+                <p>Una sola tasa, la tuya, aplicada a todo el sistema y a la página web. Solo un administrador la cambia, y cada cambio queda con nombre y hora.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fuga">
+            <div class="fuga-num">03</div>
+            <div>
+              <h3>La plata que sale de la gaveta sin que nadie la apruebe</h3>
+              <p>Un taxi por insumos, una compra de urgencia. Sale efectivo a las tres de la mañana y la explicación llega dos días después, de memoria, cuando ya nadie se acuerda del monto exacto.</p>
+              <div class="fuga-fix">
+                <span class="k">Cómo se cierra</span>
+                <p>El egreso se carga en el momento, pero el día no se cierra hasta que un administrador aprueba cada salida de dinero.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fuga">
+            <div class="fuga-num">04</div>
+            <div>
+              <h3>Comisiones por reservas que ya eran tuyas</h3>
+              <p>El huésped que te conoce igual entra por el portal, y ahí se va entre el 15 % y el 20 % de esa noche. No es captación nueva: es tu propio cliente pagando peaje.</p>
+              <div class="fuga-fix">
+                <span class="k">Cómo se cierra</span>
+                <p>Página de reservas propia, con anticipo por pago móvil y sin comisión de nadie. El enlace se comparte por WhatsApp o Instagram.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:48px;">
+          <span class="eyebrow">Una noche cualquiera</span>
+          <h2 class="section-title">Así se ve el <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">turno completo</span></h2>
+          <p class="section-subtitle">No es una demostración armada. Es el recorrido que hace el personal de un hotel de alta rotación, tal como quedó construido.</p>
+        </div>
+
+        <div style="max-width:820px;">
+          <div class="turno">
+            <div class="turno-step">
+              <span class="turno-hora">21:10</span>
+              <h3>Llega una pareja sin reserva</h3>
+              <p>Recepción abre el mapa, toca una habitación libre y hace el check-in en una sola pantalla: cédula, foto del documento, acompañantes y cobro. Si quieren llevarse algo de la nevera, entra en la misma cuenta y el tiempo todavía no corre.</p>
+            </div>
+            <div class="turno-step">
+              <span class="turno-hora">21:14</span>
+              <h3>Paga mitad en efectivo y mitad por pago móvil</h3>
+              <p>El cobro se parte en dos métodos, cada uno con su moneda, su tasa congelada y su referencia. La captura del comprobante se adjunta ahí mismo, desde la cámara del teléfono.</p>
+            </div>
+            <div class="turno-step">
+              <span class="turno-hora">01:05</span>
+              <h3>La habitación entra en «por vencer»</h3>
+              <p>El mapa la pinta distinto y suena un aviso. Cuando se pasa del tiempo el tono se vuelve insistente hasta que alguien se ocupa. Las horas extra se cobran por hora empezada, con la gracia que tú definas.</p>
+            </div>
+            <div class="turno-step">
+              <span class="turno-hora">01:40</span>
+              <h3>Salida y revisión</h3>
+              <p>El checkout calcula el saldo con los consumos y las horas extra, permite marcar daños y lo que quedó roto, y deja la habitación esperando limpieza hasta que alguien la registre.</p>
+            </div>
+            <div class="turno-step">
+              <span class="turno-hora">08:00</span>
+              <h3>Entrega de turno</h3>
+              <p>Quien sale cuenta el efectivo y marca el checklist de lo que entrega. Quien entra lo recibe y anota si algo no cuadra. Corregir lo declarado después exige que un administrador lo apruebe.</p>
+            </div>
+            <div class="turno-step">
+              <span class="turno-hora">09:30</span>
+              <h3>Tú abres el teléfono</h3>
+              <p>Ves el día cerrado: cuánto entró por habitaciones, cuánto por la tienda, qué salió, quién lo cargó y qué no cuadró. Firmas y esos números quedan congelados para siempre.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:48px;">
+          <span class="eyebrow">Control, no vigilancia</span>
+          <h2 class="section-title">Lo que el sistema <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">no deja pasar</span></h2>
+          <p class="section-subtitle">Tu gente no necesita menos confianza. Necesita un sistema donde lo que hicieron quede anotado, para que nadie cargue con la culpa de otro.</p>
+        </div>
+
+        <div class="modulos-grid">
+          <div class="modulo">
+            <span class="num">01</span>
+            <h3>Cada quien ve lo suyo</h3>
+            <p>Recepción cobra y atiende, pero no cambia precios, ni la tasa, ni anula un consumo. Las camareras registran su trabajo y no ven la caja. Tú ves todo.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">02</span>
+            <h3>Nada se borra</h3>
+            <p>Una reserva se cancela con motivo, no se elimina. Un producto se corrige, no desaparece. Una cuenta se desactiva, nunca se borra.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">03</span>
+            <h3>Los montos quedan congelados</h3>
+            <p>Cada cobro guarda su par en bolívares y en divisa con la tasa de ese momento. El arqueo de ayer no cambia de número mañana.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">04</span>
+            <h3>Un día firmado no se toca</h3>
+            <p>Al firmar el cierre las cifras se congelan y el día se bloquea. Reabrirlo exige ser administrador, dar un motivo, y queda anotado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:48px;">
+          <span class="eyebrow">No es una promesa</span>
+          <h2 class="section-title">Está <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">operando hoy</span></h2>
+          <p class="section-subtitle">Se construyó trabajando con el dueño de un hotel real, corrigiendo cada semana lo que la operación mostraba. Cada cambio queda registrado y el personal lo lee explicado en su propia pantalla, sin términos técnicos.</p>
+        </div>
+
+        <div class="caso" style="margin-bottom:24px;">
+          <div class="caso-head">
+            <span class="caso-badge">Sistema completo · Valencia, Carabobo</span>
+            <span class="caso-url">Referencia disponible a pedido</span>
+          </div>
+          <h3>Hotel de 12 habitaciones</h3>
+          <p style="color:var(--text-muted);line-height:1.65;margin:0;font-size:15.5px;">
+            Alta rotación, dos categorías y tres recepcionistas por turnos de 24 horas. Migró desde el sistema
+            que alquilaba y hoy opera todo aquí: mapa, caja, turnos y cierre del día.
+          </p>
+          <ul class="caso-bullets">
+            <li>2.148 registros migrados del sistema anterior —clientes, movimientos de caja y estadías— antes de encender nada.</li>
+            <li>Montos congelados con la tasa de su momento, para que el arqueo histórico nunca cambie de número.</li>
+            <li>Manejo correcto del huso horario de Venezuela, donde un error de zona horaria mueve una estadía de día.</li>
+            <li>1.011 pruebas automáticas corriendo antes de cada actualización, contra una base separada de la real.</li>
+          </ul>
+        </div>
+
+        <div class="caso">
+          <div class="caso-head">
+            <span class="caso-badge">Sitio y canal de reservas · La Guaira</span>
+            <span class="caso-url">hotelviplaguaira.com</span>
+          </div>
+          <h3>Hotel VIP La Guaira</h3>
+          <p style="color:var(--text-muted);line-height:1.65;margin:0;font-size:15.5px;">
+            Un complejo grande, con cuatro categorías de habitación, restaurante, casino y spa. Le desarrollamos
+            su página con el catálogo de habitaciones, las reservas en línea y la atención por WhatsApp.
+          </p>
+          <ul class="caso-bullets">
+            <li>Conector propio con el PMS que ya usaba el hotel: once funciones que consultan, crean, cancelan y corrigen precios sin intervención manual.</li>
+            <li>Once métodos de cobro en una sola caja, incluyendo verificación de USDT directamente en la cadena.</li>
+            <li>Pases de acceso con código QR y vista previa al compartirse por WhatsApp o Telegram.</li>
+            <li>55 rutas de API internas sosteniendo la operación.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="precios">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:44px;">
+          <span class="eyebrow">Precios de apertura</span>
+          <h2 class="section-title">Se paga una vez y el sistema <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">es tuyo</span></h2>
+          <p class="section-subtitle">
+            No es una mensualidad de la que no te puedes bajar. Pagas el desarrollo, el sistema queda
+            instalado en tu servidor con tu dominio, y el código es tuyo. El primer año el servidor y el
+            dominio van incluidos.
+          </p>
+        </div>
+
+        <div class="apertura">
+          <span class="apertura-sello">Por qué cuesta esto y no diez veces más</span>
+          <p>
+            Porque de verdad me cuesta menos hacerlo, no porque sea menos sistema. Son tres razones y
+            las tres se pueden comprobar.
+          </p>
+          <ol class="apertura-razones">
+            <li>
+              <strong>El sistema ya está escrito.</strong> Son más de cien mil líneas de código que
+              construí y que son mías. No pagas que lo invente: pagas que lo adapte a tu hotel.
+            </li>
+            <li>
+              <strong>17 años de oficio.</strong> Ya cometí los errores caros en proyectos
+              anteriores. Lo que a un equipo nuevo le toma tres intentos, acá sale al primero, y eso
+              son horas que no te facturo.
+            </li>
+            <li>
+              <strong>Trabajo con las herramientas de 2026.</strong> Me adapté a ellas en vez de
+              pelearme: el mismo trabajo toma hoy una fracción de las horas que tomaba hace tres años.
+              Quien te cobra como en 2019 te está cobrando su lentitud.
+            </li>
+          </ol>
+          <p class="apertura-cierre">
+            A eso se suma que <strong>estoy abriendo este rubro</strong> y quiero los primeros casos
+            para mostrar. Cuando los tenga, estos precios suben.
+          </p>
+        </div>
+
+        <div class="planes">
+          <div class="plan">
+            <span class="plan-nombre">Esencial</span>
+            <span class="plan-alcance">hasta 15 habitaciones</span>
+            <div class="plan-precio">$1.900<small>pago único · en 3 partes</small></div>
+            <ul class="plan-lista">
+              <li>Mapa de habitaciones con los tiempos corriendo</li>
+              <li>Check-in y checkout con cobro en varias monedas</li>
+              <li>Caja del día y cierre firmado</li>
+              <li>Página de reservas propia, sin comisión</li>
+              <li>Ficha de clientes e historial</li>
+            </ul>
+          </div>
+
+          <div class="plan plan-destacado">
+            <span class="plan-cinta">El que está operando hoy</span>
+            <span class="plan-nombre">Profesional</span>
+            <span class="plan-alcance">16 a 40 habitaciones</span>
+            <div class="plan-precio">$2.900<small>pago único · en 3 partes</small></div>
+            <ul class="plan-lista">
+              <li class="heredado">Todo lo del plan Esencial</li>
+              <li>Turnos con entrega de caja y arqueo por persona</li>
+              <li>Control cruzado entre camareras y recepción</li>
+              <li>Tienda o minibar con su inventario</li>
+              <li>Reportes por rango de días y por método de cobro</li>
+              <li>Permisos por persona y bitácora de quién hizo qué</li>
+            </ul>
+          </div>
+
+          <div class="plan">
+            <span class="plan-nombre">Completo</span>
+            <span class="plan-alcance">más de 40 habitaciones</span>
+            <div class="plan-precio">$4.500<small>pago único · en 3 partes</small></div>
+            <ul class="plan-lista">
+              <li class="heredado">Todo lo del plan Profesional</li>
+              <li>Lencería y equipamiento por habitación</li>
+              <li>Tickets de mantenimiento con responsable</li>
+              <li>Avisos al teléfono del personal, aunque esté bloqueado</li>
+              <li>Atención por WhatsApp conectada al sistema</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="plan-cambio">
+          <strong>¿Hoy le pagas a otro sistema?</strong> Se te descuentan 1.000 dólares del plan que
+          elijas. Es el mismo trato que recibió el hotel donde ya está funcionando, que venía pagando
+          una licencia anual y no quería pagar dos cosas a la vez mientras hacíamos el cambio.
+        </div>
+
+        <div class="entrada">
+          <div>
+            <span class="entrada-eyebrow">¿Todavía no quieres comprometerte?</span>
+            <h3>Diagnóstico técnico y plan por fases</h3>
+            <p>
+              Reviso tu operación y lo que ya tienes montado, y te entrego un documento con qué se puede
+              automatizar, en qué orden conviene hacerlo, qué riesgos tiene y cuánto costaría cada fase.
+              Te sirva conmigo o con cualquier otro.
+            </p>
+            <p>
+              <strong>Si después contratas, se descuenta completo del proyecto.</strong> Y si del diagnóstico
+              sale que no te hace falta un sistema, te lo digo ahí y te ahorro varios miles.
+            </p>
+          </div>
+          <div class="entrada-precio">
+            <span class="n">$170</span>
+            <span class="d">pago único · una semana de entrega · se descuenta si contratas</span>
+          </div>
+        </div>
+
+        <div class="precio-notas">
+          <div class="precio-nota">
+            <h4>Siempre incluido</h4>
+            <ul>
+              <li>Migración de tus clientes, movimientos y estadías</li>
+              <li>Servidor y dominio el primer año</li>
+              <li>Capacitación del personal y visita guiada dentro del sistema</li>
+              <li>90 días de garantía sobre todo lo entregado</li>
+            </ul>
+          </div>
+          <div class="precio-nota">
+            <h4>Lo que sigues pagando después</h4>
+            <ul>
+              <li>Servidor: unos 25 dólares al mes, contratado por ti</li>
+              <li>Dominio: unos 15 dólares al año</li>
+              <li>Hacia mí: nada obligatorio. Soporte a demanda, cotizado y aprobado antes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:44px;">
+          <span class="eyebrow">La cuenta de tres años</span>
+          <h2 class="section-title">Alquilar sale más caro <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">que tenerlo</span></h2>
+          <p class="section-subtitle">
+            Un sistema hotelero por suscripción para un hotel de 10 a 30 habitaciones cuesta hoy entre 69 y 150
+            dólares al mes, y de 50 habitaciones para arriba entre 200 y 500. Casi siempre con la instalación
+            aparte. Y el día que dejas de pagar, te quedas sin sistema y sin datos.
+          </p>
+        </div>
+
+        <div class="tabla-wrap" style="max-width:760px;">
+          <table class="compara">
+            <thead>
+              <tr><th>Acumulado</th><th>Suscripción típica</th><th>Sistema propio</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Año 1</td><td>$1.400</td><td>$2.900</td></tr>
+              <tr><td>Año 2</td><td>$2.600</td><td>$3.215</td></tr>
+              <tr class="win"><td>Año 3</td><td>$3.800</td><td>$3.530</td></tr>
+              <tr class="win"><td>Año 5</td><td>$6.200</td><td>$4.160</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:13px;color:var(--text-dim);margin-top:18px;line-height:1.6;max-width:70ch;">
+          Suscripción calculada a 100 dólares al mes más 200 de instalación, que es el medio del rango del
+          mercado. Sistema propio con servidor y dominio incluidos el primer año y unos 315 al año después.
+          Desde el tercer año el sistema propio cuesta menos, y a partir de ahí la diferencia solo crece.
+        </p>
+        <p style="font-size:14.5px;color:var(--text-muted);margin-top:24px;line-height:1.65;max-width:70ch;">
+          Se paga una vez y el sistema es tuyo: queda instalado en tu servidor, con tu dominio, y el código es
+          tuyo. Si hoy le pagas a otro sistema, eso se descuenta — es el mismo trato que recibió el hotel donde
+          ya está funcionando, que venía pagando una licencia anual y no quería pagar dos cosas a la vez mientras
+          hacíamos el cambio.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:40px;">
+          <span class="eyebrow">Lo que todos preguntan</span>
+          <h2 class="section-title">Antes de <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">decir que no</span></h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-q">Ya tengo un sistema y no quiero perder mis datos</div>
+            <div class="faq-a">El hotel donde está funcionando venía de otro sistema. Se migraron sus clientes, sus movimientos y sus estadías antes de encender nada, y se trabajó en paralelo hasta que el personal estuvo cómodo. La migración es parte del trabajo, no un extra.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Mi gente no se maneja bien con computadoras</div>
+            <div class="faq-a">Por eso está hecho para el teléfono y en el idioma en que se habla en el mostrador. Trae una visita guiada que recorre cada pantalla, y cada vez que se agrega algo el personal lo lee explicado sin jerga.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">¿Y si mañana desapareces?</div>
+            <div class="faq-a">El sistema queda instalado en un servidor tuyo, con tus datos y el código completo. No es un alquiler del que no te puedes bajar: si algún día trabajas con otro, se lo entregas y sigue.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Cobramos por pago móvil, Zelle y efectivo en dos monedas</div>
+            <div class="faq-a">Está construido exactamente para eso. Cada cobro puede partirse en varios métodos, cada uno con su moneda y su referencia obligatoria, y la captura del comprobante se adjunta desde la cámara. Si prefieres que la validación sea automática contra el banco, también lo hago: es lo que corre en otros proyectos míos.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">No quiero pelearme con mi personal</div>
+            <div class="faq-a">Al contrario. Cuando el arqueo se calcula solo y cada movimiento tiene nombre, se terminan las discusiones de «a mí me faltó» y «yo no fui». La primera vez que alguien no pueda ser culpado injustamente, lo vas a ver en su cara.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">¿Cuánto cuesta y cuánto tarda?</div>
+            <div class="faq-a">Depende del tamaño del hotel y de cuánto haya que migrar, así que el número sale después de una conversación de veinte minutos, no antes. Lo que sí te puedo adelantar: se entrega por partes, empezando por lo que más te duele, y cada parte queda funcionando en tu hotel antes de pasar a la siguiente.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonios" data-testimonios-seccion hidden>
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:44px;">
+          <span class="eyebrow">Lo dicen ellos</span>
+          <h2 class="section-title">Lo que dicen los <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">hoteleros</span> con los que ya trabajé</h2>
+        </div>
+        <div class="testimonios" data-testimonios="hoteles"></div>
+      </div>
+    </section>
+
+    <section class="section" id="hablemos">
+      <div class="container">
+        <div style="max-width:760px;margin:0 auto;">
+          <div class="cta-block">
+            <span class="eyebrow">El siguiente paso</span>
+            <h2>Te lo muestro funcionando, con tu operación</h2>
+            <p>
+              Una conversación de veinte minutos. Me cuentas cómo cobras, cómo entregan el turno y qué te hace
+              ruido hoy. Yo te muestro el sistema andando y te digo con franqueza si te sirve o no.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+              <a href="https://wa.me/584222707095?text=Hola%20Neri%2C%20tengo%20un%20hotel%20y%20quiero%20ver%20el%20sistema%20funcionando" target="_blank" rel="noopener" class="btn-primary">Escribir por WhatsApp
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="mailto:neracosu@gmail.com?subject=Sistema%20para%20mi%20hotel" class="btn-ghost">Prefiero por correo</a>
+            </div>
+            <div class="cta-proof">
+              Sin presentación de ventas. Si no te sirve, te lo digo yo primero.
+              <cite>WhatsApp 0422-270 7095 · neracosu@gmail.com</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="margin-bottom:32px;">
+          <span class="eyebrow">Otras industrias</span>
+          <h2 class="section-title" style="font-size:clamp(22px,2.6vw,30px);">También construyo para</h2>
+        </div>
+        <div class="nichos-row">
+          <a class="nicho-chip" href="/para/restaurantes-y-bares.html"><div class="t">Restaurantes y bares</div><div class="d">Comandas a cocina, mesas, POS y delivery</div></a>
+          <a class="nicho-chip" href="/para/cobros-y-pagos.html"><div class="t">Cobros y pagos</div><div class="d">Pago móvil validado solo, C2P, USDT</div></a>
+          <a class="nicho-chip" href="/para/reservas.html"><div class="t">Reservas y taquilla</div><div class="d">Canchas, eventos, entradas y aforo</div></a>
+          <a class="nicho-chip" href="/para/integraciones-api-y-bots.html"><div class="t">API, bots e integraciones</div><div class="d">Conectar lo que ya tienes con lo que necesitas</div></a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+    (function () {
+      var ids = ['cf-entradas', 'cf-minutos', 'cf-precio', 'cf-horas'];
+      var campos = {};
+      for (var i = 0; i < ids.length; i++) {
+        campos[ids[i]] = document.getElementById(ids[i]);
+        if (!campos[ids[i]]) return;
+      }
+      var salidaHoras = document.getElementById('cf-horas-mes');
+      var salidaBs = document.getElementById('cf-bs-mes');
+      var fmt = new Intl.NumberFormat('es-VE', { maximumFractionDigits: 0 });
+
+      function num(el, min) {
+        var v = parseFloat(el.value);
+        if (!isFinite(v) || v < min) return min;
+        return v;
+      }
+
+      function recalcular() {
+        var entradas = num(campos['cf-entradas'], 0);
+        var minutos = num(campos['cf-minutos'], 0);
+        var precio = num(campos['cf-precio'], 0);
+        var horasBloque = num(campos['cf-horas'], 1);
+
+        var horasMes = (entradas * minutos * 30) / 60;
+        var precioHora = precio / horasBloque;
+        var bsMes = horasMes * precioHora;
+
+        salidaHoras.textContent = fmt.format(horasMes);
+        salidaBs.textContent = 'Bs ' + fmt.format(bsMes);
+      }
+
+      for (var j = 0; j < ids.length; j++) {
+        campos[ids[j]].addEventListener('input', recalcular);
+      }
+      recalcular();
+    })();
+    </script>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-glow"></div>
+    <div class="container" style="position:relative;">
+      <div class="wordmark">NERACOSU<span class="dot">.</span></div>
+      <div class="footer-grid">
+        <div>
+          <span class="flex items-center gap-2_5">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="#5ed29c"/>
+              <path d="M9 22V10L18 22V10" stroke="#070b0a" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"/>
+              <circle cx="22.5" cy="20.5" r="1.6" fill="#070b0a"/>
+            </svg>
+            <span class="font-jakarta font-extrabold tracking-tight" style="font-size:15px;color:#fff;">NERACOSU<span style="color:#5ed29c;">.</span></span>
+          </span>
+          <p style="font-size:13px;color:rgba(255,255,255,0.55);margin-top:16px;max-width:320px;line-height:1.6;">Hecho con código y café desde La Guaira, Venezuela. Construyendo productos digitales que venden desde 2009.</p>
+          <div class="flex items-center gap-2" style="margin-top:20px;">
+            <a href="https://github.com/neracosu" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            <a href="https://linkedin.com/in/ingnrcs" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://instagram.com/Ing.nrcs" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="https://wa.me/584222707095" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Soluciones</div>
+          <a href="/para/citas-y-servicios.html" class="footer-link">Servicios con cita</a>
+          <a href="/para/comercio-y-tienda.html" class="footer-link">Comercio e inventario</a>
+          <a href="/para/hoteles.html" class="footer-link">Hoteles y posadas</a>
+          <a href="/para/restaurantes-y-bares.html" class="footer-link">Restaurantes y bares</a>
+          <a href="/para/cobros-y-pagos.html" class="footer-link">Cobros y pagos</a>
+          <a href="/para/reservas.html" class="footer-link">Reservas y taquilla</a>
+          <a href="/para/logistica-y-aduana.html" class="footer-link">Logística y aduana</a>
+          <a href="/para/integraciones-api-y-bots.html" class="footer-link">API, bots e integraciones</a>
+        </div>
+        <div>
+          <div class="footer-heading">Navegación</div>
+          <a href="/calculadora.html" class="footer-link" style="color:#5ed29c;">Calculadora</a>
+          <a href="/#portafolio" class="footer-link">Portafolio</a>
+          <a href="/#proceso" class="footer-link">Proceso</a>
+          <a href="/#sobre-mi" class="footer-link">Sobre mí</a>
+          <a href="/hoja-de-vida.html" class="footer-link">Hoja de Vida</a>
+          <a href="/blog/" class="footer-link">Blog</a>
+          <a href="/#contacto" class="footer-link">Contacto</a>
+        </div>
+        <div>
+          <div class="footer-heading">Contacto</div>
+          <a href="mailto:neracosu@gmail.com" class="footer-link">neracosu@gmail.com</a>
+          <a href="tel:+584222707095" class="footer-link">+58 422 270 7095</a>
+          <span class="footer-link">La Guaira, Venezuela</span>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <div>© 2026 Neri Colón. Todos los derechos reservados.</div>
+        <div>Disponible para proyectos remotos en todo el mundo.</div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/584222707095?text=Hola%20Neri%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20hoteles" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </a>
+
+  <script src="/assets/js/redesign.js" defer></script>
+  <script src="/assets/js/testimonios.js" defer></script>
+  <script src="/assets/js/asistente.js" defer></script>
+  <script src="/assets/js/calc-fuga.js" defer></script>
+</body>
+</html>

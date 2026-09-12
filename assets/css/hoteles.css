@@ -1,0 +1,557 @@
+/* =========================================================================
+   Sistema de gestion para hoteles — estilos propios de /servicios/hoteles.html
+   =========================================================================
+   Usa los tokens de unify-2026.css (fondo #070b0a, acento #5ed29c, Inter).
+   Aca solo viven los bloques que no existen en el resto del sitio: el mapa de
+   habitaciones, la calculadora, las fugas, los planes, la tabla de costos y
+   la ficha del asistente de WhatsApp.
+
+   El acento verde del sitio queda RESERVADO a la accion y a lo semantico. Lo
+   que no es accion usa los grises del sistema: un boton solo se ve si es lo
+   unico de su color en la pantalla. */
+
+.hoteles-mono {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------ hero + mapa */
+
+.hoteles-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 62rem) {
+  .hoteles-hero__grid { grid-template-columns: 1.02fr 0.98fr; }
+}
+
+.hoteles-hero__nota {
+  margin-top: 1.5rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--border-color, rgba(255, 255, 255, 0.2));
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+  font-size: 0.92rem;
+}
+
+.hoteles-mapa {
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 14px;
+  background: var(--bg-secondary, #0d1311);
+  padding: 1rem;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+.hoteles-mapa__barra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+.hoteles-mapa__titulo {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+
+.hoteles-mapa__reloj {
+  font-size: 0.8rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+
+.hoteles-mapa__grilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+@media (min-width: 26rem) {
+  .hoteles-mapa__grilla { grid-template-columns: repeat(4, 1fr); }
+}
+
+.hoteles-cuarto {
+  --color: rgba(255, 255, 255, 0.45);
+  --tenue: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-left: 3px solid var(--color);
+  border-radius: 8px;
+  background: var(--tenue);
+  padding: 0.55rem 0.5rem;
+  min-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Los estados repiten los colores que el propio sistema usa en el mapa. */
+.hoteles-cuarto--libre { --color: #5ed29c; --tenue: rgba(94, 210, 156, 0.1); }
+.hoteles-cuarto--ocupada { --color: #8fa8b4; --tenue: rgba(143, 168, 180, 0.1); }
+.hoteles-cuarto--vence { --color: #e8a53c; --tenue: rgba(232, 165, 60, 0.13); }
+.hoteles-cuarto--vencida { --color: #e5544a; --tenue: rgba(229, 84, 74, 0.14); }
+.hoteles-cuarto--limpieza { --color: #22d3ee; --tenue: rgba(34, 211, 238, 0.1); }
+
+.hoteles-cuarto__num { font-size: 1.05rem; font-weight: 700; line-height: 1; }
+
+.hoteles-cuarto__estado {
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.hoteles-cuarto__tiempo {
+  font-size: 0.76rem;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.78));
+}
+
+.hoteles-cuarto--vencida .hoteles-cuarto__tiempo { color: #e5544a; }
+
+/* ------------------------------------------------------------ calculadora */
+
+.hoteles-cuenta {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 14px;
+  background: var(--bg-card, rgba(255, 255, 255, 0.03));
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+@media (min-width: 54rem) {
+  .hoteles-cuenta { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+
+.hoteles-campo { margin-bottom: 1.15rem; }
+.hoteles-campo:last-child { margin-bottom: 0; }
+
+.hoteles-campo label {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+  margin-bottom: 0.4rem;
+}
+
+.hoteles-campo input {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.05rem;
+  color: #fff;
+  background: var(--bg-primary, #070b0a);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 0.7rem 0.85rem;
+}
+
+.hoteles-campo input:focus-visible {
+  outline: 2px solid var(--accent-primary, #5ed29c);
+  outline-offset: 1px;
+}
+
+.hoteles-campo small {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+
+.hoteles-resultado { align-self: center; }
+
+.hoteles-resultado__cifra {
+  display: block;
+  font-size: clamp(2.5rem, 8vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.hoteles-resultado__pie {
+  margin: 0.5rem 0 0;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+
+.hoteles-resultado hr {
+  border: 0;
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  margin: 1.35rem 0;
+}
+
+.hoteles-resultado__segunda {
+  margin: 0;
+  font-size: clamp(1.25rem, 3.5vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ------------------------------------------------------------------ fugas */
+
+.hoteles-fugas {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+.hoteles-fuga {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem 2rem;
+  padding-block: 1.7rem;
+  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+@media (min-width: 50rem) {
+  .hoteles-fuga { grid-template-columns: 3rem 1fr 13rem; align-items: start; }
+}
+
+.hoteles-fuga__num {
+  font-size: 0.85rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+  padding-top: 0.25rem;
+}
+
+.hoteles-fuga h3 { margin: 0 0 0.4rem; font-size: 1.12rem; }
+.hoteles-fuga p { margin: 0; }
+
+.hoteles-fuga__arreglo {
+  font-size: 0.92rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+  border-left: 2px solid var(--accent-primary, #5ed29c);
+  padding-left: 0.85rem;
+}
+
+.hoteles-fuga__arreglo strong {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-primary, #5ed29c);
+  margin-bottom: 0.25rem;
+}
+
+/* -------------------------------------------------------------- recorrido */
+
+.hoteles-recorrido { display: grid; gap: 1rem; margin-top: 2.5rem; }
+
+@media (min-width: 48rem) {
+  .hoteles-recorrido { grid-template-columns: repeat(2, 1fr); }
+}
+
+.hoteles-paso {
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 12px;
+  padding: 1.4rem;
+  background: var(--bg-card, rgba(255, 255, 255, 0.03));
+}
+
+.hoteles-paso__hora {
+  display: block;
+  font-size: 0.8rem;
+  color: #e8a53c;
+  margin-bottom: 0.5rem;
+}
+
+.hoteles-paso h3 { margin: 0 0 0.4rem; font-size: 1.08rem; }
+.hoteles-paso p { margin: 0; font-size: 0.96rem; }
+
+/* --------------------------------------------------------------- candados */
+
+.hoteles-candados {
+  display: grid;
+  gap: 1px;
+  margin-top: 2.5rem;
+  background: var(--border-color, rgba(255, 255, 255, 0.08));
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@media (min-width: 48rem) {
+  .hoteles-candados { grid-template-columns: repeat(2, 1fr); }
+}
+
+.hoteles-candado { background: var(--bg-primary, #070b0a); padding: 1.5rem; }
+.hoteles-candado h3 { margin: 0 0 0.4rem; font-size: 1.08rem; }
+.hoteles-candado p { margin: 0; font-size: 0.96rem; color: var(--text-muted, rgba(255, 255, 255, 0.5)); }
+
+/* ----------------------------------------------------------------- cifras */
+
+.hoteles-cifras {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  margin-top: 2.5rem;
+  background: var(--border-color, rgba(255, 255, 255, 0.08));
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+@media (min-width: 48rem) {
+  .hoteles-cifras { grid-template-columns: repeat(4, 1fr); }
+}
+
+.hoteles-cifra { background: var(--bg-primary, #070b0a); padding: 1.4rem 1.1rem; }
+
+.hoteles-cifra__dato {
+  display: block;
+  font-size: clamp(1.7rem, 3.6vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.hoteles-cifra__pie {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+  line-height: 1.4;
+}
+
+/* ------------------------------------------------------------ referencias */
+
+.hoteles-referencias { display: grid; gap: 1rem; margin-top: 2.5rem; }
+
+@media (min-width: 50rem) {
+  .hoteles-referencias { grid-template-columns: repeat(2, 1fr); }
+}
+
+.hoteles-referencia {
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 12px;
+  padding: 1.6rem;
+  background: var(--bg-card, rgba(255, 255, 255, 0.03));
+}
+
+.hoteles-referencia h3 { margin: 0 0 0.2rem; font-size: 1.12rem; }
+
+.hoteles-referencia__que {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e8a53c;
+  margin: 0 0 0.9rem;
+}
+
+.hoteles-referencia p { font-size: 0.96rem; }
+.hoteles-referencia__enlace { margin-bottom: 0; font-size: 0.88rem; }
+
+/* ----------------------------------------------------------------- planes */
+
+.hoteles-planes { display: grid; gap: 1rem; margin-top: 2.5rem; align-items: start; }
+
+@media (min-width: 56rem) {
+  .hoteles-planes { grid-template-columns: repeat(3, 1fr); }
+}
+
+.hoteles-plan {
+  position: relative;
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 14px;
+  padding: 1.75rem 1.6rem;
+  background: var(--bg-primary, #070b0a);
+}
+
+/* El plan ya vendido lleva el unico borde de color de la seccion: es el ancla
+   contra la que se comparan los otros dos. */
+.hoteles-plan--elegido {
+  border-color: var(--accent-primary, #5ed29c);
+  background: var(--bg-card, rgba(255, 255, 255, 0.03));
+}
+
+.hoteles-plan__sello {
+  position: absolute;
+  top: -0.7rem;
+  left: 1.4rem;
+  margin: 0;
+  background: var(--accent-primary, #5ed29c);
+  color: #04150d;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.6rem;
+  border-radius: 6px;
+}
+
+.hoteles-plan h3 { margin: 0 0 0.2rem; font-size: 1.2rem; }
+
+.hoteles-plan__cuantas {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+  margin-bottom: 1.1rem;
+}
+
+.hoteles-plan__precio {
+  margin: 0;
+  font-size: clamp(2.1rem, 5vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.hoteles-plan__nota {
+  margin: 0.35rem 0 1.2rem;
+  font-size: 0.84rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+
+.hoteles-plan ul { margin: 0; padding-left: 1.1rem; font-size: 0.95rem; }
+.hoteles-plan li { margin-bottom: 0.55rem; }
+.hoteles-plan li:last-child { margin-bottom: 0; }
+
+.hoteles-descuento {
+  margin-top: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 12px;
+  padding: 1.4rem 1.6rem;
+}
+
+.hoteles-descuento p { margin: 0; }
+
+.hoteles-incluido {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+@media (min-width: 48rem) {
+  .hoteles-incluido { grid-template-columns: repeat(2, 1fr); }
+}
+
+.hoteles-incluido h3 { margin: 0 0 0.6rem; font-size: 1.05rem; }
+.hoteles-incluido ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+.hoteles-incluido li { margin-bottom: 0.5rem; }
+
+/* ------------------------------------------------------------ comparacion */
+
+.hoteles-costos { margin-top: 2.5rem; overflow-x: auto; }
+
+.hoteles-costos table { width: 100%; border-collapse: collapse; min-width: 22rem; }
+
+.hoteles-costos th,
+.hoteles-costos td {
+  text-align: left;
+  padding: 0.85rem 0.9rem;
+  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+.hoteles-costos thead th {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+
+.hoteles-costos tbody th { font-size: 0.95rem; font-weight: 700; }
+
+.hoteles-costos td {
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.hoteles-costos__final th,
+.hoteles-costos__final td { border-bottom: 0; font-weight: 800; }
+.hoteles-costos__final td:last-child { color: var(--accent-primary, #5ed29c); }
+
+.hoteles-costos__pie {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+
+/* -------------------------------------------------------------------- bot */
+
+.hoteles-bot { display: grid; gap: 2rem; margin-top: 2.5rem; }
+
+@media (min-width: 52rem) {
+  .hoteles-bot { grid-template-columns: 1.05fr 0.95fr; }
+}
+
+.hoteles-bot__ficha {
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 12px;
+  background: var(--bg-card, rgba(255, 255, 255, 0.03));
+  padding: 1.6rem;
+}
+
+.hoteles-bot__ficha h3 { margin: 0 0 0.7rem; font-size: 1.08rem; }
+.hoteles-bot__ficha ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+.hoteles-bot__ficha li { margin-bottom: 0.6rem; }
+.hoteles-bot__ficha li:last-child { margin-bottom: 0; }
+
+/* ----------------------------------------------------------------- peros */
+
+.hoteles-peros { margin-top: 2rem; max-width: 48rem; }
+
+.hoteles-pero {
+  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  padding-block: 1.15rem;
+}
+
+.hoteles-pero summary {
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+  align-items: baseline;
+}
+
+.hoteles-pero summary::-webkit-details-marker { display: none; }
+.hoteles-pero summary::before {
+  content: "+";
+  color: var(--accent-primary, #5ed29c);
+  font-weight: 800;
+}
+.hoteles-pero[open] summary::before { content: "\2013"; }
+
+.hoteles-pero p {
+  margin: 0.8rem 0 0;
+  padding-left: 1.6rem;
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+}
+
+/* Solo para lectores de pantalla. */
+.hoteles-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hoteles-mapa * { animation: none !important; transition: none !important; }
+}

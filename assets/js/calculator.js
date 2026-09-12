@@ -1,6 +1,21 @@
 (function () {
   'use strict';
 
+  /* ========== TARIFA ==========
+     Fuente unica de verdad del precio. Sale del costo real de operacion:
+     100 horas facturables al mes (65% de 153 brutas) + $200/mes de costos
+     => $17/h para un ingreso neto de $1.500/mes. El detalle esta en
+     ~/PRECIOS-Y-COSTOS.md (documento interno, fuera del docroot).
+
+     Hasta 2026-09-12 cada opcion traia su precio escrito a mano y todas
+     estaban a $10/h, un 41% por debajo del costo. Ahora el precio se deriva
+     de las horas: cambiar la tarifa aca lo actualiza todo de una vez y no
+     puede volver a desalinearse de las paginas de /para/.
+
+     Los planes con monthly:true (hosting) llevan precio propio y no se tocan:
+     son mensualidades, no horas de trabajo. */
+  var TARIFA_HORA = 17;
+
   /* ========== DATA ========== */
   var SERVICES = [
     {
@@ -83,9 +98,9 @@
       icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>',
       monthly: false,
       complexity: [
-        { label: 'Integracion Basica', hours: 40, price: 400 },
-        { label: 'Integracion Media', hours: 70, price: 700 },
-        { label: 'Integracion Completa', hours: 120, price: 1200 }
+        { label: 'Integracion Basica', hours: 55, price: 0 },
+        { label: 'Integracion Media', hours: 95, price: 0 },
+        { label: 'Integracion Completa', hours: 145, price: 0 }
       ],
       addons: [
         { label: 'Pago Movil automatizado', hours: 15, price: 150 },
@@ -199,6 +214,18 @@
       ]
     }
   ];
+
+  /* Deriva el precio de las horas para todo lo que se cobra por trabajo.
+     Lo mensual (hosting) conserva su precio: no son horas. */
+  SERVICES.forEach(function (service) {
+    if (service.monthly) return;
+    (service.complexity || []).forEach(function (c) {
+      if (c.hours > 0) c.price = c.hours * TARIFA_HORA;
+    });
+    (service.addons || []).forEach(function (a) {
+      if (a.hours > 0) a.price = a.hours * TARIFA_HORA;
+    });
+  });
 
   /* ========== STATE ========== */
   var state = {
@@ -325,6 +352,32 @@
     goToStep(2);
   }
 
+  /* Texto que acompana al slider de nivel: nombre, horas y precio. */
+  function lecturaNivel(service) {
+    var c = service.complexity[state.complexityIndex];
+    var h = '<span class="calc__nivel-nombre">' + c.label + '</span>';
+    if (service.monthly) {
+      h += '<span class="calc__nivel-precio">$' + c.price + '/mes</span>';
+    } else {
+      h += '<span class="calc__nivel-precio">' + c.hours + 'h &middot; $'
+         + c.price.toLocaleString() + '</span>';
+    }
+    return h;
+  }
+
+  /* Rellena la pista y refresca la lectura sin repintar el paso entero:
+     repintar en cada cuadro del arrastre se siente pesado. */
+  function refrescarNivel(input, service) {
+    var max = parseFloat(input.max) || 1;
+    input.style.setProperty('--pct', ((parseFloat(input.value) / max) * 100).toFixed(2) + '%');
+    var c = service.complexity[state.complexityIndex];
+    input.setAttribute('aria-valuetext', c.label + ', ' + (service.monthly
+      ? '$' + c.price + ' al mes'
+      : c.hours + ' horas, $' + c.price.toLocaleString()));
+    var lectura = document.getElementById('calc-nivel-lectura');
+    if (lectura) lectura.innerHTML = lecturaNivel(service);
+  }
+
   /* ========== STEP 2: OPTIONS ========== */
   function renderStep2() {
     var service = getService();
@@ -334,21 +387,20 @@
     var html = '<div class="calc__panel" id="calc-step-2">';
     html += '<h2 class="calc__step-title">Configura tu ' + service.name + '</h2>';
 
-    /* Complexity */
-    html += '<h3 class="calc__option-label">Nivel de complejidad</h3>';
-    html += '<div class="calc__complexity-grid">';
-    service.complexity.forEach(function (c, i) {
-      var sel = i === state.complexityIndex ? ' is-selected' : '';
-      html += '<button class="calc__complexity-card' + sel + '" data-complexity="' + i + '" type="button">';
-      html += '<span class="calc__complexity-name">' + c.label + '</span>';
-      if (service.monthly) {
-        html += '<span class="calc__complexity-price">$' + c.price + '/mes</span>';
-      } else {
-        html += '<span class="calc__complexity-hours">' + c.hours + 'h</span>';
-        html += '<span class="calc__complexity-price">$' + c.price.toLocaleString() + '</span>';
-      }
-      html += '</button>';
+    /* Nivel de complejidad: slider de 3 posiciones.
+       Antes eran tres tarjetas en grid; entre 480 y 768 px quedaban
+       apretadas y debajo se apilaban ocupando media pantalla. */
+    var ultimo = service.complexity.length - 1;
+    html += '<h3 class="calc__option-label"><label for="calc-nivel">Nivel de complejidad</label></h3>';
+    html += '<div class="calc__nivel">';
+    html += '<div class="calc__nivel-lectura" id="calc-nivel-lectura">' + lecturaNivel(service) + '</div>';
+    html += '<input type="range" id="calc-nivel" class="calc__nivel-slider" min="0" max="' + ultimo
+         + '" step="1" value="' + state.complexityIndex + '">';
+    html += '<div class="calc__nivel-topes" aria-hidden="true">';
+    service.complexity.forEach(function (c) {
+      html += '<span>' + c.label + '</span>';
     });
+    html += '</div>';
     html += '</div>';
 
     /* Addons */
@@ -376,19 +428,19 @@
     html += '</div>';
     stepsContainer.innerHTML = html;
 
+    var slider = document.getElementById('calc-nivel');
+    if (slider) {
+      refrescarNivel(slider, service);
+      slider.addEventListener('input', function () {
+        state.complexityIndex = parseInt(this.value, 10);
+        refrescarNivel(this, service);
+      });
+    }
+
     stepsContainer.addEventListener('click', handleStep2Click);
   }
 
   function handleStep2Click(e) {
-    var compCard = e.target.closest('[data-complexity]');
-    if (compCard) {
-      state.complexityIndex = parseInt(compCard.dataset.complexity, 10);
-      var cards = stepsContainer.querySelectorAll('.calc__complexity-card');
-      cards.forEach(function (c) { c.classList.remove('is-selected'); });
-      compCard.classList.add('is-selected');
-      return;
-    }
-
     var addonCard = e.target.closest('[data-addon]');
     if (addonCard) {
       var idx = parseInt(addonCard.dataset.addon, 10);
@@ -468,6 +520,21 @@
       html += '<span>' + totalHours + 'h &mdash; $' + totalPrice.toLocaleString() + ' USD</span>';
     }
     html += '</div>';
+
+    /* Transparencia de tarifa: el numero no sale de la nada */
+    if (!service.monthly) {
+      html += '<p class="calc__tarifa">';
+      html += totalHours + ' horas de trabajo a $' + TARIFA_HORA + ' la hora. ';
+      html += 'Es una estimacion para ubicarte, no una cotizacion cerrada: el numero final sale ';
+      html += 'despues de conversar, y suele bajar si tu caso encaja en algo que ya tengo construido.';
+      html += '</p>';
+      html += '<p class="calc__tarifa">';
+      html += 'Si tu negocio es un hotel, un restaurante, un centro de reservas, un almacen aduanero ';
+      html += 'o necesitas cobrar por pago movil, mira los ';
+      html += '<a href="/para/">planes cerrados por rubro</a>: parten de sistemas que ya estan ';
+      html += 'escritos y traen migracion, capacitacion, servidor el primer anio y 90 dias de garantia.';
+      html += '</p>';
+    }
     html += '</div>';
 
     /* WhatsApp CTA */

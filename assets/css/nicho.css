@@ -1,0 +1,1098 @@
+/* ============================================================
+   NERACOSU — Páginas por nicho (/para/*)
+   Extiende redesign.css. Sin frameworks, CSS plano.
+   ============================================================ */
+
+/* --- Hero de nicho ------------------------------------------------ */
+.nicho-hero {
+  position: relative;
+  padding: 148px 0 76px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.nicho-hero::before {
+  content: "";
+  position: absolute;
+  top: -40%; left: 50%;
+  width: 900px; height: 620px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(94,210,156,0.16), rgba(34,211,238,0.05) 45%, transparent 70%);
+  pointer-events: none;
+}
+.nicho-hero .container { position: relative; z-index: 1; }
+.nicho-hero-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 5.4vw, 62px);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+  margin: 0 0 22px;
+  max-width: 15ch;
+}
+.nicho-hero-sub {
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 62ch;
+  margin: 0 0 36px;
+}
+
+/* --- Franja de prueba (cifras verificables) ----------------------- */
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-top: 48px;
+}
+.proof-strip > div { background: #0a100f; padding: 22px 20px; }
+.proof-strip .v {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: clamp(22px, 2.6vw, 30px);
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.proof-strip .l {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 8px;
+  line-height: 1.45;
+}
+
+/* --- Columnas pérdida / ganancia ---------------------------------- */
+.lossgain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 860px) { .lossgain { grid-template-columns: 1fr; } }
+.lossgain-col {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+}
+.lossgain-col.loss {
+  background: rgba(255, 92, 92, 0.035);
+  border-color: rgba(255, 92, 92, 0.16);
+}
+.lossgain-col.gain {
+  background: rgba(94, 210, 156, 0.045);
+  border-color: rgba(94, 210, 156, 0.22);
+}
+.lossgain-col h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+.lossgain-col.loss h3 { color: #ff8a8a; }
+.lossgain-col.gain h3 { color: var(--accent); }
+.lossgain-col ul { list-style: none; margin: 0; padding: 0; }
+.lossgain-col li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.lossgain-col li:last-child { margin-bottom: 0; }
+.lossgain-col li::before {
+  position: absolute;
+  left: 0; top: -1px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.lossgain-col.loss li::before { content: "✕"; color: #ff6b6b; }
+.lossgain-col.gain li::before { content: "✓"; color: var(--accent); }
+
+/* --- Lista de módulos --------------------------------------------- */
+.modulos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.modulo {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px;
+  background: rgba(255,255,255,0.018);
+  transition: border-color .25s ease, transform .25s ease;
+}
+.modulo:hover { border-color: rgba(94,210,156,0.32); transform: translateY(-3px); }
+.modulo .num {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 14px;
+}
+.modulo h3 {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+.modulo p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text-muted); }
+
+/* --- Caso real ----------------------------------------------------- */
+.caso {
+  border: 1px solid var(--border-strong);
+  border-radius: 24px;
+  padding: 40px;
+  background: linear-gradient(160deg, rgba(94,210,156,0.06), rgba(255,255,255,0.014));
+}
+@media (max-width: 720px) { .caso { padding: 28px 22px; } }
+.caso-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.caso-badge {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(94,210,156,0.3);
+  border-radius: 999px;
+  padding: 6px 13px;
+}
+.caso h3 {
+  font-size: clamp(21px, 2.6vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+.caso-url { font-size: 13px; color: var(--accent); font-family: "Plus Jakarta Sans", sans-serif; }
+.caso-bullets { list-style: none; margin: 22px 0 0; padding: 0; }
+.caso-bullets li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 13px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.caso-bullets li::before {
+  content: "→";
+  position: absolute; left: 0; top: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* --- Testimonio pegado al CTA ------------------------------------- */
+.cta-block {
+  border: 1px solid rgba(94,210,156,0.24);
+  border-radius: 26px;
+  padding: 46px 40px;
+  background: linear-gradient(155deg, rgba(94,210,156,0.09), rgba(7,11,10,0.4));
+  text-align: center;
+}
+@media (max-width: 720px) { .cta-block { padding: 32px 22px; } }
+.cta-block h2 {
+  font-size: clamp(24px, 3.4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+.cta-block p { color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 56ch; margin: 0 auto 30px; }
+.cta-proof {
+  margin-top: 32px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  font-style: italic;
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-proof cite {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+/* --- Tira de nichos (cross-link) ----------------------------------- */
+.nichos-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+.nicho-chip {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  transition: border-color .25s ease, background .25s ease;
+}
+.nicho-chip:hover { border-color: rgba(94,210,156,0.35); background: rgba(94,210,156,0.04); }
+.nicho-chip .t { font-weight: 700; font-size: 15.5px; margin-bottom: 6px; letter-spacing: -0.01em; }
+.nicho-chip .d { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+.nicho-chip[aria-current="page"] { border-color: rgba(94,210,156,0.45); background: rgba(94,210,156,0.07); }
+
+/* --- Tabla técnica -------------------------------------------------- */
+.tabla-tec { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.tabla-tec th, .tabla-tec td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.tabla-tec th {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+.tabla-tec td { color: var(--text-muted); line-height: 1.55; }
+.tabla-tec td code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  color: #9be8c4;
+  background: rgba(94,210,156,0.08);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+.tabla-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 18px; }
+.tabla-wrap .tabla-tec tr:last-child td { border-bottom: none; }
+
+/* --- Breadcrumb ----------------------------------------------------- */
+.crumbs { font-size: 12.5px; color: var(--text-dim); margin-bottom: 26px; letter-spacing: 0.02em; }
+.crumbs a { color: var(--text-dim); }
+.crumbs a:hover { color: var(--accent); }
+.crumbs span { margin: 0 8px; opacity: .5; }
+
+/* ============================================================
+   Bloques de conversión (calculadora, fugas, turno, precios)
+   ============================================================ */
+
+/* --- Calculadora "con tus números" -------------------------------- */
+.calcfuga {
+  border: 1px solid var(--border-strong);
+  border-radius: 24px;
+  padding: 38px;
+  background: linear-gradient(160deg, rgba(94,210,156,0.055), rgba(255,255,255,0.012));
+}
+@media (max-width: 720px) { .calcfuga { padding: 26px 20px; } }
+.calcfuga-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 22px;
+  margin-bottom: 32px;
+}
+.calcfuga-field label {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+/* --- Slider nativo -------------------------------------------------
+   input[type=range] estilado a mano: cada motor pinta la pista y el
+   pulgar por su cuenta, asi que van las tres familias de selectores.
+   El relleno de la pista se hace con --pct, que actualiza el JS. */
+.calcfuga-valor {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.calcfuga-field input[type="range"] {
+  --pct: 50%;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 34px;               /* area tactil comoda, la pista se dibuja dentro */
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+/* Pista */
+.calcfuga-field input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    var(--accent) 0%, var(--accent) var(--pct),
+    rgba(255, 255, 255, 0.12) var(--pct), rgba(255, 255, 255, 0.12) 100%);
+}
+.calcfuga-field input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.calcfuga-field input[type="range"]::-moz-range-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+/* Pulgar */
+.calcfuga-field input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  margin-top: -10px;          /* centra el pulgar sobre la pista de 6px */
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid #0a100f;
+  box-shadow: 0 0 0 1px rgba(94, 210, 156, 0.5), 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: transform .12s ease;
+}
+.calcfuga-field input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid #0a100f;
+  box-shadow: 0 0 0 1px rgba(94, 210, 156, 0.5), 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.calcfuga-field input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.14); }
+.calcfuga-field input[type="range"]:focus-visible { outline: none; }
+.calcfuga-field input[type="range"]:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(94, 210, 156, 0.3), 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.calcfuga-field input[type="range"]:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 4px rgba(94, 210, 156, 0.3), 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+/* Extremos del recorrido, para que se entienda el rango */
+.calcfuga-topes {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.38);
+  font-variant-numeric: tabular-nums;
+  margin-top: 2px;
+}
+.calcfuga-field .hint { font-size: 12.5px; color: var(--text-dim); margin-top: 9px; line-height: 1.5; }
+.calcfuga-out {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+.calcfuga-out .big {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(38px, 7vw, 62px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--accent);
+}
+.calcfuga-out .big small { font-size: 0.42em; font-weight: 700; letter-spacing: -0.01em; }
+.calcfuga-out .txt { font-size: 16px; line-height: 1.6; color: var(--text-muted); max-width: 56ch; margin-top: 14px; }
+.calcfuga-out .txt strong { color: #fff; }
+.calcfuga-note { font-size: 13px; color: var(--text-dim); margin-top: 22px; line-height: 1.6; font-style: italic; }
+
+/* --- Fugas numeradas ---------------------------------------------- */
+.fugas { display: grid; gap: 18px; }
+.fuga {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 22px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  background: rgba(255,255,255,0.016);
+}
+@media (max-width: 640px) { .fuga { grid-template-columns: 1fr; gap: 14px; padding: 24px 20px; } }
+.fuga-num {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255,255,255,0.13);
+  letter-spacing: -0.03em;
+}
+.fuga h3 { font-size: 19px; font-weight: 700; margin: 0 0 12px; letter-spacing: -0.015em; line-height: 1.28; }
+.fuga p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--text-muted); }
+.fuga-fix {
+  margin-top: 18px;
+  padding: 15px 18px;
+  border-left: 2px solid var(--accent);
+  background: rgba(94,210,156,0.055);
+  border-radius: 0 12px 12px 0;
+}
+.fuga-fix .k {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 7px;
+}
+.fuga-fix p { font-size: 14.5px; color: rgba(255,255,255,0.82); }
+
+/* --- Línea de tiempo del turno ------------------------------------ */
+.turno { position: relative; padding-left: 26px; }
+.turno::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 8px; bottom: 8px;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--border-strong) 12%, var(--border-strong) 88%, transparent);
+}
+.turno-step { position: relative; padding-bottom: 34px; }
+.turno-step:last-child { padding-bottom: 0; }
+.turno-step::before {
+  content: "";
+  position: absolute;
+  left: -30px; top: 7px;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(94,210,156,0.15);
+}
+.turno-hora {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12.5px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 8px;
+}
+.turno-step h3 { font-size: 17.5px; font-weight: 700; margin: 0 0 9px; letter-spacing: -0.015em; }
+.turno-step p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--text-muted); }
+
+/* --- Comparación de costo ------------------------------------------ */
+.compara { width: 100%; border-collapse: collapse; font-size: 15px; }
+.compara th, .compara td { padding: 15px 18px; text-align: left; border-bottom: 1px solid var(--border); }
+.compara thead th {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+.compara thead th:last-child { color: var(--accent); }
+.compara tbody td { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 600; color: var(--text-muted); }
+.compara tbody td:first-child { color: #fff; }
+.compara tbody td:last-child { color: var(--accent); }
+.compara tbody tr.win td { background: rgba(94,210,156,0.06); }
+.compara tbody tr:last-child td { border-bottom: none; }
+
+/* --- Bloque "no es promesa" (métricas duras) ----------------------- */
+.metricas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+.metrica .v {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+}
+.metrica .l { font-size: 13.5px; color: var(--text-muted); margin-top: 11px; line-height: 1.5; }
+
+/* ============================================================
+   Móvil — la mayoría del tráfico llega por teléfono
+   ============================================================ */
+@media (max-width: 768px) {
+  .nicho-hero { padding: 116px 0 60px; }
+  .nicho-hero::before { width: 560px; height: 420px; top: -22%; }
+  .nicho-hero-title { max-width: none; }
+  .nicho-hero-sub { font-size: 16px; }
+
+  /* Los CTA del hero ocupan el ancho: pulgar, no puntería */
+  .nicho-hero .btn-primary,
+  .nicho-hero .btn-ghost { width: 100%; justify-content: center; }
+
+  .proof-strip { margin-top: 36px; border-radius: 16px; }
+  .proof-strip > div { padding: 18px 16px; }
+
+  .calcfuga { border-radius: 20px; }
+  .calcfuga-grid { grid-template-columns: 1fr; gap: 18px; margin-bottom: 26px; }
+  .calcfuga-valor { font-size: 26px; margin-bottom: 12px; }
+  .calcfuga-field input[type="range"] { height: 40px; }
+  .calcfuga-field input[type="range"]::-webkit-slider-thumb { width: 30px; height: 30px; margin-top: -12px; }
+  .calcfuga-out .txt { font-size: 15px; }
+
+  .fuga { border-radius: 16px; }
+  .fuga-num { font-size: 26px; }
+  .fuga h3 { font-size: 17.5px; }
+
+  .turno { padding-left: 22px; }
+  .turno-step { padding-bottom: 28px; }
+  .turno-step::before { left: -26px; }
+
+  .caso { border-radius: 18px; }
+  .caso-head { gap: 10px; margin-bottom: 18px; }
+
+  .cta-block { border-radius: 20px; }
+  .cta-block .btn-primary,
+  .cta-block .btn-ghost { width: 100%; justify-content: center; }
+  .cta-proof { font-size: 14px; }
+
+  .modulos-grid { gap: 14px; }
+  .modulo { padding: 22px 20px; border-radius: 16px; }
+
+  .nichos-row { gap: 12px; }
+
+  .compara th, .compara td { padding: 12px 10px; }
+  .compara { font-size: 14px; }
+  .compara thead th { font-size: 10px; letter-spacing: 0.06em; }
+}
+
+@media (max-width: 420px) {
+  /* Dos columnas siguen entrando; una sola desperdicia pantalla */
+  .proof-strip { grid-template-columns: 1fr 1fr; }
+  .proof-strip .v { font-size: 21px; }
+  .proof-strip .l { font-size: 11.5px; }
+  .calcfuga { padding: 22px 16px; }
+  .fuga { padding: 20px 16px; }
+  .metricas { grid-template-columns: 1fr 1fr; }
+}
+
+/* El botón flotante de WhatsApp no debe tapar el CTA final */
+@media (max-width: 768px) {
+  .cta-block { margin-bottom: 8px; }
+}
+
+/* Las tablas anchas se desplazan en vez de aplastarse en el teléfono */
+@media (max-width: 768px) {
+  .tabla-wrap { -webkit-overflow-scrolling: touch; }
+  .tabla-tec { min-width: 620px; }
+  .tabla-tec th, .tabla-tec td { padding: 13px 14px; }
+}
+
+/* Aviso de que la tabla se desliza: solo visible donde hace falta */
+.tabla-hint { display: none; }
+@media (max-width: 768px) {
+  .tabla-hint {
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+}
+
+/* ============================================================
+   Planes y precios
+   ============================================================ */
+.planes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+.plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px 26px;
+  background: rgba(255, 255, 255, 0.018);
+}
+.plan-destacado {
+  border-color: rgba(94, 210, 156, 0.42);
+  background: linear-gradient(165deg, rgba(94, 210, 156, 0.085), rgba(255, 255, 255, 0.014));
+}
+.plan-cinta {
+  position: absolute;
+  top: -11px; left: 26px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #06231a;
+  background: var(--accent);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+.plan-nombre {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.plan-alcance {
+  display: block;
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 5px;
+  line-height: 1.45;
+}
+.plan-precio {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--accent);
+  margin: 22px 0 4px;
+}
+.plan-precio small {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-dim);
+  margin-top: 9px;
+}
+.plan-lista {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--border);
+  flex: 1;
+}
+.plan-lista li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.plan-lista li:last-child { margin-bottom: 0; }
+.plan-lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0; top: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.plan-lista li.heredado { color: var(--text-dim); font-style: italic; }
+.plan-lista li.heredado::before { content: "↳"; color: var(--text-dim); }
+
+/* --- Cajas de letra chica honesta ----------------------------------- */
+.precio-notas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+.precio-nota {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.012);
+}
+.precio-nota h4 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+.precio-nota ul { list-style: none; margin: 0; padding: 0; }
+.precio-nota li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.precio-nota li:last-child { margin-bottom: 0; }
+.precio-nota li::before {
+  content: "·";
+  position: absolute;
+  left: 4px; top: -1px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Aviso de descuento por dejar otro sistema */
+.plan-cambio {
+  margin-top: 24px;
+  border-left: 2px solid var(--accent);
+  background: rgba(94, 210, 156, 0.06);
+  border-radius: 0 14px 14px 0;
+  padding: 18px 22px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.plan-cambio strong { color: #fff; }
+
+@media (max-width: 768px) {
+  .planes { gap: 14px; }
+  .plan { padding: 26px 20px; border-radius: 16px; }
+  .plan-precio { font-size: 34px; }
+  .precio-notas { gap: 14px; margin-top: 20px; }
+  .precio-nota { padding: 20px; border-radius: 14px; }
+  .plan-cambio { padding: 16px 18px; font-size: 14.5px; }
+}
+
+/* --- Bloque «por qué cuesta esto» ---------------------------------- */
+.apertura {
+  border: 1px solid rgba(94, 210, 156, 0.3);
+  border-radius: 20px;
+  padding: 32px;
+  background: linear-gradient(160deg, rgba(94, 210, 156, 0.075), rgba(255, 255, 255, 0.012));
+  margin-bottom: 32px;
+}
+.apertura-sello {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #06231a;
+  background: var(--accent);
+  border-radius: 999px;
+  padding: 6px 13px;
+  margin-bottom: 18px;
+}
+.apertura p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 74ch;
+}
+.apertura strong { color: #fff; }
+.apertura-razones {
+  list-style: none;
+  counter-reset: razon;
+  margin: 22px 0 0;
+  padding: 0;
+}
+.apertura-razones li {
+  counter-increment: razon;
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 18px;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 74ch;
+}
+.apertura-razones li:last-child { margin-bottom: 0; }
+.apertura-razones li::before {
+  content: counter(razon);
+  position: absolute;
+  left: 0; top: 1px;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(94, 210, 156, 0.42);
+  color: var(--accent);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.apertura-cierre { margin-top: 22px !important; padding-top: 20px; border-top: 1px solid var(--border); }
+
+@media (max-width: 768px) {
+  .apertura { padding: 24px 20px; border-radius: 16px; margin-bottom: 24px; }
+  .apertura p, .apertura-razones li { font-size: 15px; }
+  .apertura-razones li { padding-left: 36px; }
+}
+
+/* Precio «desde» en las tarjetas de industria */
+.modulo-desde {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border: 1px solid rgba(94, 210, 156, 0.28);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+/* ============================================================
+   Testimonios — pegados al CTA (sube 68% la conversión en B2B)
+   La sección se autooculta si no hay ninguno cargado.
+   ============================================================ */
+.testimonios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.testimonio {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.018);
+  display: flex;
+  flex-direction: column;
+}
+.testimonio-texto {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.86);
+  flex: 1;
+  position: relative;
+  padding-left: 22px;
+}
+.testimonio-texto::before {
+  content: "\201C";
+  position: absolute;
+  left: -2px;
+  top: -10px;
+  font-family: "Instrument Serif", serif;
+  font-size: 46px;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.55;
+}
+.testimonio-firma {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.testimonio-nombre {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  color: #fff;
+  letter-spacing: -0.005em;
+}
+.testimonio-cargo {
+  display: block;
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 4px;
+  line-height: 1.45;
+}
+@media (max-width: 768px) {
+  .testimonios { gap: 14px; }
+  .testimonio { padding: 24px 20px; border-radius: 16px; }
+  .testimonio-texto { font-size: 15px; }
+}
+
+/* --- Puerta de entrada: producto de bajo ticket ---------------------- */
+.entrada {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  border: 1px dashed rgba(94, 210, 156, 0.42);
+  border-radius: 20px;
+  padding: 32px;
+  background: rgba(94, 210, 156, 0.035);
+  margin-top: 24px;
+}
+@media (max-width: 760px) {
+  .entrada { grid-template-columns: 1fr; gap: 22px; padding: 26px 20px; border-radius: 16px; }
+}
+.entrada-eyebrow {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.entrada h3 {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  line-height: 1.25;
+}
+.entrada p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--text-muted); max-width: 62ch; }
+.entrada p + p { margin-top: 12px; }
+.entrada strong { color: #fff; }
+.entrada-precio { text-align: right; }
+@media (max-width: 760px) { .entrada-precio { text-align: left; } }
+.entrada-precio .n {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--accent);
+  display: block;
+}
+.entrada-precio .d {
+  display: block;
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-top: 10px;
+  line-height: 1.5;
+  max-width: 22ch;
+}
+@media (max-width: 760px) { .entrada-precio .d { max-width: none; } }
+
+/* ============================================================
+   Asistente de diagnóstico guiado
+   ============================================================ */
+.asistente {
+  border: 1px solid rgba(94, 210, 156, 0.3);
+  border-radius: 24px;
+  padding: 40px;
+  background: linear-gradient(160deg, rgba(94, 210, 156, 0.07), rgba(255, 255, 255, 0.012));
+  min-height: 400px;
+}
+@media (max-width: 768px) { .asistente { padding: 26px 20px; border-radius: 18px; min-height: 0; } }
+
+.asis-cab { margin-bottom: 26px; }
+.asis-paso {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.asis-barra { height: 3px; border-radius: 999px; background: rgba(255, 255, 255, 0.09); overflow: hidden; }
+.asis-barra span {
+  display: block; height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width .35s ease;
+}
+.asis-titulo {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: clamp(21px, 3vw, 30px);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin: 0 0 10px;
+}
+.asis-ayuda { margin: 0 0 26px; font-size: 15px; line-height: 1.6; color: var(--text-muted); max-width: 60ch; }
+.asis-eyebrow {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 14px;
+}
+
+.asis-opciones { display: grid; gap: 12px; }
+.asis-opcion {
+  width: 100%;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, transform .15s ease;
+  min-height: 56px;               /* objetivo táctil cómodo */
+}
+.asis-opcion:hover, .asis-opcion:focus-visible {
+  border-color: var(--accent);
+  background: rgba(94, 210, 156, 0.09);
+  outline: none;
+}
+.asis-opcion:active { transform: scale(0.99); }
+
+.asis-atras {
+  margin-top: 22px;
+  background: none; border: none; padding: 0;
+  color: var(--text-dim);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px; cursor: pointer;
+}
+.asis-atras:hover { color: var(--accent); }
+
+.asis-precio { margin: 26px 0; }
+.asis-tachado {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--text-dim);
+  text-decoration: line-through;
+  margin-right: 12px;
+}
+.asis-n {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(40px, 7vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--accent);
+}
+.asis-d { display: block; font-size: 13px; color: var(--text-dim); margin-top: 12px; line-height: 1.55; }
+
+.asis-acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+@media (max-width: 768px) {
+  .asis-acciones .btn-primary, .asis-acciones .btn-ghost { width: 100%; justify-content: center; }
+}
+.asis-nota { margin: 26px 0 0; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13.5px; color: var(--text-dim); line-height: 1.6; }
+.asis-reiniciar {
+  background: none; border: none; padding: 0;
+  color: var(--accent); cursor: pointer;
+  font-size: 13.5px; font-family: inherit;
+  text-decoration: underline; text-underline-offset: 2px;
+}
+
+/* Opciones del asistente con ejemplos debajo */
+.asis-opcion { display: block; padding: 16px 20px; }
+.asis-opcion-t {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.asis-opcion-ej {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-dim);
+}
+.asis-opcion:hover .asis-opcion-ej,
+.asis-opcion:focus-visible .asis-opcion-ej { color: rgba(255, 255, 255, 0.62); }
+@media (max-width: 768px) {
+  .asis-opcion { padding: 15px 17px; }
+  .asis-opcion-t { font-size: 15.5px; }
+  .asis-opcion-ej { font-size: 12.5px; }
+}

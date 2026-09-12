@@ -4,10 +4,23 @@
 # ============================================================
 
 # --- Proyectos de clientes ajenos a neracosu.com ---
+# ESTE REPO ES PUBLICO. Todo lo que viva en el docroot y no sea el sitio
+# propio va aca. Al agregar un subdominio o proyecto nuevo bajo public_html,
+# lo primero es sumarlo a esta lista.
 ameb.app/
 zafraclic.com/
 glotracol.neracosu.com/
 ourstory.lat/
+oceandemo.neracosu.com/
+adastram.store/
+hotelmarte.neracosu.com/
+gustito.neracosu.com/
+crononauta.neracosu.com/
+
+# --- Personal, no publicable ---
+# mi-luna trae fotos y audio de una persona identificable.
+mi-luna/
+docs/superpowers/specs/*mi-luna*
 
 # --- Carpetas del servidor ---
 cgi-bin/
