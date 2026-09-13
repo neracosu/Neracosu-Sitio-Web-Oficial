@@ -119,8 +119,8 @@
   var PREGUNTAS = [
     {
       id: 'rubro',
-      titulo: '¿A qué se dedica tu negocio?',
-      ayuda: 'Busca el tuyo entre los ejemplos. Si no aparece, elige «otra cosa» y seguimos igual.',
+      titulo: '¿A qué se dedica su negocio?',
+      ayuda: 'Busque el suyo entre los ejemplos. Si no aparece, elige «otra cosa» y seguimos igual.',
       opciones: [
         { v: 'citas', t: 'Servicios con cita',
           ej: 'peluquería, barbería, spa, uñas, odontología, clínica, veterinaria, taller mecánico, fisioterapia, psicología' },
@@ -140,8 +140,8 @@
     },
     {
       id: 'dolor',
-      titulo: '¿Qué es lo que más te está costando hoy?',
-      ayuda: 'Elige lo que más te haga ruido. Por ahí empezamos.',
+      titulo: '¿Qué es lo que más le está costando hoy?',
+      ayuda: 'Elija lo que más le haga ruido. Por ahí empezamos.',
       opciones: [
         { v: 'operacion', t: 'No sé qué pasa en mi operación hasta que es tarde' },
         { v: 'cobros', t: 'Verificar pagos a mano y que no cuadre la caja' },
@@ -152,7 +152,7 @@
     {
       id: 'tamano',
       titulo: '¿De qué tamaño es la operación?',
-      ayuda: 'Define el plan que te queda, no la calidad del sistema.',
+      ayuda: 'Defina el plan que le queda, no la calidad del sistema.',
       opciones: [
         { v: 0, t: 'Chica: un local, poco personal' },
         { v: 1, t: 'Mediana: un local grande o dos chicos' },
@@ -161,7 +161,7 @@
     },
     {
       id: 'actual',
-      titulo: '¿Con qué trabajas hoy?',
+      titulo: '¿Con qué trabaja hoy?',
       ayuda: 'Sin juicio: la mayoría empieza en cuaderno y WhatsApp.',
       opciones: [
         { v: 'mensualidad', t: 'Pago una mensualidad por un sistema' },
@@ -236,7 +236,7 @@
 
     function pintarResultado() {
       var d = decidir(resp);
-      var texto = 'Hola Neri, usé el asistente de tu web.\n\n'
+      var texto = 'Hola Neri, usé el asistente de su web.\n\n'
         + '• Rubro: ' + d.datos.nombre + '\n'
         + (d.datos.sinPrecio
             ? '• Entiendo que acá se empieza por el diagnóstico ($170)\n'
@@ -254,19 +254,19 @@
         + 'Quisiera conversarlo.';
 
       var h = '<div class="asis-resultado">';
-      h += '<span class="asis-eyebrow">Lo que te recomiendo</span>';
+      h += '<span class="asis-eyebrow">Lo que le recomiendo</span>';
       if (d.datos.sinPrecio) {
         h += '<h3 class="asis-titulo">' + d.datos.nombre + ' &mdash; empezamos por el diagnóstico</h3>';
-        h += '<p class="asis-ayuda">Este es el único rubro donde no te doy un precio cerrado, y prefiero '
-           + 'decírtelo de una: la agenda por profesional es lo único de mi catálogo que todavía no está '
+        h += '<p class="asis-ayuda">Este es el único rubro donde no le doy un precio cerrado, y prefiero '
+           + 'decírselo de una: la agenda por profesional es lo único de mi catálogo que todavía no está '
            + 'construido. Lo demás &mdash;calendario, cobro validado contra el banco, personal con permisos&mdash; '
            + 'ya opera en otros negocios. Por eso el precio sale del diagnóstico y no de una tabla.</p>';
       } else if (d.datos.aMedida) {
-        h += '<h3 class="asis-titulo">Tu caso no encaja en un plan cerrado</h3>';
-        h += '<p class="asis-ayuda">Y prefiero decírtelo antes que venderte uno que no te sirve. '
-           + 'Lo que te conviene es empezar por el diagnóstico: reviso tu operación y te entrego un '
-           + 'plan por fases con costos, te sirva conmigo o con cualquier otro. Si después contratas, '
-           + 'se te descuenta completo.</p>';
+        h += '<h3 class="asis-titulo">Su caso no encaja en un plan cerrado</h3>';
+        h += '<p class="asis-ayuda">Y prefiero decírselo antes que venderle uno que no le sirve. '
+           + 'Lo que le conviene es empezar por el diagnóstico: reviso su operación y le entrego un '
+           + 'plan por fases con costos, le sirva conmigo o con cualquier otro. Si después contrata, '
+           + 'se le descuenta completo.</p>';
       } else {
         h += '<h3 class="asis-titulo">' + d.datos.nombre + ' &mdash; plan ' + d.plan.nombre + '</h3>';
         h += '<p class="asis-ayuda">' + d.plan.alcance.charAt(0).toUpperCase() + d.plan.alcance.slice(1)
@@ -277,7 +277,7 @@
       if (d.datos.sinPrecio) {
         h += '<span class="asis-n">$250</span>';
         h += '<span class="asis-d">diagnóstico técnico y plan por fases &middot; se descuenta completo '
-           + 'si después contratas</span>';
+           + 'si después contrata</span>';
         h += '</div>';
       } else {
       if (d.descuento) {
@@ -285,15 +285,15 @@
       }
       h += '<span class="asis-n">' + money(d.total) + '</span>';
       h += '<span class="asis-d">desarrollo, 50 % al aprobar y 50 % contra entrega'
-         + (d.descuento ? ' &middot; incluye $1.000 de descuento por dejar tu sistema actual' : '')
+         + (d.descuento ? ' &middot; incluye $1.000 de descuento por dejar su sistema actual' : '')
          + '</span>';
       if (d.plan.mes) {
         h += '<span class="asis-mes">+ ' + money(d.plan.mes) + ' / mes de servicio'
            + '<small>hosting, dominio, respaldos, seguridad y soporte. No es el permiso de usarlo: '
-           + 'si lo cancelas, el sistema sigue siendo tuyo.</small></span>';
+           + 'si lo cancela, el sistema sigue siendo suyo.</small></span>';
       } else {
         h += '<span class="asis-mes asis-mes-no">Sin mensualidad: esta capa se monta sobre el sistema '
-           + 'que ya tienes.</span>';
+           + 'que ya tiene.</span>';
       }
       h += '</div>';
       }
@@ -304,7 +304,7 @@
       h += '<a class="btn-ghost" href="' + d.datos.url + '">Ver todo lo que incluye</a>';
       h += '</div>';
 
-      h += '<p class="asis-nota">¿No te cuadra? <button type="button" class="asis-reiniciar" data-reiniciar>'
+      h += '<p class="asis-nota">¿No le cuadra? <button type="button" class="asis-reiniciar" data-reiniciar>'
          + 'Responder de nuevo</button> o escribime y lo vemos: nada de esto es definitivo.</p>';
       h += '</div>';
       raiz.innerHTML = h;

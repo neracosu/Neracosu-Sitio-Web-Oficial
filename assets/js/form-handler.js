@@ -65,7 +65,7 @@
 
         if (result.success) {
           statusEl.className = 'form__status is-success';
-          statusEl.textContent = 'Mensaje enviado correctamente. Te contactare pronto!';
+          statusEl.textContent = 'Mensaje enviado correctamente. Le contactare pronto!';
           form.reset();
           generateCSRFToken();
         } else {
@@ -115,7 +115,7 @@
 
       case 'email':
         if (!value) error = 'El email es requerido.';
-        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) error = 'Ingresa un email valido.';
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) error = 'Ingrese un email valido.';
         break;
 
       case 'whatsapp':
@@ -123,11 +123,11 @@
         break;
 
       case 'project':
-        if (!value) error = 'Selecciona un tipo de proyecto.';
+        if (!value) error = 'Seleccione un tipo de proyecto.';
         break;
 
       case 'message':
-        if (!value) error = 'Cuentame sobre tu proyecto.';
+        if (!value) error = 'Cuenteme sobre su proyecto.';
         else if (value.length < 10) error = 'Describe un poco mas tu proyecto.';
         else if (value.length > 2000) error = 'El mensaje es muy largo (max 2000 caracteres).';
         break;

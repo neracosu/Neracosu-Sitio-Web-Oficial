@@ -19,6 +19,7 @@
   function formatear(valor, formato, sufijo) {
     var n = fmt.format(valor);
     if (formato === 'bs') n = 'Bs ' + n;
+    else if (formato === 'usd') n = '$' + n;
     else if (formato === 'pct') n = n + ' %';
     if (sufijo) n = n + ' ' + sufijo;
     return n;

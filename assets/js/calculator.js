@@ -329,7 +329,7 @@
   /* ========== STEP 1: SELECT SERVICE ========== */
   function renderStep1() {
     var html = '<div class="calc__panel" id="calc-step-1">';
-    html += '<h2 class="calc__step-title">Selecciona un servicio</h2>';
+    html += '<h2 class="calc__step-title">Seleccione un servicio</h2>';
     html += '<div class="calc__services-grid">';
     SERVICES.forEach(function (s) {
       html += '<button class="calc__service-card" data-service="' + s.id + '" type="button">';
@@ -386,7 +386,7 @@
 
     var unit = service.monthly ? '/mes' : 'h';
     var html = '<div class="calc__panel" id="calc-step-2">';
-    html += '<h2 class="calc__step-title">Configura tu ' + service.name + '</h2>';
+    html += '<h2 class="calc__step-title">Configure su ' + service.name + '</h2>';
 
     /* Nivel de complejidad: slider de 3 posiciones.
        Antes eran tres tarjetas en grid; entre 480 y 768 px quedaban
@@ -481,7 +481,7 @@
     });
 
     var html = '<div class="calc__panel" id="calc-step-3">';
-    html += '<h2 class="calc__step-title">Tu presupuesto estimado</h2>';
+    html += '<h2 class="calc__step-title">Su presupuesto estimado</h2>';
 
     html += '<div class="calc__result-card">';
     html += '<div class="calc__result-header">';
@@ -526,12 +526,12 @@
     if (!service.monthly) {
       html += '<p class="calc__tarifa">';
       html += totalHours + ' horas de trabajo a $' + TARIFA_HORA + ' la hora. ';
-      html += 'Es una estimacion para ubicarte, no una cotizacion cerrada: el numero final sale ';
-      html += 'despues de conversar, y suele bajar si tu caso encaja en algo que ya tengo construido.';
+      html += 'Es una estimacion para ubicarse, no una cotizacion cerrada: el numero final sale ';
+      html += 'despues de conversar, y suele bajar si su caso encaja en algo que ya tengo construido.';
       html += '</p>';
       html += '<p class="calc__tarifa">';
-      html += 'Si tu negocio es un hotel, un restaurante, un centro de reservas, un almacen aduanero ';
-      html += 'o necesitas cobrar por pago movil, mira los ';
+      html += 'Si su negocio es un hotel, un restaurante, un centro de reservas, un almacen aduanero ';
+      html += 'o necesita cobrar por pago movil, mira los ';
       html += '<a href="/para/">planes cerrados por rubro</a>: parten de sistemas que ya estan ';
       html += 'escritos y traen migracion, capacitacion, servidor el primer anio y 90 dias de garantia.';
       html += '</p>';
