@@ -73,8 +73,12 @@ lo carga, para la sección `#industrias`.
   con obligaciones. La regla viene del `CLAUDE.md` de `armorpay-cloud`.
 - **ZafraClic y Gustito Xpress no se nombran** — son de un amigo. Sus
   capacidades se describen sin identificar el proyecto.
-- **Hotel Marte va anonimizado** («un hotel de 12 habitaciones en Valencia,
+- **Hotel Marte va anonimizado** («un hotel de alta rotación en Valencia,
   Carabobo», referencia a pedido), siguiendo el criterio del propio dueño.
+  **Sin el número de habitaciones** (Neri, 2026-09-16: «da la impresión que
+  estoy iniciando con esto»). Para decir dónde funciona: «Mis sistemas funcionan
+  hoy en empresas de Caracas, Valencia y el exterior». No afirmar que el sistema
+  de hoteles corre en varias partes del país: hoy es un solo hotel.
 - **Revisar siempre a 390 px de ancho**: la mayoría del tráfico es móvil.
 
 ## Piezas nuevas (2026-09-12)
