@@ -162,7 +162,7 @@
         <h2 class="cv-section-title">Extracto Profesional</h2>
 
         <div style="font-size:15.5px;line-height:1.7;color:rgba(255,255,255,0.78);max-width:880px;">
-          Ingeniero Informático con <strong style="color:#fff;">17 años</strong> de experiencia diseñando, construyendo y operando plataformas web de misión crítica. Especialista en arquitectura full-stack moderna (Next.js / Node / Prisma / MySQL), WordPress avanzado, construcción de CRMs y ERPs a medida, integraciones de pago para el mercado venezolano, sistemas conversacionales con IA y administración avanzada de servidores Linux. Actualmente, como <strong style="color:#fff;">Lead Developer en Desarrollos Turísticos Siglo XXII, C.A. (división VIP SOFT)</strong>, lidero un portafolio de <strong style="color:#fff;">siete plataformas productivas 24/7</strong> que sustentan el ecosistema turístico, deportivo y de entretenimiento de La Guaira, más dos productos propios: un SaaS multicanal de soporte y Atalaya Monitor Server, un monitor en vivo de servidores y proyectos.
+          Ingeniero Informático con <strong style="color:#fff;">17 años</strong> de experiencia diseñando, construyendo y operando plataformas web de misión crítica. Especialista en arquitectura full-stack moderna (Next.js / Node / Prisma / MySQL), WordPress avanzado, construcción de CRMs y ERPs a medida, integraciones de pago para el mercado venezolano, sistemas conversacionales con IA y administración avanzada de servidores Linux. Actualmente, como <strong style="color:#fff;">Lead Developer en Desarrollos Turísticos Siglo XXII, C.A. (división VIP SOFT)</strong>, lidero un portafolio de <strong style="color:#fff;">siete plataformas productivas 24/7</strong> que sustentan el ecosistema turístico, deportivo y de entretenimiento de La Guaira, más tres productos propios: ArmorPay, una plataforma de validación de pagos; un SaaS multicanal de soporte, y Atalaya Monitor Server, un monitor en vivo de servidores y proyectos.
         </div>
 
         <!-- Filosofía -->
@@ -175,7 +175,7 @@
 
       <!-- 02 PLATAFORMAS PRODUCTIVAS -->
       <section class="cv-section">
-        <span class="cv-section-num">02 · 08 sistemas en producción</span>
+        <span class="cv-section-num">02 · 09 sistemas en producción</span>
         <h2 class="cv-section-title">Plataformas Productivas Destacadas <span class="font-serif-italic" style="color:#5ed29c;">2025-2026</span></h2>
         <p class="cv-section-sub">Ecosistema VIP en La Guaira (Desarrollos Turísticos Siglo XXII) + productos propios.</p>
 
@@ -369,6 +369,29 @@
               <li>Agente por cron para hostings sin Node y plugin de WordPress que solo envían datos, vinculados con código de un solo uso y firma en cada envío.</li>
               <li>Hooks de Claude Code: cada sesión es un robot en pantalla y se enciende cuando un agente espera permiso.</li>
               <li>Modo público filtrado en el servidor, PIN con scrypt, protección CSRF y bloqueo de accesos a la red interna; 10 temas dibujados en código, uno en 3D.</li>
+            </ul>
+          </div>
+        </article>
+        <!-- 09 ArmorPay -->
+        <article class="cv-bigplat" style="--accent-c:#fbbf24;">
+          <div class="cv-bigplat-side">
+            <span class="cv-bigplat-num">09</span>
+            <span class="cv-bigplat-tag">Producto propio · Pagos</span>
+            <span class="cv-bigplat-ver">desde jun 2026</span>
+          </div>
+          <div class="cv-bigplat-main">
+            <h3>ArmorPay</h3>
+            <a class="cv-bigplat-url" href="https://armorpay.net" target="_blank" rel="noopener">armorpay.net</a>
+            <p class="cv-bigplat-desc">Plataforma de validación de pagos para varios comercios: cada uno confirma en segundos que un pago móvil llegó a su cuenta, con control por caja, turnos y cierre. Nunca custodia ni mueve fondos: el pago va del cliente a la cuenta del comercio y la plataforma solo confirma que llegó.</p>
+            <div class="cv-bigplat-stack">
+              <span class="tag">Next.js</span><span class="tag">Webhooks</span><span class="tag">C2P</span><span class="tag">BDV · Tesoro · BDT</span>
+            </div>
+            <ul class="cv-bigplat-bullets">
+              <li>Tres bancos integrados en producción: Banco de Venezuela, Banco del Tesoro y Banco Digital de los Trabajadores.</li>
+              <li>La notificación entrante del banco es la fuente de verdad y la consulta en línea, el respaldo; el banco receptor viaja de punta a punta en cada evento.</li>
+              <li>Multi-comercio con aislamiento estricto como pieza central del diseño: si falla, un comercio vería el dinero de otro.</li>
+              <li>Comunicación entre componentes firmada criptográficamente, con contrato de API versionado.</li>
+              <li>Migraciones de base de datos versionadas, con historial y posibilidad de retroceder.</li>
             </ul>
           </div>
         </article>
