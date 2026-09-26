@@ -271,7 +271,7 @@
         <div class="proof-strip">
           <div><div class="v">11</div><div class="l">Métodos de cobro conviviendo en una sola caja</div></div>
           <div><div class="v">3</div><div class="l">Negocios cobrando con esto en producción</div></div>
-          <div><div class="v">2</div><div class="l">Bancos integrados para validación automática</div></div>
+          <div><div class="v">3</div><div class="l">Bancos integrados para validación automática</div></div>
           <div><div class="v">0</div><div class="l">Capturas revisadas a mano</div></div>
         </div>
       </div>
@@ -471,7 +471,7 @@
           </p>
           <ul class="caso-bullets">
             <li>Multi-comercio de verdad: el aislamiento entre negocios es la pieza central del diseño, porque si falla, un comercio vería el dinero de otro.</li>
-            <li>Dos bancos integrados, con el banco receptor viajando de punta a punta en cada evento.</li>
+            <li>Tres bancos integrados en producción (Banco de Venezuela, Banco del Tesoro y Banco Digital de los Trabajadores), con el banco receptor viajando de punta a punta en cada evento. Con los demás bancos se gestiona la afiliación.</li>
             <li>Comunicación entre componentes firmada criptográficamente, con contrato de API versionado.</li>
             <li>Migraciones de base de datos versionadas, con historial y posibilidad de retroceder.</li>
             <li><strong style="color:#fff;">Nunca se custodia ni se mueve dinero</strong>: el pago va del cliente a la cuenta del comercio; la plataforma solo confirma que llegó.</li>
@@ -715,7 +715,7 @@
 
         <div class="metricas" style="margin-bottom:40px;">
           <div class="metrica"><div class="v">11</div><div class="l">métodos de cobro en una sola caja, en el hotel</div></div>
-          <div class="metrica"><div class="v">2</div><div class="l">bancos integrados para validación automática</div></div>
+          <div class="metrica"><div class="v">3</div><div class="l">bancos integrados para validación automática</div></div>
           <div class="metrica"><div class="v">3</div><div class="l">negocios cobrando con estos patrones en producción</div></div>
           <div class="metrica"><div class="v">0</div><div class="l">comisiones: el dinero nunca pasa por mí</div></div>
         </div>

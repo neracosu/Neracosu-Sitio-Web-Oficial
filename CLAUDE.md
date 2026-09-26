@@ -61,11 +61,10 @@ Hay **ocho** landings por industria más su índice: `citas-y-servicios`,
 `comercio-y-tienda`, `hoteles`, `restaurantes-y-bares`, `reservas`,
 `cobros-y-pagos`, `logistica-y-aduana`, `integraciones-api-y-bots`.
 
-Los rubros no son 24 páginas: son **arquetipos de sistema**. Una peluquería,
-una odontología y un taller mecánico comparten el mismo sistema (cita con
-profesional); una farmacia, una zapatería y una joyería comparten otro
-(comercio con inventario). El asistente de `/para/#asistente` agrupa así en su
-primera pregunta, con ejemplos debajo de cada opción.
+**Antes de editar o regenerar `/para/`, las calculadoras o `/calculadora.html`,
+cargar la skill `para-neracosu`**: piezas JS/CSS, la trampa de los sliders
+(`verificar-sliders.py`), `TARIFA_HORA` y el orden seguro de `precios.py` →
+`build.py`.
 
 **`citas-y-servicios` no lleva precio cerrado, a propósito.** La agenda por
 profesional es lo único del catálogo que **no está construido** (se verificó:
@@ -78,14 +77,12 @@ de precios sin construir primero ese módulo.**
 (fuera del docroot); ver `build-para/LEEME.md`. Editar el `.html` de `/para/`
 directamente se pierde en la próxima regeneración.
 
-Estilos en `assets/css/nicho.css`, que extiende `redesign.css`. La home también
-lo carga, para la sección `#industrias`.
-
 ### Reglas de contenido de estas páginas
 
-- **Voz: tuteo**, español de Venezuela llano, sin jerga técnica de cara al
-  cliente. El cierre honesto («si no te sirve, te lo digo yo primero») es parte
-  del tono, no un adorno.
+- **Voz: usted** (desde el 2026-09-12, commit 38ead1d; antes era tuteo),
+  español de Venezuela llano, sin jerga técnica de cara al cliente y sin
+  órdenes. El cierre honesto («se lo digo de una vez») es parte del tono, no
+  un adorno.
 - **Las cifras son verificables o no van.** Cada número sale de leer el código
   o la operación real. Si no se puede sostener, se quita.
 - **ArmorPay se nombra siempre «plataforma de validación de pagos»**, nunca
@@ -101,68 +98,9 @@ lo carga, para la sección `#industrias`.
   de hoteles corre en varias partes del país: hoy es un solo hotel.
 - **Revisar siempre a 390 px de ancho**: la mayoría del tráfico es móvil.
 
-## Piezas nuevas (2026-09-12)
-
-| Archivo | Qué es |
-|---|---|
-| `assets/js/testimonios.js` | Testimonios. **Editar solo el array de arriba.** La sección se autooculta mientras esté vacío, así nunca se publica uno inventado. Guía para pedirlos: `~/build-para/COMO-PEDIR-TESTIMONIOS.md`. |
-| `assets/js/asistente.js` | Asistente guiado de 4 preguntas en `/para/#asistente`. Sin IA ni backend: reglas en el navegador y salida a WhatsApp con el resumen. `NICHOS` es la única copia de los precios; si cambian en `/para/`, cambian ahí. |
-| `assets/js/calc-fuga.js` | Sliders de las calculadoras de fuga: número grande, relleno de la pista y `aria-valuetext`. La **fórmula** de cada página sigue en su script propio. |
-| `assets/css/nicho.css` | Estilos de todo lo anterior más planes, calculadoras y bloques de conversión. |
-
 **Regla de los testimonios: no se inventa ninguno.** Si el cliente lo desmiente
 cuesta más que no tener ninguno, y contradice el tono honesto del resto.
-
-**Productos propios vs. encargos.** ArmorPay y Soporte Vipsoft salieron del
-portafolio de clientes y tienen su bloque `#productos` en la home: los construyó
-y los opera él. El portafolio de encargos quedó en 16; sumados dan las 18.
-
-### Sliders de las calculadoras
-
-Las calculadoras usan `<input type="range">` nativo, no una librería: HTML lo
-hace mejor, es accesible de fábrica y pesa 0 KB.
-
-**Trampa que ya costó una vez:** si el `value` no cae en la rejilla del `step`,
-**el navegador lo redondea en silencio** y la cuenta da otro número. Pasó con
-`cf-precio` (12.600 con `step="500"` → el navegador servía 12.500 y el
-resultado bajaba de Bs 340.200 a Bs 337.500).
-
-Antes de publicar un cambio de sliders, correr:
-
-```bash
-python3 /home/neracosu/build-para/verificar-sliders.py
-```
-
-Comprueba que cada `value` esté dentro del rango, que caiga en la rejilla del
-`step` y que el recorrido no sea tan fino que no se pueda arrastrar.
-
-### La calculadora principal
-
-`/calculadora.html` es un asistente de 3 pasos, no un formulario de números.
-Desde el 2026-09-12 el **nivel de complejidad** es un slider de 3 posiciones
-(`calc__nivel-slider`) en vez de tres tarjetas en grid, que entre 480 y 768 px
-quedaban apretadas y debajo ocupaban media pantalla. Los **adicionales siguen
-siendo casillas**: son multi-selección y un slider no puede expresarlas.
-
-La tarifa vive en `var TARIFA_HORA = 17` al principio de `calculator.js` y el
-precio de cada opción se **deriva** de sus horas. Es la única fuente: cambiarla
-ahí actualiza todo.
-
-### Al regenerar precios
-
-`precios.py` es **idempotente por secciones** (`secciones.py`), no por regex.
-La versión con regex abarcaba de más: al reejecutarla dejaba la tabla de tres
-años duplicada y se comía el bloque de entrada en 5 páginas. El bloque de
-entrada de $170 vive **dentro** de la plantilla de `precios.py`, que es su única
-fuente: no agregarlo por separado.
-
-Orden seguro para republicar todo:
-
-```bash
-python3 /home/neracosu/build-para/precios.py
-python3 /home/neracosu/build-para/verificar-sliders.py
-python3 /home/neracosu/build-para/build.py
-```
+`assets/js/testimonios.js` se autooculta mientras su array esté vacío.
 
 ## ⚠️ Dos trampas del servidor que ya tumbaron el sitio
 
@@ -203,17 +141,15 @@ quien ya visitó el sitio.
 
 `/para/` es el **único** lugar del sitio con cifras de proyecto. Se decidió el
 2026-09-12, después de que `/servicios/hoteles.html` y `/para/hoteles.html`
-quedaran publicadas a la vez con precios distintos: la primera con el modelo
-viejo (pago único, 90 días de garantía, tabla de costo a 3 años) y la segunda
-con pago único más mensualidad. Un visitante podía caer en cualquiera.
+quedaran publicadas a la vez con precios distintos. Un visitante podía caer en
+cualquiera.
 
 - **`/servicios/`** describe capacidades por tecnología y **no cotiza**: manda a
   `/para/` y a la calculadora. La única cifra que conserva es el hosting a
   $8/mes, que es un servicio aparte y no contradice nada.
-- **`/servicios/hoteles.html` ya no existe**: 301 a `/para/hoteles.html` desde
-  el `.htaccess` de `servicios/`. El original quedó en
-  `~/backups/web-20260912-072243/servicios-hoteles-original.html`.
-- La **calculadora** deriva sus precios de `TARIFA_HORA`, así que también sale
-  de la misma fuente.
+- **`/servicios/hoteles.html` ya no existe** (301 a `/para/hoteles.html`).
+- Copias que hay que mantener en sintonía: `NICHOS` en `assets/js/asistente.js`
+  repite los precios de `/para/`; la calculadora deriva los suyos de
+  `TARIFA_HORA` en `calculator.js`.
 
 **Antes de publicar una cifra nueva, preguntarse dónde más vive ese número.**

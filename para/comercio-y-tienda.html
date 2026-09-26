@@ -154,7 +154,7 @@
         "name": "¿Sirve para farmacia, con lotes y vencimientos?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "El control de lote y fecha de vencimiento no está construido: es una extensión del módulo de inventario y se cotiza aparte tras el diagnóstico."
+          "text": "Sí. El control de lote y vencimiento y el principio activo vienen de la base de un equipo aliado que ya los tiene en producción. Lo propio de una farmacia se adapta: récipe por foto verificado por el farmacéutico en turno, regente por sede y un catálogo en línea que muestra existencia y precio sin promocionar medicamentos con récipe."
         }
       },
       {
@@ -171,6 +171,14 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "No. El desarrollo es una inversión única, el sistema queda en el servidor del cliente y el dinero va directo a su cuenta."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si se va la luz o el internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un equipo espejo en el local cobra contra su copia de la sede y se sincroniza al volver la conexión. Con batería y un segundo internet (Starlink opcional), el local sigue conectado durante el apagón."
         }
       }
     ]
@@ -250,7 +258,7 @@
       <div class="container">
         <div class="crumbs"><a href="/">Inicio</a><span>/</span><a href="/para/">Soluciones</a><span>/</span>Comercio e inventario</div>
         <span class="eyebrow">Tiendas y comercio · Hecho en Venezuela</span>
-        <h1 class="nicho-hero-title">Le pidieron algo que sí tenías. Estaba <span class="font-serif-italic" style="color:#5ed29c;">en la otra sucursal</span>.</h1>
+        <h1 class="nicho-hero-title">Le pidieron algo que sí tenía. Estaba <span class="font-serif-italic" style="color:#5ed29c;">en la otra sucursal</span>.</h1>
         <p class="nicho-hero-sub">
           Farmacia, ropa, zapatos, joyería, ferretería, mascotas, óptica. El problema es el mismo: nadie sabe
           con certeza qué hay, dónde está ni cuánto se vendió hasta que toca contar. Este sistema
@@ -451,6 +459,128 @@
             <p>Cada quien entra con su clave. Quién vendió, quién ajustó inventario y quién dio un descuento queda registrado.</p>
           </div>
         </div>
+        <div style="max-width:720px;margin:56px 0 28px;">
+          <span class="eyebrow">En alianza</span>
+          <h3 style="font-size:22px;line-height:1.3;margin:10px 0 8px;">Y lo que suma el equipo con el que trabajo en Acarigua</h3>
+          <p style="color:var(--text-muted);line-height:1.65;margin:0;font-size:15.5px;">
+            Para comercios más grandes trabajo en alianza con un equipo de desarrollo de Acarigua que tiene
+            su propio sistema de operación en producción en comercios venezolanos. Estos módulos son de esa
+            base y se integran con lo mío: la validación de pagos, los servidores y la tienda.
+          </p>
+        </div>
+        <div class="modulos-grid">
+          <div class="modulo">
+            <span class="num">10</span>
+            <h3>Lotes y vencimientos</h3>
+            <p>Lee el lote y el vencimiento del código de barras de la caja, vende primero lo que vence primero y avisa lo que está por vencerse antes de botarlo.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">11</span>
+            <h3>Compras que se leen solas</h3>
+            <p>Le toma una foto a la factura del proveedor y el sistema saca los renglones para que usted confirme. Reparte el flete y compara cotizaciones: cada producto con su costo real.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">12</span>
+            <h3>Reparto con su aplicación</h3>
+            <p>Zonas de delivery con su tarifa, repartidor con su propia aplicación, estados del pedido y avisos al cliente por WhatsApp en cada paso.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">13</span>
+            <h3>Sigue cobrando sin internet</h3>
+            <p>Un programa en la computadora del local guarda la copia del catálogo y cobra aunque se caiga la conexión. Cuando vuelve, sube todo sin duplicar nada.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">14</span>
+            <h3>Contabilidad y libros solos</h3>
+            <p>Cada venta, compra y devolución genera su asiento. Libros de compras y ventas con IVA, exento, IGTF y retenciones, y el paquete del contador en Excel.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">15</span>
+            <h3>Lo que el dueño necesita ver</h3>
+            <p>Cómo va contra el punto de equilibrio, ganancia por producto, la plata dormida en lo que no rota y el cierre del día en su correo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="farmacias">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:48px;">
+          <span class="eyebrow">Si su negocio es una farmacia</span>
+          <h2 class="section-title">El mismo sistema, con lo que exige <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">una farmacia</span></h2>
+          <p class="section-subtitle">
+            Una farmacia es un comercio con inventario, más un farmacéutico y unas normas que un programa
+            genérico no conoce. Esto es lo que se adapta, y cada punto sale de leer la ley venezolana.
+          </p>
+        </div>
+        <div class="modulos-grid">
+          <div class="modulo">
+            <span class="num">01</span>
+            <h3>Principio activo y genérico</h3>
+            <p>La ficha pide principio activo. Si falta la marca, el sistema sugiere el equivalente y el farmacéutico decide, previa consulta con el médico, como pide la Ley de Medicamentos.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">02</span>
+            <h3>Récipe por foto</h3>
+            <p>En la tienda en línea o por WhatsApp, el cliente sube la foto del récipe y el farmacéutico en turno la verifica antes de despachar. Si es de los que se retienen, el repartidor recoge el original.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">03</span>
+            <h3>Farmacéutico en turno</h3>
+            <p>Regente registrado por sede. Lo que lleva récipe no sale sin su visto bueno, ni en el mostrador ni en línea. El sistema deja listas las anotaciones del libro recetario, que se sigue llevando.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">04</span>
+            <h3>Catálogo en línea dentro de la norma</h3>
+            <p>Muestra existencia y precio, solo de productos con registro sanitario, y no promociona medicamentos con récipe. Las ofertas y cupones van a lo que la norma permite.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">05</span>
+            <h3>Existencia por sede, en el teléfono</h3>
+            <p>Su cliente ve en qué sede está su medicamento y cuál le queda más cerca, y pide con delivery o para retirar. Es lo que ya le ofrecen las cadenas nacionales, con su nombre.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">06</span>
+            <h3>IVA por producto</h3>
+            <p>Medicinas exentas, cuidado personal y misceláneos gravados, IGTF en la parte en divisas: todo en el mismo ticket, sin cálculos a mano.</p>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--text-dim);margin-top:22px;line-height:1.6;max-width:70ch;">
+          Soy desarrollador, no abogado: estos puntos se revisan con su asesor legal antes de encender la tienda.
+          Si tiene varias sedes y quiere tienda, app y sistema unidos, se cotiza con diagnóstico: una cadena no cabe en un plan de un local.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="sin-luz">
+      <div class="container">
+        <div style="max-width:720px;margin-bottom:48px;">
+          <span class="eyebrow">Cuando se va la luz</span>
+          <h2 class="section-title">La caja no se detiene por un <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">apagón</span></h2>
+          <p class="section-subtitle">
+            En Venezuela la luz y el internet se van. Un sistema pensado desde afuera no lo tiene en cuenta; este sí.
+          </p>
+        </div>
+        <div class="modulos-grid">
+          <div class="modulo">
+            <span class="num">01</span>
+            <h3>Equipo espejo en el local</h3>
+            <p>Una computadora del local guarda la copia de la sede y cobra contra ella si se cae el internet o el servidor, con escritura a prueba de apagones. Al volver, se sincroniza sola.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">02</span>
+            <h3>Batería y segundo internet</h3>
+            <p>Una batería grande mantiene encendidos el equipo, el router y la caja. Un router con respaldo pasa solo a un segundo internet, y donde el cable falla con la luz se agrega una antena Starlink, opcional.</p>
+          </div>
+          <div class="modulo">
+            <span class="num">03</span>
+            <h3>Vigilado desde afuera</h3>
+            <p>Usted ve qué sede está con luz, por cuál internet sale y cuánta batería le queda. La alerta me llega a mí antes que su llamada.</p>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--text-dim);margin-top:22px;line-height:1.6;max-width:70ch;">
+          Los equipos se compran al costo, a su nombre. La instalación y la vigilancia se cotizan por sede.
+        </p>
       </div>
     </section>
 
@@ -503,7 +633,7 @@
         <div style="max-width:720px;margin-bottom:44px;">
           <span class="eyebrow">Precios de apertura</span>
           <h2 class="section-title">Se paga una vez y el sistema <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">es suyo</span></h2>
-          <p class="section-subtitle">Sin mensualidad y sin comisión por venta. Paga el desarrollo, el sistema queda instalado en su servidor con su dominio, y el código es suyo. El primer año el servidor y el dominio van incluidos.</p>
+          <p class="section-subtitle">Sin comisión por venta. Paga el desarrollo una vez, el sistema queda instalado en su servidor con su dominio y el código es suyo. La mensualidad paga que alguien lo sostenga: hosting, respaldos y soporte.</p>
         </div>
 
         <div class="apertura">
@@ -798,7 +928,7 @@
           </div>
           <div class="faq-item">
             <div class="faq-q">¿Sirve para farmacia, con lotes y vencimientos?</div>
-            <div class="faq-a">El control de lote y fecha de vencimiento no está construido: es una extensión del módulo de inventario, no algo que ya exista. Se lo digo antes para que no sea una sorpresa. Se cotiza aparte y lo conversamos en el diagnóstico.</div>
+            <div class="faq-a">Sí. El control de lote y vencimiento, el principio activo y la lectura de los códigos de las cajas vienen de la base del equipo aliado con el que trabajo, que ya los tiene en producción. Lo que exige una farmacia en particular (récipe por foto, regente por sede, catálogo dentro de la norma) se adapta: está explicado más arriba, en la sección de farmacias.</div>
           </div>
           <div class="faq-item">
             <div class="faq-q">Ya vendo por Instagram, ¿para qué una tienda?</div>
