@@ -28,6 +28,26 @@ de «desde 2011» a **«desde 2009»**, que es lo único coherente con 17 años.
 Consultores)**. Con 17 años quedan 2009–2011 sin respaldo visible. Si alguien
 resta, ve el hueco. Hay que agregar esa entrada al CV o dejar el pie sin año.
 
+## `/atalaya/` se genera: no se edita aquí
+
+La página de Atalaya Monitor Server y sus guías salen de `/opt/atalaya/site/`
+(repo de root) con `node scripts/export-site.js`, que reemplaza la carpeta
+entera. Un cambio hecho directo en `public_html/atalaya/` se pierde en el
+próximo export: ya pasó el 2026-09-26. Cada HTML lo avisa en la línea 2. Desde
+`neracosu` no hay permiso de escritura en `/opt/atalaya`: dejar un parche en
+`~/` y pedírselo a la sesión de root.
+
+## Plataformas en producción: 24
+
+Desde el 2026-09-26 son **24** (antes 23): 21 encargos del portafolio más tres
+productos propios en `#productos` (ArmorPay, Soporte Vipsoft y Atalaya Monitor
+Server). El número vive en `index.html` (meta, OG, Twitter, contador
+`data-counter="24"`, el texto del portafolio, el título de capacidades y la
+métrica del cierre), `para/index.html` (y su fuente `build-para/body-index.html`),
+`servicios/sistemas-de-gestion.html`, `build-para/seo.py` y la imagen
+`assets/img/og-image.jpg`, que se renderiza desde `build-para/og-card.html`
+con Chromium headless. Si cambia, cambia en todos.
+
 ## Marca
 
 La marca es **NERACOSU**, no «Neri.dev». El logotipo se escribe `NERACOSU` con
