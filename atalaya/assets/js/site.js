@@ -3,7 +3,7 @@ import { px } from './pixicons.js?v=c5d987b20f';
 
 const $ = id => document.getElementById(id);
 // capturas junto a este script: assets/img/ (funciona desde /atalaya/ y desde /atalaya/guias/)
-const IMG = new URL('../img/', import.meta.url).href, V = '0.31.0';
+const IMG = new URL('../img/', import.meta.url).href, V = '0.37.0';
 document.querySelectorAll('[data-px]').forEach(el => { el.outerHTML = px(el.dataset.px); });
 
 // escena pixel en vivo (simulada)
