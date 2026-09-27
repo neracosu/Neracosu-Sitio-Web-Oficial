@@ -1763,3 +1763,23 @@ img, svg, video { display: block; max-width: 100%; }
 .blog-cover .blog-cat-tag { z-index: 2; }
 @media (prefers-reduced-motion: reduce) { .blog-card:hover .blog-shot { transform: none; } }
 .portfolio-cover:has(.portfolio-shot.ejemplo)::after { background: linear-gradient(180deg, rgba(7,11,10,.35) 0%, transparent 28%); }
+/* fotos de Neri (2026-09-27) */
+img.lg-card-avatar { object-fit: cover; padding: 0; flex: none; }
+.about-portrait { overflow: hidden; }
+.about-portrait > *:not(.about-photo) { position: relative; z-index: 2; }
+.about-portrait .about-photo {
+  position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0;
+  object-fit: cover; object-position: center 30%; border-radius: inherit;
+}
+.about-portrait::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; border-radius: inherit;
+  background: linear-gradient(180deg, rgba(7,11,10,.72) 0%, rgba(7,11,10,0) 22%, rgba(7,11,10,0) 55%, rgba(7,11,10,.92) 100%);
+}
+.about-portrait .about-spacer { flex: 1; }
+.cv-masthead::after { content: ''; display: block; clear: both; }
+.cv-masthead .cv-foto {
+  float: right; width: 200px; height: 250px; object-fit: cover; object-position: center 20%;
+  margin: 0 0 16px 24px; border-radius: 18px; border: 1px solid rgba(255,255,255,.12);
+}
+@media (max-width: 700px) { .cv-masthead .cv-foto { width: 104px; height: 130px; margin-left: 14px; border-radius: 14px; } }
+@media (max-width: 700px) { .cv-masthead .cv-foto { float: none; display: block; margin: 0 0 18px 0; } }
