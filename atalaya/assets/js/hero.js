@@ -1,6 +1,6 @@
 // Escena del inicio: una Atalaya en miniatura (simulada). Pixel art para edificios, carteles, robot e invasores;
 // textos nitidos a resolucion completa (la mezcla de la Ciudad clasica). Se detiene fuera de la vista.
-import { SIGNS, ICON_COLORS, ROBOT_FRAMES, INVADER, ENVELOPE, paintCanvas, shade } from './pixeldata.js?v=3330bf7e2e';
+import { SIGNS, ICON_COLORS, ROBOT_FRAMES, INVADER, ENVELOPE, paintCanvas, shade } from './pixeldata.js?v=94db679c67';
 
 const BUILDINGS = [
   { name: 'Vercel', sign: 'box', color: '#1e293b', w: 22, h: 46 },

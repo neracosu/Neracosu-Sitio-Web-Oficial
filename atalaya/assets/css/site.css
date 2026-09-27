@@ -279,3 +279,67 @@ pre.cmd { position: relative; margin: .6rem 0 0; padding: .75rem .9rem; backgrou
   .screen .sim { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* ---------------------------------------------------------------- franja: version, edad del proyecto y colabore */
+.born { display: flex; align-items: center; justify-content: center; gap: .5rem 1.4rem; flex-wrap: wrap; padding: 6px clamp(16px, 4vw, 40px);
+  font-family: var(--mono); font-size: .76rem; color: var(--ink-3); background: rgba(3, 6, 14, .9); border-bottom: 1px solid var(--line); }
+.born .v { color: var(--accent); }
+.born .age b { color: var(--ink-2); font-weight: 500; font-variant-numeric: tabular-nums; }
+.born .pulse { display: inline-block; width: 6px; height: 6px; margin-right: .45rem; background: #4ade80; vertical-align: 1px; animation: bornPulse 2s steps(2) infinite; }
+.born .gh { color: var(--ink-2); text-decoration: none; border-bottom: 1px dashed var(--line-strong); }
+.born .gh:hover { color: var(--ink); border-bottom-color: var(--accent); }
+@keyframes bornPulse { 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .born .pulse { animation: none; } }
+@media (max-width: 640px) { .born { font-size: .7rem; gap: .2rem .9rem; } .born .long { display: none; } }
+
+.collab { padding-top: 3rem; padding-bottom: 3rem; }
+.collab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 1.4rem; }
+.collab-card { display: grid; gap: .35rem; padding: 1.1rem 1.2rem; border: 1px solid var(--line-strong); border-radius: 14px; background: var(--bg-2); color: var(--ink); text-decoration: none; }
+.collab-card .px { width: 1.8em; height: 1.8em; }
+.collab-card small { color: var(--ink-3); }
+.collab-card:hover { border-color: var(--accent); }
+
+/* ---------------------------------------------------------------- en accion: grabaciones del sistema */
+#en-accion h2 em { font-style: normal; color: var(--accent); }
+.clips { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: 18px; }
+.clip.big { grid-column: 1 / -1; }
+.clip.big figcaption { font-size: .95rem; }
+.clip.big figcaption b { font-size: 1.12rem; }
+.clip { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line-strong); background: #060a14; box-shadow: 0 20px 60px rgba(0, 0, 0, .45); }
+.clip video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #060a14; cursor: pointer; }
+.clip figcaption { display: flex; gap: .7rem; align-items: flex-start; padding: .8rem .95rem .95rem; border-top: 1px solid var(--line); color: var(--ink-3); font-size: .9rem; }
+.clip figcaption .px { width: 1.6em; height: 1.6em; flex: none; margin-top: .1rem; }
+.clip figcaption b { display: block; color: var(--ink); font-size: 1rem; margin-bottom: .15rem; }
+
+/* animacion ampliada */
+.clip video { transition: transform .2s ease; }
+.clip video:hover { transform: scale(1.012); }
+.clip video:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.lightbox { overscroll-behavior: contain; }
+.lightbox { position: fixed; inset: 0; margin: auto; height: fit-content; width: min(1280px, calc(100vw - 32px)); max-width: none; max-height: calc(100vh - 32px); padding: 0; border: 1px solid var(--line-strong); border-radius: 16px; background: #060a14; color: var(--ink); overflow: visible; }
+.lightbox::backdrop { background: rgba(2, 4, 10, .86); backdrop-filter: blur(4px); }
+.lightbox figure { margin: 0; }
+.lightbox video { display: block; width: 100%; max-height: calc(100vh - 150px); aspect-ratio: 16 / 9; object-fit: contain; border-radius: 16px 16px 0 0; background: #060a14; cursor: pointer; }
+.lightbox figcaption { display: flex; gap: .7rem; align-items: flex-start; padding: .9rem 1.1rem 1rem; color: var(--ink-3); border-top: 1px solid var(--line); }
+.lightbox figcaption .px { width: 1.7em; height: 1.7em; flex: none; }
+.lightbox figcaption b { display: block; color: var(--ink); font-size: 1.08rem; margin-bottom: .15rem; }
+.lb-close, .lb-nav { position: absolute; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-strong); background: rgba(6, 10, 20, .9); color: var(--ink); font: 400 1.8rem/1 system-ui, sans-serif; cursor: pointer; }
+.lb-close { top: -14px; right: -14px; font-size: 1.5rem; }
+.lb-nav { top: 42%; }
+.lb-prev { left: -22px; } .lb-next { right: -22px; }
+.lb-close:hover, .lb-nav:hover, .lb-close:focus-visible, .lb-nav:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+@media (max-width: 700px) { .lb-close { top: 8px; right: 8px; } .lb-prev { left: 6px; } .lb-next { right: 6px; } .lb-nav { top: 30%; width: 38px; height: 38px; } }
+/* vuelta a neracosu.com: quien llega desde la home (o las redes) tiene cómo regresar */
+.born .home { color: var(--ink); text-decoration: none; font-weight: 600; padding: 2px 8px; border: 1px solid var(--line-strong); }
+.born .home:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---------------------------------------------------------------- videos verticales (los de las redes) */
+.vids-head { margin: 3rem 0 1rem; }
+.vids-head h3 { margin: 0 0 .3rem; }
+.vids { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 300px); gap: 18px; justify-content: center; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 14px; }
+.vid { margin: 0; scroll-snap-align: center; border-radius: 26px; padding: 10px; background: #0b1120; border: 1px solid var(--line-strong); box-shadow: 0 24px 60px rgba(0, 0, 0, .5); }
+.vid video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; background: #060a14; }
+.vid figcaption { padding: .7rem .35rem .2rem; color: var(--ink-3); font-size: .88rem; line-height: 1.4; }
+.vid figcaption b { display: block; color: var(--ink); font-size: .98rem; margin-bottom: .15rem; }
+@media (max-width: 700px) { .vids { justify-content: start; grid-auto-columns: 78%; } }
+.vid figcaption .dl { display: inline-block; margin-top: .5rem; font-size: .82rem; color: var(--accent); text-decoration: none; border-bottom: 1px dashed currentColor; }

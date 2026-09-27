@@ -16,9 +16,15 @@ adastram.store/
 hotelmarte.neracosu.com/
 gustito.neracosu.com/
 crononauta.neracosu.com/
+prospectos.neracosu.com/
+wpdev.neracosu.com/
 # Atalaya: su pantalla y la nube son proxies a servicios locales (el sitio del producto si va: atalaya/)
 atalaya.neracosu.com/
 nube.neracosu.com/
+# Videos de Atalaya: se publican en el docroot pero no van al repo (pesan
+# mas de 100 MB y salen del export de /opt/atalaya, que es su fuente).
+atalaya/assets/video/
+atalaya-kit/
 
 # --- Personal, no publicable ---
 # mi-luna trae fotos y audio de una persona identificable.
