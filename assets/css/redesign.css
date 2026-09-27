@@ -1726,3 +1726,28 @@ img, svg, video { display: block; max-width: 100%; }
   .nav-cta-wrap { margin-left: 12px; }
   .nav-cta-wrap .btn-primary { padding: 10px 14px !important; }
 }
+
+/* Portafolio: captura real de cada proyecto en la portada del card (2026-09-27). La letra queda solo en los
+   que no tienen captura (sistemas privados o anonimos). Velo oscuro arriba y abajo para leer las etiquetas. */
+.portfolio-cover .portfolio-shot {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  opacity: .92; transition: transform .45s ease, opacity .3s ease;
+}
+.portfolio-card:hover .portfolio-shot { transform: scale(1.03); opacity: 1; }
+.portfolio-cover:has(.portfolio-shot)::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(7,11,10,.55) 0%, transparent 32%, transparent 62%, rgba(7,11,10,.65) 100%);
+}
+.portfolio-cover:has(.portfolio-shot) .big-letter,
+.portfolio-cover:has(.portfolio-shot) .grid-pattern { display: none; }
+.portfolio-cover .portfolio-badge, .portfolio-cover .portfolio-icon { z-index: 2; }
+@media (prefers-reduced-motion: reduce) { .portfolio-card:hover .portfolio-shot { transform: none; } }
+/* productos propios: la captura arriba de la tarjeta (solo en la home) */
+.modulo .modulo-shot {
+  display: block; width: calc(100% + 52px); max-width: none; margin: -26px -26px 18px; height: 170px;
+  object-fit: cover; object-position: top center; border-radius: 18px 18px 0 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06); opacity: .92; transition: opacity .3s ease;
+}
+.modulo:hover .modulo-shot { opacity: 1; }
+@media (max-width: 640px) { .modulo .modulo-shot { width: calc(100% + 40px); margin: -22px -20px 16px; border-radius: 16px 16px 0 0; } }
