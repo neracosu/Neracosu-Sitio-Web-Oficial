@@ -30,9 +30,15 @@ sudo netfilter-persistent save                        # guardar el cambio
 
 ## Qué hay hoy
 
-Tres IPs de los ataques de agosto de 2026, movidas desde el `.htaccess` el
+Quince IPs en total: tres de los ataques de agosto de 2026, movidas desde el `.htaccess` el
 2026-09-12. La versión anterior del archivo, con las IPs, quedó respaldada en
 `~/backups/web-20260912-072243/htaccess-con-ips`.
+
+El 2026-09-26 se sumaron doce, las que más descargaron repositorios `.git` expuestos
+(incidente de terrazasvip.com, vipsoft.cloud y vipplaysportbar.com). La lista vive en
+`/root/bloqueos-ips.txt` (solo root), no aquí. Ese mismo día se agregó una regla global de
+Apache (`/etc/apache2/conf.d/includes/pre_virtualhost_global.conf`) que niega `/.git`, `/.svn`,
+`/.hg` y `/.env*` en todos los sitios, sin depender del `.htaccess` de cada cuenta.
 
 `fail2ban` sigue corriendo aparte con cuatro jaulas (sshd y tres de Apache),
 pero sus baneos **expiran en un día** (`dbpurgeage = 1d`): sirve para ataques

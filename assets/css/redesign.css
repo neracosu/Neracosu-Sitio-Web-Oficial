@@ -1751,3 +1751,15 @@ img, svg, video { display: block; max-width: 100%; }
 }
 .modulo:hover .modulo-shot { opacity: 1; }
 @media (max-width: 640px) { .modulo .modulo-shot { width: calc(100% + 40px); margin: -22px -20px 16px; border-radius: 16px 16px 0 0; } }
+/* portadas de ejemplo (estilo de las propuestas) para tarjetas sin captura real */
+.portfolio-cover .portfolio-shot.ejemplo { object-position: center; opacity: 1; }
+.blog-cover .blog-shot {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center; transition: transform .45s ease;
+}
+.blog-card:hover .blog-shot { transform: scale(1.03); }
+.blog-cover:has(.blog-shot) .big-letter,
+.blog-cover:has(.blog-shot) .grid-pattern { display: none; }
+.blog-cover .blog-cat-tag { z-index: 2; }
+@media (prefers-reduced-motion: reduce) { .blog-card:hover .blog-shot { transform: none; } }
+.portfolio-cover:has(.portfolio-shot.ejemplo)::after { background: linear-gradient(180deg, rgba(7,11,10,.35) 0%, transparent 28%); }
