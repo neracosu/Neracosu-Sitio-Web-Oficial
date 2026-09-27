@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantalla LED en eventos: que la gente se detenga a jugar</title>
+  <meta name="description" content="Juego de memoria en vivo para el panel LED de un casino: el operador juega desde la laptop y la pantalla responde al instante. Cómo funciona y qué exigir.">
+  <meta name="author" content="Neri Rafael Colón Suárez">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://neracosu.com/blog/juego-interactivo-pantalla-led-eventos.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Pantalla LED en eventos: que la gente se detenga a jugar">
+  <meta property="og:description" content="Juego de memoria en vivo para el panel LED de un casino: el operador juega desde la laptop y la pantalla responde al instante. Cómo funciona y qué exigir.">
+  <meta property="og:url" content="https://neracosu.com/blog/juego-interactivo-pantalla-led-eventos.html">
+  <meta property="og:image" content="https://neracosu.com/assets/img/blog/juego-interactivo-pantalla-led-eventos-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ilustración de ejemplo: tablero de cartas de un juego de memoria en una pantalla LED de evento">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:site_name" content="Neri Colón - Desarrollador Web">
+  <meta property="article:published_time" content="2026-09-27">
+  <meta property="article:author" content="Neri Colón">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pantalla LED en eventos: que la gente se detenga a jugar">
+  <meta name="twitter:description" content="Juego de memoria en vivo para el panel LED de un casino: el operador juega desde la laptop y la pantalla responde al instante. Cómo funciona y qué exigir.">
+  <meta name="twitter:image" content="https://neracosu.com/assets/img/blog/juego-interactivo-pantalla-led-eventos-og.jpg">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#070b0a">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/style.css?v=8f9737d3">
+  <link rel="stylesheet" href="/assets/css/unify-2026.css?v=57d0726a">
+  <link rel="stylesheet" href="/assets/css/blog.css?v=be1f7624">
+  <link rel="stylesheet" href="/assets/css/promo.css?v=a648a8fb">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "La gente pasa frente a su pantalla LED y no se detiene: un juego en vivo que cambia eso",
+    "description": "Juego de memoria en vivo para el panel LED de un casino: el operador juega desde la laptop y la pantalla responde al instante. Cómo funciona y qué exigir.",
+    "image": "https://neracosu.com/assets/img/blog/juego-interactivo-pantalla-led-eventos-og.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Neri Colón",
+      "url": "https://neracosu.com/#sobre-mi"
+    },
+    "datePublished": "2026-09-27",
+    "dateModified": "2026-09-27",
+    "url": "https://neracosu.com/blog/juego-interactivo-pantalla-led-eventos.html",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://neracosu.com/blog/juego-interactivo-pantalla-led-eventos.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://neracosu.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://neracosu.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Juego interactivo para pantalla LED en eventos"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <header class="header is-scrolled" id="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="/" class="nav__logo" aria-label="Neri Colón - Inicio"><span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span></a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span class="nav__toggle-line"></span><span class="nav__toggle-line"></span><span class="nav__toggle-line"></span></button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/#servicios" class="nav__link">Servicios</a></li>
+          <li class="nav__item"><a href="/#portafolio" class="nav__link">Portafolio</a></li>
+          <li class="nav__item"><a href="/#proceso" class="nav__link">Proceso</a></li>
+          <li class="nav__item"><a href="/#sobre-mi" class="nav__link">Sobre Mí</a></li>
+          <li class="nav__item"><a href="/blog/" class="nav__link is-active">Blog</a></li>
+          <li class="nav__item"><a href="/#contacto" class="nav__link">Contacto</a></li>
+          <li class="nav__item nav__item--cta"><a href="/#contacto" class="nav__link nav__link--cta">Hablemos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <nav class="breadcrumb container" aria-label="Breadcrumb">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb__separator">&rsaquo;</span>
+      <a href="/blog/">Blog</a>
+      <span class="breadcrumb__separator">&rsaquo;</span>
+      <span>Juego interactivo para pantalla LED</span>
+    </nav>
+
+    <header class="article-header container">
+      <span class="article-header__category">Eventos</span>
+      <h1 class="article-header__title">La gente pasa frente a su pantalla LED y no se detiene: un juego en vivo que cambia eso</h1>
+      <div class="article-header__meta">
+        <span>Por <a href="/#sobre-mi">Neri Colón</a></span>
+        <span>27 de septiembre, 2026</span>
+        <span>6 min de lectura</span>
+      </div>
+    </header>
+    <figure class="article-cover container"><img src="/assets/img/blog/juego-interactivo-pantalla-led-eventos-1440.webp" width="1440" height="756" alt="Ilustración de ejemplo: ocho cartas boca abajo en una pantalla LED y un operador con su laptop al lado" decoding="async"></figure>
+
+    <article class="article container">
+
+      <p>Usted alquiló o ya tiene un panel LED enorme. Lo encienden con el logo, un video institucional y la lista de promociones. La gente pasa, lo mira un segundo y sigue de largo. El animador tiene micrófono, pero no tiene con qué convocar a nadie. Una pantalla que solo muestra cosas compite con los teléfonos del público, y casi siempre pierde.</p>
+
+      <p>Lo que hace que alguien se detenga es que la pantalla le responda. El 18 de abril de 2026 el Gran Casino de La Guaira usó en su panel LED «Par y Gana», un <strong>juego de memoria interactivo</strong> que construí para ese concurso en vivo. Le cuento cómo funciona, qué puede salir mal en una activación así y qué debe exigir si está pensando en algo parecido para su casino, su centro comercial o su marca.</p>
+
+      <h2>Cómo es el juego, en palabras sencillas</h2>
+
+      <p>En la pantalla grande aparecen <strong>8 cartas boca abajo, en 2 filas de 4</strong>. Detrás hay 4 premios, cada uno repetido dos veces. El participante elige dos cartas diciendo su número en voz alta. Si las dos esconden el mismo premio, forma el par y gana ese premio. Si no coinciden, pierde el turno.</p>
+
+      <p>En el Gran Casino los premios configurados fueron una moto 0 km como premio mayor, fichas promocionales del casino y dos premios de aliados: tobos de cerveza de un bar deportivo y una promoción de un club VIP. Los logos de los aliados acompañan el tablero en pantalla.</p>
+
+      <p>Hay dos pantallas y las dos muestran lo mismo en el mismo instante. En la laptop, el operador tiene el panel de control con el tablero, los botones y el inventario de premios. En el LED, a pantalla completa, el público ve las cartas voltearse con animación, sonido y confeti cuando alguien gana. Que estén <strong>sincronizadas</strong> quiere decir que cuando el operador toca una carta en la laptop, esa misma carta se mueve en el LED sin que nadie tenga que hacer nada más.</p>
+
+      <h2>Lo que puede salir mal en vivo, y cómo se cierra</h2>
+
+      <p>Una activación en vivo no tiene segunda toma. Estos son los riesgos y lo que hace el sistema con cada uno.</p>
+
+      <h3>1. El operador toca la carta equivocada</h3>
+      <p>Con el público gritando números, equivocarse es lo más fácil del mundo.</p>
+      <p><strong>Cómo se cierra:</strong> cada carta necesita dos toques. El primero solo la hace parpadear en el LED, lo que además crea suspenso; el segundo la voltea. Si aun así se equivocó, hay un botón para deshacer la última carta antes de completar el turno, y otro para cancelar el turno completo si el participante se retira. Y si el operador toca dos veces por nervios, el sistema cuenta una sola.</p>
+
+      <h3>2. Alguien dice que el juego está arreglado</h3>
+      <p>Cuando hay una moto en juego, siempre aparece la duda.</p>
+      <p><strong>Cómo se cierra:</strong> el LED nunca recibe la posición de los premios antes de tiempo; solo conoce una carta cuando se voltea. Cuando alguien pierde, el operador puede revelar el tablero completo para que todos vean dónde estaba cada premio antes de barajar de nuevo. Cada barajada queda guardada de forma que se puede reproducir después, y cada carta volteada queda anotada en un registro de auditoría. Si hay un reclamo, hay con qué responder.</p>
+
+      <h3>3. La pantalla se traba o alguien la recarga</h3>
+      <p><strong>Cómo se cierra:</strong> el estado del juego no vive en la pantalla sino en el servidor. Si se recarga el LED o la laptop, el tablero vuelve exactamente donde estaba, con las cartas ya volteadas en su sitio. Lo único que se pierde es la animación de ese momento. Además, la pantalla del LED le pide al equipo que no se apague ni entre en reposo mientras el juego está abierto.</p>
+
+      <h3>4. Se cae el internet del local</h3>
+      <p>Aquí prefiero ser directo: este juego vive en un servidor en línea, así que sin conexión la pantalla deja de recibir cambios. Lo que el sistema garantiza es que no se pierde nada de lo jugado; al volver la conexión, se retoma donde quedó. Si su local tiene internet inestable, <strong>exija</strong> una conexión de respaldo (un segundo proveedor o datos móviles) y una prueba completa en el sitio el día anterior.</p>
+
+      <h3>5. El público no entiende las reglas</h3>
+      <p>Si hay que explicar mucho, la gente se va.</p>
+      <p><strong>Cómo se cierra:</strong> la regla cabe en una frase: dos cartas iguales, gana. En pantalla aparece el número de turno, y si las dos cartas no coinciden el sistema marca la pérdida al instante, sin que el animador tenga que explicar nada.</p>
+
+      <h3>6. Se entrega un premio dos veces, o ninguno</h3>
+      <p><strong>Cómo se cierra:</strong> cuando alguien gana, esas dos cartas se quedan fijas en el tablero con el sello «GANADO» y ese premio sale del juego. El operador ve en todo momento cuántos premios quedan por ganar, y hay un historial de ganadores con fecha y hora donde se marca cada premio como pendiente o entregado.</p>
+
+      <h2>Así funciona una noche</h2>
+
+      <p>Esto no es la crónica del evento; es el recorrido de una noche con este sistema, con horas de ejemplo.</p>
+
+      <ul>
+        <li><strong>La víspera, 4:00 p. m.:</strong> se abre el panel y la pantalla en dos ventanas, se crea una sesión de prueba y se juegan dos o tres turnos. Al terminar, esa sesión de prueba se elimina.</li>
+        <li><strong>6:30 p. m.:</strong> la laptop se conecta al panel LED por HDMI, en modo de pantalla extendida. La ventana del juego se pasa al LED y se pone a pantalla completa. Un clic en la pantalla grande activa el sonido.</li>
+        <li><strong>7:00 p. m.:</strong> el operador crea la sesión de la noche y la activa. El tablero se baraja solo y aparecen las 8 cartas.</li>
+        <li><strong>7:15 p. m.:</strong> primer turno. El animador llama a alguien, el operador inicia el turno y el LED muestra el número. El participante canta sus dos cartas; parpadeo, volteo, resultado.</li>
+        <li><strong>Después de cada turno perdido:</strong> se revela el tablero para que el público vea dónde estaba la moto, se baraja y pasa el siguiente.</li>
+        <li><strong>Al cierre:</strong> el historial dice quién ganó qué y a qué hora, y se marca lo entregado.</li>
+      </ul>
+
+      <h2>Preguntas que me hacen</h2>
+
+      <h3>¿No es más barato poner un video y una ruleta de cartón?</h3>
+      <p>Sí, y para muchos eventos alcanza. Donde un juego en vivo hace diferencia es cuando la gente está de paso y hay que darle una razón para quedarse, y cuando los premios son lo bastante grandes como para que la transparencia importe.</p>
+
+      <h3>¿Se puede cambiar el juego, los premios o el tamaño del tablero?</h3>
+      <p>Sí. Los premios, su cantidad y el tamaño del tablero son configuración, no un programa nuevo. De hecho, «Par y Gana» tuvo antes una versión de 24 cartas en la que había que juntar tres iguales; para el evento quedó en 8 cartas y pares.</p>
+
+      <h3>¿Necesito un técnico durante el evento?</h3>
+      <p>El operador no necesita saber de sistemas: el manual del día es corto y los botones dicen lo que hacen. Aun así, le recomiendo tener a alguien de soporte localizable esa noche. Es lo honesto.</p>
+
+      <h3>¿Cuánto cuesta?</h3>
+      <p>Depende de cuánto hay que construir desde cero y cuánto se adapta. Los precios de referencia están publicados en <a href="/para/integraciones-api-y-bots.html">la página de integraciones y sistemas conectados</a>, que es donde explico cómo hago que dos sistemas se hablen en tiempo real.</p>
+
+      <h2>Si está pensando en su próximo evento</h2>
+
+      <p>Un juego en pantalla no salva un evento mal organizado, y no todo evento lo necesita. Pero si usted ya tiene la pantalla, los premios y el público pasando, lo que falta es darle a la gente un motivo para detenerse y al animador algo que mostrar. Si quiere, conversamos sobre su caso y le digo con franqueza si tiene sentido.</p>
+
+    </article>
+
+    <div class="article__cta container" style="max-width:720px" data-animate="fade-up">
+      <h3 class="article__cta-title">¿Tiene una pantalla y un evento en puerta?</h3>
+      <p class="article__cta-text">Cuénteme qué pantalla tiene, cuántas personas espera y qué quiere que se lleven. Le digo con franqueza si un juego en vivo le conviene o no.</p>
+      <div class="article__cta-buttons">
+        <a href="/para/integraciones-api-y-bots.html" class="btn btn--primary">Ver cómo conecto pantallas y sistemas</a>
+        <a href="https://wa.me/584222707095?text=Hola%20Neri!%20Me%20interesa%20un%20juego%20interactivo%20para%20la%20pantalla%20LED%20de%20mi%20evento." class="btn btn--outline" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+
+    <section class="related container" aria-label="Artículos relacionados">
+      <h2 class="related__title">Artículos Relacionados</h2>
+      <div class="blog__grid">
+        
+        <a href="/blog/sistema-para-restaurantes-con-varias-sedes.html" class="blog__card" data-animate="fade-up">
+          <div class="blog__card-image">
+            <img src="/assets/img/blog/sistema-para-restaurantes-con-varias-sedes-800.webp" srcset="/assets/img/blog/sistema-para-restaurantes-con-varias-sedes-800.webp 800w, /assets/img/blog/sistema-para-restaurantes-con-varias-sedes-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 400px" width="800" height="420" loading="lazy" decoding="async" alt="Ilustración de ejemplo del artículo">
+            <img src="/assets/img/blog/sistema-para-restaurantes-con-varias-sedes-800.webp" srcset="/assets/img/blog/sistema-para-restaurantes-con-varias-sedes-800.webp 800w, /assets/img/blog/sistema-para-restaurantes-con-varias-sedes-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 400px" width="800" height="420" loading="lazy" decoding="async" alt="Ilustración de ejemplo: Sistema para restaurantes con varias sedes">
+            <span class="blog__card-category">Restaurantes</span>
+          </div>
+          <div class="blog__card-content">
+            <div class="blog__card-meta">
+              <time datetime="2026-09-27">27 Sep 2026</time>
+              <span>6 min</span>
+            </div>
+            <h3 class="blog__card-title">Sistema para restaurantes con varias sedes</h3>
+            <p class="blog__card-excerpt">Comandas a la pantalla de cocina, caja propia por sede y cobro antes de cocinar el pedido en línea. Así opera un bar con dos sedes en La Guaira.</p>
+          </div>
+        </a>
+        <a href="/blog/software-almacen-aduanero-la-guaira.html" class="blog__card" data-animate="fade-up">
+          <div class="blog__card-image">
+            <img src="/assets/img/blog/software-almacen-aduanero-la-guaira-800.webp" srcset="/assets/img/blog/software-almacen-aduanero-la-guaira-800.webp 800w, /assets/img/blog/software-almacen-aduanero-la-guaira-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 400px" width="800" height="420" loading="lazy" decoding="async" alt="Ilustración de ejemplo del artículo">
+            <img src="/assets/img/blog/software-almacen-aduanero-la-guaira-800.webp" srcset="/assets/img/blog/software-almacen-aduanero-la-guaira-800.webp 800w, /assets/img/blog/software-almacen-aduanero-la-guaira-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 400px" width="800" height="420" loading="lazy" decoding="async" alt="Ilustración de ejemplo: Software para almacén aduanero">
+            <span class="blog__card-category">Logística</span>
+          </div>
+          <div class="blog__card-content">
+            <div class="blog__card-meta">
+              <time datetime="2026-09-27">27 Sep 2026</time>
+              <span>6 min</span>
+            </div>
+            <h3 class="blog__card-title">Software para almacén aduanero</h3>
+            <p class="blog__card-excerpt">Retiros a costado de buque sin correos ni llamadas: una solicitud por BL, recaudos controlados y un portal donde el agente aduanal ve lo suyo.</p>
+          </div>
+        </a>
+      
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="/" style="text-decoration:none"><span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span></a>
+          <p class="footer__tagline">Hecho con código y café desde La Guaira, Venezuela</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://linkedin.com/in/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://github.com/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+          <a href="https://instagram.com/Ing.nrcs" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2026 Neri Colón. Todos los derechos reservados.</p></div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js" defer></script>
+  <script src="/assets/js/main.js?v=b8752f75" defer></script>
+
+  <script type="module" src="/assets/js/motion.js?v=9eb449a2"></script>
+</body>
+</html>

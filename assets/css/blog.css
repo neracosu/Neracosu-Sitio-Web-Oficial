@@ -399,3 +399,13 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* portadas ilustradas (estilo propuesta), 2026-09 */
+.blog__card-image:has(img) { aspect-ratio: 40 / 21; background: #e6e8e7; }
+.blog__card-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.blog__card:hover .blog__card-image img { transform: scale(1.03); }
+.article-cover { max-width: 900px; margin: 0 auto 2.5rem; }
+.article-cover img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); }
+@media (prefers-reduced-motion: reduce) { .blog__card:hover .blog__card-image img { transform: none; } }
+/* el padding abreviado de .article-header y .breadcrumb anulaba el margen lateral del .container (texto pegado al borde en movil) */
+.article-header.container, .breadcrumb.container { padding-left: var(--container-padding); padding-right: var(--container-padding); }
