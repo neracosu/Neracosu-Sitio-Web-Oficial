@@ -30,9 +30,8 @@ primer párrafo de «Quién soy»), `hoja-de-vida.html` (meta, OG,
 extracto, sección 06) y en las seis páginas de `/para/`. El pie de página pasó
 de «desde 2011» a **«desde 2009»**, que es lo único coherente con 17 años.
 
-⚠️ **Pendiente:** la línea de tiempo del CV arranca en **2011 — 2012 (LEFP
-Consultores)**. Con 17 años quedan 2009–2011 sin respaldo visible. Si alguien
-resta, ve el hueco. Hay que agregar esa entrada al CV o dejar el pie sin año.
+La línea de tiempo del CV cubre 2009–2011 con «Desarrollo Web Independiente»
+(desde el 2026-09-12), así que el «desde 2009» del pie tiene respaldo.
 
 ## `/atalaya/` se genera: no se edita aquí
 
