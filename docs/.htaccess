@@ -2,3 +2,6 @@
 <FilesMatch "\.(php|php5|php7|php8|phtml)$">
   Require all denied
 </FilesMatch>
+
+# Documentacion interna: no se sirve por web (2026-09-27). Vive en el repo y en el servidor, nada mas.
+Require all denied
