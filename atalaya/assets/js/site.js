@@ -3,7 +3,7 @@ import { px } from './pixicons.js?v=69a3dc648a';
 
 const $ = id => document.getElementById(id);
 // capturas junto a este script: assets/img/ (funciona desde /atalaya/ y desde /atalaya/guias/)
-const IMG = new URL('../img/', import.meta.url).href, V = '0.77.1';
+const IMG = new URL('../img/', import.meta.url).href, V = '0.78.0';
 document.querySelectorAll('[data-px]').forEach(el => { el.outerHTML = px(el.dataset.px); });
 
 // edad del proyecto: corre desde el primer commit (la primera linea de codigo), para que se vea que es nuevo
