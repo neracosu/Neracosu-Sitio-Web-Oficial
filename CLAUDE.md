@@ -75,7 +75,7 @@ cargar la skill `para-neracosu`**: piezas JS/CSS, la trampa de los sliders
 profesional es lo único del catálogo que **no está construido** (se verificó:
 cero coincidencias de patrón de cita en los 5 proyectos). Lo que sí se reutiliza
 es el calendario, el cupo retenido, el cobro validado y el personal con PIN. La
-página lo dice de frente y ofrece el diagnóstico de $170. **No ponerle una tabla
+página lo dice de frente y ofrece el diagnóstico de $250. **No ponerle una tabla
 de precios sin construir primero ese módulo.**
 
 **No se editan a mano.** Se ensamblan con `/home/neracosu/build-para/build.py`
