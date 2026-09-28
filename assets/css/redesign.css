@@ -841,8 +841,10 @@ img, svg, video { display: block; max-width: 100%; }
   font-family: "Inter", sans-serif; font-weight: 900;
   /* 9 caracteres («NERACOSU.») no entran a 80px en un telefono de 390px:
      se salian y los recortaba el overflow-x del body. */
-  font-size: clamp(44px, 15vw, 240px);
-  line-height: 0.9; letter-spacing: -0.05em;
+  font-size: clamp(40px, 13.6vw, 208px);
+  /* -0.05em juntaba tanto las letras que el punto (con su propio degradado
+     recortado al texto) tapaba el borde derecho de la U. */
+  line-height: 0.9; letter-spacing: -0.03em;
   text-align: center; margin-bottom: 60px;
   background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(94,210,156,0.4) 60%, rgba(7,11,10,0) 100%);
   -webkit-background-clip: text;
@@ -850,6 +852,7 @@ img, svg, video { display: block; max-width: 100%; }
   background-clip: text;
 }
 .wordmark .dot {
+  margin-left: 0.02em;
   background: linear-gradient(180deg, #5ed29c 0%, rgba(94,210,156,0.2) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
