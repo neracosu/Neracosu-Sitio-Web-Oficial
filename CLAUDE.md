@@ -10,7 +10,13 @@ Sitio estático servido desde `/home/neracosu/public_html/`. La home (`index.htm
 - **La calculadora (`/calculadora.html`) es central.** Aparece destacada en el nav (pill verde, posición 3 de 6), en el overlay móvil, y como primer item del footer en verde. No quitar ni mover sin avisar al dueño.
 - **SEO preservado**: meta tags completos, OpenGraph, Twitter Card, hreflang, geo tags (La Guaira: 10.6031, -66.9354), canonical, y 2 bloques JSON-LD (`ProfessionalService` + `Person`). Mantener al editar el `<head>`.
 
-Detalles de implementación, placeholders y cómo revertir: skill `home-neracosu`.
+Detalles de implementación y cómo revertir: skill `home-neracosu`.
+
+**La home no cotiza** (desde el 2026-09-27): sin tablas ni cifras de proyecto,
+solo enlaces a `/para/` y a la calculadora. Tampoco lleva estadísticas genéricas
+de internet ni escasez inventada («3 cupos este mes»). Correo público:
+**info@neracosu.com**. Foto de «Quién soy»: `assets/img/neri/neri-foto-*.webp`
+(la real; el retrato con pantallas holográficas era generado).
 
 ## Idioma
 
@@ -19,8 +25,8 @@ El dueño y todo el contenido público es en **español (Venezuela)**. Responder
 ## Trayectoria: 17 años
 
 Desde el 2026-09-12 el sitio dice **17 años** (antes «+15»), por decisión del
-dueño. Aparece en `index.html` (meta, OG, Twitter, tarjeta del hero, descripción,
-contador `data-counter="17"`, dos títulos), `hoja-de-vida.html` (meta, OG,
+dueño. Aparece en `index.html` (contador `data-counter="17"`, el título y el
+primer párrafo de «Quién soy»), `hoja-de-vida.html` (meta, OG,
 extracto, sección 06) y en las seis páginas de `/para/`. El pie de página pasó
 de «desde 2011» a **«desde 2009»**, que es lo único coherente con 17 años.
 
@@ -42,8 +48,7 @@ próximo export: ya pasó el 2026-09-26. Cada HTML lo avisa en la línea 2. Desd
 Desde el 2026-09-26 son **24** (antes 23): 21 encargos del portafolio más tres
 productos propios en `#productos` (ArmorPay, Soporte Vipsoft y Atalaya Monitor
 Server). El número vive en `index.html` (meta, OG, Twitter, contador
-`data-counter="24"`, el texto del portafolio, el título de capacidades y la
-métrica del cierre), `para/index.html` (y su fuente `build-para/body-index.html`),
+`data-counter="24"`, el texto del portafolio y la métrica de «Compruébelo»), `para/index.html` (y su fuente `build-para/body-index.html`),
 `servicios/sistemas-de-gestion.html`, `build-para/seo.py` y la imagen
 `assets/img/og-image.jpg`, que se renderiza desde `build-para/og-card.html`
 con Chromium headless. Si cambia, cambia en todos.

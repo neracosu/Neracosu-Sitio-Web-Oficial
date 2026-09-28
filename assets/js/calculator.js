@@ -30,8 +30,8 @@
         { label: 'Plataforma Compleja', hours: 100, price: 1000 }
       ],
       addons: [
-        { label: 'Diseno personalizado', hours: 15, price: 150 },
-        { label: 'SEO basico', hours: 8, price: 80 },
+        { label: 'Diseño personalizado', hours: 15, price: 150 },
+        { label: 'SEO básico', hours: 8, price: 80 },
         { label: 'Blog/CMS', hours: 12, price: 120 },
         { label: 'Formulario avanzado', hours: 6, price: 60 },
         { label: 'Multi-idioma', hours: 15, price: 150 },
@@ -40,7 +40,7 @@
     },
     {
       id: 'aplicaciones-moviles',
-      name: 'Aplicaciones Moviles',
+      name: 'Aplicaciones Móviles',
       icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>',
       monthly: false,
       complexity: [
@@ -63,34 +63,34 @@
       icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>',
       monthly: false,
       complexity: [
-        { label: 'Tienda Basica', hours: 60, price: 600 },
+        { label: 'Tienda Básica', hours: 60, price: 600 },
         { label: 'Tienda Media', hours: 120, price: 1200 },
         { label: 'Tienda Compleja', hours: 200, price: 2000 }
       ],
       addons: [
-        { label: 'Pago Movil', hours: 15, price: 150 },
+        { label: 'Pago Móvil', hours: 15, price: 150 },
         { label: 'Inventario avanzado', hours: 20, price: 200 },
         { label: 'Multi-vendedor', hours: 40, price: 400 },
         { label: 'Blog', hours: 10, price: 100 },
-        { label: 'App movil', hours: 80, price: 800 }
+        { label: 'App móvil', hours: 80, price: 800 }
       ]
     },
     {
       id: 'sistemas-gestion',
-      name: 'Sistemas de Gestion',
+      name: 'Sistemas de Gestión',
       icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
       monthly: false,
       complexity: [
-        { label: 'Basico', hours: 120, price: 1200 },
+        { label: 'Básico', hours: 120, price: 1200 },
         { label: 'Medio', hours: 250, price: 2500 },
         { label: 'Complejo', hours: 400, price: 4000 }
       ],
       addons: [
         { label: 'Inventario', hours: 25, price: 250 },
-        { label: 'Facturacion', hours: 20, price: 200 },
+        { label: 'Facturación', hours: 20, price: 200 },
         { label: 'Reportes/Dashboard', hours: 30, price: 300 },
         { label: 'API REST', hours: 20, price: 200 },
-        { label: 'App movil', hours: 80, price: 800 }
+        { label: 'App móvil', hours: 80, price: 800 }
       ]
     },
     {
@@ -99,15 +99,15 @@
       icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>',
       monthly: false,
       complexity: [
-        { label: 'Integracion Basica', hours: 55, price: 0 },
-        { label: 'Integracion Media', hours: 100, price: 0 },
-        { label: 'Integracion Completa', hours: 145, price: 0 }
+        { label: 'Integración Básica', hours: 55, price: 0 },
+        { label: 'Integración Media', hours: 100, price: 0 },
+        { label: 'Integración Completa', hours: 145, price: 0 }
       ],
       addons: [
-        { label: 'Pago Movil automatizado', hours: 15, price: 150 },
+        { label: 'Pago Móvil automatizado', hours: 15, price: 150 },
         { label: 'VPOS/Tarjetas', hours: 15, price: 150 },
         { label: 'QR', hours: 10, price: 100 },
-        { label: 'Conciliacion automatica', hours: 20, price: 200 },
+        { label: 'Conciliación automática', hours: 20, price: 200 },
         { label: 'Multi-banco', hours: 25, price: 250 }
       ]
     },
@@ -130,7 +130,7 @@
     },
     {
       id: 'bots-automatizacion',
-      name: 'Bots y Automatizacion',
+      name: 'Bots y Automatización',
       icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 014 4c0 1.95-1.4 3.57-3.25 3.93A2 2 0 0011 12v1"/><circle cx="12" cy="17" r="4"/><path d="M10 17h4"/><path d="M2 2l2 2"/><path d="M22 2l-2 2"/><path d="M2 22l2-2"/><path d="M22 22l-2-2"/></svg>',
       monthly: false,
       complexity: [
@@ -140,10 +140,10 @@
       ],
       addons: [
         { label: 'Web scraping', hours: 10, price: 100 },
-        { label: 'Integracion API', hours: 12, price: 120 },
+        { label: 'Integración API', hours: 12, price: 120 },
         { label: 'Base de datos', hours: 10, price: 100 },
         { label: 'Dashboard', hours: 20, price: 200 },
-        { label: 'Programacion automatica', hours: 8, price: 80 }
+        { label: 'Programación automática', hours: 8, price: 80 }
       ]
     },
     {
@@ -152,7 +152,7 @@
       icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
       monthly: false,
       complexity: [
-        { label: 'Auditoria Basica', hours: 20, price: 200 },
+        { label: 'Auditoría Básica', hours: 20, price: 200 },
         { label: 'Pentesting', hours: 40, price: 400 },
         { label: 'Suite Completa', hours: 80, price: 800 }
       ],
@@ -160,7 +160,7 @@
         { label: 'Hardening servidor', hours: 10, price: 100 },
         { label: 'WAF', hours: 8, price: 80 },
         { label: 'Monitoreo continuo', hours: 15, price: 150 },
-        { label: 'Capacitacion', hours: 8, price: 80 }
+        { label: 'Capacitación', hours: 8, price: 80 }
       ]
     },
     {
@@ -182,35 +182,35 @@
     },
     {
       id: 'recuperacion-hackeados',
-      name: 'Recuperacion Sitios Hackeados',
+      name: 'Recuperación de Sitios Hackeados',
       icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
       monthly: false,
       complexity: [
-        { label: 'Limpieza Basica', hours: 12, price: 120 },
+        { label: 'Limpieza Básica', hours: 12, price: 120 },
         { label: 'Limpieza + Hardening', hours: 25, price: 250 },
-        { label: 'Recuperacion Completa', hours: 50, price: 500 }
+        { label: 'Recuperación Completa', hours: 50, price: 500 }
       ],
       addons: [
-        { label: 'Backup/restauracion', hours: 5, price: 50 },
+        { label: 'Backup/restauración', hours: 5, price: 50 },
         { label: 'Firewall', hours: 8, price: 80 },
-        { label: 'Monitoreo 30 dias', hours: 10, price: 100 },
+        { label: 'Monitoreo 30 días', hours: 10, price: 100 },
         { label: 'Informe seguridad', hours: 5, price: 50 }
       ]
     },
     {
       id: 'diagnostico-optimizacion',
-      name: 'Diagnostico y Optimizacion',
+      name: 'Diagnóstico y Optimización',
       icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
       monthly: false,
       complexity: [
-        { label: 'Basico', hours: 10, price: 100 },
+        { label: 'Básico', hours: 10, price: 100 },
         { label: 'Medio', hours: 20, price: 200 },
         { label: 'Completo', hours: 40, price: 400 }
       ],
       addons: [
         { label: 'Core Web Vitals', hours: 8, price: 80 },
-        { label: 'SEO tecnico', hours: 10, price: 100 },
-        { label: 'Optimizacion imagenes', hours: 5, price: 50 },
+        { label: 'SEO técnico', hours: 10, price: 100 },
+        { label: 'Optimización imágenes', hours: 5, price: 50 },
         { label: 'Cache avanzado', hours: 8, price: 80 }
       ]
     }
@@ -361,7 +361,7 @@
       h += '<span class="calc__nivel-precio">$' + c.price + '/mes</span>';
     } else {
       h += '<span class="calc__nivel-precio">' + c.hours + 'h &middot; $'
-         + c.price.toLocaleString() + '</span>';
+         + c.price.toLocaleString('es-VE') + '</span>';
     }
     return h;
   }
@@ -374,7 +374,7 @@
     var c = service.complexity[state.complexityIndex];
     input.setAttribute('aria-valuetext', c.label + ', ' + (service.monthly
       ? '$' + c.price + ' al mes'
-      : c.hours + ' horas, $' + c.price.toLocaleString()));
+      : c.hours + ' horas, $' + c.price.toLocaleString('es-VE')));
     var lectura = document.getElementById('calc-nivel-lectura');
     if (lectura) lectura.innerHTML = lecturaNivel(service);
   }
@@ -497,7 +497,7 @@
     if (service.monthly) {
       html += '<span>$' + comp.price + '/mes</span>';
     } else {
-      html += '<span>' + comp.hours + 'h &mdash; $' + comp.price.toLocaleString() + '</span>';
+      html += '<span>' + comp.hours + 'h &mdash; $' + comp.price.toLocaleString('es-VE') + '</span>';
     }
     html += '</div>';
 
@@ -507,7 +507,7 @@
       if (service.monthly) {
         html += '<span>+$' + a.price + '/mes</span>';
       } else {
-        html += '<span>' + a.hours + 'h &mdash; +$' + a.price.toLocaleString() + '</span>';
+        html += '<span>' + a.hours + 'h &mdash; +$' + a.price.toLocaleString('es-VE') + '</span>';
       }
       html += '</div>';
     });
@@ -518,7 +518,7 @@
       html += '<span>$' + totalPrice + '/mes USD</span>';
     } else {
       html += '<span>Total estimado</span>';
-      html += '<span>' + totalHours + 'h &mdash; $' + totalPrice.toLocaleString() + ' USD</span>';
+      html += '<span>' + totalHours + 'h &mdash; $' + totalPrice.toLocaleString('es-VE') + ' USD</span>';
     }
     html += '</div>';
 
@@ -526,14 +526,14 @@
     if (!service.monthly) {
       html += '<p class="calc__tarifa">';
       html += totalHours + ' horas de trabajo a $' + TARIFA_HORA + ' la hora. ';
-      html += 'Es una estimacion para ubicarse, no una cotizacion cerrada: el numero final sale ';
-      html += 'despues de conversar, y suele bajar si su caso encaja en algo que ya tengo construido.';
+      html += 'Es una estimación para ubicarse, no una cotización cerrada: el número final sale ';
+      html += 'después de conversar, y suele bajar si su caso encaja en algo que ya tengo construido.';
       html += '</p>';
       html += '<p class="calc__tarifa">';
-      html += 'Si su negocio es un hotel, un restaurante, un centro de reservas, un almacen aduanero ';
-      html += 'o necesita cobrar por pago movil, mira los ';
-      html += '<a href="/para/">planes cerrados por rubro</a>: parten de sistemas que ya estan ';
-      html += 'escritos y traen migracion, capacitacion, servidor el primer anio y 90 dias de garantia.';
+      html += 'Si su negocio es un hotel, un restaurante, un centro de reservas, un almacén aduanero ';
+      html += 'o necesita cobrar por pago móvil, vea los ';
+      html += '<a href="/para/">planes cerrados por rubro</a>: parten de sistemas que ya están ';
+      html += 'escritos y traen migración, capacitación, servidor el primer año y 90 días de garantía.';
       html += '</p>';
     }
     html += '</div>';
@@ -542,7 +542,7 @@
     var waURL = buildWhatsAppURL(service, comp, selectedAddons, totalHours, totalPrice);
     html += '<a href="' + waURL + '" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp calc__btn-wa">';
     html += '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
-    html += ' Enviar Cotizacion por WhatsApp';
+    html += ' Enviar Cotización por WhatsApp';
     html += '</a>';
 
     html += '</div>'; /* end result-card */
@@ -574,7 +574,7 @@
 
   /* ========== WHATSAPP ========== */
   function buildWhatsAppURL(service, comp, addons, totalHours, totalPrice) {
-    var msg = 'Hola Neri! Me interesa cotizar:\n\n';
+    var msg = '¡Hola, Neri! Me interesa cotizar:\n\n';
     msg += '*Servicio:* ' + service.name + '\n';
     msg += '*Nivel:* ' + comp.label + '\n';
 
@@ -590,7 +590,7 @@
       msg += '*Estimado:* $' + totalPrice + '/mes USD\n';
     } else {
       msg += '*Horas estimadas:* ' + totalHours + 'h\n';
-      msg += '*Costo estimado:* $' + totalPrice.toLocaleString() + ' USD\n';
+      msg += '*Costo estimado:* $' + totalPrice.toLocaleString('es-VE') + ' USD\n';
     }
     msg += '\nGenerado desde neracosu.com/calculadora';
 

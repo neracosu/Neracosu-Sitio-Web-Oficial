@@ -130,3 +130,25 @@
     });
   });
 })();
+
+// Boton flotante de WhatsApp: se esconde al bajar leyendo y cuando el contacto ya esta a la vista
+(function () {
+  var fab = document.querySelector('.float-wa');
+  if (!fab) return;
+  var ultimo = window.scrollY, contactoVisible = false, vistos = new Set();
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (x) { x.isIntersecting ? vistos.add(x.target) : vistos.delete(x.target); });
+      contactoVisible = vistos.size > 0;
+      fab.classList.toggle('float-wa--oculto', contactoVisible);
+    });
+    document.querySelectorAll('#contacto, .site-footer').forEach(function (el) { obs.observe(el); });
+  }
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    if (!contactoVisible && Math.abs(y - ultimo) > 8) {
+      fab.classList.toggle('float-wa--oculto', y > ultimo && y > 400);
+      ultimo = y;
+    }
+  }, { passive: true });
+})();

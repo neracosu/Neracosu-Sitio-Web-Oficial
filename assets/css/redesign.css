@@ -1783,3 +1783,55 @@ img.lg-card-avatar { object-fit: cover; padding: 0; flex: none; }
 }
 @media (max-width: 700px) { .cv-masthead .cv-foto { width: 104px; height: 130px; margin-left: 14px; border-radius: 14px; } }
 @media (max-width: 700px) { .cv-masthead .cv-foto { float: none; display: block; margin: 0 0 18px 0; } }
+
+/* ============================================================
+   Home 2026-09-27: menos cosas, mas aire
+   ============================================================ */
+#hero .hero-content { padding-top: 48px; }
+#hero .hero-eyebrow-row { margin: 28px 0 36px; }
+#hero .hero-headline { font-size: clamp(44px, 8.2vw, 112px); line-height: .92; }
+#hero .hero-description { font-size: 18px; max-width: 600px; margin-top: 36px; }
+#hero .hero-stats { margin-top: 80px; }
+@media (max-width: 700px) {
+  #hero .hero-description { font-size: 16px; }
+  #hero .hero-stats { margin-top: 56px; grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Portafolio: las etiquetas tecnicas no le dicen nada al cliente; el resultado si */
+#portafolio .portfolio-tags { display: none; }
+#portafolio .portfolio-meta { margin-top: 16px; }
+
+.portfolio-mas { margin-top: 40px; }
+.portfolio-mas > summary {
+  list-style: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 22px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  transition: border-color .2s, background .2s;
+}
+.portfolio-mas > summary::-webkit-details-marker { display: none; }
+.portfolio-mas > summary:hover { border-color: rgba(94,210,156,0.5); background: rgba(94,210,156,0.06); }
+.portfolio-mas > summary svg { transition: transform .25s; }
+.portfolio-mas[open] > summary svg { transform: rotate(180deg); }
+.portfolio-mas[open] > summary { margin-bottom: 56px; }
+.portfolio-mas .portfolio-block-header:first-of-type { margin-top: 0 !important; }
+
+/* Boton de WhatsApp: mas discreto en el telefono y fuera del camino mientras se lee */
+.float-wa { transition: transform .3s ease, opacity .3s ease; }
+.float-wa.float-wa--oculto { transform: translateY(120px); opacity: 0; pointer-events: none; }
+@media (max-width: 700px) {
+  .float-wa { width: 48px; height: 48px; bottom: 16px; right: 16px; }
+  .float-wa svg { width: 20px; height: 20px; }
+}
+
+/* Telefono: la home se recorre en menos pantallas */
+@media (max-width: 700px) {
+  #industrias .modulos-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  #industrias .modulo { padding: 16px 14px; }
+  #industrias .modulo p { display: none; }
+  #industrias .modulo h3 { font-size: 15px; line-height: 1.25; }
+  #industrias .modulo .num { font-size: 9.5px; }
+  #blog .blog-cover { display: none; }
+  #blog .blog-grid > :nth-child(n+3) { display: none; }
+}

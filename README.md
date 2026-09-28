@@ -91,7 +91,7 @@ Código del sitio © 2026 Neri Rafael Colón Suárez. Reusable como referencia e
 
 ## Contacto
 
-- 📧 [neracosu@gmail.com](mailto:neracosu@gmail.com)
+- 📧 [info@neracosu.com](mailto:info@neracosu.com)
 - 📱 [+58 422 270 7095](tel:+584222707095)
 - 💼 [linkedin.com/in/ingnrcs](https://linkedin.com/in/ingnrcs)
 - 🐙 [github.com/neracosu](https://github.com/neracosu)

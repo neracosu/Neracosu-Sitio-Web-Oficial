@@ -56,11 +56,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/redesign.css?v=cda42e46">
+  <link rel="stylesheet" href="/assets/css/redesign.css?v=4bd73df6">
   <link rel="stylesheet" href="/assets/css/nicho.css?v=3e189d4a">
-
-  <!-- HLS.js for hero video -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js" defer></script>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -71,7 +68,7 @@
       "name": "Neri Colón - Desarrollo Web y Software",
       "url": "https://neracosu.com",
       "telephone": "+584222707095",
-      "email": "neracosu@gmail.com",
+      "email": "info@neracosu.com",
       "description": "Servicios de desarrollo web, aplicaciones móviles, software a medida y ciberseguridad en Venezuela",
       "areaServed": [
         { "@type": "State", "name": "La Guaira", "containedIn": "Venezuela" },
@@ -134,12 +131,10 @@
 
       <nav class="nav-links" aria-label="Principal">
         <a class="nav-link" href="/para/">SOLUCIONES</a>
-        <a class="nav-link" href="#servicios">SERVICIOS</a>
+        <a class="nav-link" href="#portafolio">PORTAFOLIO</a>
         <a class="nav-link nav-link-featured" href="/calculadora.html">CALCULADORA</a>
         <a class="nav-link nav-link-atalaya" href="/atalaya/">ATALAYA<span class="nav-new">NUEVO</span></a>
-        <a class="nav-link" href="#portafolio">PORTAFOLIO</a>
         <a class="nav-link" href="#sobre-mi">SOBRE MÍ</a>
-        <a class="nav-link" href="/hoja-de-vida.html">CV</a>
         <a class="nav-link" href="#blog">BLOG</a>
       </nav>
 
@@ -174,13 +169,11 @@
 
     <nav class="mobile-nav-list" aria-label="Móvil">
       <a class="mobile-nav-link" href="/para/"><span class="mobile-nav-num">01</span>SOLUCIONES</a>
-      <a class="mobile-nav-link" href="#servicios"><span class="mobile-nav-num">02</span>SERVICIOS</a>
+      <a class="mobile-nav-link" href="#portafolio"><span class="mobile-nav-num">02</span>PORTAFOLIO</a>
       <a class="mobile-nav-link mobile-nav-link-featured" href="/calculadora.html"><span class="mobile-nav-num">03</span>CALCULADORA</a>
       <a class="mobile-nav-link mobile-nav-link-atalaya" href="/atalaya/"><span class="mobile-nav-num">04</span>ATALAYA<span class="nav-new">NUEVO</span></a>
-      <a class="mobile-nav-link" href="#portafolio"><span class="mobile-nav-num">05</span>PORTAFOLIO</a>
-      <a class="mobile-nav-link" href="#sobre-mi"><span class="mobile-nav-num">06</span>SOBRE MÍ</a>
-      <a class="mobile-nav-link" href="/hoja-de-vida.html"><span class="mobile-nav-num">07</span>HOJA DE VIDA</a>
-      <a class="mobile-nav-link" href="#blog"><span class="mobile-nav-num">08</span>BLOG</a>
+      <a class="mobile-nav-link" href="#sobre-mi"><span class="mobile-nav-num">05</span>SOBRE MÍ</a>
+      <a class="mobile-nav-link" href="#blog"><span class="mobile-nav-num">06</span>BLOG</a>
     </nav>
 
     <div style="padding-top:32px;padding-bottom:24px;">
@@ -203,7 +196,6 @@
          HERO
          ============================================================ -->
     <section id="hero" class="hero">
-      <video class="hero-video" autoplay loop muted playsinline aria-hidden="true"></video>
       <div class="hero-gradient-x"></div>
       <div class="hero-gradient-y"></div>
       <div class="grid-lines" data-motion-grid><span></span></div>
@@ -235,113 +227,34 @@
           </div>
         </div>
 
-        <!-- Liquid glass mini-profile -->
-        <div style="margin-bottom:8px;">
-          <div class="liquid-glass fade-up" style="width:220px;height:220px;transform:translateY(-50px);animation-delay:0.4s;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
-            <div class="flex items-center justify-between">
-              <span class="font-jakarta" style="font-size:11px;letter-spacing:0.18em;color:rgba(255,255,255,0.55);font-weight:600;">[ 2026 ]</span>
-              <span class="lg-card-availability">
-                <span class="dot"></span>DISPONIBLE
-              </span>
-            </div>
-            <div class="flex items-center gap-3">
-              <img class="lg-card-avatar" src="/assets/img/neri/neri-avatar-96.webp" srcset="/assets/img/neri/neri-avatar-96.webp 1x, /assets/img/neri/neri-avatar-192.webp 2x" width="44" height="44" alt="Neri Colón" decoding="async">
-              <div>
-                <div style="font-size:13px;font-weight:700;color:#fff;line-height:1.1;">Neri Colón</div>
-                <div style="font-size:10px;color:rgba(255,255,255,0.55);margin-top:3px;letter-spacing:0.04em;">Ing. Informático</div>
-              </div>
-            </div>
-            <div>
-              <div style="font-size:16px;line-height:1.25;color:#fff;font-weight:500;">
-                Full Stack en <span class="font-serif-italic" style="color:#5ed29c;">La Guaira</span>
-              </div>
-              <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:6px;line-height:1.4;">17 años · Venezuela, Colombia, México, Australia</div>
-            </div>
-          </div>
-        </div>
-
         <h1 class="hero-headline" data-motion-headline>
-          <div><span data-motion-line>CONSTRUYO</span></div>
-          <div><span data-motion-line>PRODUCTOS DIGITALES</span></div>
+          <div><span data-motion-line>EL SISTEMA</span></div>
+          <div><span data-motion-line>DE SU NEGOCIO,</span></div>
           <div>
-            <span data-motion-line>QUE&nbsp;</span><span data-motion-line style="font-family:'Instrument Serif',serif;font-style:italic;text-transform:lowercase;font-weight:400;letter-spacing:-0.02em;color:rgba(255,255,255,0.92);">venden</span><span data-motion-line style="color:#5ed29c;">.</span>
+            <span data-motion-line style="font-family:'Instrument Serif',serif;font-style:italic;text-transform:lowercase;font-weight:400;letter-spacing:-0.02em;color:rgba(255,255,255,0.92);">bien hecho</span><span data-motion-line style="color:#5ed29c;">.</span>
           </div>
         </h1>
 
         <p class="hero-description fade-up" style="animation-delay:0.9s;">
-          17 años construyendo plataformas web, apps móviles, e-commerce, integraciones de pago y sistemas a medida
-          para empresas en Venezuela y Latinoamérica.
-          De la idea al lanzamiento, sin sorpresas.
+          Sistemas a medida para hoteles, comercios, restaurantes y cobros: la caja, el inventario, las reservas
+          y el pago móvil validado contra el banco. Los construyo yo, los pongo a funcionar y me quedo a sostenerlos.
         </p>
 
         <div class="flex flex-wrap items-center gap-3 fade-up" style="animation-delay:1.05s;margin-top:40px;">
           <a href="#contacto" class="btn-primary">
-            Empezar proyecto
+            Hablemos de su proyecto
             <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          <a href="#portafolio" class="btn-ghost">Ver portafolio</a>
+          <a href="#portafolio" class="btn-ghost">Ver el trabajo</a>
         </div>
 
         <div class="hero-stats fade-up" style="animation-delay:1.2s;">
           <div><div class="v"><span data-counter="24">24</span></div><div class="l">Plataformas en producción</div></div>
           <div><div class="v"><span data-counter="17">17</span></div><div class="l">Años de experiencia</div></div>
-          <div><div class="v"><span data-counter="5">5</span></div><div class="l">Países atendidos</div></div>
-          <div><div class="v">24h</div><div class="l">Respuesta promedio</div></div>
+          <div><div class="v"><span data-counter="3">3</span></div><div class="l">Productos propios en operación</div></div>
+          <div><div class="v"><span data-counter="4">4</span></div><div class="l">Países con clientes</div></div>
         </div>
       </div>
-    </section>
-
-    <!-- ============================================================
-         MARQUEE
-         ============================================================ -->
-    <section class="marquee-section" aria-label="Stack técnico">
-      <div class="marquee-track">
-        <span class="marquee-item">React<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Next.js 15-16<span class="marquee-dot"></span></span>
-        <span class="marquee-item">TypeScript<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Node.js 20<span class="marquee-dot"></span></span>
-        <span class="marquee-item">NestJS<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Python<span class="marquee-dot"></span></span>
-        <span class="marquee-item">PHP avanzado<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Vue.js<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Prisma<span class="marquee-dot"></span></span>
-        <span class="marquee-item">MariaDB<span class="marquee-dot"></span></span>
-        <span class="marquee-item">MySQL<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Redis<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Tailwind CSS<span class="marquee-dot"></span></span>
-        <span class="marquee-item">WordPress<span class="marquee-dot"></span></span>
-        <span class="marquee-item">C# / .NET<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Unity 3D<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Linux Server<span class="marquee-dot"></span></span>
-        <span class="marquee-item">cPanel / WHM<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Apache<span class="marquee-dot"></span></span>
-        <span class="marquee-item">PM2<span class="marquee-dot"></span></span>
-        <span class="marquee-item">API REST<span class="marquee-dot"></span></span>
-
-        <span class="marquee-item">React<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Next.js 15-16<span class="marquee-dot"></span></span>
-        <span class="marquee-item">TypeScript<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Node.js 20<span class="marquee-dot"></span></span>
-        <span class="marquee-item">NestJS<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Python<span class="marquee-dot"></span></span>
-        <span class="marquee-item">PHP avanzado<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Vue.js<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Prisma<span class="marquee-dot"></span></span>
-        <span class="marquee-item">MariaDB<span class="marquee-dot"></span></span>
-        <span class="marquee-item">MySQL<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Redis<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Tailwind CSS<span class="marquee-dot"></span></span>
-        <span class="marquee-item">WordPress<span class="marquee-dot"></span></span>
-        <span class="marquee-item">C# / .NET<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Unity 3D<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Linux Server<span class="marquee-dot"></span></span>
-        <span class="marquee-item">cPanel / WHM<span class="marquee-dot"></span></span>
-        <span class="marquee-item">Apache<span class="marquee-dot"></span></span>
-        <span class="marquee-item">PM2<span class="marquee-dot"></span></span>
-        <span class="marquee-item">API REST<span class="marquee-dot"></span></span>
-      </div>
-      <div class="marquee-fade-l"></div>
-      <div class="marquee-fade-r"></div>
     </section>
 
     <!-- ============================================================
@@ -350,10 +263,10 @@
     <section class="section" id="industrias">
       <div class="container">
         <div style="max-width:720px;margin-bottom:48px;">
-          <span class="eyebrow">¿A qué le dedicas?</span>
+          <span class="eyebrow">¿A qué se dedica?</span>
           <h2 class="section-title">Una peluquería no necesita lo mismo que <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">una farmacia</span></h2>
           <p class="section-subtitle">
-            Entra a su industria y va a encontrar la cuenta de lo que le está costando hoy, los módulos que ya
+            Entre a su industria y va a encontrar la cuenta de lo que le está costando hoy, los módulos que ya
             existen y las cifras de lo que está operando en negocios como el suyo.
           </p>
         </div>
@@ -363,49 +276,49 @@
             <span class="num">SERVICIOS CON CITA</span>
             <h3>Peluquería, spa, clínica, taller</h3>
             <p>Agende por profesional, anticipo validado contra el banco y recordatorios que atacan las inasistencias.</p>
-            <span class="modulo-desde">desde el diagnóstico</span>
+            <span class="modulo-desde">Ver su caso →</span>
           </a>
           <a class="modulo" href="/para/comercio-y-tienda.html">
             <span class="num">COMERCIO</span>
             <h3>Farmacia, ropa, zapatos, joyería</h3>
             <p>Inventario que se descuenta solo, punto de venta y tienda en línea que cobra sola de noche.</p>
-            <span class="modulo-desde">desde $2.500</span>
+            <span class="modulo-desde">Ver su caso →</span>
           </a>
           <a class="modulo" href="/para/hoteles.html">
             <span class="num">HOTELERÍA</span>
             <h3>Hoteles y posadas</h3>
             <p>Mapa de habitaciones con los tiempos corriendo, caja en bolívares y divisas, turnos y cierre del día firmado.</p>
-            <span class="modulo-desde">desde $2.800</span>
+            <span class="modulo-desde">Ver su caso →</span>
           </a>
           <a class="modulo" href="/para/restaurantes-y-bares.html">
             <span class="num">GASTRONOMÍA</span>
             <h3>Restaurantes y bares</h3>
             <p>Comandas que llegan a cocina sin transcribir, mesas con cuenta viva, cobro dividido y delivery.</p>
-            <span class="modulo-desde">desde $2.500</span>
+            <span class="modulo-desde">Ver su caso →</span>
           </a>
           <a class="modulo" href="/para/cobros-y-pagos.html">
             <span class="num">COBROS</span>
             <h3>Cobros y pagos</h3>
             <p>Pago móvil validado solo contra el banco, C2P con clave temporal, USDT en cadena y tasa oficial al día.</p>
-            <span class="modulo-desde">desde $1.300</span>
+            <span class="modulo-desde">Ver su caso →</span>
           </a>
           <a class="modulo" href="/para/reservas.html">
             <span class="num">RESERVAS</span>
             <h3>Reservas, eventos y taquilla</h3>
             <p>Disponibilidad real, cupo apartado mientras el cliente paga, cotizador de eventos y venta de entradas.</p>
-            <span class="modulo-desde">desde $2.400</span>
+            <span class="modulo-desde">Ver su caso →</span>
           </a>
           <a class="modulo" href="/para/logistica-y-aduana.html">
             <span class="num">LOGÍSTICA</span>
             <h3>Logística y aduana</h3>
             <p>Solicitudes con expediente, recaudos controlados y portal para que el cliente vea su carga sin llamar.</p>
-            <span class="modulo-desde">desde $4.700</span>
+            <span class="modulo-desde">Ver su caso →</span>
           </a>
           <a class="modulo" href="/para/integraciones-api-y-bots.html">
             <span class="num">TÉCNICO</span>
             <h3>API, bots e integraciones</h3>
             <p>La capa que hace que sus sistemas se hablen: APIs propias, conectores y bots que consultan en vez de inventar.</p>
-            <span class="modulo-desde">desde $1.200</span>
+            <span class="modulo-desde">Ver su caso →</span>
           </a>
         </div>
 
@@ -419,292 +332,6 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         PROBLEM
-         ============================================================ -->
-    <section class="section" id="problema">
-      <div class="container">
-        <div style="max-width:720px;margin-bottom:64px;">
-          <span class="eyebrow">El problema</span>
-          <h2 class="section-title">Su negocio merece más que una <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">página web genérica</span></h2>
-          <p class="section-subtitle">Estos son los tres problemas que veo todos los días en negocios que pierden clientes por su presencia digital.</p>
-        </div>
-
-        <div class="problem-grid" data-stagger-group>
-          <div class="card" style="padding:32px;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:rgba(94,210,156,0.08);border:1px solid rgba(94,210,156,0.2);color:#5ed29c;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              </span>
-              <span class="font-jakarta" style="font-size:11px;letter-spacing:0.18em;color:rgba(255,255,255,0.4);">/ 01</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:18px;line-height:1.25;margin-bottom:12px;color:#fff;letter-spacing:-0.01em;">Sitios lentos que espantan visitantes</h3>
-            <p style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.6);">El 53% de los usuarios abandona un sitio que tarda más de 3 segundos en cargar. Cada segundo extra reduce sus conversiones un 7%.</p>
-          </div>
-          <div class="card" style="padding:32px;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:rgba(94,210,156,0.08);border:1px solid rgba(94,210,156,0.2);color:#5ed29c;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-              </span>
-              <span class="font-jakarta" style="font-size:11px;letter-spacing:0.18em;color:rgba(255,255,255,0.4);">/ 02</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:18px;line-height:1.25;margin-bottom:12px;color:#fff;letter-spacing:-0.01em;">Presencia digital que no convierte</h3>
-            <p style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.6);">Tener un sitio no basta. Si no está diseñado para convertir visitantes en clientes, está tirando dinero y oportunidades.</p>
-          </div>
-          <div class="card" style="padding:32px;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:rgba(94,210,156,0.08);border:1px solid rgba(94,210,156,0.2);color:#5ed29c;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-              </span>
-              <span class="font-jakarta" style="font-size:11px;letter-spacing:0.18em;color:rgba(255,255,255,0.4);">/ 03</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:18px;line-height:1.25;margin-bottom:12px;color:#fff;letter-spacing:-0.01em;">Vulnerabilidades de seguridad</h3>
-            <p style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.6);">El 43% de los ciberataques van dirigidos a pymes. Sin protección adecuada, su negocio está expuesto a pérdidas y daño reputacional.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         SERVICES
-         ============================================================ -->
-    <section id="servicios" class="section">
-      <div class="container">
-        <div class="flex flex-wrap items-end justify-between" style="gap:32px;margin-bottom:64px;">
-          <div style="max-width:640px;">
-            <span class="eyebrow">Lo que hago</span>
-            <h2 class="section-title">Servicios de desarrollo <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">de punta a punta</span></h2>
-            <p class="section-subtitle">Soluciones digitales completas, desde la idea hasta el lanzamiento y soporte continuo. 10+ verticales cubiertas.</p>
-          </div>
-          <div class="eye-row">
-            <span class="dot"></span>
-            <span class="txt">3 cupos disponibles este mes</span>
-          </div>
-        </div>
-
-        <div class="services-grid" data-stagger-group>
-          <!-- Featured 1 -->
-          <article class="card card-featured" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(94,210,156,0.12);border:1px solid rgba(94,210,156,0.25);color:#5ed29c;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
-              </span>
-              <span class="tag tag-accent">Destacado</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:19px;line-height:1.25;margin-bottom:10px;color:#fff;letter-spacing:-0.01em;">Sistemas de Gestión a Medida</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:20px;">Software especializado por industria: farmacias, delivery, restaurantes, centros deportivos y más.</p>
-            <div class="flex flex-wrap" style="gap:6px;margin-bottom:24px;">
-              <span class="tag" style="font-size:10px;">POS</span><span class="tag" style="font-size:10px;">Inventario</span><span class="tag" style="font-size:10px;">Reservas</span><span class="tag" style="font-size:10px;">API REST</span>
-            </div>
-            <div class="flex items-end justify-between" style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div>
-                <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Desde</div>
-                <div style="font-family:Inter;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;">$2,000 <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">USD</span></div>
-              </div>
-              <a href="#contacto" aria-label="Cotizar este servicio" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Featured 2 -->
-          <article class="card card-featured" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(94,210,156,0.12);border:1px solid rgba(94,210,156,0.25);color:#5ed29c;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
-              </span>
-              <span class="tag tag-accent">Destacado</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:19px;line-height:1.25;margin-bottom:10px;color:#fff;letter-spacing:-0.01em;">Soluciones de Pago Online</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:20px;">Integra cobros: Pago Móvil automatizado, débito inmediato, VPOS, QR y conexión con 39+ bancos venezolanos.</p>
-            <div class="flex flex-wrap" style="gap:6px;margin-bottom:24px;">
-              <span class="tag" style="font-size:10px;">Pago Móvil</span><span class="tag" style="font-size:10px;">VPOS</span><span class="tag" style="font-size:10px;">QR</span><span class="tag" style="font-size:10px;">API Bancaria</span>
-            </div>
-            <div class="flex items-end justify-between" style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div>
-                <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Desde</div>
-                <div style="font-family:Inter;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;">$800 <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">USD</span></div>
-              </div>
-              <a href="#contacto" aria-label="Cotizar este servicio" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Web -->
-          <article class="card" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
-              </span>
-              <span class="tag">Web</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:19px;line-height:1.25;margin-bottom:10px;color:#fff;letter-spacing:-0.01em;">Desarrollo Web</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:20px;">Sitios rápidos, responsivos y optimizados para SEO. Desde landing pages hasta plataformas complejas.</p>
-            <div class="flex flex-wrap" style="gap:6px;margin-bottom:24px;">
-              <span class="tag" style="font-size:10px;">Next.js</span><span class="tag" style="font-size:10px;">React</span><span class="tag" style="font-size:10px;">WordPress</span>
-            </div>
-            <div class="flex items-end justify-between" style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div>
-                <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Desde</div>
-                <div style="font-family:Inter;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;">$500 <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">USD</span></div>
-              </div>
-              <a href="#contacto" aria-label="Cotizar este servicio" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Apps -->
-          <article class="card" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
-              </span>
-              <span class="tag">Apps</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:19px;line-height:1.25;margin-bottom:10px;color:#fff;letter-spacing:-0.01em;">Aplicaciones Móviles</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:20px;">Apps nativas y multiplataforma que ofrecen experiencias fluidas en iOS y Android.</p>
-            <div class="flex flex-wrap" style="gap:6px;margin-bottom:24px;">
-              <span class="tag" style="font-size:10px;">React Native</span><span class="tag" style="font-size:10px;">PWA</span><span class="tag" style="font-size:10px;">Unity 3D</span>
-            </div>
-            <div class="flex items-end justify-between" style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div>
-                <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Desde</div>
-                <div style="font-family:Inter;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;">$3,000 <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">USD</span></div>
-              </div>
-              <a href="#contacto" aria-label="Cotizar este servicio" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- E-Commerce -->
-          <article class="card" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-              </span>
-              <span class="tag">Tienda</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:19px;line-height:1.25;margin-bottom:10px;color:#fff;letter-spacing:-0.01em;">E-Commerce</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:20px;">Tiendas online optimizadas para vender. Pasarelas de pago, inventario y experiencia de compra fluida.</p>
-            <div class="flex flex-wrap" style="gap:6px;margin-bottom:24px;">
-              <span class="tag" style="font-size:10px;">WooCommerce</span><span class="tag" style="font-size:10px;">Shopify</span><span class="tag" style="font-size:10px;">Custom</span>
-            </div>
-            <div class="flex items-end justify-between" style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div>
-                <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Desde</div>
-                <div style="font-family:Inter;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;">$1,200 <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">USD</span></div>
-              </div>
-              <a href="#contacto" aria-label="Cotizar este servicio" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Ciberseguridad -->
-          <article class="card" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-              </span>
-              <span class="tag">Seguridad</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:19px;line-height:1.25;margin-bottom:10px;color:#fff;letter-spacing:-0.01em;">Ciberseguridad</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:20px;">Protege su negocio digital con auditorías, pentesting y configuración de defensas robustas.</p>
-            <div class="flex flex-wrap" style="gap:6px;margin-bottom:24px;">
-              <span class="tag" style="font-size:10px;">Pentesting</span><span class="tag" style="font-size:10px;">WAF</span><span class="tag" style="font-size:10px;">SSL</span><span class="tag" style="font-size:10px;">OWASP</span>
-            </div>
-            <div class="flex items-end justify-between" style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div>
-                <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Desde</div>
-                <div style="font-family:Inter;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;">$300 <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">USD</span></div>
-              </div>
-              <a href="#contacto" aria-label="Cotizar este servicio" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Hosting -->
-          <article class="card" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
-              </span>
-              <span class="tag">Hosting</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:19px;line-height:1.25;margin-bottom:10px;color:#fff;letter-spacing:-0.01em;">Hosting Profesional</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:20px;">Hosting compartido para emprendedores y corporativo para empresas. SSL, backups diarios, cPanel.</p>
-            <div class="flex flex-wrap" style="gap:6px;margin-bottom:24px;">
-              <span class="tag" style="font-size:10px;">cPanel</span><span class="tag" style="font-size:10px;">SSL</span><span class="tag" style="font-size:10px;">Backups</span>
-            </div>
-            <div class="flex items-end justify-between" style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div>
-                <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Desde</div>
-                <div style="font-family:Inter;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;">$8/mes <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">USD</span></div>
-              </div>
-              <a href="#contacto" aria-label="Cotizar este servicio" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Bots -->
-          <article class="card" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-              </span>
-              <span class="tag">Automatización</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:19px;line-height:1.25;margin-bottom:10px;color:#fff;letter-spacing:-0.01em;">Bots y Automatización</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:20px;">Bots en Python para automatizar procesos, web scraping, integración con APIs y tareas repetitivas.</p>
-            <div class="flex flex-wrap" style="gap:6px;margin-bottom:24px;">
-              <span class="tag" style="font-size:10px;">Python</span><span class="tag" style="font-size:10px;">Selenium</span><span class="tag" style="font-size:10px;">APIs</span>
-            </div>
-            <div class="flex items-end justify-between" style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div>
-                <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Desde</div>
-                <div style="font-family:Inter;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;">$500 <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">USD</span></div>
-              </div>
-              <a href="#contacto" aria-label="Cotizar este servicio" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Recuperación -->
-          <article class="card" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div class="flex items-center justify-between" style="margin-bottom:28px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-              </span>
-              <span class="tag">Emergencia</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:19px;line-height:1.25;margin-bottom:10px;color:#fff;letter-spacing:-0.01em;">Recuperación de Sitios Hackeados</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:20px;">Elimino malware, cierro vulnerabilidades, restauro archivos y refuerzo la seguridad de su sitio.</p>
-            <div class="flex flex-wrap" style="gap:6px;margin-bottom:24px;">
-              <span class="tag" style="font-size:10px;">Malware</span><span class="tag" style="font-size:10px;">Hardening</span><span class="tag" style="font-size:10px;">Firewall</span>
-            </div>
-            <div class="flex items-end justify-between" style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div>
-                <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Desde</div>
-                <div style="font-family:Inter;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;">$200 <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">USD</span></div>
-              </div>
-              <a href="#contacto" aria-label="Cotizar este servicio" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         PORTFOLIO
-         ============================================================ -->
     <!-- ============================================================
          PRODUCTOS PROPIOS — no son encargos: los construí y los opero
          ============================================================ -->
@@ -764,7 +391,7 @@
           <div style="max-width:720px;">
             <span class="eyebrow">Mi trabajo</span>
             <h2 class="section-title">21 plataformas que me <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">encargaron</span></h2>
-            <p class="section-subtitle">Ecosistema turístico, deportivo y de entretenimiento VIP en La Guaira, Venezuela, más el portafolio internacional. Todas son sistemas reales operando 24/7, salvo la de logística aduanera, que está construida y en demostración. <strong style="color:#fff;">ArmorPay, Soporte Vipsoft y Atalaya no están en esta lista</strong> porque no me los encargó nadie: están <a href="#productos" style="color:#5ed29c;">acá arriba</a>, en productos propios. Entre las dos listas, 24 en producción.</p>
+            <p class="section-subtitle">Hoteles, complejos deportivos, restaurantes, banca y comercio. Todas son sistemas reales en operación, salvo la de logística aduanera, que está construida y en demostración. Con los tres <a href="#productos" style="color:#5ed29c;">productos propios</a> suman 24 en producción.</p>
           </div>
           <a href="/hoja-de-vida.html" class="btn-ghost">
             Ver hoja de vida completa
@@ -772,12 +399,7 @@
           </a>
         </div>
 
-        <div class="portfolio-block-header">
-          <span class="eyebrow" style="color:#5ed29c;">Ecosistema VIP · Venezuela 2025-2026</span>
-          <div class="portfolio-block-rule"></div>
-        </div>
-
-        <div class="portfolio-grid" data-stagger-group>
+        <div class="portfolio-grid portfolio-destacados" data-stagger-group>
           <!-- 01 Hotel VIP La Guaira -->
           <a class="card portfolio-card" href="https://hotelviplaguaira.com" target="_blank" rel="noopener">
             <div class="portfolio-cover" style="--accent-c:#22d3ee;">
@@ -789,9 +411,9 @@
             </div>
             <div class="portfolio-body">
               <h3>Hotel VIP La Guaira</h3>
-              <p>Plataforma integral: reservas con gateway LobbyPMS propio (12 funciones), 11 métodos de pago, VIP Bot Gemini con 11 herramientas y pases QR auditables.</p>
+              <p>Reservas en línea conectadas al sistema de gestión del hotel, once métodos de cobro, pases con código QR que se pueden auditar y un asistente que atiende por WhatsApp.</p>
               <div class="portfolio-tags"><span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">Prisma 5</span><span class="tag">Stripe</span></div>
-              <div class="portfolio-meta">→ 50+ releases en producción</div>
+              <div class="portfolio-meta">→ Más de 50 versiones publicadas en producción</div>
             </div>
           </a>
 
@@ -806,11 +428,89 @@
             </div>
             <div class="portfolio-body">
               <h3>Terrazas VIP Sport Park</h3>
-              <p>Sistema integral de gestión deportiva: 125 páginas, 230 endpoints, INVU POS productivo, bot WhatsApp con 26 tools y matriz de capabilities data-driven.</p>
+              <p>Un complejo deportivo manejado desde un solo sistema: 125 pantallas, punto de venta en operación, permisos por empleado y un asistente de WhatsApp que responde con los datos reales.</p>
               <div class="portfolio-tags"><span class="tag">Next.js 15</span><span class="tag">Prisma</span><span class="tag">PM2</span><span class="tag">INVU POS</span></div>
-              <div class="portfolio-meta">→ 53 modelos · 9 métodos de pago</div>
+              <div class="portfolio-meta">→ 9 métodos de pago</div>
             </div>
           </a>
+
+          <!-- PMS hotelero (cliente bajo reserva) -->
+          <a class="card portfolio-card" href="/para/hoteles.html">
+            <div class="portfolio-cover" style="--accent-c:#a78bfa;">
+              <div class="grid-pattern"></div>
+              <img class="portfolio-shot ejemplo" src="/assets/img/portafolio/pms-hotelero-800.webp" srcset="/assets/img/portafolio/pms-hotelero-800.webp 800w, /assets/img/portafolio/pms-hotelero-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 420px" width="800" height="420" loading="lazy" decoding="async" alt="Ilustración de ejemplo: sistema hotelero con avisos de recepción y cierre de caja">
+              <div class="big-letter">P</div>
+              <div class="portfolio-badge"><span class="dot" style="background:#a78bfa;"></span>PMS propio · Valencia</div>
+              <div class="portfolio-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
+            </div>
+            <div class="portfolio-body">
+              <h3>Sistema hotelero de alta rotación</h3>
+              <p>Reemplazó al SaaS que el hotel alquilaba. Mapa de habitaciones con tiempos corriendo, caja en dos monedas, turnos con entrega y cierre del día firmado.</p>
+              <div class="portfolio-tags"><span class="tag">Next.js 15</span><span class="tag">Prisma</span><span class="tag">MySQL</span><span class="tag">17 módulos</span></div>
+              <div class="portfolio-meta">→ 2.148 registros migrados · 1.011 pruebas</div>
+            </div>
+          </a>
+
+          <!-- 06 VIP Play Sport Bar -->
+          <a class="card portfolio-card" href="https://vipplaysportbar.com" target="_blank" rel="noopener">
+            <div class="portfolio-cover" style="--accent-c:#f43f5e;">
+              <img class="portfolio-shot" src="/assets/img/portafolio/vip-play-800.webp" srcset="/assets/img/portafolio/vip-play-800.webp 800w, /assets/img/portafolio/vip-play-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 420px" width="800" height="450" loading="lazy" decoding="async" alt="Página de inicio de VIP Play Sport Bar">
+              <div class="grid-pattern"></div>
+              <div class="big-letter">V</div>
+              <div class="portfolio-badge"><span class="dot" style="background:#f43f5e;"></span>VIP Play · multi-sede</div>
+              <div class="portfolio-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
+            </div>
+            <div class="portfolio-body">
+              <h3>VIP Play Sport Bar</h3>
+              <p>Restaurante y bar en dos sedes: punto de venta, pantalla de cocina, mesas con cuenta abierta, cobro antes de despachar y pedidos a la habitación del hotel. Se instala en el teléfono como una app.</p>
+              <div class="portfolio-tags"><span class="tag">Next.js 16</span><span class="tag">Prisma 7</span><span class="tag">SSE</span><span class="tag">Web-Push VAPID</span></div>
+              <div class="portfolio-meta">→ 2 sedes: Estadio Macuto + Catia La Mar</div>
+            </div>
+          </a>
+
+          <a class="card portfolio-card" href="/para/cobros-y-pagos.html">
+            <div class="portfolio-cover" style="--accent-c:#5ed29c;">
+              <img class="portfolio-shot" src="/assets/img/portafolio/concil-800.webp" srcset="/assets/img/portafolio/concil-800.webp 800w, /assets/img/portafolio/concil-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 420px" width="800" height="450" loading="lazy" decoding="async" alt="Página de inicio de CONCIL">
+              <div class="grid-pattern"></div>
+              <div class="big-letter">C</div>
+              <div class="portfolio-badge"><span class="dot" style="background:#5ed29c;"></span>CONCIL · v2.9</div>
+              <div class="portfolio-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
+            </div>
+            <div class="portfolio-body">
+              <h3>CONCIL · conciliación bancaria</h3>
+              <p>Ordena los extractos de diez bancos en una sola base: saldos por cuenta, avisos de días sin extracto, pagos repetidos y reconocimiento de la comisión del pago móvil. Sin dependencias externas: hasta el lector de Excel está escrito a mano.</p>
+              <div class="portfolio-tags"><span class="tag">PHP 8.2+</span><span class="tag">MySQL</span><span class="tag">Cero dependencias</span><span class="tag">XLSX propio</span></div>
+              <div class="portfolio-meta">→ 19.700 líneas · en desarrollo activo</div>
+            </div>
+          </a>
+
+          <!-- Adastram Store -->
+          <a class="card portfolio-card" href="https://adastram.store" target="_blank" rel="noopener">
+            <div class="portfolio-cover" style="--accent-c:#ff4dd8;">
+              <img class="portfolio-shot" src="/assets/img/portafolio/adastram-800.webp" srcset="/assets/img/portafolio/adastram-800.webp 800w, /assets/img/portafolio/adastram-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 420px" width="800" height="450" loading="lazy" decoding="async" alt="Página de inicio de Adastram Store">
+              <div class="grid-pattern"></div>
+              <div class="big-letter">A</div>
+              <div class="portfolio-badge"><span class="dot" style="background:#ff4dd8;"></span>E-commerce · Venezuela</div>
+              <div class="portfolio-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
+            </div>
+            <div class="portfolio-body">
+              <h3>Adastram Store</h3>
+              <p>Tienda en línea con panel de administración propio: catálogo, carrito, pago móvil con carga de comprobante y confirmación desde el panel de la dueña.</p>
+              <div class="portfolio-tags"><span class="tag">Next.js 15</span><span class="tag">Prisma</span><span class="tag">MySQL</span><span class="tag">Vitest</span></div>
+              <div class="portfolio-meta">→ Cada monto calculado al centavo, sin redondeos</div>
+            </div>
+          </a>
+        </div>
+
+        <details class="portfolio-mas">
+          <summary><span>Ver las otras 15 plataformas</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="portfolio-block-header">
+          <span class="eyebrow" style="color:#5ed29c;">Ecosistema VIP · Venezuela 2025-2026</span>
+          <div class="portfolio-block-rule"></div>
+        </div>
+
+        <div class="portfolio-grid" data-stagger-group>
+
 
           <!-- 04 Bowling Park La Guaira -->
           <a class="card portfolio-card" href="https://bowlinglaguaira.com" target="_blank" rel="noopener">
@@ -846,22 +546,6 @@
             </div>
           </a>
 
-          <!-- 06 VIP Play Sport Bar -->
-          <a class="card portfolio-card" href="https://vipplaysportbar.com" target="_blank" rel="noopener">
-            <div class="portfolio-cover" style="--accent-c:#f43f5e;">
-              <img class="portfolio-shot" src="/assets/img/portafolio/vip-play-800.webp" srcset="/assets/img/portafolio/vip-play-800.webp 800w, /assets/img/portafolio/vip-play-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 420px" width="800" height="450" loading="lazy" decoding="async" alt="Página de inicio de VIP Play Sport Bar">
-              <div class="grid-pattern"></div>
-              <div class="big-letter">V</div>
-              <div class="portfolio-badge"><span class="dot" style="background:#f43f5e;"></span>VIP Play · multi-sede</div>
-              <div class="portfolio-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
-            </div>
-            <div class="portfolio-body">
-              <h3>VIP Play Sport Bar</h3>
-              <p>Sistema multi-sede: POS, KDS, gestión de mesas, payment-first flow y módulo Room Service integrado con Hotel VIP. PWA con push notifications cada 5 min.</p>
-              <div class="portfolio-tags"><span class="tag">Next.js 16</span><span class="tag">Prisma 7</span><span class="tag">SSE</span><span class="tag">Web-Push VAPID</span></div>
-              <div class="portfolio-meta">→ 2 sedes: Estadio Macuto + Catia La Mar</div>
-            </div>
-          </a>
 
           <!-- 07 Mardenli Sportsbook -->
           <a class="card portfolio-card" href="https://sportsbook.mardenli.com" target="_blank" rel="noopener">
@@ -904,22 +588,6 @@
         </div>
 
         <div class="portfolio-grid" data-stagger-group>
-          <!-- PMS hotelero (cliente bajo reserva) -->
-          <a class="card portfolio-card" href="/para/hoteles.html">
-            <div class="portfolio-cover" style="--accent-c:#a78bfa;">
-              <div class="grid-pattern"></div>
-              <img class="portfolio-shot ejemplo" src="/assets/img/portafolio/pms-hotelero-800.webp" srcset="/assets/img/portafolio/pms-hotelero-800.webp 800w, /assets/img/portafolio/pms-hotelero-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 420px" width="800" height="420" loading="lazy" decoding="async" alt="Ilustración de ejemplo: sistema hotelero con avisos de recepción y cierre de caja">
-              <div class="big-letter">P</div>
-              <div class="portfolio-badge"><span class="dot" style="background:#a78bfa;"></span>PMS propio · Valencia</div>
-              <div class="portfolio-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
-            </div>
-            <div class="portfolio-body">
-              <h3>Sistema hotelero de alta rotación</h3>
-              <p>Reemplazó al SaaS que el hotel alquilaba. Mapa de habitaciones con tiempos corriendo, caja en dos monedas, turnos con entrega y cierre del día firmado.</p>
-              <div class="portfolio-tags"><span class="tag">Next.js 15</span><span class="tag">Prisma</span><span class="tag">MySQL</span><span class="tag">17 módulos</span></div>
-              <div class="portfolio-meta">→ 2.148 registros migrados · 1.011 pruebas</div>
-            </div>
-          </a>
 
           <!-- OCLS logistica aduanera -->
           <a class="card portfolio-card" href="/para/logistica-y-aduana.html">
@@ -939,22 +607,6 @@
             </div>
           </a>
 
-          <!-- Adastram Store -->
-          <a class="card portfolio-card" href="https://adastram.store" target="_blank" rel="noopener">
-            <div class="portfolio-cover" style="--accent-c:#ff4dd8;">
-              <img class="portfolio-shot" src="/assets/img/portafolio/adastram-800.webp" srcset="/assets/img/portafolio/adastram-800.webp 800w, /assets/img/portafolio/adastram-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 420px" width="800" height="450" loading="lazy" decoding="async" alt="Página de inicio de Adastram Store">
-              <div class="grid-pattern"></div>
-              <div class="big-letter">A</div>
-              <div class="portfolio-badge"><span class="dot" style="background:#ff4dd8;"></span>E-commerce · Venezuela</div>
-              <div class="portfolio-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
-            </div>
-            <div class="portfolio-body">
-              <h3>Adastram Store</h3>
-              <p>Tienda en línea con panel de administración propio: catálogo, carrito, pago móvil con carga de comprobante y confirmación desde el panel de la dueña.</p>
-              <div class="portfolio-tags"><span class="tag">Next.js 15</span><span class="tag">Prisma</span><span class="tag">MySQL</span><span class="tag">Vitest</span></div>
-              <div class="portfolio-meta">→ Cálculos de dinero en centavos enteros</div>
-            </div>
-          </a>
 
           <!-- Gran Casino La Guaira -->
           <a class="card portfolio-card" href="/para/integraciones-api-y-bots.html">
@@ -973,21 +625,6 @@
             </div>
           </a>
           <!-- CONCIL — conciliación bancaria -->
-          <a class="card portfolio-card" href="/para/cobros-y-pagos.html">
-            <div class="portfolio-cover" style="--accent-c:#5ed29c;">
-              <img class="portfolio-shot" src="/assets/img/portafolio/concil-800.webp" srcset="/assets/img/portafolio/concil-800.webp 800w, /assets/img/portafolio/concil-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 420px" width="800" height="450" loading="lazy" decoding="async" alt="Página de inicio de CONCIL">
-              <div class="grid-pattern"></div>
-              <div class="big-letter">C</div>
-              <div class="portfolio-badge"><span class="dot" style="background:#5ed29c;"></span>CONCIL · v2.9</div>
-              <div class="portfolio-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
-            </div>
-            <div class="portfolio-body">
-              <h3>CONCIL · conciliación bancaria</h3>
-              <p>Ordena los extractos de diez bancos en una sola base: saldos por cuenta, avisos de días sin extracto, pagos repetidos y reconocimiento de la comisión del pago móvil. Sin una sola dependencia — el lector y el escritor de XLSX están escritos a mano.</p>
-              <div class="portfolio-tags"><span class="tag">PHP 8.2+</span><span class="tag">MySQL</span><span class="tag">Cero dependencias</span><span class="tag">XLSX propio</span></div>
-              <div class="portfolio-meta">→ 19.700 líneas · en desarrollo activo</div>
-            </div>
-          </a>
 
           <!-- ArmorPay interno -->
           <a class="card portfolio-card" href="/para/cobros-y-pagos.html">
@@ -1149,54 +786,7 @@
             </div>
           </a>
         </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         PROCESS
-         ============================================================ -->
-    <section id="proceso" class="section">
-      <div class="container">
-        <div style="max-width:720px;margin-bottom:64px;">
-          <span class="eyebrow">Cómo trabajo</span>
-          <h2 class="section-title">Un proceso <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">claro</span> de principio a fin</h2>
-          <p class="section-subtitle">Para que siempre sepa en qué etapa está su proyecto y qué viene después. Sin sorpresas, sin caja negra.</p>
-        </div>
-
-        <div class="process-grid" data-stagger-group>
-          <div class="process-step first">
-            <div class="flex items-center justify-between" style="margin-bottom:32px;">
-              <span class="font-jakarta" style="font-size:11px;font-weight:700;letter-spacing:0.18em;color:#5ed29c;">STEP 01</span>
-              <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:56px;line-height:0.8;color:rgba(255,255,255,0.08);letter-spacing:-0.04em;">01</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:22px;line-height:1.2;margin-bottom:12px;color:#fff;letter-spacing:-0.02em;">Descubrimiento</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);">Analizo su negocio, objetivos, competencia y público. Definimos alcance, funcionalidades y cronograma. Consulta inicial gratuita de 30 minutos.</p>
-          </div>
-          <div class="process-step">
-            <div class="flex items-center justify-between" style="margin-bottom:32px;">
-              <span class="font-jakarta" style="font-size:11px;font-weight:700;letter-spacing:0.18em;color:#5ed29c;">STEP 02</span>
-              <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:56px;line-height:0.8;color:rgba(255,255,255,0.08);letter-spacing:-0.04em;">02</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:22px;line-height:1.2;margin-bottom:12px;color:#fff;letter-spacing:-0.02em;">Diseño y Prototipo</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);">Wireframes y prototipos interactivos para que vea su proyecto antes de escribir una línea de código. Ajustamos hasta que esté 100% satisfecho.</p>
-          </div>
-          <div class="process-step">
-            <div class="flex items-center justify-between" style="margin-bottom:32px;">
-              <span class="font-jakarta" style="font-size:11px;font-weight:700;letter-spacing:0.18em;color:#5ed29c;">STEP 03</span>
-              <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:56px;line-height:0.8;color:rgba(255,255,255,0.08);letter-spacing:-0.04em;">03</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:22px;line-height:1.2;margin-bottom:12px;color:#fff;letter-spacing:-0.02em;">Desarrollo</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);">Construyo su solución con las mejores tecnologías. Reportes semanales de progreso con demos en vivo para que vea el avance.</p>
-          </div>
-          <div class="process-step">
-            <div class="flex items-center justify-between" style="margin-bottom:32px;">
-              <span class="font-jakarta" style="font-size:11px;font-weight:700;letter-spacing:0.18em;color:#5ed29c;">STEP 04</span>
-              <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:56px;line-height:0.8;color:rgba(255,255,255,0.08);letter-spacing:-0.04em;">04</span>
-            </div>
-            <h3 style="font-family:Inter;font-weight:700;font-size:22px;line-height:1.2;margin-bottom:12px;color:#fff;letter-spacing:-0.02em;">Lanzamiento y Soporte</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:rgba(255,255,255,0.6);">Despliegue optimizado, pruebas finales y capacitación. 30 días de soporte gratuito post-lanzamiento incluidos.</p>
-          </div>
-        </div>
+        </details>
       </div>
     </section>
 
@@ -1208,7 +798,7 @@
         <div class="about-grid">
           <div>
             <div class="liquid-glass about-portrait">
-              <img class="about-photo" src="/assets/img/neri/neri-retrato-640.webp?v=2" srcset="/assets/img/neri/neri-retrato-640.webp?v=2 640w, /assets/img/neri/neri-retrato-1080.webp?v=2 1080w" sizes="(max-width: 900px) 92vw, 440px" width="640" height="800" loading="lazy" decoding="async" alt="Neri Colón trabajando frente a su laptop, con pantallas de código y arquitectura de sistemas">
+              <img class="about-photo" src="/assets/img/neri/neri-foto-480.webp" srcset="/assets/img/neri/neri-foto-480.webp 480w, /assets/img/neri/neri-foto-960.webp 960w" sizes="(max-width: 900px) 92vw, 440px" width="480" height="600" loading="lazy" decoding="async" alt="Neri Colón trabajando en su laptop al aire libre en La Guaira">
               <div class="flex items-center justify-between">
                 <span style="font-size:11px;letter-spacing:0.18em;color:rgba(255,255,255,0.5);">[ ING. INFORMÁTICO ]</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5ed29c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
@@ -1227,21 +817,13 @@
 
           <div>
             <span class="eyebrow">Quién soy</span>
-            <h2 class="section-title" style="margin-bottom:24px;">17 años convirtiendo ideas en <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">código que vende</span></h2>
+            <h2 class="section-title" style="margin-bottom:24px;">17 años haciendo sistemas que <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">se usan todos los días</span></h2>
 
             <div style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.7);max-width:640px;">
-              <p style="margin:0 0 16px 0;">Soy <strong style="color:#fff;">Neri Rafael Colón Suárez</strong>, Ingeniero Informático con 17 años transformando ideas en soluciones digitales reales.</p>
-              <p style="margin:0 0 16px 0;">He trabajado con empresas en <strong style="color:#fff;">Venezuela, Colombia, México y Australia</strong>, siempre con el mismo objetivo: crear tecnología que genere resultados medibles.</p>
-              <p style="margin:0 0 16px 0;">Mi enfoque combina desarrollo full stack, conocimiento en ciberseguridad y una obsesión por la calidad y el rendimiento. Cada proyecto lo trato como si fuera mío.</p>
+              <p style="margin:0 0 16px 0;">Soy <strong style="color:#fff;">Neri Rafael Colón Suárez</strong>, ingeniero informático. Llevo 17 años construyendo software para empresas en <strong style="color:#fff;">Venezuela, Colombia, México y Australia</strong>.</p>
+              <p style="margin:0 0 16px 0;">No le entrego un sistema y desaparezco: los que construyo los opero, los vigilo y los mantengo en línea. Por eso sé lo que cuesta sostener algo vivo, y lo diseño pensando en eso desde el primer día.</p>
               <p style="margin:0;">Hoy lidero el portafolio de plataformas productivas del ecosistema VIP en La Guaira como <strong style="color:#fff;">Lead Developer en Desarrollos Turísticos Siglo XXII (División VIP SOFT)</strong>, y continúo como consultor externo en Solutions Quantic (Venezuela) y EAgencia (Colombia).</p>
             </div>
-
-            <!-- Filosofía Profesional -->
-            <aside class="philosophy-quote">
-              <span class="philosophy-mark">"</span>
-              <span class="philosophy-label">— Enfoque profesional</span>
-              <p class="philosophy-text">A lo largo de mi carrera como desarrollador, los desafíos han sido una de mis mayores fuentes de motivación. Poseo la capacidad y habilidad para resolver problemas de manera creativa, explorando siempre diversas alternativas y enfoques. Si me enfrento a una situación en la que no tengo total claridad sobre el proceso a seguir, analizo a fondo el problema, replanteo múltiples escenarios y evalúo la mejor solución posible. Me apasiona profundizar en cada reto, asegurándome de ofrecer respuestas eficaces, optimizadas y alineadas con los objetivos del proyecto.</p>
-            </aside>
 
             <div style="margin-top:48px;">
               <div class="font-jakarta" style="font-size:11px;letter-spacing:0.18em;color:rgba(255,255,255,0.4);text-transform:uppercase;margin-bottom:20px;">Trayectoria · 3 vínculos vigentes</div>
@@ -1289,121 +871,7 @@
                 </a>
               </div>
             </div>
-
-            <div style="margin-top:40px;">
-              <div class="font-jakarta" style="font-size:11px;letter-spacing:0.18em;color:rgba(255,255,255,0.4);text-transform:uppercase;margin-bottom:16px;">Stack técnico</div>
-              <div class="flex flex-wrap" style="gap:8px;">
-                <span class="tag" style="font-size:12px;padding:6px 12px;">TypeScript</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">JavaScript</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">PHP avanzado</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Python</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">C# / .NET</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">React / Next.js 15-16</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Vue.js</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Tailwind · shadcn/ui</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Node.js 20</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">NestJS · Express</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Prisma 5-7</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">MySQL · MariaDB</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Redis · PostgreSQL</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">WordPress (Especialista)</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Linux Server</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">cPanel / WHM</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Apache · PM2</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">SMTP / IMAP propios</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">React Native · Unity 3D</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Pagos VE (MovilPay · BDV C2P · USDT)</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">IA Conversacional (Gemini · OpenWA)</span>
-                <span class="tag" style="font-size:12px;padding:6px 12px;">Git · CI-CD</span>
-              </div>
-            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         CV SUMMARY · Hoja de Vida
-         ============================================================ -->
-    <section class="section" id="hoja-de-vida-summary" style="background:linear-gradient(180deg,transparent,rgba(94,210,156,0.02),transparent);">
-      <div class="container">
-        <div style="max-width:760px;margin-bottom:64px;">
-          <span class="eyebrow">Hoja de Vida</span>
-          <h2 class="section-title">17 años · 3 vínculos vigentes · 24 plataformas <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">en producción</span></h2>
-          <p class="section-subtitle">Mi trabajo se organiza en 6 grandes capacidades técnicas que se cruzan entre proyectos. Cada bloque tiene casos reales detrás.</p>
-        </div>
-
-        <div class="cv-summary-grid" data-stagger-group>
-          <article class="card cv-cap-card">
-            <div class="cv-cap-num">A</div>
-            <h3>Pagos Venezuela</h3>
-            <ul>
-              <li>MovilPay BDT con anti-fraude per-entity</li>
-              <li>BDV C2P · FastDebit · USDT TRC20 · Stripe</li>
-              <li>Scraping BCV oficial multi-fuente</li>
-            </ul>
-          </article>
-
-          <article class="card cv-cap-card">
-            <div class="cv-cap-num">B</div>
-            <h3>IA &amp; Automatización</h3>
-            <ul>
-              <li>VIP Bot Hotel (Gemini 2.0 Flash · 11 tools)</li>
-              <li>ArtificialIC (Terrazas · 26 tools custom)</li>
-              <li>WhatsApp Gateway OpenWA en PM2</li>
-            </ul>
-          </article>
-
-          <article class="card cv-cap-card">
-            <div class="cv-cap-num">C</div>
-            <h3>Integraciones Empresariales</h3>
-            <ul>
-              <li>LobbyPMS Gateway propio (12 funciones)</li>
-              <li>INVU POS · ~26 M-codes activos</li>
-              <li>Mobilia Gestión API (CRM líder España)</li>
-            </ul>
-          </article>
-
-          <article class="card cv-cap-card">
-            <div class="cv-cap-num">D</div>
-            <h3>CRM &amp; ERP a Medida</h3>
-            <ul>
-              <li>ERP completo del ecosistema VIP</li>
-              <li>SGE Next.js para Solutions Quantic</li>
-              <li>Reportes SENIAT exportables</li>
-            </ul>
-          </article>
-
-          <article class="card cv-cap-card">
-            <div class="cv-cap-num">E</div>
-            <h3>Linux, Servidores &amp; DevOps</h3>
-            <ul>
-              <li>Admin avanzada Linux · cPanel/WHM · Apache</li>
-              <li>PM2 cluster · zero-downtime deploys</li>
-              <li>SMTP/IMAP propios · SPF/DKIM/DMARC</li>
-            </ul>
-          </article>
-
-          <article class="card cv-cap-card">
-            <div class="cv-cap-num">F</div>
-            <h3>Seguridad &amp; Hardening</h3>
-            <ul>
-              <li>Staff PIN re-auth con AuditLog atributivo</li>
-              <li>27 capabilities data-driven editables</li>
-              <li>Auditoría multi-agente · 46 hallazgos / 25 fixes</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="cv-summary-cta">
-          <a href="/hoja-de-vida.html" class="btn-primary">
-            Ver hoja de vida completa
-            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <a href="/hoja-de-vida.html?print=1" class="btn-ghost">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
-            Descargar PDF
-          </a>
         </div>
       </div>
     </section>
@@ -1415,9 +883,9 @@
       <div class="container">
         <div class="faq-grid">
           <div class="faq-side">
-            <span class="eyebrow">FAQ</span>
-            <h2 class="section-title">Resuelve sus <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">dudas</span></h2>
-            <p class="section-subtitle" style="margin-bottom:24px;">Las preguntas que recibo más frecuentemente. Si no encuentra su respuesta, escríbame directo.</p>
+            <span class="eyebrow">Preguntas frecuentes</span>
+            <h2 class="section-title">Lo que más me <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">preguntan</span></h2>
+            <p class="section-subtitle" style="margin-bottom:24px;">Si su pregunta no está aquí, escríbame directo.</p>
             <a href="#contacto" class="btn-ghost">
               Pregúnteme algo
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -1433,7 +901,7 @@
                   <span class="icon-minus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
                 </span>
               </button>
-              <div class="faq-a"><p>Los precios están publicados, no hay que preguntarlos: cada rubro tiene su tabla en <a href="/para/" style="color:#5ed29c;">soluciones</a>. Un sistema completo arranca en $2.400 y una capa de cobros o integración, en $1.200. El desarrollo se paga una vez —50 % al aprobar y 50 % contra entrega— y los sistemas completos llevan una mensualidad de servicio desde $100 que cubre hosting, respaldos, seguridad y soporte.</p><p>Si prefiere una cifra para su caso concreto, la <a href="/calculadora.html" style="color:#5ed29c;">calculadora</a> la estima en un minuto, y el diagnóstico completo con plan por fases cuesta $250 y se descuenta si contrata.</p></div>
+              <div class="faq-a"><p>Los precios están publicados, no hay que preguntarlos: cada industria tiene su tabla en <a href="/para/" style="color:#5ed29c;">soluciones</a>. El desarrollo se paga una vez, la mitad al aprobar y la otra mitad contra entrega, y los sistemas completos llevan una mensualidad de servicio que cubre hosting, respaldos, seguridad y soporte.</p><p>Si prefiere una cifra para su caso concreto, la <a href="/calculadora.html" style="color:#5ed29c;">calculadora</a> la estima en un minuto. El diagnóstico completo con plan por fases se descuenta si contrata.</p></div>
             </div>
             <div class="faq-item">
               <button class="faq-q" type="button">
@@ -1443,7 +911,7 @@
                   <span class="icon-minus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
                 </span>
               </button>
-              <div class="faq-a"><p>Los tiempos dependen de la complejidad: una landing page puede estar lista en 1-2 semanas, un sitio web completo en 3-6 semanas, y una aplicación en 2-4 meses. Siempre defino plazos realistas y envío reportes semanales de progreso.</p></div>
+              <div class="faq-a"><p>Depende de lo que haga falta: una página sencilla toma de una a dos semanas; un sistema completo, de cuatro a ocho, y se entrega por fases para que usted empiece a usarlo antes. El plazo queda escrito en la propuesta.</p></div>
             </div>
             <div class="faq-item">
               <button class="faq-q" type="button">
@@ -1453,17 +921,17 @@
                   <span class="icon-minus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
                 </span>
               </button>
-              <div class="faq-a"><p>Sí, trabajo 100% remoto con clientes en Venezuela, Latinoamérica y el mundo. Uso Slack, Google Meet, Trello y GitHub para mantener comunicación fluida. Nos reunimos semanalmente por videollamada para revisar avances.</p></div>
+              <div class="faq-a"><p>Sí. Trabajo con clientes en Venezuela y fuera del país, por videollamada y WhatsApp. Si su negocio está en La Guaira o Caracas, también puedo ir a verlo.</p></div>
             </div>
             <div class="faq-item">
               <button class="faq-q" type="button">
-                <span>¿Ofreces soporte después del lanzamiento?</span>
+                <span>¿Qué pasa después de la entrega?</span>
                 <span class="faq-icon">
                   <span class="icon-plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span>
                   <span class="icon-minus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
                 </span>
               </button>
-              <div class="faq-a"><p>Absolutamente. Todos mis proyectos incluyen 30 días de soporte gratuito post-lanzamiento para ajustes y resolución de dudas. También ofrezco planes de mantenimiento mensual para actualizaciones, seguridad y mejoras continuas.</p></div>
+              <div class="faq-a"><p>Sigo ahí. Los sistemas completos llevan una mensualidad que cubre el servidor, los respaldos, la seguridad y el soporte, así que no depende de que yo esté libre para atenderlo: es parte del servicio.</p></div>
             </div>
             <div class="faq-item">
               <button class="faq-q" type="button">
@@ -1473,7 +941,7 @@
                   <span class="icon-minus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
                 </span>
               </button>
-              <div class="faq-a"><p>Recibe reportes semanales con demos en vivo de su proyecto. Además, tiene acceso a un tablero de Trello donde puede ver el estado de cada tarea en tiempo real. La transparencia es fundamental en mi forma de trabajar.</p></div>
+              <div class="faq-a"><p>Cada semana le muestro el avance funcionando, en un enlace que usted mismo puede abrir y probar. No trabajo a puerta cerrada hasta el día de la entrega.</p></div>
             </div>
             <div class="faq-item">
               <button class="faq-q" type="button">
@@ -1483,7 +951,7 @@
                   <span class="icon-minus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
                 </span>
               </button>
-              <div class="faq-a"><p>Domino un amplio stack: React, Next.js, Vue.js, Node.js, PHP, WordPress, Python, C#, React Native, Unity 3D y más. Siempre elijo la tecnología que mejor se adapte a las necesidades y presupuesto de cada proyecto, no la más trendy.</p></div>
+              <div class="faq-a"><p>La que mejor le sirva a su caso y a su presupuesto, no la que esté de moda. Lo más frecuente en mis sistemas: Next.js, Node.js, PHP, WordPress, Python y bases de datos MySQL o MariaDB, en servidores que administro yo.</p></div>
             </div>
           </div>
         </div>
@@ -1597,13 +1065,7 @@
             <div>
               <span class="eyebrow">Presupuesto instantáneo</span>
               <h2 class="section-title" style="margin-bottom:16px;">Calcule el costo de su <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">proyecto</span></h2>
-              <p class="section-subtitle" style="margin-bottom:32px;">Seleccione un servicio y obtén un presupuesto estimado al instante. Sin compromiso.</p>
-              <div class="flex flex-wrap" style="gap:10px;">
-                <a class="calc-chip" href="/calculadora.html">Desarrollo Web <span class="price">$200</span></a>
-                <a class="calc-chip" href="/calculadora.html">E-Commerce <span class="price">$600</span></a>
-                <a class="calc-chip" href="/calculadora.html">Apps Móviles <span class="price">$1,500</span></a>
-                <a class="calc-chip" href="/calculadora.html">Sistemas de Gestión <span class="price">$1,200</span></a>
-              </div>
+              <p class="section-subtitle" style="margin-bottom:0;">Seleccione un servicio y obtenga un estimado al instante, calculado con las horas reales del trabajo. Sin dejar datos y sin compromiso.</p>
             </div>
             <a href="/calculadora.html" class="btn-primary" style="white-space:nowrap;">
               Calcular ahora
@@ -1624,7 +1086,7 @@
           <h2 class="section-title">Esto no son <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">capturas de pantalla</span></h2>
           <p class="section-subtitle">
             Cada cifra de acá sale de leer el código y la operación, no de una presentación. Y varias de
-            estas plataformas están en línea ahora mismo: ábralas y recorre lo que quiera.
+            estas plataformas están en línea ahora mismo: ábralas y recorra lo que quiera.
           </p>
         </div>
 
@@ -1646,7 +1108,7 @@
         </div>
 
         <div class="comprobable-ref" style="margin-top:20px;">
-          <span class="k">Habla con alguien que ya trabajó conmigo</span>
+          <span class="k">Hable con alguien que ya trabajó conmigo</span>
           <p>
             Le paso la referencia de un cliente de su mismo rubro y le escribo primero, para que sepa que
             va a llamar. Una conversación de cinco minutos con él vale más que cualquier frase
@@ -1690,12 +1152,12 @@
         <div class="contact-grid">
           <div>
             <span class="eyebrow">Empecemos</span>
-            <h2 class="section-title">Contacte a su desarrollador <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">de confianza</span></h2>
-            <p class="section-subtitle" style="margin-bottom:32px;">Solo acepto 3 proyectos nuevos por mes para garantizar la máxima calidad en cada uno.</p>
+            <h2 class="section-title">Hablemos de su <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">proyecto</span></h2>
+            <p class="section-subtitle" style="margin-bottom:32px;">Le respondo yo, no un vendedor. Cuénteme qué necesita y le digo con franqueza si puedo ayudarlo.</p>
 
             <div class="contact-info-card" style="margin-bottom:16px;">
               <div style="font-family:Inter;font-weight:700;font-size:16px;margin-bottom:4px;color:#fff;">¿Prefiere WhatsApp?</div>
-              <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:16px;">Escríbame directo y le respondo en menos de 2 horas.</div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:16px;">Escríbame directo; le contesto yo mismo.</div>
               <a href="https://wa.me/584222707095" target="_blank" rel="noopener" class="btn-primary" style="width:100%;justify-content:center;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                 Chatear por WhatsApp
@@ -1705,9 +1167,9 @@
             <div class="contact-info-card">
               <div style="font-family:Inter;font-weight:700;font-size:16px;margin-bottom:16px;color:#fff;">Información de contacto</div>
               <div style="display:flex;flex-direction:column;gap:12px;">
-                <a href="mailto:neracosu@gmail.com" class="flex items-center gap-3" style="color:rgba(255,255,255,0.75);font-size:14px;">
+                <a href="mailto:info@neracosu.com" class="flex items-center gap-3" style="color:rgba(255,255,255,0.75);font-size:14px;">
                   <span class="contact-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-                  neracosu@gmail.com
+                  info@neracosu.com
                 </a>
                 <a href="tel:+584222707095" class="flex items-center gap-3" style="color:rgba(255,255,255,0.75);font-size:14px;">
                   <span class="contact-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
@@ -1756,9 +1218,9 @@
               <select class="select" id="cf-budget" name="budget">
                 <option value="" disabled selected>Seleccione un rango</option>
                 <option>$300 — $800 USD</option>
-                <option>$800 — $2,000 USD</option>
-                <option>$2,000 — $5,000 USD</option>
-                <option>$5,000+ USD</option>
+                <option>$800 — $2.000 USD</option>
+                <option>$2.000 — $5.000 USD</option>
+                <option>$5.000+ USD</option>
                 <option>No estoy seguro</option>
               </select>
             </div>
@@ -1770,7 +1232,7 @@
               <span data-submit-label>Enviar mensaje</span>
               <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </button>
-            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:16px;text-align:center;line-height:1.5;">Le respondo en menos de 24 horas hábiles. Su información está segura.</p>
+            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:16px;text-align:center;line-height:1.5;">Le respondo en menos de 24 horas hábiles. Sus datos solo los veo yo.</p>
           </form>
         </div>
       </div>
@@ -1795,7 +1257,7 @@
             </svg>
             <span class="font-jakarta font-extrabold tracking-tight" style="font-size:15px;color:#fff;">NERACOSU<span style="color:#5ed29c;">.</span></span>
           </span>
-          <p style="font-size:13px;color:rgba(255,255,255,0.55);margin-top:16px;max-width:320px;line-height:1.6;">Hecho con código y café desde La Guaira, Venezuela. Construyendo productos digitales que venden desde 2009.</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.55);margin-top:16px;max-width:320px;line-height:1.6;">Sistemas a medida hechos en La Guaira, Venezuela, desde 2009.</p>
           <div class="flex items-center gap-2" style="margin-top:20px;">
             <a href="https://github.com/neracosu" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
             <a href="https://linkedin.com/in/ingnrcs" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -1808,17 +1270,16 @@
           <div class="footer-heading">Servicios</div>
           <a href="/para/citas-y-servicios.html" class="footer-link">Servicios con cita</a>
           <a href="/para/comercio-y-tienda.html" class="footer-link">Comercio e inventario</a>
-          <a href="#servicios" class="footer-link">Desarrollo web</a>
-          <a href="#servicios" class="footer-link">E-commerce</a>
-          <a href="#servicios" class="footer-link">Apps móviles</a>
-          <a href="#servicios" class="footer-link">Ciberseguridad</a>
-          <a href="#servicios" class="footer-link">Hosting</a>
+          <a href="/servicios/desarrollo-web.html" class="footer-link">Desarrollo web</a>
+          <a href="/servicios/ecommerce.html" class="footer-link">E-commerce</a>
+          <a href="/servicios/aplicaciones-moviles.html" class="footer-link">Apps móviles</a>
+          <a href="/servicios/ciberseguridad.html" class="footer-link">Ciberseguridad</a>
+          <a href="/servicios/hosting.html" class="footer-link">Hosting</a>
         </div>
         <div>
           <div class="footer-heading">Navegación</div>
           <a href="/calculadora.html" class="footer-link" style="color:#5ed29c;">Calculadora</a>
           <a href="#portafolio" class="footer-link">Portafolio</a>
-          <a href="#proceso" class="footer-link">Proceso</a>
           <a href="#sobre-mi" class="footer-link">Sobre mí</a>
           <a href="/hoja-de-vida.html" class="footer-link">Hoja de Vida</a>
           <a href="#blog" class="footer-link">Blog</a>
@@ -1826,7 +1287,7 @@
         </div>
         <div>
           <div class="footer-heading">Contacto</div>
-          <a href="mailto:neracosu@gmail.com" class="footer-link">neracosu@gmail.com</a>
+          <a href="mailto:info@neracosu.com" class="footer-link">info@neracosu.com</a>
           <a href="tel:+584222707095" class="footer-link">+58 422 270 7095</a>
           <span class="footer-link">La Guaira, Venezuela</span>
         </div>
@@ -1844,7 +1305,7 @@
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
   </a>
 
-  <script src="/assets/js/redesign.js?v=cb16215d" defer></script>
+  <script src="/assets/js/redesign.js?v=d0a9fde1" defer></script>
   <script type="module" src="/assets/js/motion.js?v=9eb449a2"></script>
 </body>
 </html>
