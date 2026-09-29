@@ -44,6 +44,22 @@ Options -Indexes
   </FilesMatch>
 </IfModule>
 
+# Cabeceras de seguridad, SOLO para neracosu.com y www: dentro de public_html viven
+# carpetas de otros sitios y subdominios (ameb.app, zafraclic.com, atalaya...) que
+# heredan este archivo, y una CSP pensada para este sitio les romperia el suyo.
+# La CSP permite scripts en linea porque las paginas los traen (los arma el generador
+# en ~/build-para); sacarlos a archivos permitiria quitar 'unsafe-inline' de script-src.
+<IfModule mod_headers.c>
+  <If "%{HTTP_HOST} =~ /^(www\.)?neracosu\.com$/i">
+    Header always set Strict-Transport-Security "max-age=31536000"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self'; frame-src 'self'; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+  </If>
+</IfModule>
+
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php82” package as the default “PHP” programming language.
 <IfModule mime_module>
