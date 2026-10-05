@@ -57,8 +57,9 @@ con Chromium headless. Si cambia, cambia en todos.
 El complejo cerró por ahora (dicho por el dueño). `/para/reservas`, `/para/cobros-y-pagos`, `/para/citas-y-servicios`
 y el índice de `/para/` ya no dicen que opera hoy: reservas pasó de «dos complejos» a un bowling de La Guaira en
 operación, y cobros de «tres negocios» a dos. Terrazas queda como el sistema más grande construido, «en pausa».
-**Sin tocar todavía, a decisión del dueño:** la tarjeta de Terrazas en el portafolio de la home, su enlace en
-«Compruébelo», `/para/integraciones-api-y-bots` y el número de «24 plataformas en producción», que la incluye.
+La tarjeta de Terrazas en el portafolio de la home, su enlace en «Compruébelo» y `/para/integraciones-api-y-bots`
+la muestran con la etiqueta «en pausa». **El número sigue en 24 plataformas** (decisión del dueño, 2026-10-06): la
+plataforma sigue desplegada y `terrazasvip.com` responde.
 Si reabre, se revierte desde `~/backups/web-para-20261006-terrazas`.
 
 ## Marca
