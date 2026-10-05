@@ -57,7 +57,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/redesign.css?v=024b1f60">
-  <link rel="stylesheet" href="/assets/css/nicho.css?v=56fb040b">
+  <link rel="stylesheet" href="/assets/css/nicho.css?v=a7104280">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -262,6 +262,16 @@
          ============================================================ -->
     <section class="section" id="industrias">
       <div class="container">
+        <!-- Temporada promocional (oct-dic 2026). Se esconde sola al vencer; quitar en enero de 2027. -->
+        <div class="promo-banda">
+          <span class="promo-banda__k">Temporada promocional &middot; hasta el 31 de diciembre de 2026</span>
+          <p>
+            <strong>40 % de descuento en el pago único de cualquier plan</strong> para quien contrate antes de esa
+            fecha. <a class="promo-banda__enlace" href="/para/">Ver los planes por industria &rarr;</a>
+          </p>
+          <script>if (new Date() > new Date("2027-01-01T04:00:00Z")) document.documentElement.classList.add("promo-vencida");</script>
+        </div>
+
         <div style="max-width:720px;margin-bottom:48px;">
           <span class="eyebrow">¿A qué se dedica?</span>
           <h2 class="section-title">Una peluquería no necesita lo mismo que <span class="font-serif-italic" style="color:#5ed29c;text-transform:lowercase;">una farmacia</span></h2>

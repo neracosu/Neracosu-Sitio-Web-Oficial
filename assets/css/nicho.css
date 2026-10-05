@@ -1223,6 +1223,8 @@
 }
 .promo-banda p { margin: 0; font-size: 16px; line-height: 1.55; color: rgba(255, 255, 255, 0.82); }
 .promo-banda strong { color: #fff; }
+.promo-banda__enlace { color: #5ed29c; font-weight: 600; white-space: nowrap; }
+.promo-banda__enlace:hover, .promo-banda__enlace:focus-visible { text-decoration: underline; }
 .plan-precio s.precio-lista {
   display: block;
   font-size: 0.5em;
