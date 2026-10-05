@@ -23,8 +23,9 @@ public_html/
 ├── index.html                  Home (rediseño 2026)
 ├── hoja-de-vida.html           CV editorial completo (imprimible a PDF)
 ├── calculadora.html            Wizard de presupuesto interactivo
-├── blog/                       Blog estático (10 artículos)
-├── servicios/                  Páginas verticales por servicio (7)
+├── para/                       Landings por nicho (8), ensambladas con build-para/ (fuera del repo)
+├── blog/                       Blog estático (15 artículos)
+├── servicios/                  Páginas por servicio (7); los precios viven en /para/
 └── assets/
     ├── css/
     │   ├── redesign.css        Stack principal del rediseño 2026
@@ -37,6 +38,9 @@ public_html/
         ├── motion.js           Capa de motion design (Anime.js v4)
         ├── redesign.js         Interactividad del rediseño 2026 (nav, FAQ, form)
         ├── calculator.js       Lógica del wizard de presupuesto
+        ├── asistente.js        Asistente de 4 preguntas de /para/ (sin backend)
+        ├── calc-fuga.js        Calculadoras «con sus números» de /para/
+        ├── nera.js             El mensaje de Nera en la consola (ver abajo)
         └── countdown.js        Countdown legacy
 ```
 
@@ -77,11 +81,24 @@ Es producción directa — el cambio en disco es el cambio en vivo. Backup antes
 cp index.html index.html.backup-$(date +%Y-%m-%d)
 ```
 
+## El código fuente está «escrito en Nera»
+
+Abra cualquier página y pulse Ctrl+U: lo primero que verá es un programa en
+**Nera 0.3.1 «Arepa Estable»**, un lenguaje que no existe. Es una broma para
+quien husmea. El HTML real sigue debajo, intacto: lo que se antepone es un
+comentario, que los buscadores y las vistas previas ignoran, así que el SEO no
+cambia. La consola de F12 también habla (`nera.ayuda()`).
+
+Lo genera `build-para/nera.py` (fuera del repo) en cada regeneración. El
+servidor manda `charset=UTF-8` en la cabecera porque el comentario desplaza el
+`<meta charset>` fuera de los primeros 1024 bytes.
+
 ## Características destacadas
 
 - **Calculadora** (`/calculadora.html`) — wizard de 3 pasos que estima presupuesto y envía a WhatsApp
-- **Hoja de Vida** (`/hoja-de-vida.html`) — CV editorial de 7 secciones, descargable como PDF desde el navegador (`?print=1` auto-imprime). Cubre 15+ años, 13 plataformas en producción, 11 entries de experiencia, 14 certificaciones
-- **Portfolio**: 13 cards en home (8 plataformas VIP en La Guaira + 5 proyectos Colombia)
+- **Hoja de Vida** (`/hoja-de-vida.html`) — CV editorial de 7 secciones, descargable como PDF desde el navegador (`?print=1` auto-imprime). Cubre 17 años de oficio, 24 plataformas en producción, 12 entradas de experiencia, 14 certificaciones
+- **Portafolio**: 24 plataformas en producción en la home, con captura de la página pública donde la hay
+- **Landings por nicho** (`/para/`): precios publicados, calculadoras con los números del cliente y asistente guiado que sale a WhatsApp
 - **SEO**: meta tags completos, OpenGraph, Twitter Card, hreflang, geo tags La Guaira, canonical, 2 bloques JSON-LD (`ProfessionalService` + `Person`)
 - **Idioma**: Español de Venezuela
 

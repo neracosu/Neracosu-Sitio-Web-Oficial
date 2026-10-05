@@ -147,6 +147,28 @@ El CSS y el JS siguen a un año, pero las páginas los piden con
 Si tocas un asset fuera del build, córrelo a mano o el cambio no le llega a
 quien ya visitó el sitio.
 
+## El código fuente empieza con un programa en «Nera» (broma, desde 2026-10-05)
+
+Al abrir Ctrl+U en cualquier página propia, antes del `<!DOCTYPE>` hay un
+comentario HTML con un programa en Nera 0.3.1 «Arepa Estable», un lenguaje que
+no existe, seguido de 60 líneas en blanco. Es una broma para quien husmee; el
+dueño la pidió **con la condición de no afectar el SEO**, así que:
+
+- **El HTML real no se toca.** Solo se antepone el comentario y se agrega
+  `assets/js/nera.js` antes de `</body>` (habla en la consola de F12 y define
+  `window.nera`). Nada se minifica ni se reordena.
+- Lo pone `~/build-para/nera.py`, que **`build.py` ya corre** antes de
+  `versionar-assets.py`. Es idempotente: reemplaza todo lo que haya antes del
+  `<!DOCTYPE>`. Para cambiar el texto, editá `PROGRAMA` y `ADVERTENCIAS` ahí.
+- **Dentro del comentario no puede ir `--`**: cierra el comentario y el HTML
+  se desarma. El script lo asevera y se niega a escribir.
+- El `.htaccess` manda **`AddDefaultCharset UTF-8`** para neracosu.com porque
+  el comentario saca el `<meta charset>` de los primeros 1024 bytes, que es lo
+  único que el navegador revisa antes de decidir la codificación. **No lo
+  quites**: los acentos saldrían mal.
+- Al crear una página nueva fuera de `/para/` (blog, servicios), correr
+  `python3 ~/build-para/nera.py` para que la lleve también.
+
 ## Los precios viven en un solo sitio
 
 `/para/` es el **único** lugar del sitio con cifras de proyecto. Se decidió el
