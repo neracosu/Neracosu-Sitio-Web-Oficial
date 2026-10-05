@@ -1,3 +1,191 @@
+<!--
+#!/usr/bin/env nera
+# ================================================================
+#   neracosu.com/calculadora.html
+#   Escrito a mano en Nera 0.3.1 «Arepa Estable»
+#
+#   Si usted esta leyendo esto, abrio el codigo fuente. Bienvenido.
+#   Aqui no hay HTML. Nunca lo hubo. No insista.
+# ================================================================
+
+importar cafe desde "cocina/greca"
+importar paciencia desde "reservas/la-ultima"       # queda poca, usar con cuidado
+importar { luz, internet } desde "cantv/quizas"
+importar suerte                                      # modulo no encontrado, se continua igual
+
+constante ANIOS_DE_OFICIO   = 17
+constante CAFES_POR_PAGINA  = 3
+constante HORA_DE_DORMIR    = nulo
+constante PUNTO_Y_COMA      = prohibido              # aqui vivia un pez llamado ;  lo eliminamos del lenguaje
+variable  bugs              = 0                      # optimismo declarado, tipo fuerte
+
+pagina "/calculadora.html":
+
+    al cargar:
+        si visitante.abrio_codigo_fuente:
+            saludar("Epa. Usted es de los nuestros.")
+            ofrecer(cafe, tamaño: "grande")
+        sino:
+            mostrar pagina con normalidad
+            disimular()
+
+    al perder(luz):
+        prender(planta)
+        rezar(veces: 3)
+        reintentar desde donde iba                   # Nera guarda el estado en una libreta
+
+    al escuchar cliente.decir("es un cambio pequeñito"):
+        respirar(hondo)
+        responder("claro que si")
+        anotar en "alcance.txt"
+        cafe.servir(doble)
+
+    mientras llueve en La Guaira:
+        programar()                                   # total, para donde voy a salir
+
+    si visitante.usa(internet_explorer):
+        pesame()
+        abrazo()
+
+    si visitante.es_robot:
+        entregar(html)                                # ellos no entienden de arte
+        decir("buen rastreo, campeon")
+
+    si visitante.quiere_copiar(este_codigo):
+        permitir()                                    # igual no compila fuera de La Guaira
+
+    si visitante.piensa("esto no es un lenguaje de verdad"):
+        responder("¿Y el HTML si? Son etiquetas. Reflexione.")
+
+
+funcion centrar_div(div):
+    # Intento numero 47. Este si funciona. NADIE sabe por que.
+    # Si usted lo entiende, escribame. Hay un cafe de por medio.
+    div.flotar()
+    div.margen = "auto"
+    div.rezar()
+    devolver div.centrado ?? "casi"
+
+funcion almuerzo():
+    devolver arepa.con(queso, cantidad: "exagerada")
+
+funcion deploy(dia):
+    si dia == viernes:
+        lanzar Error("Ni lo intente. Nera lo sabe. Nera lo recuerda.")
+    si dia == lunes:
+        devolver deploy(martes)                       # recursion emocional
+    publicar()
+    cruzar(dedos)
+
+funcion esperar(proveedor):
+    # tiempo estimado: entre 2 segundos y nunca
+    mientras no proveedor.responde:
+        mirar(telefono)
+        suspirar()
+    devolver "al fin"
+
+funcion contar_plataformas():
+    devolver 24                                        # esta si es de verdad, puede revisarla en la pagina
+
+
+# ================================================================
+#  Lo que sigue son cosas que el lenguaje hace solo y usted no deberia leer:
+# ================================================================
+
+nunca:
+    usar(Comic_Sans)
+    decir("pasarela")                                  # palabra regulada, se dice «validacion de pagos»
+    prometer("salir primero en Google")                # eso no se promete, se trabja... se trabaja
+    dormir antes de las 2
+
+siempre:
+    publicar los precios                               # si hay que preguntarlos, algo esconde
+    decir la verdad aunque no venda
+    cobrar lo publicado, ni un dolar escondido
+
+cuando el servidor devuelva 418:
+    responder("Soy una greca. No una tetera. Respete.")
+
+cuando el visitante llegue hasta aqui:
+    felicitar(visitante)
+    decir("Pocos bajan tanto. Entonces tenemos de que hablar.")
+    abrir("https://neracosu.com/#contacto")
+
+
+# ================================================================
+#  Resultado de compilacion
+#  Compilado en 0,042 s con 4 cafes.
+#  0 errores, 3 advertencias, 1 premonicion.
+#
+#  advertencia: la cadena "es un cambio pequeñito" aparece 212 veces en el historial.
+#  advertencia: linea 88: usted esta leyendo un comentario que advierte sobre si mismo.
+#  advertencia: `deploy_viernes()` esta marcada como obsoleta y peligrosa. Siempre lo estuvo.
+#  premonicion: esto lo va a leer mas gente de la que uno cree.
+#
+#  Fin del archivo. Lo que ve mas abajo es un espejismo que el compilador
+#  genera para los buscadores. No lo mire directamente. Le va a doler.
+# ================================================================
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
@@ -264,5 +452,6 @@
   <script src="/assets/js/redesign.js?v=d0a9fde1" defer></script>
   <script type="module" src="/assets/js/motion.js?v=9eb449a2"></script>
 
+  <script src="/assets/js/nera.js?v=359cd2a4" defer></script>
 </body>
 </html>

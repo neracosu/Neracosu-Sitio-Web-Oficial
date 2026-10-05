@@ -51,6 +51,9 @@ Options -Indexes
 # en ~/build-para); sacarlos a archivos permitiria quitar 'unsafe-inline' de script-src.
 <IfModule mod_headers.c>
   <If "%{HTTP_HOST} =~ /^(www\.)?neracosu\.com$/i">
+    # charset en la cabecera: el HTML lleva un comentario largo antes del <meta charset>
+    # (la broma de ~/build-para/nera.py) y el navegador solo lo busca en los primeros 1024 bytes.
+    AddDefaultCharset UTF-8
     Header always set Strict-Transport-Security "max-age=31536000"
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Frame-Options "SAMEORIGIN"
