@@ -84,11 +84,10 @@
       nombre: 'Servicios con cita',
       url: '/para/citas-y-servicios.html',
       descuento: false,
-      sinPrecio: true,
       planes: [
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
+        { nombre: 'Esencial', alcance: 'hasta 3 profesionales', precio: 2400, mes: 100 },
+        { nombre: 'Profesional', alcance: 'de 4 a 10 profesionales', precio: 3800, mes: 130 },
+        { nombre: 'Completo', alcance: 'más de 10 o varias sedes', precio: 5700, mes: 170 },
       ],
     },
     /* No es un plan: es la respuesta honesta cuando el caso no encaja

@@ -70,7 +70,13 @@ cargar la skill `para-neracosu`**: piezas JS/CSS, la trampa de los sliders
 (`verificar-sliders.py`), `TARIFA_HORA` y el orden seguro de `precios.py` →
 `build.py`.
 
-**`citas-y-servicios` no lleva precio cerrado, a propósito.** La agenda por
+**Desde el 2026-10-05 `citas-y-servicios` SÍ lleva precio cerrado** (decisión del dueño: «cada nicho ya debería ir
+con un precio o 3 precios definidos»): Esencial hasta 3 profesionales $2.400, Profesional de 4 a 10 $3.800, Completo
+más de 10 o varias sedes $5.700, con $100/$130/$170 al mes. La página sigue diciendo de frente que la agenda por
+profesional se termina de construir con los primeros negocios, que el precio no se mueve y que lo que queda por
+escrito es el plazo. El sistema completo de gimnasios va en `/para/cobros-y-pagos.html` a los mismos tres precios
+(hasta 150, hasta 500, más de 500 alumnos). Lo que sigue es la regla anterior, que ya no rige:
+~~`citas-y-servicios` no lleva precio cerrado, a propósito.~~ La agenda por
 profesional es lo único del catálogo que **no está construido** (se verificó:
 cero coincidencias de patrón de cita en los 5 proyectos). Lo que sí se reutiliza
 es el calendario, el cupo retenido, el cobro validado y el personal con PIN. La
