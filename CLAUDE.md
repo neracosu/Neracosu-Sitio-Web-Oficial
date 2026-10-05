@@ -157,3 +157,12 @@ cualquiera.
   `TARIFA_HORA` en `calculator.js`.
 
 **Antes de publicar una cifra nueva, preguntarse dónde más vive ese número.**
+
+## Vocabulario y calculadoras de `/para/` (desde el 2026-10-05)
+
+- **Las calculadoras de fuga van en dólares**: el campo de precio (ticket, bloque, cita, hora de trabajo) se
+  pregunta en USD (`data-formato="usd"`) y la pérdida sale en USD. Los montos en bolívares envejecían con la
+  inflación y no cuadraban con precios en USD. Las propuestas del panel de prospección repiten los mismos ejemplos.
+- La cinta del plan destacado dice **«El que recomiendo»**, no «El más pedido» (no se podía sostener).
+- El pago único se llama **«pago único»** o **«adaptación»**, no «desarrollo», donde se adapta un sistema que ya
+  existe. Las mismas palabras van en `prospectos.neracosu.com/plantillas/`: si cambian aquí, cambian allá.
