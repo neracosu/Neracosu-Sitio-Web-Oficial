@@ -52,6 +52,15 @@ Server). El número vive en `index.html` (meta, OG, Twitter, contador
 `assets/img/og-image.jpg`, que se renderiza desde `build-para/og-card.html`
 con Chromium headless. Si cambia, cambia en todos.
 
+## Terrazas VIP Sport Park está en pausa (desde el 2026-10-06)
+
+El complejo cerró por ahora (dicho por el dueño). `/para/reservas`, `/para/cobros-y-pagos`, `/para/citas-y-servicios`
+y el índice de `/para/` ya no dicen que opera hoy: reservas pasó de «dos complejos» a un bowling de La Guaira en
+operación, y cobros de «tres negocios» a dos. Terrazas queda como el sistema más grande construido, «en pausa».
+**Sin tocar todavía, a decisión del dueño:** la tarjeta de Terrazas en el portafolio de la home, su enlace en
+«Compruébelo», `/para/integraciones-api-y-bots` y el número de «24 plataformas en producción», que la incluye.
+Si reabre, se revierte desde `~/backups/web-para-20261006-terrazas`.
+
 ## Marca
 
 La marca es **NERACOSU**, no «Neri.dev». El logotipo se escribe `NERACOSU` con
