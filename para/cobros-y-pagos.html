@@ -308,10 +308,10 @@
             </div>
             <div class="calcfuga-field">
               <label for="cp-sueldo">Costo de esa hora de trabajo</label>
-              <span class="calcfuga-valor" id="cp-sueldo-val" aria-hidden="true">Bs 900</span>
-              <input type="range" id="cp-sueldo" min="100" max="5000" step="50" value="900"
-                     data-salida="cp-sueldo-val" data-formato="bs">
-              <div class="calcfuga-topes" aria-hidden="true"><span>Bs 100</span><span>Bs 5.000</span></div>
+              <span class="calcfuga-valor" id="cp-sueldo-val" aria-hidden="true">$2</span>
+              <input type="range" id="cp-sueldo" min="1" max="12" step="1" value="2"
+                     data-salida="cp-sueldo-val" data-formato="usd">
+              <div class="calcfuga-topes" aria-hidden="true"><span>$1</span><span>$12</span></div>
               <div class="hint">Lo que le cuesta una hora de la persona que lo hace.</div>
             </div>
             <div class="calcfuga-field">
@@ -328,7 +328,7 @@
             <div class="big"><span id="cp-horas">60</span> <small>h al mes verificando pagos</small></div>
             <p class="txt">
               que alguien de su equipo pasa mirando el banco en vez de atender.
-              Son <strong id="cp-bs">Bs 54.000</strong> al mes en tiempo, y no incluye lo que se pierde
+              Son <strong id="cp-bs">$120</strong> al mes en tiempo, y no incluye lo que se pierde
               cuando la verificación sale mal.
             </p>
             <p class="calcfuga-note">
@@ -800,7 +800,7 @@
 
         var horasMes = (pagos * minutos * dias) / 60;
         outHoras.textContent = fmt.format(horasMes);
-        outBs.textContent = 'Bs ' + fmt.format(horasMes * sueldo);
+        outBs.textContent = '$' + fmt.format(horasMes * sueldo);
       }
 
       for (var j = 0; j < ids.length; j++) {

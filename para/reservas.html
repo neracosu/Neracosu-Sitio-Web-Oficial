@@ -315,10 +315,10 @@
             </div>
             <div class="calcfuga-field">
               <label for="cv-ticket">Valor promedio de una reserva</label>
-              <span class="calcfuga-valor" id="cv-ticket-val" aria-hidden="true">Bs 18.000</span>
-              <input type="range" id="cv-ticket" min="1000" max="100000" step="1000" value="18000"
-                     data-salida="cv-ticket-val" data-formato="bs">
-              <div class="calcfuga-topes" aria-hidden="true"><span>Bs 1.000</span><span>Bs 100.000</span></div>
+              <span class="calcfuga-valor" id="cv-ticket-val" aria-hidden="true">$40</span>
+              <input type="range" id="cv-ticket" min="2" max="220" step="2" value="40"
+                     data-salida="cv-ticket-val" data-formato="usd">
+              <div class="calcfuga-topes" aria-hidden="true"><span>$2</span><span>$220</span></div>
               <div class="hint">Lo que deja una reserva completa.</div>
             </div>
           </div>
@@ -326,7 +326,7 @@
           <div class="calcfuga-out">
             <div class="big"><span id="cv-perdidas">41</span> <small>reservas perdidas al mes</small></div>
             <p class="txt">
-              gente que quería pagarle y no encontró cómo. Son <strong id="cv-bs">Bs 736.533</strong> al mes
+              gente que quería pagarle y no encontró cómo. Son <strong id="cv-bs">$1.637</strong> al mes
               que se fueron a otro sitio por no tener quién contestara.
             </p>
             <p class="calcfuga-note">
@@ -921,7 +921,7 @@
 
         var perdidasMes = consultas * 4.33 * (fuera / 100) * (pierde / 100);
         outN.textContent = fmt.format(perdidasMes);
-        outBs.textContent = 'Bs ' + fmt.format(perdidasMes * ticket);
+        outBs.textContent = '$' + fmt.format(perdidasMes * ticket);
       }
 
       for (var j = 0; j < ids.length; j++) {

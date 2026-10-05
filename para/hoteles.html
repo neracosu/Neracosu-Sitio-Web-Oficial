@@ -308,10 +308,10 @@
             </div>
             <div class="calcfuga-field">
               <label for="cf-precio">Precio del bloque más vendido</label>
-              <span class="calcfuga-valor" id="cf-precio-val" aria-hidden="true">Bs 12.600</span>
-              <input type="range" id="cf-precio" min="1000" max="60000" step="100" value="12600"
-                     data-salida="cf-precio-val" data-formato="bs">
-              <div class="calcfuga-topes" aria-hidden="true"><span>Bs 1.000</span><span>Bs 60.000</span></div>
+              <span class="calcfuga-valor" id="cf-precio-val" aria-hidden="true">$28</span>
+              <input type="range" id="cf-precio" min="2" max="130" step="1" value="28"
+                     data-salida="cf-precio-val" data-formato="usd">
+              <div class="calcfuga-topes" aria-hidden="true"><span>$2</span><span>$130</span></div>
               <div class="hint">El de 4 horas, o el que más rote en su hotel.</div>
             </div>
             <div class="calcfuga-field">
@@ -328,7 +328,7 @@
             <div class="big"><span id="cf-horas-mes">108</span> <small>h de habitación al mes</small></div>
             <p class="txt">
               regaladas cada mes, solo en el rato entre que el huésped paga y entra al cuarto.
-              Equivale a <strong id="cf-bs-mes">Bs 340.200</strong> que se van sin que nadie los anote.
+              Equivale a <strong id="cf-bs-mes">$756</strong> que se van sin que nadie los anote.
             </p>
             <p class="calcfuga-note">
               Es aritmética con sus propios números, no una promesa. Y es una sola de las cuatro fugas de aquí abajo.
@@ -946,7 +946,7 @@
         var bsMes = horasMes * precioHora;
 
         salidaHoras.textContent = fmt.format(horasMes);
-        salidaBs.textContent = 'Bs ' + fmt.format(bsMes);
+        salidaBs.textContent = '$' + fmt.format(bsMes);
       }
 
       for (var j = 0; j < ids.length; j++) {

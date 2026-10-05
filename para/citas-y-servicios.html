@@ -268,10 +268,10 @@
             </div>
             <div class="calcfuga-field">
               <label for="cc-valor">Valor promedio de una cita</label>
-              <span class="calcfuga-valor" id="cc-valor-val" aria-hidden="true">Bs 6.000</span>
-              <input type="range" id="cc-valor" min="200" max="60000" step="100" value="6000"
-                     data-salida="cc-valor-val" data-formato="bs">
-              <div class="calcfuga-topes" aria-hidden="true"><span>Bs 200</span><span>Bs 60.000</span></div>
+              <span class="calcfuga-valor" id="cc-valor-val" aria-hidden="true">$15</span>
+              <input type="range" id="cc-valor" min="1" max="130" step="1" value="15"
+                     data-salida="cc-valor-val" data-formato="usd">
+              <div class="calcfuga-topes" aria-hidden="true"><span>$1</span><span>$130</span></div>
               <div class="hint">Lo que deja un servicio completo.</div>
             </div>
             <div class="calcfuga-field">
@@ -287,7 +287,7 @@
           <div class="calcfuga-out">
             <div class="big"><span id="cc-horas">50</span> <small>citas perdidas al mes</small></div>
             <p class="txt">
-              horas de su gente pagadas y no facturadas. Son <strong id="cc-bs">Bs 299.290</strong> al mes en
+              horas de su gente pagadas y no facturadas. Son <strong id="cc-bs">$748</strong> al mes en
               tiempo que ya estaba vendido y se evaporó.
             </p>
             <p class="calcfuga-note">
@@ -605,7 +605,7 @@
 
         var perdidas = citas * 4.33 * (falla / 100) * (1 - recupera / 100);
         outN.textContent = fmt.format(perdidas);
-        outBs.textContent = 'Bs ' + fmt.format(perdidas * valor);
+        outBs.textContent = '$' + fmt.format(perdidas * valor);
       }
 
       for (var j = 0; j < ids.length; j++) {

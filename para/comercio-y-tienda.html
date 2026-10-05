@@ -315,10 +315,10 @@
             </div>
             <div class="calcfuga-field">
               <label for="cm-ticket">Ticket promedio</label>
-              <span class="calcfuga-valor" id="cm-ticket-val" aria-hidden="true">Bs 4.500</span>
-              <input type="range" id="cm-ticket" min="200" max="40000" step="100" value="4500"
-                     data-salida="cm-ticket-val" data-formato="bs">
-              <div class="calcfuga-topes" aria-hidden="true"><span>Bs 200</span><span>Bs 40.000</span></div>
+              <span class="calcfuga-valor" id="cm-ticket-val" aria-hidden="true">$10</span>
+              <input type="range" id="cm-ticket" min="1" max="90" step="1" value="10"
+                     data-salida="cm-ticket-val" data-formato="usd">
+              <div class="calcfuga-topes" aria-hidden="true"><span>$1</span><span>$90</span></div>
               <div class="hint">Lo que deja una compra normal.</div>
             </div>
             <div class="calcfuga-field">
@@ -334,7 +334,7 @@
           <div class="calcfuga-out">
             <div class="big"><span id="cm-ventas">70</span> <small>ventas perdidas al mes</small></div>
             <p class="txt">
-              gente que quería comprarle y se fue sin nada. Son <strong id="cm-bs">Bs 315.900</strong> al mes,
+              gente que quería comprarle y se fue sin nada. Son <strong id="cm-bs">$702</strong> al mes,
               y esto asume que solo la mitad habría comprado de verdad.
             </p>
             <p class="calcfuga-note">
@@ -1049,7 +1049,7 @@
         // se asume que solo la mitad de quienes no encuentran habria comprado
         var ventas = clientes * (falta / 100) * dias * 0.5;
         outN.textContent = fmt.format(ventas);
-        outBs.textContent = 'Bs ' + fmt.format(ventas * ticket);
+        outBs.textContent = '$' + fmt.format(ventas * ticket);
       }
 
       for (var j = 0; j < ids.length; j++) {
