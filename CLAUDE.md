@@ -166,3 +166,9 @@ cualquiera.
 - La cinta del plan destacado dice **«El que recomiendo»**, no «El más pedido» (no se podía sostener).
 - El pago único se llama **«pago único»** o **«adaptación»**, no «desarrollo», donde se adapta un sistema que ya
   existe. Las mismas palabras van en `prospectos.neracosu.com/plantillas/`: si cambian aquí, cambian allá.
+- **Temporada promocional (decisión del dueño, 2026-10-05): 40 % de descuento en el pago único de cualquier plan
+  para quien contrate hasta el 31 de diciembre de 2026.** La mensualidad no cambia y no se suma a otros descuentos.
+  Sale de `PROMO_PCT` y `PROMO_HASTA` en `~/build-para/precios.py` (banda `.promo-banda` y precio de lista tachado en
+  cada tarjeta) y de la banda escrita a mano en `body-index.html`. Un script de la banda la esconde al vencer, pero
+  **en enero de 2027 hay que quitarla de las fuentes**. No es escasez inventada: tiene fecha real y la fijó el dueño.
+  La home todavía no la menciona.
