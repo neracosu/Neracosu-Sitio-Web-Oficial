@@ -24,6 +24,7 @@ nube.neracosu.com/
 juego.atalaya.neracosu.com/
 monte.neracosu.com/
 mishis.neracosu.com/
+mishis.app/
 # Videos de Atalaya: se publican en el docroot pero no van al repo (pesan
 # mas de 100 MB y salen del export de /opt/atalaya, que es su fuente).
 atalaya/assets/video/
