@@ -233,3 +233,13 @@ de agosto que Google seguía pidiendo: el 99 % de sus visitas de octubre). Solo 
 
 El hero ya no anuncia Atalaya: el aviso de arriba y el segundo botón llevan a `/para/` (21-oct, tras ver
 que el 78 % se iba de la home sin abrir otra página y casi nadie llegaba a los precios).
+
+## Velocidad (PageSpeed, 2026-10-21)
+
+Las fuentes (Inter, Plus Jakarta Sans, Instrument Serif) **se alojan aquí**: `assets/fonts/*.woff2` (solo latin y
+latin-ext, nombre con hash) y `assets/css/fuentes.css`. **No volver a enlazar Google Fonts**: bloqueaba la primera
+pintura ~0,8 s. La plantilla de `/para/` (`~/build-para/head.tpl`) ya va así; la home precarga además las dos fuentes
+del titular. El `.htaccess` comprime `text/javascript` (Apache manda el JS con ese tipo, no `application/javascript`) y
+le da un año de caché al JS de `/assets/` solo en neracosu.com. Resultado en teléfono con Lighthouse: rendimiento
+85 → 92-96, accesibilidad 93 → 100. Lo que queda: HTTP/2 (configuración del servidor, solo root) y anime.js desde
+jsDelivr con código que no se usa.

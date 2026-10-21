@@ -899,7 +899,7 @@ img, svg, video { display: block; max-width: 100%; }
   border-top: 1px solid rgba(255,255,255,0.06);
   display: flex; justify-content: space-between; align-items: center;
   flex-wrap: wrap; gap: 16px;
-  font-size: 12px; color: rgba(255,255,255,0.4);
+  font-size: 12px; color: rgba(255,255,255,0.58); /* 0.4 daba 3,8:1; 0.58 pasa de 4,5:1 (WCAG AA) */
 }
 
 /* ============================================================
@@ -1857,3 +1857,6 @@ img.lg-card-avatar { object-fit: cover; padding: 0; flex: none; }
 .faq-lista li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 .faq-lista strong { color: #fff; font-weight: 600; }
 @media (max-width: 700px) { .faq-lista, .faq-a p { padding-right: 0; } }
+
+/* Los enlaces dentro de un parrafo no se distinguen solo por el color (WCAG 1.4.1). */
+.faq-a p a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
