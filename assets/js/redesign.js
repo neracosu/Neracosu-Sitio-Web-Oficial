@@ -80,40 +80,80 @@
   });
 
   // ---------- Contact form (graceful) ----------
+  // ---------- Formulario de contacto ----------
+  // Desde el 2026-10-21 la solicitud va al panel de prospeccion (le llega a Neri por
+  // correo y queda en prospectos.neracosu.com/web). Antes abria WhatsApp y decia
+  // «Mensaje enviado» aunque la persona no le diera a Enviar alla: se perdian.
+  // Si el panel no responde, se ofrece WhatsApp con el texto listo, diciendo la verdad.
   var form = document.querySelector('[data-contact-form]');
   if (form) {
+    var URL_SOLICITUD = 'https://prospectos.neracosu.com/api/web/solicitud';
+    var WA = '584222707095';
+    var btn = form.querySelector('button[type="submit"]');
+    var label = form.querySelector('[data-submit-label]');
+    var estado = form.querySelector('[data-form-estado]');
+    var valor = function (n) { return (form.elements[n] && form.elements[n].value || '').trim(); };
+    var decir = function (html, color) { if (estado) { estado.innerHTML = html; estado.style.color = color || 'rgba(255,255,255,0.75)'; } };
+    var escapar = function (t) { return t.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var textoWhatsApp = function () {
+      return [
+        'Hola Neri, soy ' + valor('name') + '.',
+        '',
+        valor('email') ? 'Correo: ' + valor('email') : '',
+        'Tipo de proyecto: ' + valor('type'),
+        valor('budget') ? 'Presupuesto: ' + valor('budget') : '',
+        '',
+        valor('message'),
+      ].filter(function (l, i, xs) { return l !== '' || xs[i - 1] !== ''; }).join('\n');
+    };
+    var botonWhatsApp = function (texto) {
+      return '<a class="btn-primary" style="margin-top:12px;justify-content:center;" target="_blank" rel="noopener" href="https://wa.me/' + WA + '?text=' + encodeURIComponent(textoWhatsApp()) + '">' + texto + '</a>';
+    };
+    var ocupado = function (si) {
+      if (btn) btn.disabled = si;
+      if (label) label.textContent = si ? 'Enviando…' : 'Enviar mensaje';
+    };
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var btn = form.querySelector('button[type="submit"]');
-      var label = form.querySelector('[data-submit-label]');
-      var name = (form.elements['name'] && form.elements['name'].value) || '';
-      var email = (form.elements['email'] && form.elements['email'].value) || '';
-      var phone = (form.elements['phone'] && form.elements['phone'].value) || '';
-      var type = (form.elements['type'] && form.elements['type'].value) || '';
-      var budget = (form.elements['budget'] && form.elements['budget'].value) || '';
-      var msg = (form.elements['message'] && form.elements['message'].value) || '';
-
-      var body = [
-        'Hola Neri, soy ' + name + '.',
-        '',
-        'Email: ' + email,
-        phone ? 'WhatsApp: ' + phone : '',
-        'Tipo de proyecto: ' + type,
-        budget ? 'Presupuesto: ' + budget : '',
-        '',
-        'Detalles:',
-        msg,
-      ].filter(Boolean).join('\n');
-
-      var wa = 'https://wa.me/584222707095?text=' + encodeURIComponent(body);
-      window.open(wa, '_blank', 'noopener');
-
-      if (label) label.textContent = 'Mensaje enviado';
-      if (btn) btn.classList.add('sent');
-      setTimeout(function () {
-        if (label) label.textContent = 'Enviar mensaje';
-        if (btn) btn.classList.remove('sent');
-      }, 4000);
+      if (!valor('email') && !valor('phone')) {
+        decir('Déjeme su correo o su WhatsApp para poder responderle.', '#f0c35a');
+        if (form.elements['phone']) form.elements['phone'].focus();
+        return;
+      }
+      ocupado(true);
+      decir('');
+      var datos = {
+        nombre: valor('name'), email: valor('email'), phone: valor('phone'), type: valor('type'),
+        budget: valor('budget'), message: valor('message'), sitio: valor('sitio'),
+        pagina: location.pathname, sesion: window.ncSesion ? window.ncSesion() : '',
+      };
+      var control = 'AbortController' in window ? new AbortController() : null;
+      var plazo = setTimeout(function () { if (control) control.abort(); }, 15000);
+      fetch(URL_SOLICITUD, {
+        method: 'POST', mode: 'cors', credentials: 'omit',
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+        body: JSON.stringify(datos), signal: control ? control.signal : undefined,
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) { return { status: r.status, j: j }; });
+      }).then(function (res) {
+        clearTimeout(plazo);
+        if (res.status === 200 && res.j.ok) {
+          var nombre = escapar(datos.nombre.split(' ')[0] || '');
+          decir('<strong style="color:#5ed29c;">Listo' + (nombre ? ', ' + nombre : '') + ': recibí su mensaje.</strong><br>Le respondo en menos de 24 horas hábiles' + (datos.phone ? ' por WhatsApp' : ' a su correo') + '.');
+          form.reset();
+          if (label) label.textContent = 'Mensaje recibido';
+          if (btn) { btn.disabled = true; btn.classList.add('sent'); }
+          return;
+        }
+        ocupado(false);
+        if (res.status === 400 && res.j.mensaje) { decir(escapar(res.j.mensaje), '#f0c35a'); return; }
+        decir(escapar(res.j.mensaje || 'No pude guardar su mensaje en este momento.') + '<br>Envíemelo por WhatsApp con el texto ya escrito:' + botonWhatsApp('Enviar por WhatsApp'), '#f0c35a');
+      }).catch(function () {
+        clearTimeout(plazo);
+        ocupado(false);
+        decir('No pude guardar su mensaje en este momento. Envíemelo por WhatsApp con el texto ya escrito:' + botonWhatsApp('Enviar por WhatsApp'), '#f0c35a');
+      });
     });
   }
 

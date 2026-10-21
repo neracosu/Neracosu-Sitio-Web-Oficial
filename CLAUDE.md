@@ -210,3 +210,22 @@ cualquiera.
   cada tarjeta) y de la banda escrita a mano en `body-index.html`. Un script de la banda la esconde al vencer, pero
   **en enero de 2027 hay que quitarla de las fuentes**. No es escasez inventada: tiene fecha real y la fijó el dueño.
   La home todavía no la menciona.
+
+## Medición propia y formulario (desde el 2026-10-21)
+
+El sitio no tiene Google Analytics. Mide con `assets/js/medir.js`, que manda vistas, clics (WhatsApp,
+calculadora, `/para/`, correo, teléfono) y hasta dónde se baja en la home al panel de prospección
+(`prospectos.neracosu.com/api/web/evento`); se ve en `prospectos.neracosu.com/web`. Sin cookies ni IP.
+Lo pone `~/build-para/medir.py` en las mismas páginas que `nera.py` (`build.py` ya lo corre). `?nomedir=1`
+en cualquier página deja de contar ese navegador; `?medir=1` lo deshace.
+
+**El formulario de contacto de la home ya no abre WhatsApp**: manda la solicitud a
+`prospectos.neracosu.com/api/web/solicitud`, que la guarda y avisa a info@neracosu.com. Si el panel no
+responde, ofrece un botón de WhatsApp con el texto listo (nunca dice «enviado» sin haberlo guardado).
+Por eso la CSP del `.htaccess` lleva `connect-src https://prospectos.neracosu.com`: **no quitarlo**.
+
+**El `.htaccess` responde 410** a `/view/item/`, `/shop/pg/` y `/merchandises/detail/` (basura del hackeo
+de agosto que Google seguía pidiendo: el 99 % de sus visitas de octubre). Solo para neracosu.com.
+
+El hero ya no anuncia Atalaya: el aviso de arriba y el segundo botón llevan a `/para/` (21-oct, tras ver
+que el 78 % se iba de la home sin abrir otra página y casi nadie llegaba a los precios).

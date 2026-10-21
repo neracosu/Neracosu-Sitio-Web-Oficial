@@ -5,6 +5,13 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule (^|/)\.(git|svn|env|htpasswd) - [F,L]
+
+  # Paginas basura del hackeo de ago-2026: Google sigue pidiendolas (99 % de sus
+  # visitas en oct-2026 eran 404 aqui). 410 le dice que no existen ni van a volver,
+  # y deja de gastar sus visitas en ellas. Solo para neracosu.com: este archivo lo
+  # heredan los subdominios.
+  RewriteCond %{HTTP_HOST} ^(www\.)?neracosu\.com$ [NC]
+  RewriteRule ^(view/item|shop/pg|merchandises/detail)(/|$) - [G,L]
 </IfModule>
 
 # Las IPs de los ataques de ago-2026 se bloquean en el cortafuegos, no aca:
@@ -59,7 +66,7 @@ Options -Indexes
     Header always set X-Frame-Options "SAMEORIGIN"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self'; frame-src 'self'; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self' https://prospectos.neracosu.com; frame-src 'self'; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
   </If>
 </IfModule>
 
