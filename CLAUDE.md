@@ -243,3 +243,9 @@ del titular. El `.htaccess` comprime `text/javascript` (Apache manda el JS con e
 le da un año de caché al JS de `/assets/` solo en neracosu.com. Resultado en teléfono con Lighthouse: rendimiento
 85 → 92-96, accesibilidad 93 → 100. Lo que queda: HTTP/2 (configuración del servidor, solo root) y anime.js desde
 jsDelivr con código que no se usa.
+
+En `/para/` (mismo día): la plantilla precarga también la cursiva del titular (sin eso, cobros-y-pagos saltaba
+0,355 de CLS al llegar la fuente), el menú móvil va con `inert` mientras está cerrado (`redesign.js` lo quita al
+abrir y cierra con Escape), los títulos de las notas de precio son `h3` (en `precios.py`) y los enlaces dentro del
+texto van subrayados. Accesibilidad 100 en las nueve; rendimiento 85-97 según la corrida (el servidor compartido
+mete ruido en el «tiempo de bloqueo»).

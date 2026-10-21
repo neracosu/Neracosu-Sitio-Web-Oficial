@@ -17,16 +17,28 @@
   var overlay = document.querySelector('.mobile-overlay');
   var openBtn = document.querySelector('[data-action="open-menu"]');
   var closeBtn = document.querySelector('[data-action="close-menu"]');
+  // Cerrado, el menu queda inerte (ni tabulador ni lector de pantalla); abierto, se habilita.
   function openMenu() {
     if (!overlay) return;
     overlay.classList.add('open');
+    overlay.removeAttribute('inert');
+    overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    var primero = overlay.querySelector('a, button');
+    if (primero) primero.focus();
   }
   function closeMenu() {
     if (!overlay) return;
+    var estabaAbierto = overlay.classList.contains('open');
     overlay.classList.remove('open');
+    overlay.setAttribute('inert', '');
+    overlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (estabaAbierto && openBtn) openBtn.focus();
   }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay && overlay.classList.contains('open')) closeMenu();
+  });
   if (openBtn) openBtn.addEventListener('click', openMenu);
   if (closeBtn) closeBtn.addEventListener('click', closeMenu);
   if (overlay) {
