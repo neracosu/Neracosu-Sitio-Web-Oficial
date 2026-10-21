@@ -42,11 +42,15 @@ próximo export: ya pasó el 2026-09-26. Cada HTML lo avisa en la línea 2. Desd
 `neracosu` no hay permiso de escritura en `/opt/atalaya`: dejar un parche en
 `~/` y pedírselo a la sesión de root.
 
-## Plataformas en producción: 24
+## Plataformas en producción: 26
 
-Desde el 2026-09-26 son **24** (antes 23): 21 encargos del portafolio más tres
-productos propios en `#productos` (ArmorPay, Soporte Vipsoft y Atalaya Monitor
-Server). El número vive en `index.html` (meta, OG, Twitter, contador
+Desde el 2026-10-21 son **26** (antes 24; decisión del dueño): 21 encargos del portafolio más cinco
+productos propios en `#productos` (ArmorPay, Soporte Vipsoft, Atalaya Monitor Server, Papel Cebolla y
+Mishis, este último «en versión de prueba»). **Monte** va aparte, en el bloque `#laboratorio` debajo del
+portafolio, y **no suma**: es cultural, con licencia no comercial (atribución a Urbano Monte y la David
+Rumsey Map Collection siempre a la vista; no nombrar la presentación). **G&G Shopping no entra**: lo
+desarrolló Moisés, Neri solo lo modernizó y lo puso en línea (dicho por el dueño, 2026-10-21). También
+está en `hoja-de-vida.html` (fichas 10 y 11) y en el chiste de `nera.py` («devolver 26»). El número vive en `index.html` (meta, OG, Twitter, contador
 `data-counter="24"`, el texto del portafolio y la métrica de «Compruébelo»), `para/index.html` (y su fuente `build-para/body-index.html`),
 `servicios/sistemas-de-gestion.html`, `build-para/seo.py` y la imagen
 `assets/img/og-image.jpg`, que se renderiza desde `build-para/og-card.html`

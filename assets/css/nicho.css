@@ -1245,3 +1245,11 @@
   .promo-banda { padding: 15px 16px; }
   .promo-banda p { font-size: 15px; }
 }
+
+/* #productos con cinco tarjetas (21-oct-2026): tres columnas en escritorio, para que quede 3 + 2 y no 4 + 1. */
+@media (min-width: 1000px) { .modulos-grid--3 { grid-template-columns: repeat(3, 1fr); } }
+/* Laboratorio: proyectos personales debajo del portafolio. No suman a las plataformas en produccion. */
+.laboratorio { max-width: 760px; }
+.laboratorio-titulo { font-size: clamp(22px, 3vw, 28px); font-weight: 700; color: #fff; margin: 10px 0 20px; letter-spacing: -0.01em; }
+.laboratorio-item { display: block; text-decoration: none; color: inherit; }
+.laboratorio-credito { display: block; margin: 14px 0 0; font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; }
