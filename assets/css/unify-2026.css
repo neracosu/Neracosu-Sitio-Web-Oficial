@@ -124,3 +124,6 @@ a { color: inherit; }
 a.is-accent, a.text-accent, .post-tag, .article-tag {
   color: #5ed29c !important;
 }
+
+/* Boton verde con letra oscura, como en la home: blanco sobre #5ed29c daba 1,87:1 (21-oct-2026). */
+.btn--primary, .btn--primary:hover { color: #070b0a; }

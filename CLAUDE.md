@@ -249,3 +249,14 @@ En `/para/` (mismo día): la plantilla precarga también la cursiva del titular 
 abrir y cierra con Escape), los títulos de las notas de precio son `h3` (en `precios.py`) y los enlaces dentro del
 texto van subrayados. Accesibilidad 100 en las nueve; rendimiento 85-97 según la corrida (el servidor compartido
 mete ruido en el «tiempo de bloqueo»).
+
+## Servicio de optimización web y SEO (desde el 2026-10-21)
+
+`/servicios/optimizacion-web-y-seo.html`, con tarjeta en `#servicios` de la home y en `/servicios/`. **Sin precio**
+(regla de `/servicios/`): diagnóstico y cotización por escrito. El caso real es este mismo sitio: capturas de
+PageSpeed Insights de Google del 21-oct-2026 (6:39 → 6:54, móvil 83 → 95, accesibilidad 93 → 100; escritorio 100)
+en `assets/img/servicios/pagespeed-*` (completa para escritorio y `-puntajes` para teléfono). Informes:
+`pagespeed.web.dev/analysis/https-neracosu-com/s1tb144mb0` (antes) y `/7texqnh6hw` (después). **No decir en la
+página que el sitio fue hackeado** (se vende ciberseguridad): las URL basura van como «direcciones viejas».
+Esa página **no carga GSAP, ScrollTrigger, Lenis ni anime.js** (con ellos daba 67 en móvil; sin ellos, 97). El resto
+de `/servicios/` y `/blog/` todavía los carga.
