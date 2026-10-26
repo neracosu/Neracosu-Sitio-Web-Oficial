@@ -12,6 +12,26 @@ Options -Indexes
   # heredan los subdominios.
   RewriteCond %{HTTP_HOST} ^(www\.)?neracosu\.com$ [NC]
   RewriteRule ^(view/item|shop/pg|merchandises/detail)(/|$) - [G,L]
+
+  # URLs sin .html (2026-10-26). Solo neracosu.com y solo sus paginas propias: la raiz,
+  # /para/, /servicios/ y /blog/. Lo demas (subdominios, /atalaya/, proyectos) no se toca.
+  # /servicios/hoteles se fusiono con /para/hoteles el 2026-09-12 (antes en servicios/.htaccess,
+  # que tenia su propio RewriteEngine y por eso anulaba estas reglas en esa carpeta).
+  RewriteCond %{HTTP_HOST} ^(www\.)?neracosu\.com$ [NC]
+  RewriteRule ^servicios/hoteles(\.html)?$ /para/hoteles [R=301,L]
+  # 1) .../index.html -> .../  (301)
+  RewriteCond %{HTTP_HOST} ^(www\.)?neracosu\.com$ [NC]
+  RewriteCond %{THE_REQUEST} \s/+((?:para/|servicios/|blog/)?)index\.html[\s?]
+  RewriteRule ^ /%1 [R=301,L]
+  # 2) .../pagina.html -> .../pagina  (301; la consulta ?... se conserva)
+  RewriteCond %{HTTP_HOST} ^(www\.)?neracosu\.com$ [NC]
+  RewriteCond %{THE_REQUEST} \s/+((?:para/|servicios/|blog/)?[^/?\s.]+)\.html[\s?]
+  RewriteRule ^ /%1 [R=301,L]
+  # 3) .../pagina -> sirve pagina.html por dentro, si existe
+  RewriteCond %{HTTP_HOST} ^(www\.)?neracosu\.com$ [NC]
+  RewriteCond %{REQUEST_URI} ^/((?:para/|servicios/|blog/)?[^/.]+)$
+  RewriteCond %{DOCUMENT_ROOT}/%1.html -f
+  RewriteRule ^ /%1.html [L]
 </IfModule>
 
 # Las IPs de los ataques de ago-2026 se bloquean en el cortafuegos, no aca:

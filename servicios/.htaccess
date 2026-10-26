@@ -3,13 +3,5 @@
   Require all denied
 </FilesMatch>
 
-# /servicios/hoteles.html se fusiono con /para/hoteles.html el 2026-09-12.
-# Eran dos paginas del mismo servicio con precios distintos: esta se quedo con
-# el modelo viejo (pago unico, 90 dias de garantia, tabla de costo a 3 anios)
-# mientras /para/ pasaba a pago unico mas mensualidad. Un visitante podia caer
-# en cualquiera de las dos y ver cifras que no coincidian.
-# 301 y no 302: la fusion es definitiva y asi se traslada el posicionamiento.
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteRule ^hoteles\.html$ /para/hoteles.html [R=301,L]
-</IfModule>
+# La redireccion de /servicios/hoteles.html a /para/hoteles vive en el .htaccess raiz
+# desde 2026-10-26: un RewriteEngine aqui anulaba las reglas de URLs sin .html.
