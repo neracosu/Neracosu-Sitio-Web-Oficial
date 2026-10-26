@@ -1,0 +1,559 @@
+<!--
+#!/usr/bin/env nera
+# ================================================================
+#   neracosu.com/servicios/que-hace-falta-para-hacer-una-app.html
+#   Escrito a mano en Nera 0.3.1 «Arepa Estable»
+#
+#   Si usted esta leyendo esto, abrio el codigo fuente. Bienvenido.
+#   Aqui no hay HTML. Nunca lo hubo. No insista.
+# ================================================================
+
+importar cafe desde "cocina/greca"
+importar paciencia desde "reservas/la-ultima"       # queda poca, usar con cuidado
+importar { luz, internet } desde "cantv/quizas"
+importar suerte                                      # modulo no encontrado, se continua igual
+
+constante ANIOS_DE_OFICIO   = 17
+constante CAFES_POR_PAGINA  = 3
+constante HORA_DE_DORMIR    = nulo
+constante PUNTO_Y_COMA      = prohibido              # aqui vivia un pez llamado ;  lo eliminamos del lenguaje
+variable  bugs              = 0                      # optimismo declarado, tipo fuerte
+
+pagina "/servicios/que-hace-falta-para-hacer-una-app.html":
+
+    al cargar:
+        si visitante.abrio_codigo_fuente:
+            saludar("Epa. Usted es de los nuestros.")
+            ofrecer(cafe, tamaño: "grande")
+        sino:
+            mostrar pagina con normalidad
+            disimular()
+
+    al perder(luz):
+        prender(planta)
+        rezar(veces: 3)
+        reintentar desde donde iba                   # Nera guarda el estado en una libreta
+
+    al escuchar cliente.decir("es un cambio pequeñito"):
+        respirar(hondo)
+        responder("claro que si")
+        anotar en "alcance.txt"
+        cafe.servir(doble)
+
+    mientras llueve en La Guaira:
+        programar()                                   # total, para donde voy a salir
+
+    si visitante.usa(internet_explorer):
+        pesame()
+        abrazo()
+
+    si visitante.es_robot:
+        entregar(html)                                # ellos no entienden de arte
+        decir("buen rastreo, campeon")
+
+    si visitante.quiere_copiar(este_codigo):
+        permitir()                                    # igual no compila fuera de La Guaira
+
+    si visitante.piensa("esto no es un lenguaje de verdad"):
+        responder("¿Y el HTML si? Son etiquetas. Reflexione.")
+
+
+funcion centrar_div(div):
+    # Intento numero 47. Este si funciona. NADIE sabe por que.
+    # Si usted lo entiende, escribame. Hay un cafe de por medio.
+    div.flotar()
+    div.margen = "auto"
+    div.rezar()
+    devolver div.centrado ?? "casi"
+
+funcion almuerzo():
+    devolver arepa.con(queso, cantidad: "exagerada")
+
+funcion deploy(dia):
+    si dia == viernes:
+        lanzar Error("Ni lo intente. Nera lo sabe. Nera lo recuerda.")
+    si dia == lunes:
+        devolver deploy(martes)                       # recursion emocional
+    publicar()
+    cruzar(dedos)
+
+funcion esperar(proveedor):
+    # tiempo estimado: entre 2 segundos y nunca
+    mientras no proveedor.responde:
+        mirar(telefono)
+        suspirar()
+    devolver "al fin"
+
+funcion contar_plataformas():
+    devolver 26                                        # esta si es de verdad, puede revisarla en la pagina
+
+
+# ================================================================
+#  Lo que sigue son cosas que el lenguaje hace solo y usted no deberia leer:
+# ================================================================
+
+nunca:
+    usar(Comic_Sans)
+    decir("pasarela")                                  # palabra regulada, se dice «validacion de pagos»
+    prometer("salir primero en Google")                # eso no se promete, se trabja... se trabaja
+    dormir antes de las 2
+
+siempre:
+    publicar los precios                               # si hay que preguntarlos, algo esconde
+    decir la verdad aunque no venda
+    cobrar lo publicado, ni un dolar escondido
+
+cuando el servidor devuelva 418:
+    responder("Soy una greca. No una tetera. Respete.")
+
+cuando el visitante llegue hasta aqui:
+    felicitar(visitante)
+    decir("Pocos bajan tanto. Entonces tenemos de que hablar.")
+    abrir("https://neracosu.com/#contacto")
+
+
+# ================================================================
+#  Resultado de compilacion
+#  Compilado en 0,073 s con 3 cafes.
+#  0 errores, 3 advertencias, 1 premonicion.
+#
+#  advertencia: el bucle `mientras llueve` nunca termina en La Guaira entre junio y noviembre.
+#  advertencia: la variable `bugs` vale 0. El compilador se rio al leer esa linea.
+#  advertencia: se usaron 17 años de oficio y 0 plantillas. Costo de compilacion: alto. Valio la pena.
+#  premonicion: esto lo va a leer mas gente de la que uno cree.
+#
+#  Fin del archivo. Lo que ve mas abajo es un espejismo que el compilador
+#  genera para los buscadores. No lo mire directamente. Le va a doler.
+# ================================================================
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qué hace falta para hacer la app de su negocio</title>
+  <meta name="description" content="Antes del programador: una tarea concreta, quién la usará, si va instalable o en las tiendas y de dónde salen los datos. Así se arma una app que se usa.">
+  <meta name="author" content="Neri Rafael Colón Suárez">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://neracosu.com/servicios/que-hace-falta-para-hacer-una-app">
+  <link rel="alternate" hreflang="es-419" href="https://neracosu.com/servicios/que-hace-falta-para-hacer-una-app">
+  <link rel="alternate" hreflang="x-default" href="https://neracosu.com/servicios/que-hace-falta-para-hacer-una-app">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="VE-X">
+  <meta name="geo.placename" content="La Guaira">
+  <meta name="geo.position" content="10.6031;-66.9354">
+  <meta name="ICBM" content="10.6031, -66.9354">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Qué hace falta para hacer la app de su negocio">
+  <meta property="og:description" content="Antes del programador: una tarea concreta, quién la usará, si va instalable o en las tiendas y de dónde salen los datos. Así se arma una app que se usa.">
+  <meta property="og:url" content="https://neracosu.com/servicios/que-hace-falta-para-hacer-una-app">
+  <meta property="og:image" content="https://neracosu.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NERACOSU — sistemas a medida">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:site_name" content="Neri Colón - Desarrollador Web">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Qué hace falta para hacer la app de su negocio">
+  <meta name="twitter:description" content="Antes del programador: una tarea concreta, quién la usará, si va instalable o en las tiendas y de dónde salen los datos. Así se arma una app que se usa.">
+  <meta name="twitter:image" content="https://neracosu.com/assets/img/og-image.jpg">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#070b0a">
+
+  <link rel="preload" href="/assets/fonts/inter-latin-3100e775.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/fuentes.css?v=3418de6a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=8f9737d3">
+  <link rel="stylesheet" href="/assets/css/unify-2026.css?v=4a75c430">
+  <link rel="stylesheet" href="/assets/css/landing.css?v=838336ef">
+  <link rel="stylesheet" href="/assets/css/blog.css?v=be1f7624">
+  <link rel="stylesheet" href="/assets/css/promo.css?v=a648a8fb">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Desarrollo de apps para negocios",
+    "description": "Diseño y desarrollo de aplicaciones para negocios de Latinoamérica: apps instalables desde la web o publicadas en las tiendas, conectadas a los datos, pagos y avisos del negocio.",
+    "provider": {
+      "@type": "Person",
+      "name": "Neri Colón",
+      "url": "https://neracosu.com/",
+      "jobTitle": "Desarrollador Web Full Stack",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Guaira",
+        "addressCountry": "VE"
+      }
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Latinoamérica"
+    },
+    "serviceType": "Desarrollo de apps para negocios",
+    "url": "https://neracosu.com/servicios/que-hace-falta-para-hacer-una-app"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta hacer una app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de cuántas pantallas tenga, de con qué se conecta (pagos, inventario, WhatsApp) y de si va a las tiendas o se instala desde la web. Los planes con precio por tipo de negocio están en soluciones por rubro, la calculadora le da un estimado en un minuto, y en este artículo explico qué mueve el precio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo tarda?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del alcance. Antes de empezar dividimos la app en fases y le dejo por escrito qué trae cada una y cuándo se entrega, para que la primera versión esté en uso lo antes posible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito tener una empresa constituida?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para una app instalable desde la web, no. Para publicarla en las tiendas a nombre de su negocio, sí: Apple y Google piden una entidad legal con número D-U-N-S para las cuentas de organización. Lo explico en app instalable o app en las tiendas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Mi app puede enviar notificaciones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. En Android funcionan también en apps instalables desde la web, y en iPhone desde iOS 16.4, siempre que la persona haya agregado la app a su pantalla de inicio, según la nota oficial de WebKit. El panel de recepción que hice para un hotel le avisa así a la gerencia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La app puede cobrar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, según el país: en Venezuela con Pago Móvil y C2P confirmados contra el banco, en Colombia con Wompi y en el resto de la región con Stripe. Lo explico en pagos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué tengo que preparar antes de escribirle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nada formal. Con que me cuente qué tarea quiere resolver, quién la va a usar y cómo la hace hoy (cuaderno, Excel, WhatsApp, otro sistema) puedo decirle si una app es lo que le conviene."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://neracosu.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://neracosu.com/servicios/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Aplicaciones móviles",
+        "item": "https://neracosu.com/servicios/aplicaciones-moviles.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Qué hace falta para hacer una app"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+
+  <header class="header is-scrolled" id="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="/" class="nav__logo" aria-label="Neri Colón - Inicio">
+        <span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span>
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/#servicios" class="nav__link">Servicios</a></li>
+          <li class="nav__item"><a href="/#portafolio" class="nav__link">Portafolio</a></li>
+          <li class="nav__item"><a href="/#sobre-mi" class="nav__link">Sobre Mí</a></li>
+          <li class="nav__item"><a href="/blog/" class="nav__link">Blog</a></li>
+          <li class="nav__item"><a href="/#contacto" class="nav__link">Contacto</a></li>
+          <li class="nav__item nav__item--cta">
+            <a href="/#contacto" class="nav__link nav__link--cta">Hablemos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="landing-hero">
+      <div class="container">
+        <p class="landing-hero__kicker">Apps para negocios · Latinoamérica</p>
+        <h1 class="landing-hero__title">Qué hace falta para hacer la app de su negocio</h1>
+        <p class="landing-hero__subtitle">Antes que un programador, hacen falta cuatro respuestas: qué tarea concreta va a resolver la app, quién la va a usar (sus clientes o su personal), si conviene instalarla desde la web o publicarla en Google Play y App Store, y de dónde salen los datos que va a mostrar. Con eso claro se arma una primera versión pequeña, se pone en uso y se crece a partir de lo que la gente de verdad usa.</p>
+        <div class="landing-hero__ctas">
+          <a href="https://wa.me/584222707095?text=Hola%20Neri%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20qu%C3%A9%20hace%20falta%20para%20hacer%20una%20app.%20Mi%20negocio%20es%3A%20" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="btn__icon" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Cuénteme su idea
+          </a>
+          <a href="#como" class="btn btn--outline">Ver el paso a paso</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PASO A PASO ====== -->
+    <section class="landing-pain" id="como">
+      <div class="container">
+        <p class="section__kicker">Paso a paso</p>
+        <h2 class="section__title">Así se pasa de la idea a una app que su gente usa</h2>
+        <ol class="caso__pasos">
+          <li><strong>Una tarea, no una lista de deseos.</strong> «Que mis clientes pidan sin escribirme», «que recepción cobre y cierre caja desde el teléfono». Una app que intenta hacerlo todo desde el primer día tarda más y se usa menos.</li>
+          <li><strong>Quién la va a usar.</strong> Una app para sus clientes tiene que entenderse sin explicación. Una para su personal puede tener más detalle, pero tiene que caber en el ritmo de un turno. Son dos diseños distintos.</li>
+          <li><strong>Dónde va a vivir.</strong> Instalable desde la web (se abre con un enlace y se agrega a la pantalla de inicio) o publicada en las tiendas. Para la mayoría de los negocios conviene empezar por la primera; la comparación completa está en <a href="/servicios/app-instalable-o-app-en-tiendas">app instalable o app en las tiendas</a>.</li>
+          <li><strong>De dónde salen los datos.</strong> Precios, existencias, reservas, clientes. Si ya los tiene en otro sistema, la app se conecta a él; si están en un cuaderno o en Excel, la app pasa a ser el lugar donde viven.</li>
+          <li><strong>Con qué se conecta.</strong> Cobros, avisos al teléfono, WhatsApp, correo. Cada conexión se decide al principio porque cambia cómo se construye lo demás.</li>
+          <li><strong>Primera versión en uso real.</strong> Se entrega lo mínimo que resuelve la tarea, la usan personas reales y con lo que pase se decide la siguiente fase. Así no se paga por pantallas que nadie abre.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====== LO QUE HACE FALTA ====== -->
+    <section class="landing-features">
+      <div class="container">
+        <p class="section__kicker">Lo que pone cada quien</p>
+        <h2 class="section__title">Lo que necesito de usted y lo que resuelvo yo</h2>
+        <div class="landing-features__grid">
+          <div class="landing-features__card">
+            <h3>Cómo trabaja hoy</h3>
+            <p>Me sirve más ver cómo hace la tarea hoy, aunque sea en papel, que una lista de funciones. Ahí aparece lo que la app tiene que hacer y lo que sobra.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Una persona que decida</h3>
+            <p>Alguien de su lado que pruebe cada entrega y diga «así sí» o «así no». Sin eso, las fases se alargan.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Su contenido</h3>
+            <p>Logotipo, fotos, textos, precios. Lo puedo ordenar y redactar con usted, pero la información de su negocio la tiene usted.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Cuentas a su nombre</h3>
+            <p>Le recomiendo que el dominio y, si la app va a las tiendas, las cuentas de Google Play y Apple estén a nombre de su negocio. Así la app es suya pase lo que pase.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Lo técnico</h3>
+            <p>Diseño de pantallas, programación, servidor, seguridad, conexión con pagos y avisos, y la publicación. Eso lo hago yo y se lo explico sin jerga.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Después de publicar</h3>
+            <p>Una app necesita servidor, copias de seguridad y ajustes cuando cambian los teléfonos o sus procesos. Conviene acordarlo desde el principio y no cuando algo falla.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CASOS ====== -->
+    <section class="landing-pain">
+      <div class="container">
+        <p class="section__kicker">Apps que funcionan hoy</p>
+        <h2 class="section__title">Tres apps instalables que hice, para públicos muy distintos</h2>
+        <p class="section__subtitle">Las dos primeras son productos propios y públicos: puede abrirlas en su teléfono ahora mismo.</p>
+        <ul class="caso__lista">
+          <li><strong><a href="https://papelcebolla.app" target="_blank" rel="noopener noreferrer">papelcebolla.app</a></strong>, gratis, para calcar cualquier dibujo con la cámara del teléfono. Se instala desde el navegador, no pide cuenta y las fotos no salen del teléfono.</li>
+          <li><strong><a href="https://mishis.app" target="_blank" rel="noopener noreferrer">mishis.app</a></strong>, un juego para fotografiar gatos y coleccionarlos en pixel art, con cuenta, catálogo y liga semanal. Está en versión de prueba.</li>
+          <li><strong>El panel de recepción de un hotel de alta rotación en Valencia, Carabobo.</strong> El personal lo instala en el teléfono, cobra en dos monedas, cierra caja por turno, y la gerencia recibe avisos en el suyo. El hotel dejó de alquilar el sistema que usaba antes.</li>
+        </ul>
+        <p class="caso__honesto">Se lo digo de una vez: si la app no le ahorra tiempo o dinero en algo concreto, no se la recomiendo. A veces lo que hace falta es una buena <a href="/servicios/que-debe-tener-la-pagina-web-de-un-negocio">página web que venda</a> o un <a href="/servicios/bot-de-whatsapp-para-negocios">bot de WhatsApp</a>, y prefiero decírselo antes de que pague por una app que nadie abre.</p>
+      </div>
+    </section>
+
+    <!-- ====== FAQ ====== -->
+    <section class="landing-faq">
+      <div class="container">
+        <p class="section__kicker">Preguntas frecuentes</p>
+        <h2 class="section__title">Lo que suelen preguntarme</h2>
+        <div class="landing-faq__list">
+          <details class="landing-faq__item">
+            <summary>¿Cuánto cuesta hacer una app?</summary>
+            <div class="faq-answer">
+              <p>Depende de cuántas pantallas tenga, de con qué se conecta (pagos, inventario, WhatsApp) y de si va a las tiendas o se instala desde la web. Los planes con precio por tipo de negocio están en <a href="/para/">soluciones por rubro</a>, la <a href="/calculadora">calculadora</a> le da un estimado en un minuto, y en <a href="/blog/cuanto-cuesta-desarrollar-una-app-en-venezuela">este artículo</a> explico qué mueve el precio.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Cuánto tiempo tarda?</summary>
+            <div class="faq-answer">
+              <p>Depende del alcance. Antes de empezar dividimos la app en fases y le dejo por escrito qué trae cada una y cuándo se entrega, para que la primera versión esté en uso lo antes posible.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Necesito tener una empresa constituida?</summary>
+            <div class="faq-answer">
+              <p>Para una app instalable desde la web, no. Para publicarla en las tiendas a nombre de su negocio, sí: Apple y Google piden una entidad legal con número D-U-N-S para las cuentas de organización. Lo explico en <a href="/servicios/app-instalable-o-app-en-tiendas">app instalable o app en las tiendas</a>.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Mi app puede enviar notificaciones?</summary>
+            <div class="faq-answer">
+              <p>Sí. En Android funcionan también en apps instalables desde la web, y en iPhone desde iOS 16.4, siempre que la persona haya agregado la app a su pantalla de inicio, según la <a href="https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/" target="_blank" rel="noopener noreferrer">nota oficial de WebKit</a>. El panel de recepción que hice para un hotel le avisa así a la gerencia.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿La app puede cobrar?</summary>
+            <div class="faq-answer">
+              <p>Sí, según el país: en Venezuela con Pago Móvil y C2P confirmados contra el banco, en Colombia con Wompi y en el resto de la región con Stripe. Lo explico en <a href="/servicios/pasarelas-de-pago">pagos</a>.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Qué tengo que preparar antes de escribirle?</summary>
+            <div class="faq-answer">
+              <p>Nada formal. Con que me cuente qué tarea quiere resolver, quién la va a usar y cómo la hace hoy (cuaderno, Excel, WhatsApp, otro sistema) puedo decirle si una app es lo que le conviene.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FINAL CTA ====== -->
+    <section class="landing-cta">
+      <div class="container">
+        <div class="landing-cta__box">
+          <h2>¿Tiene una idea para la app de su negocio?</h2>
+          <p>Escríbame por WhatsApp qué tarea quiere resolver y quién la usaría, y le digo si una app es lo que le conviene y por dónde empezaría.</p>
+          <div class="landing-cta__buttons">
+            <a href="https://wa.me/584222707095?text=Hola%20Neri%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20qu%C3%A9%20hace%20falta%20para%20hacer%20una%20app.%20Mi%20negocio%20es%3A%20" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="btn__icon" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Hablemos por WhatsApp
+            </a>
+            <a href="/servicios/aplicaciones-moviles" class="btn btn--outline">
+              Ver aplicaciones móviles
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="/" style="text-decoration:none"><span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span></a>
+          <p class="footer__tagline">Sistemas a medida hechos en La Guaira, Venezuela, desde 2009.</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://linkedin.com/in/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://instagram.com/Ing.nrcs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Neri Colón. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pagina de respuesta: sin animaciones a proposito, para que cargue rapido. -->
+  <script src="/assets/js/main.js?v=b8752f75" defer></script>
+  <script src="/assets/js/nera.js?v=359cd2a4" defer></script>
+  <script src="/assets/js/medir.js?v=b5b8a87d" defer></script>
+</body>
+</html>

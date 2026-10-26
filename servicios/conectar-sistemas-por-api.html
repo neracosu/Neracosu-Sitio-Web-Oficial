@@ -1,0 +1,573 @@
+<!--
+#!/usr/bin/env nera
+# ================================================================
+#   neracosu.com/servicios/conectar-sistemas-por-api.html
+#   Escrito a mano en Nera 0.3.1 «Arepa Estable»
+#
+#   Si usted esta leyendo esto, abrio el codigo fuente. Bienvenido.
+#   Aqui no hay HTML. Nunca lo hubo. No insista.
+# ================================================================
+
+importar cafe desde "cocina/greca"
+importar paciencia desde "reservas/la-ultima"       # queda poca, usar con cuidado
+importar { luz, internet } desde "cantv/quizas"
+importar suerte                                      # modulo no encontrado, se continua igual
+
+constante ANIOS_DE_OFICIO   = 17
+constante CAFES_POR_PAGINA  = 3
+constante HORA_DE_DORMIR    = nulo
+constante PUNTO_Y_COMA      = prohibido              # aqui vivia un pez llamado ;  lo eliminamos del lenguaje
+variable  bugs              = 0                      # optimismo declarado, tipo fuerte
+
+pagina "/servicios/conectar-sistemas-por-api.html":
+
+    al cargar:
+        si visitante.abrio_codigo_fuente:
+            saludar("Epa. Usted es de los nuestros.")
+            ofrecer(cafe, tamaño: "grande")
+        sino:
+            mostrar pagina con normalidad
+            disimular()
+
+    al perder(luz):
+        prender(planta)
+        rezar(veces: 3)
+        reintentar desde donde iba                   # Nera guarda el estado en una libreta
+
+    al escuchar cliente.decir("es un cambio pequeñito"):
+        respirar(hondo)
+        responder("claro que si")
+        anotar en "alcance.txt"
+        cafe.servir(doble)
+
+    mientras llueve en La Guaira:
+        programar()                                   # total, para donde voy a salir
+
+    si visitante.usa(internet_explorer):
+        pesame()
+        abrazo()
+
+    si visitante.es_robot:
+        entregar(html)                                # ellos no entienden de arte
+        decir("buen rastreo, campeon")
+
+    si visitante.quiere_copiar(este_codigo):
+        permitir()                                    # igual no compila fuera de La Guaira
+
+    si visitante.piensa("esto no es un lenguaje de verdad"):
+        responder("¿Y el HTML si? Son etiquetas. Reflexione.")
+
+
+funcion centrar_div(div):
+    # Intento numero 47. Este si funciona. NADIE sabe por que.
+    # Si usted lo entiende, escribame. Hay un cafe de por medio.
+    div.flotar()
+    div.margen = "auto"
+    div.rezar()
+    devolver div.centrado ?? "casi"
+
+funcion almuerzo():
+    devolver arepa.con(queso, cantidad: "exagerada")
+
+funcion deploy(dia):
+    si dia == viernes:
+        lanzar Error("Ni lo intente. Nera lo sabe. Nera lo recuerda.")
+    si dia == lunes:
+        devolver deploy(martes)                       # recursion emocional
+    publicar()
+    cruzar(dedos)
+
+funcion esperar(proveedor):
+    # tiempo estimado: entre 2 segundos y nunca
+    mientras no proveedor.responde:
+        mirar(telefono)
+        suspirar()
+    devolver "al fin"
+
+funcion contar_plataformas():
+    devolver 26                                        # esta si es de verdad, puede revisarla en la pagina
+
+
+# ================================================================
+#  Lo que sigue son cosas que el lenguaje hace solo y usted no deberia leer:
+# ================================================================
+
+nunca:
+    usar(Comic_Sans)
+    decir("pasarela")                                  # palabra regulada, se dice «validacion de pagos»
+    prometer("salir primero en Google")                # eso no se promete, se trabja... se trabaja
+    dormir antes de las 2
+
+siempre:
+    publicar los precios                               # si hay que preguntarlos, algo esconde
+    decir la verdad aunque no venda
+    cobrar lo publicado, ni un dolar escondido
+
+cuando el servidor devuelva 418:
+    responder("Soy una greca. No una tetera. Respete.")
+
+cuando el visitante llegue hasta aqui:
+    felicitar(visitante)
+    decir("Pocos bajan tanto. Entonces tenemos de que hablar.")
+    abrir("https://neracosu.com/#contacto")
+
+
+# ================================================================
+#  Resultado de compilacion
+#  Compilado en 0,055 s con 3 cafes.
+#  0 errores, 3 advertencias, 1 premonicion.
+#
+#  advertencia: `esperar(cantv)` lleva 4 horas en ejecucion. Se continua sin ella.
+#  advertencia: `internet_explorer` fue eliminado en Nera 0.2. Si lo esta usando, mis condolencias.
+#  advertencia: `deploy_viernes()` esta marcada como obsoleta y peligrosa. Siempre lo estuvo.
+#  premonicion: esto lo va a leer mas gente de la que uno cree.
+#
+#  Fin del archivo. Lo que ve mas abajo es un espejismo que el compilador
+#  genera para los buscadores. No lo mire directamente. Le va a doler.
+# ================================================================
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conectar sus sistemas por API: cómo se hace y qué hace falta</title>
+  <meta name="description" content="Conectar sistemas por API: que los datos pasen solos, sin copiarlos a mano. Qué hace falta, cómo se construye para que no se rompa y qué depende del proveedor.">
+  <meta name="author" content="Neri Rafael Colón Suárez">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://neracosu.com/servicios/conectar-sistemas-por-api">
+  <link rel="alternate" hreflang="es-419" href="https://neracosu.com/servicios/conectar-sistemas-por-api">
+  <link rel="alternate" hreflang="x-default" href="https://neracosu.com/servicios/conectar-sistemas-por-api">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="VE-X">
+  <meta name="geo.placename" content="La Guaira">
+  <meta name="geo.position" content="10.6031;-66.9354">
+  <meta name="ICBM" content="10.6031, -66.9354">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Conectar sus sistemas por API: cómo se hace y qué hace falta">
+  <meta property="og:description" content="Conectar sistemas por API: que los datos pasen solos, sin copiarlos a mano. Qué hace falta, cómo se construye para que no se rompa y qué depende del proveedor.">
+  <meta property="og:url" content="https://neracosu.com/servicios/conectar-sistemas-por-api">
+  <meta property="og:image" content="https://neracosu.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NERACOSU — sistemas a medida">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:site_name" content="Neri Colón - Desarrollador Web">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Conectar sus sistemas por API: cómo se hace y qué hace falta">
+  <meta name="twitter:description" content="Conectar sistemas por API: que los datos pasen solos, sin copiarlos a mano. Qué hace falta, cómo se construye para que no se rompa y qué depende del proveedor.">
+  <meta name="twitter:image" content="https://neracosu.com/assets/img/og-image.jpg">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#070b0a">
+
+  <link rel="preload" href="/assets/fonts/inter-latin-3100e775.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/fuentes.css?v=3418de6a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=8f9737d3">
+  <link rel="stylesheet" href="/assets/css/unify-2026.css?v=4a75c430">
+  <link rel="stylesheet" href="/assets/css/landing.css?v=838336ef">
+  <link rel="stylesheet" href="/assets/css/blog.css?v=be1f7624">
+  <link rel="stylesheet" href="/assets/css/promo.css?v=a648a8fb">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Integración de sistemas por API",
+    "description": "Conectores entre los sistemas de un negocio (sistema hotelero, punto de venta, tienda, bancos, cerraduras) para que los datos pasen solos, con reintentos, registro de cada llamada y una vía manual si el otro sistema no responde.",
+    "provider": {
+      "@type": "Person",
+      "name": "Neri Colón",
+      "url": "https://neracosu.com/",
+      "jobTitle": "Desarrollador Web Full Stack",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Guaira",
+        "addressCountry": "VE"
+      }
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Latinoamérica"
+    },
+    "serviceType": "Integración de sistemas por API",
+    "url": "https://neracosu.com/servicios/conectar-sistemas-por-api"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es una API, en pocas palabras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es una puerta que un programa deja abierta para que otro programa le pregunte cosas o le mande datos, con reglas fijas y una llave de acceso. Gracias a ella dos sistemas se pasan información sin que una persona la copie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mi proveedor dice que su sistema no tiene API. ¿Se puede igual?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A veces sí. Algunos sistemas exportan archivos, mandan correos o tienen una API que no publican. Antes de cotizar reviso qué expone realmente su sistema. Si no hay ninguna vía razonable, se lo digo, en vez de venderle una conexión que se rompe al primer cambio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Va a tocar mi sistema actual?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lo menos posible. El conector se monta al lado: lee y escribe por la puerta que el sistema ofrece, sin cambiar cómo trabaja su gente. Lo que ya funciona no se toca."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Quién es dueño de la conexión?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usted. Las llaves de acceso quedan a nombre de su negocio y el código corre en su servidor. Si mañana trabaja con otro equipo, se lo entrega y sigue funcionando."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Y si el otro sistema se cae?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El conector reintenta, y si no lo logra, la operación sigue por la vía manual y queda marcada. Cada llamada queda registrada con su resultado, así se ve qué pasó sin esperar a que un cliente reclame."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tenemos equipo técnico. ¿Puede trabajar con ellos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Entrego la conexión documentada, con ejemplos, para que su equipo la use o la mantenga. Podemos repartir el trabajo como le convenga."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta conectar dos sistemas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de cuántos sistemas, en qué dirección pasan los datos y qué tan buena es la API de cada uno. Los planes con precio, por conector, están en integraciones, API y bots; para un proyecto completo, la calculadora."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://neracosu.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://neracosu.com/servicios/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Sistemas de gestión",
+        "item": "https://neracosu.com/servicios/sistemas-de-gestion.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Conectar sistemas por API"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+
+  <header class="header is-scrolled" id="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="/" class="nav__logo" aria-label="Neri Colón - Inicio">
+        <span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span>
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/#servicios" class="nav__link">Servicios</a></li>
+          <li class="nav__item"><a href="/#portafolio" class="nav__link">Portafolio</a></li>
+          <li class="nav__item"><a href="/#sobre-mi" class="nav__link">Sobre Mí</a></li>
+          <li class="nav__item"><a href="/blog/" class="nav__link">Blog</a></li>
+          <li class="nav__item"><a href="/#contacto" class="nav__link">Contacto</a></li>
+          <li class="nav__item nav__item--cta">
+            <a href="/#contacto" class="nav__link nav__link--cta">Hablemos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="landing-hero">
+      <div class="container">
+        <p class="landing-hero__kicker">Integraciones · Latinoamérica</p>
+        <h1 class="landing-hero__title">Cómo conectar sus sistemas por API para que los datos pasen solos</h1>
+        <p class="landing-hero__subtitle">Conectar dos sistemas por API es hacer que se pasen los datos solos, sin que alguien los copie de una pantalla a otra. La API es la puerta que un programa deja abierta para que otro le hable. Si al menos uno de sus sistemas la tiene, se construye una pieza en el medio que lee de uno, escribe en el otro, reintenta si algo falla y deja registro de todo.</p>
+        <div class="landing-hero__ctas">
+          <a href="https://wa.me/584222707095?text=Hola%20Neri%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20conectar%20sistemas%20por%20API.%20Los%20sistemas%20que%20necesito%20conectar%20son%3A%20" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="btn__icon" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Dígame qué quiere conectar
+          </a>
+          <a href="#como" class="btn btn--outline">Ver cómo se construye</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== COMO SE CONSTRUYE ====== -->
+    <section class="landing-pain" id="como">
+      <div class="container">
+        <p class="section__kicker">Paso a paso</p>
+        <h2 class="section__title">Cómo construyo una conexión que no se rompa en silencio</h2>
+        <ol class="caso__pasos">
+          <li><strong>Reviso qué ofrece cada sistema.</strong> Leo la documentación de su proveedor, pido la llave de acceso a nombre de su negocio y pruebo qué se puede leer y qué se puede escribir. Si algo no se puede, lo sabe antes de pagar.</li>
+          <li><strong>Decidimos quién manda en cada dato.</strong> El precio vive en un sistema, la reserva en otro, el pago en el banco. Cada dato tiene un solo dueño, para que dos sistemas no se contradigan.</li>
+          <li><strong>Construyo el conector.</strong> Si el otro sistema no responde, reintenta. Si la misma orden llega dos veces por una mala conexión, se procesa una sola vez, que es lo que evita cobros o reservas duplicados.</li>
+          <li><strong>Lo pruebo antes de encenderlo.</strong> Con datos de prueba o una copia, nunca con su operación real de primera.</li>
+          <li><strong>Queda a la vista.</strong> Cada llamada se registra con su resultado. Si la conexión deja de funcionar, se ve en el panel y la tarea sigue por la vía manual, marcada, sin perder la venta.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====== LO QUE DEPENDE DE OTROS ====== -->
+    <section class="landing-features">
+      <div class="container">
+        <p class="section__kicker">Sin letra pequeña</p>
+        <h2 class="section__title">Lo que depende de su proveedor</h2>
+        <div class="landing-features__grid">
+          <div class="landing-features__card">
+            <h3>Que la puerta exista</h3>
+            <p>Si ninguno de los dos sistemas tiene API ni otra vía de salida, no hay conexión confiable posible. A veces basta un archivo que el sistema exporta; eso se revisa primero.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Su plan con el proveedor</h3>
+            <p>Algunos proveedores solo dan acceso a su API en ciertos planes o con permiso previo. Lo confirmo con su cuenta antes de cotizar, para que no aparezca un costo después.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Los límites de uso</h3>
+            <p>Muchas API limitan cuántas consultas se pueden hacer por minuto. El conector se diseña dentro de esos límites, aunque eso signifique que un dato tarde unos segundos en pasar.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Los cambios del proveedor</h3>
+            <p>Si el proveedor cambia su API, la conexión hay que ajustarla. Por eso queda registrada y avisa cuando falla, en vez de dejar de sincronizar sin que nadie se entere.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Los bancos</h3>
+            <p>En Venezuela, Pago Móvil y C2P se pueden confirmar contra el banco en Banco de Venezuela, Banco del Tesoro y Banco Digital de los Trabajadores. Las transferencias y Zelle no dan acceso para verificarlas desde fuera.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Construir encima, no en su lugar</h3>
+            <p>Si su sistema funciona y su gente lo sabe usar, no hace falta cambiarlo. Para Glotracol (Global Trading de Colombia) hice un complemento de cotizaciones que funciona dentro de su tienda WooCommerce, la misma que ya tenían.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DONDE FUNCIONA ====== -->
+    <section class="landing-pain">
+      <div class="container">
+        <p class="section__kicker">Dónde funciona hoy</p>
+        <h2 class="section__title">Conexiones que ya corren en negocios reales</h2>
+        <ul class="caso__lista">
+          <li><strong>Con un sistema hotelero comercial.</strong> Una conexión con LobbyPMS, el sistema de gestión de un hotel de La Guaira, funcionando hoy.</li>
+          <li><strong>Con los bancos.</strong> Mi plataforma de validación de pagos confirma Pago Móvil y C2P contra el movimiento real del banco en <a href="https://vipplaysportbar.com" target="_blank" rel="noopener noreferrer">vipplaysportbar.com</a> y <a href="https://terrazasvip.com" target="_blank" rel="noopener noreferrer">terrazasvip.com</a>. Cada referencia se acepta una sola vez.</li>
+          <li><strong>Con las fuentes de la tasa oficial.</strong> La tasa del día se consulta sola, con respaldo entre fuentes por si una no responde.</li>
+          <li><strong>Con las cerraduras de un hotel.</strong> En un hotel de alta rotación en Valencia, Carabobo, el sistema del hotel y las cerraduras por tarjeta están conectados: la tarjeta abre solo durante la estadía.</li>
+          <li><strong>Con WhatsApp.</strong> Bots de WhatsApp que atienden hoy en un hotel, un sport bar y un complejo deportivo de La Guaira; así se montan en <a href="/servicios/bot-de-whatsapp-para-negocios">bot de WhatsApp para negocios</a>.</li>
+        </ul>
+        <p class="caso__honesto">Se lo digo de una vez: una conexión no se hace y se olvida. Los proveedores cambian sus sistemas, y una integración que nadie vigila se rompe un martes y usted se entera el viernes por un reclamo. Por eso le pongo registro y aviso, y por eso le digo de entrada que hace falta alguien que la sostenga, sea yo o su propio equipo.</p>
+      </div>
+    </section>
+
+    <!-- ====== FAQ ====== -->
+    <section class="landing-faq">
+      <div class="container">
+        <p class="section__kicker">Preguntas frecuentes</p>
+        <h2 class="section__title">Lo que suelen preguntarme</h2>
+        <div class="landing-faq__list">
+          <details class="landing-faq__item">
+            <summary>¿Qué es una API, en pocas palabras?</summary>
+            <div class="faq-answer">
+              <p>Es una puerta que un programa deja abierta para que otro programa le pregunte cosas o le mande datos, con reglas fijas y una llave de acceso. Gracias a ella dos sistemas se pasan información sin que una persona la copie.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>Mi proveedor dice que su sistema no tiene API. ¿Se puede igual?</summary>
+            <div class="faq-answer">
+              <p>A veces sí. Algunos sistemas exportan archivos, mandan correos o tienen una API que no publican. Antes de cotizar reviso qué expone realmente su sistema. Si no hay ninguna vía razonable, se lo digo, en vez de venderle una conexión que se rompe al primer cambio.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Va a tocar mi sistema actual?</summary>
+            <div class="faq-answer">
+              <p>Lo menos posible. El conector se monta al lado: lee y escribe por la puerta que el sistema ofrece, sin cambiar cómo trabaja su gente. Lo que ya funciona no se toca.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Quién es dueño de la conexión?</summary>
+            <div class="faq-answer">
+              <p>Usted. Las llaves de acceso quedan a nombre de su negocio y el código corre en su servidor. Si mañana trabaja con otro equipo, se lo entrega y sigue funcionando.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Y si el otro sistema se cae?</summary>
+            <div class="faq-answer">
+              <p>El conector reintenta, y si no lo logra, la operación sigue por la vía manual y queda marcada. Cada llamada queda registrada con su resultado, así se ve qué pasó sin esperar a que un cliente reclame.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>Tenemos equipo técnico. ¿Puede trabajar con ellos?</summary>
+            <div class="faq-answer">
+              <p>Sí. Entrego la conexión documentada, con ejemplos, para que su equipo la use o la mantenga. Podemos repartir el trabajo como le convenga.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Cuánto cuesta conectar dos sistemas?</summary>
+            <div class="faq-answer">
+              <p>Depende de cuántos sistemas, en qué dirección pasan los datos y qué tan buena es la API de cada uno. Los planes con precio, por conector, están en <a href="/para/integraciones-api-y-bots">integraciones, API y bots</a>; para un proyecto completo, la <a href="/calculadora">calculadora</a>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FINAL CTA ====== -->
+    <section class="landing-cta">
+      <div class="container">
+        <div class="landing-cta__box">
+          <h2>¿Qué dos sistemas necesita que se hablen?</h2>
+          <p>Escríbame por WhatsApp qué sistemas usa, qué dato copian hoy a mano y cada cuánto, y le digo si se puede conectar, cómo y qué riesgos tiene. Si no se puede, también. Si lo que busca es ver qué más se puede automatizar, empiece por <a href="/servicios/que-tareas-se-pueden-automatizar">qué tareas se pueden automatizar</a>.</p>
+          <div class="landing-cta__buttons">
+            <a href="https://wa.me/584222707095?text=Hola%20Neri%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20conectar%20sistemas%20por%20API.%20Los%20sistemas%20que%20necesito%20conectar%20son%3A%20" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="btn__icon" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Hablemos por WhatsApp
+            </a>
+            <a href="/para/integraciones-api-y-bots" class="btn btn--outline">
+              Ver planes con precio
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="/" style="text-decoration:none"><span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span></a>
+          <p class="footer__tagline">Sistemas a medida hechos en La Guaira, Venezuela, desde 2009.</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://linkedin.com/in/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://instagram.com/Ing.nrcs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Neri Colón. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pagina de respuesta: sin animaciones a proposito, para que cargue rapido. -->
+  <script src="/assets/js/main.js?v=b8752f75" defer></script>
+  <script src="/assets/js/nera.js?v=359cd2a4" defer></script>
+  <script src="/assets/js/medir.js?v=b5b8a87d" defer></script>
+</body>
+</html>

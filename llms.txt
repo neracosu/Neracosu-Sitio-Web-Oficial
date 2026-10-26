@@ -5,6 +5,23 @@
 ## Preguntas que respondo
 
 - [Cómo cobrar con Pago Móvil en Shopify](https://neracosu.com/servicios/pago-movil-en-shopify): Shopify no trabaja con bancos venezolanos; cómo cobrar en bolívares a la tasa BCV con el pago confirmado contra el banco y el pedido marcado como pagado.
+- [Pago Móvil en WooCommerce](https://neracosu.com/servicios/pago-movil-en-woocommerce): WooCommerce sí deja agregar Pago Móvil y C2P como métodos de pago propios. Así se hace: monto a tasa BCV, pago confirmado con el banco y pedido pagado solo.
+- [Validar pagos móviles](https://neracosu.com/servicios/validar-pagos-moviles-automaticamente): Una captura se edita en un minuto. Así se valida cada Pago Móvil contra el movimiento real del banco, solo y una sola vez por referencia.
+- [Integrar Wompi](https://neracosu.com/servicios/integrar-wompi-en-su-web): Wompi cobra con tarjeta, PSE, Nequi y Bancolombia en Colombia. Qué pide para abrir la cuenta, qué forma de conectarlo le conviene y cómo se confirma cada pago.
+- [Cobrar con Stripe](https://neracosu.com/servicios/cobrar-con-stripe-desde-latinoamerica): Stripe abre cuentas a negocios de México y Brasil; desde el resto de la región hace falta una empresa en Estados Unidos. Qué pide cada camino.
+- [Qué hace falta para hacer una app](https://neracosu.com/servicios/que-hace-falta-para-hacer-una-app): Antes del programador: una tarea concreta, quién la usará, si va instalable o en las tiendas y de dónde salen los datos. Así se arma una app que se usa.
+- [App instalable o app en tiendas](https://neracosu.com/servicios/app-instalable-o-app-en-tiendas): Una app instalable desde la web se abre con un enlace y se actualiza sola. Las tiendas piden cuentas, revisión y más requisitos. Cuándo conviene cada una.
+- [Qué debe tener la web de un negocio](https://neracosu.com/servicios/que-debe-tener-la-pagina-web-de-un-negocio): Qué vende y dónde en la primera pantalla, un botón claro para escribir o pedir, carga rápida en el teléfono, pruebas reales y datos que Google entienda.
+- [Shopify, WooCommerce o a la medida](https://neracosu.com/servicios/tienda-virtual-shopify-woocommerce-o-a-la-medida): Shopify para arrancar rápido, WooCommerce para ser dueño de todo sobre WordPress, a la medida si su forma de vender no cabe en una tienda normal. Cómo elegir.
+- [Bot de WhatsApp para negocios](https://neracosu.com/servicios/bot-de-whatsapp-para-negocios): Un bot de WhatsApp contesta, toma pedidos y cobra solo si está conectado a su sistema. Cómo se monta, qué permite WhatsApp y dónde funciona hoy.
+- [Qué tareas se pueden automatizar](https://neracosu.com/servicios/que-tareas-se-pueden-automatizar): Se automatiza lo que se repite igual y sigue una regla: confirmar pagos, la tasa del día, avisos, cierres de caja. Cómo saber cuáles y por dónde empezar.
+- [Conectar sistemas por API](https://neracosu.com/servicios/conectar-sistemas-por-api): Conectar sistemas por API: que los datos pasen solos, sin copiarlos a mano. Qué hace falta, cómo se construye para que no se rompa y qué depende del proveedor.
+- [Sistema de reservas en línea](https://neracosu.com/servicios/sistema-de-reservas-en-linea): Cómo funciona un sistema de reservas en línea para canchas, salones o eventos: disponibilidad real, cupo apartado mientras paga y anticipo confirmado.
+- [Pedidos en línea para restaurantes](https://neracosu.com/servicios/pedidos-en-linea-para-restaurantes): Qué hace falta para recibir pedidos en línea en su restaurante o bar sin depender de una app de reparto: carta propia, cobro confirmado y pantalla en cocina.
+- [Sistema para hoteles](https://neracosu.com/servicios/sistema-para-hoteles): Qué debe tener un sistema para hotel: mapa de habitaciones, caja en dos monedas, turnos con cierre firmado y reservas directas desde su web o su WhatsApp.
+- [Qué hacer si hackearon su web](https://neracosu.com/servicios/que-hacer-si-hackearon-su-web): Hackearon su página web: guarde la evidencia, cambie todas las claves, limpie de verdad, cierre la puerta que usaron y pida a Google quitar la advertencia.
+- [Monitorear servidores](https://neracosu.com/servicios/monitorear-servidores): Qué vigilar en sus servidores y sitios (disponibilidad, certificados, disco, respaldos, ataques) y cómo recibir avisos antes de que su cliente note la falla.
+- [Por qué su web carga lento](https://neracosu.com/servicios/por-que-mi-web-carga-lento): Las causas de una web lenta (imágenes, complementos, hospedaje, fuentes) y cómo se arregla: medir en el teléfono con PageSpeed, corregir y volver a medir.
 
 ## Servicios
 
