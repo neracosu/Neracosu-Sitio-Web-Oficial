@@ -1,0 +1,23 @@
+# NERACOSU
+
+> Neri Colón, ingeniero informático con 17 años desarrollando plataformas, hace sistemas a la medida para negocios de Latinoamérica desde La Guaira, Venezuela: páginas web, tiendas virtuales, apps, sistemas de gestión, bots de WhatsApp y cobros en línea. En Venezuela valida Pago Móvil y C2P contra el banco con su propia plataforma de validación de pagos; en Colombia integra Wompi; en el resto de la región, Stripe. Contacto: info@neracosu.com · WhatsApp +58 422-270 7095.
+
+## Preguntas que respondo
+
+- [Cómo cobrar con Pago Móvil en Shopify](https://neracosu.com/servicios/pago-movil-en-shopify.html): Shopify no trabaja con bancos venezolanos; cómo cobrar en bolívares a la tasa BCV con el pago confirmado contra el banco y el pedido marcado como pagado.
+
+## Servicios
+
+- [Pago Móvil y C2P en su sistema](https://neracosu.com/servicios/pasarelas-de-pago.html): integrar Pago Móvil y C2P en cualquier sistema o tienda, con validación automática.
+- [Desarrollo web](https://neracosu.com/servicios/desarrollo-web.html): sitios rápidos para negocios.
+- [Tienda en línea](https://neracosu.com/servicios/ecommerce.html): tiendas virtuales con cobro en bolívares y divisas.
+- [Aplicaciones móviles](https://neracosu.com/servicios/aplicaciones-moviles.html): apps para iOS y Android, y apps instalables desde la web.
+- [Sistemas de gestión](https://neracosu.com/servicios/sistemas-de-gestion.html): sistemas a la medida para operar un negocio.
+- [Optimización web y SEO](https://neracosu.com/servicios/optimizacion-web-y-seo.html): velocidad y SEO técnico, con un caso medido por Google.
+- [Ciberseguridad](https://neracosu.com/servicios/ciberseguridad.html): auditoría y endurecimiento de sitios y servidores.
+- [Hosting](https://neracosu.com/servicios/hosting.html): hospedaje administrado.
+
+## Sistemas por actividad, con precios
+
+- [Planes por industria](https://neracosu.com/para/): hoteles, restaurantes y bares, reservas, comercio y tiendas, cobros y pagos, citas y servicios, logística y aduana, integraciones y bots.
+- [Calculadora de proyecto](https://neracosu.com/calculadora.html): estimado de un proyecto a la medida.
