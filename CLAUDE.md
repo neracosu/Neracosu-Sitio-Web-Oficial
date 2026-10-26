@@ -56,15 +56,14 @@ está en `hoja-de-vida.html` (fichas 10 y 11) y en el chiste de `nera.py` («dev
 `assets/img/og-image.jpg`, que se renderiza desde `build-para/og-card.html`
 con Chromium headless. Si cambia, cambia en todos.
 
-## Terrazas VIP Sport Park está en pausa (desde el 2026-10-06)
+## Terrazas VIP Sport Park reabrió (2026-10-26)
 
-El complejo cerró por ahora (dicho por el dueño). `/para/reservas`, `/para/cobros-y-pagos`, `/para/citas-y-servicios`
-y el índice de `/para/` ya no dicen que opera hoy: reservas pasó de «dos complejos» a un bowling de La Guaira en
-operación, y cobros de «tres negocios» a dos. Terrazas queda como el sistema más grande construido, «en pausa».
-La tarjeta de Terrazas en el portafolio de la home, su enlace en «Compruébelo» y `/para/integraciones-api-y-bots`
-la muestran con la etiqueta «en pausa». **El número sigue en 24 plataformas** (decisión del dueño, 2026-10-06): la
-plataforma sigue desplegada y `terrazasvip.com` responde.
-Si reabre, se revierte desde `~/backups/web-para-20261006-terrazas`.
+Estuvo en pausa del 2026-10-06 al 23-oct. El 2026-10-26 Neri lanzó **Terrazas 2.0**: imagen nueva, web más
+optimizada (igual que VIP Play) e integrada con las APIs de **INVU POS**. Se quitó el «en pausa» de la home y de
+`/para/` (reservas, cobros-y-pagos, integraciones-api-y-bots, citas-y-servicios e índice) revirtiendo solo los
+fragmentos de la pausa en `~/build-para/body-*.html` contra `~/backups/web-para-20261006-terrazas`; lo cambiado
+después (26 plataformas, URLs sin .html) se conservó. Respaldo previo: `~/backups/urls-limpias-20261026/`.
+Terrazas y VIP Play tienen validación automática de pagos y bot de WhatsApp (Neri, 2026-10-26).
 
 ## Marca
 
