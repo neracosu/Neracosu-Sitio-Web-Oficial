@@ -19,7 +19,7 @@
   var NICHOS = {
     hoteles: {
       nombre: 'Hoteles y posadas',
-      url: '/para/hoteles.html',
+      url: '/para/hoteles',
       descuento: true,
       planes: [
         { nombre: 'Esencial', alcance: 'hasta 15 habitaciones', precio: 2800, mes: 100 },
@@ -29,7 +29,7 @@
     },
     restaurantes: {
       nombre: 'Restaurantes y bares',
-      url: '/para/restaurantes-y-bares.html',
+      url: '/para/restaurantes-y-bares',
       descuento: true,
       planes: [
         { nombre: 'Esencial', alcance: 'un local', precio: 2500, mes: 100 },
@@ -39,7 +39,7 @@
     },
     reservas: {
       nombre: 'Reservas, eventos y taquilla',
-      url: '/para/reservas.html',
+      url: '/para/reservas',
       descuento: true,
       planes: [
         { nombre: 'Esencial', alcance: 'un espacio', precio: 2400, mes: 100 },
@@ -49,7 +49,7 @@
     },
     cobros: {
       nombre: 'Cobros y pagos',
-      url: '/para/cobros-y-pagos.html',
+      url: '/para/cobros-y-pagos',
       descuento: false,
       planes: [
         { nombre: 'Un método', alcance: 'validación de pago móvil', precio: 1300, mes: 0 },
@@ -59,7 +59,7 @@
     },
     logistica: {
       nombre: 'Logística y aduana',
-      url: '/para/logistica-y-aduana.html',
+      url: '/para/logistica-y-aduana',
       descuento: true,
       planes: [
         { nombre: 'Fase 1', alcance: 'solicitudes y recaudos', precio: 4700, mes: 170 },
@@ -69,7 +69,7 @@
     },
     comercio: {
       nombre: 'Comercio e inventario',
-      url: '/para/comercio-y-tienda.html',
+      url: '/para/comercio-y-tienda',
       descuento: true,
       planes: [
         { nombre: 'Esencial', alcance: 'un local, mostrador', precio: 2500, mes: 100 },
@@ -82,7 +82,7 @@
        del diagnostico y no de una tabla. */
     citas: {
       nombre: 'Servicios con cita',
-      url: '/para/citas-y-servicios.html',
+      url: '/para/citas-y-servicios',
       descuento: false,
       planes: [
         { nombre: 'Esencial', alcance: 'hasta 3 profesionales', precio: 2400, mes: 100 },
@@ -105,7 +105,7 @@
     },
     integraciones: {
       nombre: 'API, bots e integraciones',
-      url: '/para/integraciones-api-y-bots.html',
+      url: '/para/integraciones-api-y-bots',
       descuento: false,
       planes: [
         { nombre: 'Un conector', alcance: 'un sistema', precio: 1200, mes: 0 },

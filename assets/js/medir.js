@@ -27,7 +27,11 @@
     if (sesion.length < 8) sesion = (sesion + '00000000').slice(0, 8);
     guardado('sessionStorage', 'nc_s', sesion);
   }
+  // Desde el 2026-10-26 las URLs van sin .html (/calculadora en vez de /calculadora.html).
+  // Se sigue reportando el archivo servido, con .html, para que el panel (que busca
+  // «/calculadora.html») y lo medido antes sigan cuadrando.
   var ruta = location.pathname;
+  if (ruta !== '/' && !/\/$/.test(ruta) && !/\.[a-z0-9]+$/i.test(ruta)) ruta += '.html';
 
   function enviar(datos) {
     datos.s = sesion;

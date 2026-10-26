@@ -260,3 +260,19 @@ en `assets/img/servicios/pagespeed-*` (completa para escritorio y `-puntajes` pa
 página que el sitio fue hackeado** (se vende ciberseguridad): las URL basura van como «direcciones viejas».
 Esa página **no carga GSAP, ScrollTrigger, Lenis ni anime.js** (con ellos daba 67 en móvil; sin ellos, 97). El resto
 de `/servicios/` y `/blog/` todavía los carga.
+
+## URLs sin .html (desde el 2026-10-26)
+
+neracosu.com publica sus páginas propias (raíz, `/para/`, `/servicios/`, `/blog/`) **sin `.html`**:
+`/calculadora`, `/para/hoteles`, `/servicios/pago-movil-en-shopify`. Los archivos siguen llamándose `.html`.
+Las reglas están en el `.htaccess` raíz (solo para neracosu.com): la dirección vieja da 301 a la limpia y la
+limpia sirve el archivo. Respaldo de antes del cambio: `~/backups/urls-limpias-20261026/`.
+
+- **Enlaces, `canonical`, `og:url`, hreflang, JSON-LD, sitemap y `llms.txt` van sin `.html`.** Un enlace con
+  `.html` funciona (301), pero le cuesta un salto a cada visita y a Google.
+- `/para/`: `build.py` pone `{{SLUG}}` sin `.html` (el archivo de salida sí lo lleva).
+- **Ninguna subcarpeta de esas cuatro puede tener su propio `RewriteEngine On`**: anula las reglas de la raíz
+  en esa carpeta. Por eso la 301 de `/servicios/hoteles` pasó al `.htaccess` raíz.
+- `medir.js` sigue reportando la ruta con `.html` (`/calculadora.html`) para que el panel de prospección y lo
+  medido antes cuadren.
+- Páginas de respuesta nuevas: `~/build-para/verificar-respuesta.py` exige el canonical sin `.html`.
