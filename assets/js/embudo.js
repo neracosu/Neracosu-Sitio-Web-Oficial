@@ -80,7 +80,7 @@
         + '<h1>Le muestro cómo <span class="it">quedaría</span> su sistema, con su marca.</h1>'
         + '<p class="ayuda">Responda cuatro preguntas tocando. Al final le digo qué le conviene y, si su caso califica, le armo una demostración con su nombre y sus productos para que la vea en su teléfono. Gratis, antes de pagar nada.</p>'
         + '<button type="button" class="btn-p" data-ir="1">Empezar</button>'
-        + '<div class="resp"><span>26 plataformas en producción</span><span>Pagos validados contra el banco</span><span>Todo por escrito</span></div>';
+        + '<div class="resp"><span>26 plataformas en producción</span><span>Pagos validados contra el banco</span><span>Le respondo yo, no un vendedor</span></div>';
     }, despues: function () { telefonoSistema(); } },
     { id: 'rubro', clave: 'rubro', render: function () { return pregunta(1, '¿A qué se dedica su negocio?', 'Busque el suyo en los ejemplos. Si no aparece, «otra cosa» y seguimos igual.', D.RUBROS); },
       vista: function (v) { mostrar(P.sistema({ rubro: v, tamano: R.tamano }, R.marca)); },
@@ -125,16 +125,10 @@
         + '<button type="submit" class="btn-p">' + (d.demo ? 'Quiero ver mi demostración' : 'Quiero mi diagnóstico gratis') + '</button>'
         + '<p class="aviso" hidden></p>'
         + '</form>'
-        + '<p class="nota">Le escribo yo por WhatsApp, en menos de 24 horas hábiles. Sin llamadas: todo por escrito.</p>';
+        + '<p class="nota">Le respondo yo por WhatsApp, en menos de 24 horas hábiles.</p>';
     }, despues: function () {
       medir('datos'); telefonoSistema();
-      var f = $('#datos'); if (!f) return;
-      var inMarca = $('#inMarca');
-      inMarca.addEventListener('input', function () { R.marca = inMarca.value.trim().slice(0, 120); guardar(); marcaEnVivo(); });
-      $('#inDonde').addEventListener('input', function () { R.donde = this.value.trim().slice(0, 160); guardar(); });
-      $('#inWa').addEventListener('input', function () { R.wa = this.value.trim().slice(0, 40); guardar(); });
-      f.addEventListener('submit', function (ev) { ev.preventDefault(); enviar(f); });
-      if (matchMedia('(min-width: 900px)').matches) inMarca.focus();
+      if (matchMedia('(min-width: 900px)').matches && $('#inMarca')) $('#inMarca').focus();
     } },
     { id: 'gracias', render: function () {
       var d = D.decidir(R), s = d.sistema;
@@ -242,6 +236,14 @@
   }
 
   /* ---------- eventos ---------- */
+  // Delegados en el panel desde el arranque: no hay ventana entre pintar un paso y escuchar sus campos.
+  panel.addEventListener('input', function (ev) {
+    var t = ev.target; if (!t || !t.id) return;
+    if (t.id === 'inMarca') { R.marca = t.value.trim().slice(0, 120); guardar(); marcaEnVivo(); }
+    else if (t.id === 'inDonde') { R.donde = t.value.trim().slice(0, 160); guardar(); }
+    else if (t.id === 'inWa') { R.wa = t.value.trim().slice(0, 40); guardar(); }
+  });
+  panel.addEventListener('submit', function (ev) { if (ev.target && ev.target.id === 'datos') { ev.preventDefault(); enviar(ev.target); } });
   panel.addEventListener('click', function (ev) {
     var b = ev.target.closest('[data-ir]'); if (b) { ir(Number(b.getAttribute('data-ir'))); return; }
     if (ev.target.closest('.atras')) { volver(); return; }
