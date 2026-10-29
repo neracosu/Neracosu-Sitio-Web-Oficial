@@ -204,7 +204,7 @@ cualquiera.
 El diagnóstico técnico **ya no cuesta $250: es gratis**, y viene con la oferta de una demostración con la marca y
 los productos del prospecto «cuando el caso lo permite» (decisión del dueño tras el prototipo de una tienda que
 convirtió en dos días). Vive en el bloque `.entrada` de las nueve páginas de `/para/` (plantilla de
-`~/build-para/precios.py` y `body-index.html`, con botón a WhatsApp), en la tercera tarjeta de «Tres formas de
+`~/build-para/precios.py` y `body-index.html`, con botón a `/empezar` desde el 2026-10-29; antes a WhatsApp), en la tercera tarjeta de «Tres formas de
 empezar» de la home, en el resultado «Diagnóstico primero» de `assets/js/asistente.js` y en las plantillas de
 propuestas de `prospectos.neracosu.com/plantillas/` (casilla «Diagnóstico · gratis» y el destacado «¿Prefiere
 empezar pequeño?»). **No volver a ponerle precio en un sitio sin cambiarlo en los otros tres.** La demostración se
