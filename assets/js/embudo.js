@@ -59,10 +59,24 @@
     }, 220);
   }
   function telefonoSistema() { mostrar(function () { return P.sistema(R, R.marca); }); }
+  // Chips que flotan alrededor del telefono (a: izquierda abajo, b: derecha, c: izquierda)
+  function chips(a, b, c) {
+    [['#chipa', a], ['#chipb', b], ['#chipc', c]].forEach(function (x) { var e = $(x[0]); if (!e) return; e.innerHTML = x[1] || ''; e.classList.toggle('on', !!x[1]); });
+  }
+  function marcaCorta() { return esc((R.marca || 'Su marca aquí').slice(0, 28)); }
   function marcaEnVivo() {
     var m = ui.querySelector('.marca');
     // En el telefono cabe hasta 28 letras; al panel va completo.
     if (m) { m.textContent = (R.marca || 'Su marca aquí').slice(0, 28); m.classList.toggle('vacia', !R.marca); }
+    if (paso >= 5) chips('', '<b>' + marcaCorta() + '</b>', '');
+  }
+  // Portada: el telefono pasa solo por tres pantallas reales mientras nadie empieza.
+  var cicloTimer = null, cicloI = 0;
+  function cicloPortada() {
+    clearTimeout(cicloTimer);
+    if (paso !== 0) return;
+    mostrar(P.portada(cicloI++, R.marca));
+    cicloTimer = setTimeout(cicloPortada, 2600);
   }
 
   /* ---------- pasos ---------- */
@@ -84,13 +98,13 @@
         + '<p class="ayuda">Responda cuatro preguntas tocando. Al final le digo qué le conviene y, si su caso califica, le armo una demostración con su nombre y sus productos para que la vea en su teléfono. Gratis, antes de pagar nada.</p>'
         + '<button type="button" class="btn-p" data-ir="1">Empezar</button>'
         + '<div class="resp"><span>26 plataformas en producción</span><span>Pagos validados contra el banco</span><span>Le respondo yo, no un vendedor</span></div>';
-    }, despues: function () { telefonoSistema(); } },
+    }, despues: function () { cicloI = 0; cicloPortada(); chips('<b>Pago validado</b> · Bs 12.450', '<b>Reserva</b> 2:14 a. m.', '<b>Hab. 204</b> · lista'); } },
     { id: 'rubro', clave: 'rubro', render: function () { return pregunta(1, '¿A qué se dedica su negocio?', 'Busque el suyo en los ejemplos. Si no aparece, «otra cosa» y seguimos igual.', D.RUBROS); },
-      vista: function (v) { mostrar(P.sistema({ rubro: v, tamano: R.tamano }, R.marca)); },
+      vista: function (v) { mostrar(P.sistema({ rubro: v, tamano: R.tamano }, R.marca)); var o = D.RUBROS.filter(function (x) { return x.v === v; })[0]; chips('<b>' + esc(o ? o.t : '') + '</b> · sistema real', '', ''); },
       espera: 420 },
     { id: 'actual', clave: 'actual', render: function () { return pregunta(2, '¿Cómo lo lleva hoy?', 'Sin juicio. La mayoría empieza en cuaderno y WhatsApp.', D.ACTUAL); },
-      vista: function (v) { mostrar(P.hoy(v, R.marca)); },
-      al: function () { telefonoSistema(); },
+      vista: function (v) { mostrar(P.hoy(v, R.marca)); chips('', '<b>así está hoy</b>', ''); },
+      al: function () { telefonoSistema(); chips('', '', '<b>así quedaría</b>'); },
       espera: 900 },
     { id: 'objetivo', clave: 'objetivo', render: function () { return pregunta(3, '¿Qué quiere lograr primero?', 'Toque uno y mírelo pasar en el teléfono.', D.OBJETIVOS); },
       vista: function (v) { P.efecto(v, R, R.marca, raiz); },
@@ -109,7 +123,7 @@
       else h += '<h2 class="remate">Le entrego el diagnóstico <span class="it">gratis</span>.</h2><p class="ayuda">Reviso cómo trabaja hoy y le digo qué le conviene, en qué orden y cuánto costaría cada fase. Si de ahí sale que no le hace falta un sistema, se lo digo y le ahorro varios miles.</p><button type="button" class="btn-p" data-ir="6">Quiero mi diagnóstico gratis</button><a class="enl" href="/calculadora" target="_blank" rel="noopener">Si prefiere un número ya, la calculadora se lo da en tres pasos</a>';
       return h;
     }, despues: function () {
-      medir('resultado');
+      medir('resultado'); chips('', '<b>' + marcaCorta() + '</b>', '');
       var m = $('#maq'); if (!m) return;
       var t = m.getAttribute('data-txt'), nombre = m.getAttribute('data-nombre'), i = 0;
       var pintarTexto = function (s) { m.innerHTML = esc(s).replace(esc(nombre), '<span class="c">' + esc(nombre) + '</span>'); };
@@ -130,7 +144,7 @@
         + '</form>'
         + '<p class="nota">Le respondo yo por WhatsApp, en menos de 24 horas hábiles.</p>';
     }, despues: function () {
-      medir('datos'); telefonoSistema();
+      medir('datos'); telefonoSistema(); chips('', '<b>' + marcaCorta() + '</b>', '');
       if (matchMedia('(min-width: 900px)').matches && $('#inMarca')) $('#inMarca').focus();
     } },
     { id: 'gracias', render: function () {
@@ -139,7 +153,7 @@
         + '<p class="ayuda">Le escribo por WhatsApp en menos de 24 horas hábiles con tres preguntas cortas sobre su negocio. El diagnóstico por escrito le llega en una semana.' + (d.demo ? ' Si su caso califica para la demostración, se lo digo en ese primer mensaje, con la fecha.' : '') + '</p>'
         + (s.slug ? '<a class="enl" href="/para/' + s.slug + '" target="_blank" rel="noopener">Mientras tanto, esto es lo que hace el sistema que le recomendé</a>' : '')
         + '<button type="button" class="btn-g" data-ir="0">Volver al inicio</button>';
-    }, despues: function () { telefonoSistema(); } }
+    }, despues: function () { telefonoSistema(); chips('<b>' + marcaCorta() + '</b> · en marcha', '', '<b>diagnóstico</b> en 7 días'); } }
   ];
 
   var vencido = new Date() > new Date('2027-01-01T04:00:00Z');
@@ -169,6 +183,7 @@
     // al volver o reiniciar se corta.
     if ((dir || 1) < 0 || n === 0) P.limpiar(raiz);
     paso = n;
+    if (n !== 0) clearTimeout(cicloTimer);
     pintar(dir || 1);
     var hash = n ? '#' + n : '';
     if (location.hash !== hash && !(n === 0 && !location.hash)) { ignorarHash = true; location.hash = hash || '#0'; }
@@ -263,8 +278,15 @@
     if ((ev.key === 'Escape' || ev.key === 'ArrowLeft') && !enCampo) { volver(); return; }
     if (PASOS[paso].clave && /^[1-7]$/.test(ev.key) && !enCampo) { var ops = panel.querySelectorAll('.op'); var b = ops[Number(ev.key) - 1]; if (b && !b.disabled) elegir(b.getAttribute('data-v')); }
   });
-  var tx = null, ty = null;
-  addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, { passive: true });
+  var tx = null, ty = null, permisoPedido = false;
+  addEventListener('touchstart', function (e) {
+    tx = e.touches[0].clientX; ty = e.touches[0].clientY;
+    // iOS pide permiso para el giroscopio con un gesto; si lo niegan, el fondo sigue respondiendo al toque.
+    if (!permisoPedido && window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === 'function') {
+      permisoPedido = true;
+      try { DeviceOrientationEvent.requestPermission().catch(function () { /* negado */ }); } catch (err) { /* sin permiso */ }
+    }
+  }, { passive: true });
   addEventListener('touchend', function (e) {
     if (tx === null || !e.changedTouches.length) return;
     var dx = e.changedTouches[0].clientX - tx, dy = Math.abs(e.changedTouches[0].clientY - ty); tx = null;
