@@ -47,15 +47,18 @@
   escalar(); addEventListener('resize', escalar);
 
   var sinMovimiento = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function mostrar(html) {
-    if (sinMovimiento) { ui.innerHTML = html; return; }
+  // Acepta el HTML o una funcion que lo arma: la funcion se llama al momento de pintar (220 ms despues),
+  // para que el nombre que el visitante escribio mientras tanto no se pise con uno viejo.
+  function mostrar(h) {
+    var armar = function () { return typeof h === 'function' ? h() : h; };
+    if (sinMovimiento) { ui.innerHTML = armar(); return; }
     ui.classList.add('sale');
     setTimeout(function () {
-      ui.innerHTML = html; ui.classList.remove('sale'); ui.classList.add('entra');
+      ui.innerHTML = armar(); ui.classList.remove('sale'); ui.classList.add('entra');
       requestAnimationFrame(function () { requestAnimationFrame(function () { ui.classList.remove('entra'); }); });
     }, 220);
   }
-  function telefonoSistema() { mostrar(P.sistema(R, R.marca)); }
+  function telefonoSistema() { mostrar(function () { return P.sistema(R, R.marca); }); }
   function marcaEnVivo() {
     var m = ui.querySelector('.marca');
     // En el telefono cabe hasta 28 letras; al panel va completo.
