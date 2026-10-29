@@ -227,6 +227,7 @@ Tres campos y el botón, nada más:
 - Su nombre.
 - ¿Dónde puedo ver su negocio? (Instagram, página web o dirección). Un solo campo libre.
 - Su WhatsApp.
+- Su correo (obligatorio desde el 2026-10-29, por decisión de Neri; antes no se pedía).
 
 Más el campo trampa `sitio` oculto, como en el formulario de la home. Correo no se pide. Se envía al
 panel (`POST /api/web/solicitud`) con `type: "embudo"`, las cuatro respuestas, la calificación, el
@@ -326,7 +327,7 @@ landing, después la medición en `/web`. Así la landing nunca manda algo que e
 3. Califica para demostración: mediano o grande, o quien ya vende en línea y cobra a mano. El
    resto recibe diagnóstico por escrito, con el mismo tono.
 4. Sin precios en la landing; enlace a /para/ y una línea con la promoción real.
-5. Solo tres datos al final, sin correo.
+5. ~~Solo tres datos al final, sin correo.~~ Neri (2026-10-29): el correo es importante; son cuatro datos y el correo es obligatorio.
 6. El parámetro de origen es `de=`, más corto que `utm_source` para dictarlo en un video.
 7. Panel primero, landing después.
 8. La interactividad es el teléfono que se convierte en su sistema y toma su nombre, no efectos

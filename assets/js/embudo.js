@@ -133,11 +133,12 @@
     } },
     { id: 'datos', render: function () {
       var d = D.decidir(R);
-      return '<span class="ojo">Tres datos y listo</span><h2>' + (d.demo ? 'Su demostración, con su nombre.' : 'Su diagnóstico, gratis.') + '</h2>'
+      return '<span class="ojo">Cuatro datos y listo</span><h2>' + (d.demo ? 'Su demostración, con su nombre.' : 'Su diagnóstico, gratis.') + '</h2>'
         + '<form id="datos" novalidate>'
         + '<div class="campo"><label for="inMarca">Nombre de su negocio</label><input id="inMarca" name="marca" maxlength="120" placeholder="Escríbalo y mire el teléfono" autocomplete="organization" value="' + esc(R.marca || '') + '"></div>'
         + '<div class="campo"><label for="inDonde">¿Dónde puedo verlo? Instagram, página o dirección</label><input id="inDonde" name="donde" maxlength="160" placeholder="@sunegocio" value="' + esc(R.donde || '') + '"></div>'
         + '<div class="campo"><label for="inWa">Su WhatsApp</label><input id="inWa" name="wa" maxlength="40" placeholder="0412 000 0000" inputmode="tel" autocomplete="tel" value="' + esc(R.wa || '') + '"></div>'
+        + '<div class="campo"><label for="inCorreo">Su correo</label><input id="inCorreo" name="correo" type="email" maxlength="191" placeholder="nombre@correo.com" inputmode="email" autocomplete="email" value="' + esc(R.correo || '') + '"></div>'
         + '<input class="trampa" type="text" name="sitio" tabindex="-1" autocomplete="off" aria-hidden="true">'
         + '<button type="submit" class="btn-p">' + (d.demo ? 'Quiero ver mi demostración' : 'Quiero mi diagnóstico gratis') + '</button>'
         + '<p class="aviso" hidden></p>'
@@ -204,6 +205,7 @@
 
   /* ---------- envio al panel ---------- */
   var URL_SOLICITUD = 'https://prospectos.neracosu.com/api/web/solicitud';
+  var CORREO = /^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]{2,}$/; // la misma regla que valida el panel
   var WA = '584222707095';
   var enviando = false;
   function origenEnlace() {
@@ -217,21 +219,23 @@
   }
   function enviar(f) {
     if (enviando) return;
-    var marca = f.marca.value.trim().slice(0, 120), donde = f.donde.value.trim().slice(0, 160), wa = f.wa.value.trim().slice(0, 40);
+    var marca = f.marca.value.trim().slice(0, 120), donde = f.donde.value.trim().slice(0, 160), wa = f.wa.value.trim().slice(0, 40), correo = f.correo.value.trim().slice(0, 191);
     var mal = [];
     f.querySelectorAll('.campo').forEach(function (c) { c.classList.remove('mal'); });
     if (marca.length < 2) mal.push('marca');
     if (wa.replace(/\D/g, '').length < 7) mal.push('wa');
+    if (!CORREO.test(correo)) mal.push('correo');
     if (mal.length) {
+      var MSG = { marca: 'Escriba el nombre de su negocio.', wa: 'Revise su número de WhatsApp: necesito al menos siete dígitos.', correo: 'Revise su correo: parece mal escrito.' };
       mal.forEach(function (k) { f[k].closest('.campo').classList.add('mal'); });
-      avisar(f, mal[0] === 'marca' ? 'Escriba el nombre de su negocio.' : 'Revise su número de WhatsApp: necesito al menos siete dígitos.');
+      avisar(f, MSG[mal[0]]);
       f[mal[0]].focus();
       return;
     }
-    R.marca = marca; R.donde = donde; R.wa = wa; guardar(); marcaEnVivo();
+    R.marca = marca; R.donde = donde; R.wa = wa; R.correo = correo; guardar(); marcaEnVivo();
     var d = D.decidir(R), resumen = D.resumenWhatsApp(R, d, marca);
     var datos = {
-      nombre: marca + (donde ? ' · ' + donde : ''), phone: wa, type: 'embudo', message: resumen,
+      nombre: marca + (donde ? ' · ' + donde : ''), phone: wa, email: correo, type: 'embudo', message: resumen,
       respuestas: { rubro: R.rubro, actual: R.actual, objetivo: R.objetivo, tamano: String(R.tamano), sistema: d.clave },
       calificacion: d.demo ? 'demo' : 'diagnostico', origen: origenEnlace(), pagina: '/empezar.html',
       sesion: (typeof window.ncSesion === 'function' ? window.ncSesion() : '') || '', sitio: f.sitio.value
@@ -260,6 +264,7 @@
     if (t.id === 'inMarca') { R.marca = t.value.trim().slice(0, 120); guardar(); marcaEnVivo(); }
     else if (t.id === 'inDonde') { R.donde = t.value.trim().slice(0, 160); guardar(); }
     else if (t.id === 'inWa') { R.wa = t.value.trim().slice(0, 40); guardar(); }
+    else if (t.id === 'inCorreo') { R.correo = t.value.trim().slice(0, 191); guardar(); }
   });
   panel.addEventListener('submit', function (ev) { if (ev.target && ev.target.id === 'datos') { ev.preventDefault(); enviar(ev.target); } });
   panel.addEventListener('click', function (ev) {

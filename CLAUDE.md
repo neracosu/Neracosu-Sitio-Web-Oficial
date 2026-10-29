@@ -217,7 +217,7 @@ Landing para campañas (TikTok, grupos, redes): `neracosu.com/empezar` (alias `/
 `?de=tiktok`, `?de=whatsapp`, etc., que `medir.js` toma como origen antes que `utm_source`). Cuatro preguntas con un
 teléfono dibujado en HTML que se convierte en el sistema del visitante, recomendación con captura real, remate según
 califique (mediano/grande o quien vende en línea y cobra a mano → «Quiero ver mi demostración»; el resto → diagnóstico
-gratis) y tres datos que van al panel (`type: "embudo"`, respuestas, calificación, origen) con respaldo de WhatsApp si el
+gratis) y cuatro datos (negocio, dónde verlo, WhatsApp y correo, todos menos «dónde verlo» obligatorios) que van al panel (`type: "embudo"`, respuestas, calificación, origen) con respaldo de WhatsApp si el
 panel no responde. Sin cifras de proyecto: enlaza a `/para/`. Diseño: `docs/superpowers/specs/2026-10-28-embudo-empezar-design.md`;
 plan: `docs/superpowers/plans/2026-10-28-embudo-empezar-landing.md`.
 
