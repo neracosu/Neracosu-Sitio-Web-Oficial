@@ -93,7 +93,7 @@ escrito es el plazo. El sistema completo de gimnasios va en `/para/cobros-y-pago
 profesional es lo único del catálogo que **no está construido** (se verificó:
 cero coincidencias de patrón de cita en los 5 proyectos). Lo que sí se reutiliza
 es el calendario, el cupo retenido, el cobro validado y el personal con PIN. La
-página lo dice de frente y ofrece el diagnóstico de $250. **No ponerle una tabla
+página lo dice de frente y ofrece el diagnóstico (gratis desde el 2026-10-28; antes $250). **No ponerle una tabla
 de precios sin construir primero ese módulo.**
 
 **No se editan a mano.** Se ensamblan con `/home/neracosu/build-para/build.py`
@@ -198,6 +198,18 @@ cualquiera.
   `TARIFA_HORA` en `calculator.js`.
 
 **Antes de publicar una cifra nueva, preguntarse dónde más vive ese número.**
+
+## Diagnóstico gratis y demostración con su marca (desde el 2026-10-28)
+
+El diagnóstico técnico **ya no cuesta $250: es gratis**, y viene con la oferta de una demostración con la marca y
+los productos del prospecto «cuando el caso lo permite» (decisión del dueño tras el prototipo de una tienda que
+convirtió en dos días). Vive en el bloque `.entrada` de las nueve páginas de `/para/` (plantilla de
+`~/build-para/precios.py` y `body-index.html`, con botón a WhatsApp), en la tercera tarjeta de «Tres formas de
+empezar» de la home, en el resultado «Diagnóstico primero» de `assets/js/asistente.js` y en las plantillas de
+propuestas de `prospectos.neracosu.com/plantillas/` (casilla «Diagnóstico · gratis» y el destacado «¿Prefiere
+empezar pequeño?»). **No volver a ponerle precio en un sitio sin cambiarlo en los otros tres.** La demostración se
+ofrece «según el caso» a propósito: no es para todo el que escribe, se arma cuando el prospecto ya contó su
+negocio y confirmó que la quiere. Respaldo de antes: `~/backups/diagnostico-gratis-20261028/`.
 
 ## Vocabulario y calculadoras de `/para/` (desde el 2026-10-05)
 

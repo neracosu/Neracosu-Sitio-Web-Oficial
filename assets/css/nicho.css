@@ -942,6 +942,7 @@
 .entrada p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--text-muted); max-width: 62ch; }
 .entrada p + p { margin-top: 12px; }
 .entrada strong { color: #fff; }
+.entrada .entrada-cta { margin-top: 20px; }
 .entrada-precio { text-align: right; }
 @media (max-width: 760px) { .entrada-precio { text-align: left; } }
 .entrada-precio .n {

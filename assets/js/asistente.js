@@ -98,9 +98,9 @@
       descuento: false,
       aMedida: true,
       planes: [
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
-        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 250 },
+        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 0 },
+        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 0 },
+        { nombre: 'Diagnóstico primero', alcance: 'plan por fases antes de cotizar', precio: 0 },
       ],
     },
     integraciones: {
@@ -238,7 +238,7 @@
       var texto = 'Hola Neri, usé el asistente de su web.\n\n'
         + '• Rubro: ' + d.datos.nombre + '\n'
         + (d.datos.sinPrecio
-            ? '• Entiendo que acá se empieza por el diagnóstico ($170)\n'
+            ? '• Entiendo que acá se empieza por el diagnóstico gratis\n'
             : d.datos.aMedida
               ? '• El asistente dice que mi caso no encaja en un plan cerrado\n'
               : '• Plan sugerido: ' + d.plan.nombre + ' (' + d.plan.alcance + ')\n')
@@ -264,8 +264,8 @@
         h += '<h3 class="asis-titulo">Su caso no encaja en un plan cerrado</h3>';
         h += '<p class="asis-ayuda">Y prefiero decírselo antes que venderle uno que no le sirve. '
            + 'Lo que le conviene es empezar por el diagnóstico: reviso su operación y le entrego un '
-           + 'plan por fases con costos, le sirva conmigo o con cualquier otro. Si después contrata, '
-           + 'se le descuenta completo.</p>';
+           + 'plan por fases con costos, le sirva conmigo o con cualquier otro. Es gratis, y si el caso '
+           + 'lo permite le armo una demostración con su marca para que la vea en su teléfono.</p>';
       } else {
         h += '<h3 class="asis-titulo">' + d.datos.nombre + ' &mdash; plan ' + d.plan.nombre + '</h3>';
         h += '<p class="asis-ayuda">' + d.plan.alcance.charAt(0).toUpperCase() + d.plan.alcance.slice(1)
@@ -274,9 +274,9 @@
 
       h += '<div class="asis-precio">';
       if (d.datos.sinPrecio) {
-        h += '<span class="asis-n">$250</span>';
-        h += '<span class="asis-d">diagnóstico técnico y plan por fases &middot; se descuenta completo '
-           + 'si después contrata</span>';
+        h += '<span class="asis-n">Gratis</span>';
+        h += '<span class="asis-d">diagnóstico técnico y plan por fases &middot; y una demostración con '
+           + 'su marca si el caso lo permite</span>';
         h += '</div>';
       } else {
       if (d.descuento) {
