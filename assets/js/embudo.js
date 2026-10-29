@@ -58,7 +58,8 @@
   function telefonoSistema() { mostrar(P.sistema(R, R.marca)); }
   function marcaEnVivo() {
     var m = ui.querySelector('.marca');
-    if (m) { m.textContent = R.marca || 'Su marca aquí'; m.classList.toggle('vacia', !R.marca); }
+    // En el telefono cabe hasta 28 letras; al panel va completo.
+    if (m) { m.textContent = (R.marca || 'Su marca aquí').slice(0, 28); m.classList.toggle('vacia', !R.marca); }
   }
 
   /* ---------- pasos ---------- */
@@ -114,11 +115,34 @@
       telefonoSistema();
     } },
     { id: 'datos', render: function () {
-      return '<span class="ojo">Tres datos y listo</span><h2>Su sistema, con su nombre.</h2><p class="ayuda">El formulario se termina en la siguiente tarea.</p><button type="button" class="btn-p" data-ir="7">Enviar</button>';
-    }, despues: function () { medir('datos'); telefonoSistema(); } },
+      var d = D.decidir(R);
+      return '<span class="ojo">Tres datos y listo</span><h2>' + (d.demo ? 'Su demostración, con su nombre.' : 'Su diagnóstico, gratis.') + '</h2>'
+        + '<form id="datos" novalidate>'
+        + '<div class="campo"><label for="inMarca">Nombre de su negocio</label><input id="inMarca" name="marca" maxlength="120" placeholder="Escríbalo y mire el teléfono" autocomplete="organization" value="' + esc(R.marca || '') + '"></div>'
+        + '<div class="campo"><label for="inDonde">¿Dónde puedo verlo? Instagram, página o dirección</label><input id="inDonde" name="donde" maxlength="160" placeholder="@sunegocio" value="' + esc(R.donde || '') + '"></div>'
+        + '<div class="campo"><label for="inWa">Su WhatsApp</label><input id="inWa" name="wa" maxlength="40" placeholder="0412 000 0000" inputmode="tel" autocomplete="tel" value="' + esc(R.wa || '') + '"></div>'
+        + '<input class="trampa" type="text" name="sitio" tabindex="-1" autocomplete="off" aria-hidden="true">'
+        + '<button type="submit" class="btn-p">' + (d.demo ? 'Quiero ver mi demostración' : 'Quiero mi diagnóstico gratis') + '</button>'
+        + '<p class="aviso" hidden></p>'
+        + '</form>'
+        + '<p class="nota">Le escribo yo por WhatsApp, en menos de 24 horas hábiles. Sin llamadas: todo por escrito.</p>';
+    }, despues: function () {
+      medir('datos'); telefonoSistema();
+      var f = $('#datos'); if (!f) return;
+      var inMarca = $('#inMarca');
+      inMarca.addEventListener('input', function () { R.marca = inMarca.value.trim().slice(0, 120); guardar(); marcaEnVivo(); });
+      $('#inDonde').addEventListener('input', function () { R.donde = this.value.trim().slice(0, 160); guardar(); });
+      $('#inWa').addEventListener('input', function () { R.wa = this.value.trim().slice(0, 40); guardar(); });
+      f.addEventListener('submit', function (ev) { ev.preventDefault(); enviar(f); });
+      if (matchMedia('(min-width: 900px)').matches) inMarca.focus();
+    } },
     { id: 'gracias', render: function () {
-      return '<span class="ojo">Listo</span><h2>Recibido.</h2><button type="button" class="btn-g" data-ir="0">Volver al inicio</button>';
-    } }
+      var d = D.decidir(R), s = d.sistema;
+      return '<span class="ojo">Listo</span><h2>Recibido' + (R.marca ? ', ' + esc(R.marca) : '') + '.</h2>'
+        + '<p class="ayuda">Le escribo por WhatsApp en menos de 24 horas hábiles con tres preguntas cortas sobre su negocio. El diagnóstico por escrito le llega en una semana.' + (d.demo ? ' Si su caso califica para la demostración, se lo digo en ese primer mensaje, con la fecha.' : '') + '</p>'
+        + (s.slug ? '<a class="enl" href="/para/' + s.slug + '" target="_blank" rel="noopener">Mientras tanto, esto es lo que hace el sistema que le recomendé</a>' : '')
+        + '<button type="button" class="btn-g" data-ir="0">Volver al inicio</button>';
+    }, despues: function () { telefonoSistema(); } }
   ];
 
   var vencido = new Date() > new Date('2027-01-01T04:00:00Z');
@@ -164,6 +188,57 @@
     if (p.al) setTimeout(p.al, Math.min(p.espera, 600));
     var botones = panel.querySelectorAll('.op'); botones.forEach(function (b) { b.disabled = true; b.classList.toggle('elegida', b.getAttribute('data-v') === String(v)); });
     setTimeout(function () { if (PASOS[paso] === p) ir(paso + 1); }, sinMovimiento ? Math.min(p.espera, 450) : p.espera);
+  }
+
+  /* ---------- envio al panel ---------- */
+  var URL_SOLICITUD = 'https://prospectos.neracosu.com/api/web/solicitud';
+  var WA = '584222707095';
+  var enviando = false;
+  function origenEnlace() {
+    var q = location.search, m = /[?&]de=([^&#]+)/.exec(q) || /[?&]utm_source=([^&#]+)/.exec(q);
+    if (!m) return '';
+    try { return decodeURIComponent(m[1]); } catch (e) { return m[1]; }
+  }
+  function avisar(f, html) { var a = f.querySelector('.aviso'); a.innerHTML = html; a.hidden = false; }
+  function botonWhatsApp(texto) {
+    return '<br><a class="btn-wa" href="https://wa.me/' + WA + '?text=' + encodeURIComponent(texto) + '" target="_blank" rel="noopener">Enviar por WhatsApp</a>';
+  }
+  function enviar(f) {
+    if (enviando) return;
+    var marca = f.marca.value.trim().slice(0, 120), donde = f.donde.value.trim().slice(0, 160), wa = f.wa.value.trim().slice(0, 40);
+    var mal = [];
+    f.querySelectorAll('.campo').forEach(function (c) { c.classList.remove('mal'); });
+    if (marca.length < 2) mal.push('marca');
+    if (wa.replace(/\D/g, '').length < 7) mal.push('wa');
+    if (mal.length) {
+      mal.forEach(function (k) { f[k].closest('.campo').classList.add('mal'); });
+      avisar(f, mal[0] === 'marca' ? 'Escriba el nombre de su negocio.' : 'Revise su número de WhatsApp: necesito al menos siete dígitos.');
+      f[mal[0]].focus();
+      return;
+    }
+    R.marca = marca; R.donde = donde; R.wa = wa; guardar(); marcaEnVivo();
+    var d = D.decidir(R), resumen = D.resumenWhatsApp(R, d, marca);
+    var datos = {
+      nombre: marca + (donde ? ' · ' + donde : ''), phone: wa, type: 'embudo', message: resumen,
+      respuestas: { rubro: R.rubro, actual: R.actual, objetivo: R.objetivo, tamano: String(R.tamano), sistema: d.clave },
+      calificacion: d.demo ? 'demo' : 'diagnostico', origen: origenEnlace(), pagina: '/empezar.html',
+      sesion: (typeof window.ncSesion === 'function' ? window.ncSesion() : '') || '', sitio: f.sitio.value
+    };
+    var boton = f.querySelector('button[type="submit"]'), texto = boton.textContent;
+    enviando = true; boton.disabled = true; boton.textContent = 'Enviando…';
+    f.querySelector('.aviso').hidden = true;
+    var control = typeof AbortController === 'function' ? new AbortController() : null;
+    var plazo = control ? setTimeout(function () { control.abort(); }, 12000) : null;
+    var fin = function () { enviando = false; boton.disabled = false; boton.textContent = texto; if (plazo) clearTimeout(plazo); };
+    var respaldo = function (msg) { fin(); avisar(f, esc(msg) + ' Envíemela por WhatsApp con el texto ya escrito:' + botonWhatsApp(resumen)); };
+    fetch(URL_SOLICITUD, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos), signal: control ? control.signal : undefined })
+      .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { return { status: res.status, j: j }; }); })
+      .then(function (res) {
+        if (res.status === 200 && res.j.ok) { fin(); medir('enviado'); ir(7); return; }
+        if (res.status === 400 && res.j.mensaje) { fin(); avisar(f, esc(res.j.mensaje)); return; }
+        respaldo(res.j.mensaje || 'No pude guardar su solicitud en este momento.');
+      })
+      .catch(function () { respaldo('No pude guardar su solicitud en este momento.'); });
   }
 
   /* ---------- eventos ---------- */

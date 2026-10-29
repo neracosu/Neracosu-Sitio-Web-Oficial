@@ -13,7 +13,7 @@
   function tam(r) { var t = Number(r && r.tamano); return t === 1 || t === 2 ? t : (t === 0 ? 0 : 1); }
 
   function cab(marca, extra) {
-    var m = marca ? escapar(marca) : 'Su marca aquí';
+    var m = marca ? escapar(String(marca).slice(0, 28)) : 'Su marca aquí';
     return '<div class="cab"><span class="marca' + (marca ? '' : ' vacia') + '">' + m + '</span><span>' + (extra || 'hoy') + '</span></div>';
   }
 
