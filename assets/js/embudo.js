@@ -18,6 +18,7 @@
   var VACIO = { rubro: null, actual: null, objetivo: null, tamano: null, marca: '' };
   var R = leer();
   var paso = 0;
+  var gen = 0; // sube en cada cambio de paso: un temporizador de un paso anterior ya no cuenta
   function leer() {
     try { var g = JSON.parse(sessionStorage.getItem('nc_embudo') || 'null'); if (g && typeof g === 'object') return g; } catch (e) { /* sin storage */ }
     return Object.assign({}, VACIO);
@@ -40,11 +41,15 @@
   }
 
   /* ---------- telefono ---------- */
-  function escalar() {
-    var k = innerWidth < 900 ? Math.min(1, (innerHeight * 0.42) / 620, (innerWidth - 40) / 300) : Math.min(1, (innerHeight * 0.8) / 620);
+  var anchoPrevio = 0;
+  function escalar(forzar) {
+    // El teclado del telefono solo cambia el alto: si el ancho es el mismo, el telefono no se encoge.
+    if (!forzar && innerWidth === anchoPrevio) return;
+    anchoPrevio = innerWidth;
+    var k = innerWidth < 900 ? Math.min(1, (innerHeight * 0.32) / 620, (innerWidth - 40) / 300) : Math.min(1, (innerHeight * 0.8) / 620);
     document.documentElement.style.setProperty('--k', k.toFixed(3));
   }
-  escalar(); addEventListener('resize', escalar);
+  escalar(true); addEventListener('resize', function () { escalar(false); });
 
   var sinMovimiento = matchMedia('(prefers-reduced-motion: reduce)').matches;
   // Acepta el HTML o una funcion que lo arma: la funcion se llama al momento de pintar (220 ms despues),
@@ -99,7 +104,7 @@
         + '<button type="button" class="btn-p" data-ir="1">Empezar</button>'
         + '<div class="resp"><span>26 plataformas en producción</span><span>Pagos validados contra el banco</span><span>Le respondo yo, no un vendedor</span></div>';
     }, despues: function () { cicloI = 0; cicloPortada(); chips('<b>Pago validado</b> · Bs 12.450', '<b>Reserva</b> 2:14 a. m.', '<b>Hab. 204</b> · lista'); } },
-    { id: 'rubro', clave: 'rubro', render: function () { return pregunta(1, '¿A qué se dedica su negocio?', 'Busque el suyo en los ejemplos. Si no aparece, «otra cosa» y seguimos igual.', D.RUBROS); },
+    { id: 'rubro', clave: 'rubro', render: function () { return pregunta(1, '¿A qué se dedica su negocio?', 'Si el suyo no aparece, elija «otra cosa».', D.RUBROS); },
       vista: function (v) { mostrar(P.sistema({ rubro: v, tamano: R.tamano }, R.marca)); var o = D.RUBROS.filter(function (x) { return x.v === v; })[0]; chips('<b>' + esc(o ? o.t : '') + '</b> · sistema real', '', ''); },
       espera: 420 },
     { id: 'actual', clave: 'actual', render: function () { return pregunta(2, '¿Cómo lo lleva hoy?', 'Sin juicio. La mayoría empieza en cuaderno y WhatsApp.', D.ACTUAL); },
@@ -163,7 +168,8 @@
     var p = PASOS[paso], viejo = panel.firstElementChild, el = document.createElement('div');
     el.className = 'paso' + (sinMovimiento ? '' : ' entra');
     var h = p.render();
-    if (paso > 0) h += '<div class="pie"><button type="button" class="atras">← Volver</button><span>' + (paso < 5 ? 'Deslice a la derecha para volver' : '') + '</span></div>';
+    // En la pregunta 1 no hay fila de «Volver» (a la portada se vuelve con el gesto o la tecla): asi cabe entera a 390 px
+    if (paso > 1) h += '<div class="pie"><button type="button" class="atras">← Volver</button><span>' + (paso < 5 ? 'Deslice a la derecha para volver' : '') + '</span></div>';
     el.innerHTML = h;
     if (vencido) { var pr = el.querySelector('.promo'); if (pr) pr.remove(); }
     if (viejo) { if (sinMovimiento) viejo.remove(); else { viejo.classList.add(dir < 0 ? 'entra' : 'sale'); setTimeout(function () { viejo.remove(); }, 300); } }
@@ -183,7 +189,8 @@
     // Al avanzar, el efecto del telefono termina solo (el pago llega a «exitoso» ya en la pregunta 4);
     // al volver o reiniciar se corta.
     if ((dir || 1) < 0 || n === 0) P.limpiar(raiz);
-    paso = n;
+    if (n === 6 && R.enviado) n = 7; // ya envio: «atras» no vuelve al formulario lleno
+    paso = n; gen++;
     if (n !== 0) clearTimeout(cicloTimer);
     pintar(dir || 1);
     var hash = n ? '#' + n : '';
@@ -200,7 +207,8 @@
     if (p.vista) p.vista(val);
     if (p.al) setTimeout(p.al, Math.min(p.espera, 600));
     var botones = panel.querySelectorAll('.op'); botones.forEach(function (b) { b.disabled = true; b.classList.toggle('elegida', b.getAttribute('data-v') === String(v)); });
-    setTimeout(function () { if (PASOS[paso] === p) ir(paso + 1); }, sinMovimiento ? Math.min(p.espera, 450) : p.espera);
+    var g = gen;
+    setTimeout(function () { if (gen === g && PASOS[paso] === p) ir(paso + 1); }, sinMovimiento ? Math.min(p.espera, 450) : p.espera);
   }
 
   /* ---------- envio al panel ---------- */
@@ -233,7 +241,7 @@
       return;
     }
     R.marca = marca; R.donde = donde; R.wa = wa; R.correo = correo; guardar(); marcaEnVivo();
-    var d = D.decidir(R), resumen = D.resumenWhatsApp(R, d, marca);
+    var d = D.decidir(R), resumen = D.resumenWhatsApp(R, d, marca, donde);
     var datos = {
       nombre: marca + (donde ? ' · ' + donde : ''), phone: wa, email: correo, type: 'embudo', message: resumen,
       respuestas: { rubro: R.rubro, actual: R.actual, objetivo: R.objetivo, tamano: String(R.tamano), sistema: d.clave },
@@ -250,7 +258,7 @@
     fetch(URL_SOLICITUD, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos), signal: control ? control.signal : undefined })
       .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { return { status: res.status, j: j }; }); })
       .then(function (res) {
-        if (res.status === 200 && res.j.ok) { fin(); medir('enviado'); ir(7); return; }
+        if (res.status === 200 && res.j.ok) { fin(); R.enviado = true; guardar(); medir('enviado'); ir(7); return; }
         if (res.status === 400 && res.j.mensaje) { fin(); avisar(f, esc(res.j.mensaje)); return; }
         respaldo(res.j.mensaje || 'No pude guardar su solicitud en este momento.');
       })
@@ -268,7 +276,7 @@
   });
   panel.addEventListener('submit', function (ev) { if (ev.target && ev.target.id === 'datos') { ev.preventDefault(); enviar(ev.target); } });
   panel.addEventListener('click', function (ev) {
-    var b = ev.target.closest('[data-ir]'); if (b) { ir(Number(b.getAttribute('data-ir'))); return; }
+    var b = ev.target.closest('[data-ir]'); if (b) { if (b.getAttribute('data-ir') === '1') pedirGiroscopio(); ir(Number(b.getAttribute('data-ir'))); return; }
     if (ev.target.closest('.atras')) { volver(); return; }
     var o = ev.target.closest('.op'); if (o && !o.disabled) elegir(o.getAttribute('data-v'));
   });
@@ -284,14 +292,14 @@
     if (PASOS[paso].clave && /^[1-7]$/.test(ev.key) && !enCampo) { var ops = panel.querySelectorAll('.op'); var b = ops[Number(ev.key) - 1]; if (b && !b.disabled) elegir(b.getAttribute('data-v')); }
   });
   var tx = null, ty = null, permisoPedido = false;
-  addEventListener('touchstart', function (e) {
-    tx = e.touches[0].clientX; ty = e.touches[0].clientY;
-    // iOS pide permiso para el giroscopio con un gesto; si lo niegan, el fondo sigue respondiendo al toque.
-    if (!permisoPedido && window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === 'function') {
-      permisoPedido = true;
-      try { DeviceOrientationEvent.requestPermission().catch(function () { /* negado */ }); } catch (err) { /* sin permiso */ }
-    }
-  }, { passive: true });
+  // iOS pide permiso para el giroscopio dentro de un gesto real (click), no en touchstart; se pide al tocar
+  // «Empezar», cuando la persona ya leyo el titular. Si lo niegan, el fondo sigue respondiendo al toque.
+  function pedirGiroscopio() {
+    if (permisoPedido || !window.DeviceOrientationEvent || typeof DeviceOrientationEvent.requestPermission !== 'function') return;
+    permisoPedido = true;
+    try { var pr = DeviceOrientationEvent.requestPermission(); if (pr && pr.catch) pr.catch(function () { /* negado */ }); } catch (err) { /* sin permiso */ }
+  }
+  addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, { passive: true });
   addEventListener('touchend', function (e) {
     if (tx === null || !e.changedTouches.length) return;
     var dx = e.changedTouches[0].clientX - tx, dy = Math.abs(e.changedTouches[0].clientY - ty); tx = null;

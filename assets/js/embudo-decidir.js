@@ -151,9 +151,10 @@
     return String(v);
   }
 
-  function resumenWhatsApp(r, d, marca) {
+  function resumenWhatsApp(r, d, marca, donde) {
     var lineas = ['Hola Neri, usé /empezar.'];
     if (marca) lineas.push('Negocio: ' + marca);
+    if (donde) lineas.push('Dónde verlo: ' + donde);
     lineas.push('Rubro: ' + texto(RUBROS, r.rubro));
     lineas.push('Hoy: ' + texto(ACTUAL, r.actual));
     lineas.push('Quiero: ' + texto(OBJETIVOS, r.objetivo));
