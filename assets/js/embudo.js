@@ -24,6 +24,13 @@
   }
   function guardar() { try { sessionStorage.setItem('nc_embudo', JSON.stringify(R)); } catch (e) { /* sin storage */ } }
   function reiniciar() { R = Object.assign({}, VACIO); guardar(); }
+  // Medicion: cada paso se manda una vez por visita (p1..p4 al responder, resultado, datos, enviado al pintarse/lograrse).
+  var medidos = {};
+  function medir(id) {
+    if (medidos[id]) return;
+    medidos[id] = true;
+    try { if (typeof window.ncEvento === 'function') window.ncEvento('paso', id); } catch (e) { /* sin medicion */ }
+  }
   // Hasta que paso se puede entrar con lo respondido: la pregunta n necesita las n-1 anteriores.
   function pasoPermitido(n) {
     var claves = ['rubro', 'actual', 'objetivo', 'tamano'];
@@ -98,6 +105,7 @@
       else h += '<h2 class="remate">Le entrego el diagnóstico <span class="it">gratis</span>.</h2><p class="ayuda">Reviso cómo trabaja hoy y le digo qué le conviene, en qué orden y cuánto costaría cada fase. Si de ahí sale que no le hace falta un sistema, se lo digo y le ahorro varios miles.</p><button type="button" class="btn-p" data-ir="6">Quiero mi diagnóstico gratis</button><a class="enl" href="/calculadora" target="_blank" rel="noopener">Si prefiere un número ya, la calculadora se lo da en tres pasos</a>';
       return h;
     }, despues: function () {
+      medir('resultado');
       var m = $('#maq'); if (!m) return;
       var t = m.getAttribute('data-txt'), nombre = m.getAttribute('data-nombre'), i = 0;
       var pintarTexto = function (s) { m.innerHTML = esc(s).replace(esc(nombre), '<span class="c">' + esc(nombre) + '</span>'); };
@@ -107,7 +115,7 @@
     } },
     { id: 'datos', render: function () {
       return '<span class="ojo">Tres datos y listo</span><h2>Su sistema, con su nombre.</h2><p class="ayuda">El formulario se termina en la siguiente tarea.</p><button type="button" class="btn-p" data-ir="7">Enviar</button>';
-    }, despues: function () { telefonoSistema(); } },
+    }, despues: function () { medir('datos'); telefonoSistema(); } },
     { id: 'gracias', render: function () {
       return '<span class="ojo">Listo</span><h2>Recibido.</h2><button type="button" class="btn-g" data-ir="0">Volver al inicio</button>';
     } }
@@ -151,6 +159,7 @@
     var val = /^\d+$/.test(v) ? Number(v) : v;
     try { if (navigator.vibrate) navigator.vibrate(12); } catch (e) { /* sin vibracion */ }
     R[p.clave] = val; guardar();
+    medir('p' + paso);
     if (p.vista) p.vista(val);
     if (p.al) setTimeout(p.al, Math.min(p.espera, 600));
     var botones = panel.querySelectorAll('.op'); botones.forEach(function (b) { b.disabled = true; b.classList.toggle('elegida', b.getAttribute('data-v') === String(v)); });
