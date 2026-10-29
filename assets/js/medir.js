@@ -45,10 +45,14 @@
     } catch (e) { /* sin red: no pasa nada */ }
   }
 
-  // Origen: la utm_source si viene en el enlace; si no, el dominio de donde vino (si no es este sitio).
+  // Origen: ?de= (corto, para dictarlo en un video: /empezar?de=tiktok) o la utm_source si viene en el
+  // enlace; si no, el dominio de donde vino (si no es este sitio).
   var origen = '';
+  var de = /[?&]de=([^&#]+)/.exec(q);
   var utm = /[?&]utm_source=([^&#]+)/.exec(q);
-  if (utm) {
+  if (de) {
+    try { origen = decodeURIComponent(de[1]); } catch (e) { origen = de[1]; }
+  } else if (utm) {
     try { origen = decodeURIComponent(utm[1]); } catch (e) { origen = utm[1]; }
   } else if (/[?&]fbclid=/.test(q)) {
     origen = 'facebook';
@@ -97,4 +101,6 @@
 
   // El formulario de contacto la usa para unir la solicitud con la visita.
   window.ncSesion = function () { return sesion; };
+  // El embudo /empezar manda sus pasos por aqui (tipo 'paso', detalle p1..enviado).
+  window.ncEvento = function (t, d) { enviar({ t: String(t), d: String(d).slice(0, 40) }); };
 })();
