@@ -211,6 +211,32 @@ empezar pequeño?»). **No volver a ponerle precio en un sitio sin cambiarlo en 
 ofrece «según el caso» a propósito: no es para todo el que escribe, se arma cuando el prospecto ya contó su
 negocio y confirmó que la quiere. Respaldo de antes: `~/backups/diagnostico-gratis-20261028/`.
 
+## Embudo `/empezar` (desde el 2026-10-29)
+
+Landing para campañas (TikTok, grupos, redes): `neracosu.com/empezar` (alias `/demo`, 301; el enlace de campaña lleva
+`?de=tiktok`, `?de=whatsapp`, etc., que `medir.js` toma como origen antes que `utm_source`). Cuatro preguntas con un
+teléfono dibujado en HTML que se convierte en el sistema del visitante, recomendación con captura real, remate según
+califique (mediano/grande o quien vende en línea y cobra a mano → «Quiero ver mi demostración»; el resto → diagnóstico
+gratis) y tres datos que van al panel (`type: "embudo"`, respuestas, calificación, origen) con respaldo de WhatsApp si el
+panel no responde. Sin cifras de proyecto: enlaza a `/para/`. Diseño: `docs/superpowers/specs/2026-10-28-embudo-empezar-design.md`;
+plan: `docs/superpowers/plans/2026-10-28-embudo-empezar-landing.md`.
+
+- Archivos: `empezar.html` (la portada va estática en el HTML y el `--k` del teléfono se calcula en línea en el `<head>`:
+  así el CLS es 0), `assets/js/embudo-decidir.js` (reglas puras, se prueban en Node), `assets/js/embudo-pantallas.js`
+  (pantallas y efectos del teléfono), `assets/js/embudo.js` (motor: pasos en el hash, respuestas en `sessionStorage`
+  `nc_embudo`, envío, medición), `assets/css/embudo.css` (**con sus propios tokens: no carga `redesign.css`**, que
+  costaba 790 ms bloqueantes). Librerías alojadas en `assets/js/lib/` y `assets/css/lib/` (Atropos 2.0.2, parallax.js
+  3.1.0): el CSP no permite CSS desde CDN.
+- **Pruebas:** `~/build-para/pruebas/embudo/` con `node --test --test-concurrency=1` (de a uno: cada archivo levanta
+  `python3 -m http.server` en 8098 sirviendo `public_html`). `publicacion.test.cjs` pega contra el dominio.
+- Medición: la ruta se reporta `/empezar.html`; eventos `paso` (`p1`..`p4`, `resultado`, `datos`, `enviado`) una vez
+  por visita; se ven en `prospectos.neracosu.com/web`, bloque «Embudo de /empezar».
+- `nera.py` y `medir.py` ya la incluyen. Tarjeta OG propia: `assets/img/og-empezar.jpg`, desde
+  `~/build-para/og-card-empezar.html` con Chromium a 1200×630.
+- Lighthouse móvil 29-oct: rendimiento 96-97, accesibilidad 100 (queda HTTP/2, que es del servidor).
+- **Textos de cara al cliente en positivo:** nada de «sin llamadas» ni «todo por escrito» (Neri: «suena feo»); se dice
+  «Le respondo yo por WhatsApp, en menos de 24 horas hábiles».
+
 ## Vocabulario y calculadoras de `/para/` (desde el 2026-10-05)
 
 - **Las calculadoras de fuga van en dólares**: el campo de precio (ticket, bloque, cita, hora de trabajo) se

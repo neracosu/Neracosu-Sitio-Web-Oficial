@@ -303,6 +303,13 @@
     try { if (window.Atropos) Atropos({ el: '#atropos', shadow: false, highlight: true, rotateXMax: 10, rotateYMax: 12, activeOffset: 30, duration: 350 }); } catch (e) { /* sin 3D */ }
     try { if (window.Parallax && $('#fondo')) new Parallax($('#fondo'), { relativeInput: false, hoverOnly: false, frictionX: 0.08, frictionY: 0.08, scalarX: 6, scalarY: 6 }); } catch (e) { /* sin parallax */ }
     var n = parseInt((location.hash || '#0').slice(1), 10); if (isNaN(n) || n < 0) n = 0;
+    var estatico = panel.querySelector('[data-estatico]');
+    if (n === 0 && estatico) {
+      // La portada ya viene en el HTML (sin salto de maquetacion): solo se enciende el telefono.
+      paso = 0; marco.setAttribute('data-paso', '0'); prog.style.width = '0%';
+      PASOS[0].despues();
+      return;
+    }
     ir(n);
   }
   arrancar();

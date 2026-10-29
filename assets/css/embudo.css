@@ -1,6 +1,15 @@
 /* embudo.css — /empezar (29-oct-2026). Sobre los tokens de redesign.css. Reticula de 8 px.
    Solo se animan transform y opacity; con prefers-reduced-motion no hay transiciones. */
-:root { --k: 1; --in: cubic-bezier(.2, .7, .2, 1); --out: cubic-bezier(.4, 0, 1, 1); }
+:root {
+  /* mismos tokens de redesign.css; la landing no carga esa hoja (790 ms bloqueantes para unas variables) */
+  --bg: #070b0a; --bg-elev: #0b1110; --accent: #5ed29c; --accent-hover: #4cc28c; --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, .7); --text-dim: rgba(255, 255, 255, .5);
+  --border: rgba(255, 255, 255, .08); --border-strong: rgba(255, 255, 255, .14);
+  --k: 1; --in: cubic-bezier(.2, .7, .2, 1); --out: cubic-bezier(.4, 0, 1, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+body.embudo { margin: 0; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.4; }
+#panel p { margin: 0; }
 
 html, body { height: 100%; }
 body.embudo { overflow: hidden; position: relative; background: var(--bg); color: var(--text); }
@@ -32,9 +41,10 @@ body.embudo::after {
 .tel { position: absolute; inset: 0; border-radius: 44px; background: #0d1412; border: 1px solid rgba(255, 255, 255, .18); box-shadow: 0 30px 80px rgba(0, 0, 0, .6), inset 0 0 0 6px #050807, inset 0 0 0 7px rgba(255, 255, 255, .08); }
 .tel-notch { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 92px; height: 26px; border-radius: 14px; background: #050807; z-index: 3; }
 .pant { position: absolute; inset: 8px; border-radius: 38px; overflow: hidden; background: #0b1110; font-family: Inter, sans-serif; }
-.pant .ui { position: absolute; inset: 0; padding: 48px 16px 18px; display: flex; flex-direction: column; gap: 10px; transition: opacity .28s var(--in), transform .32s var(--in); }
-.pant .ui.sale { opacity: 0; transform: translateX(-24px); }
-.pant .ui.entra { opacity: 0; transform: translateX(24px); }
+/* La pantalla entra y sale deslizando, sin bajar la opacidad: el texto nunca pierde contraste a mitad de transicion */
+.pant .ui { position: absolute; inset: 0; padding: 48px 16px 18px; display: flex; flex-direction: column; gap: 10px; transition: transform .32s var(--in); }
+.pant .ui.sale { transform: translateX(-105%); }
+.pant .ui.entra { transform: translateX(105%); }
 .cab { display: flex; align-items: center; justify-content: space-between; font-size: 11px; color: var(--text-dim); }
 .cab .marca { font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 800; font-size: 14px; color: #fff; letter-spacing: -.02em; max-width: 170px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cab .marca.vacia { color: var(--text-dim); font-weight: 600; }
@@ -162,6 +172,7 @@ body.embudo::after {
   .op .t { font-size: 16px; }
 }
 @media (max-width: 899px) { .frag.bajo { display: none; } .frag { font-size: 10px; } }
+@media (hover: hover) and (pointer: fine) { .pie span { visibility: hidden; } }
 @media (prefers-reduced-motion: reduce) {
   #prog, .pant .ui, .fx, .toast, .chip, .paso, .op, .btn-p, .fx .chk, .campo input { transition: none !important; }
   .fx .sp, .maq::after { animation: none !important; }

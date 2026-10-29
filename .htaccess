@@ -19,6 +19,9 @@ Options -Indexes
   # que tenia su propio RewriteEngine y por eso anulaba estas reglas en esa carpeta).
   RewriteCond %{HTTP_HOST} ^(www\.)?neracosu\.com$ [NC]
   RewriteRule ^servicios/hoteles(\.html)?$ /para/hoteles [R=301,L]
+  # /demo es el alias corto para dictar en un video; la canonica es /empezar (29-oct-2026)
+  RewriteCond %{HTTP_HOST} ^(www\.)?neracosu\.com$ [NC]
+  RewriteRule ^demo/?$ /empezar [R=301,L]
   # 1) .../index.html -> .../  (301)
   RewriteCond %{HTTP_HOST} ^(www\.)?neracosu\.com$ [NC]
   RewriteCond %{THE_REQUEST} \s/+((?:para/|servicios/|blog/)?)index\.html[\s?]

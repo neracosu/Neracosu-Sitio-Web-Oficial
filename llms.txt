@@ -59,3 +59,4 @@
 
 - [Planes por industria](https://neracosu.com/para/): hoteles, restaurantes y bares, reservas, comercio y tiendas, cobros y pagos, citas y servicios, logística y aduana, integraciones y bots.
 - [Calculadora de proyecto](https://neracosu.com/calculadora): estimado de un proyecto a la medida.
+- [Empezar: cuatro preguntas y una demostración con su marca](https://neracosu.com/empezar): le dice qué sistema le conviene y, si el caso califica, ofrece una demostración con su marca y el diagnóstico gratis.
