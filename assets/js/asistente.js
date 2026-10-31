@@ -77,6 +77,29 @@
         { nombre: 'Completo', alcance: 'varias sucursales', precio: 6200, mes: 170 },
       ],
     },
+    /* Emprendimientos (31-oct-2026): comida por encargo y tienda por Instagram. Mismos tres planes,
+       publicados en /para/restaurantes-y-bares#precios-encargo y /para/comercio-y-tienda#precios-instagram.
+       Sin descuento por dejar otro sistema: los planes valen menos que el descuento. */
+    encargo: {
+      nombre: 'Comida por encargo y delivery',
+      url: '/para/restaurantes-y-bares#precios-encargo',
+      descuento: false,
+      planes: [
+        { nombre: 'Esencial', alcance: 'pedidos por catálogo', precio: 290, mes: 25 },
+        { nombre: 'Profesional', alcance: 'cobra y confirma solo', precio: 590, mes: 35 },
+        { nombre: 'Completo', alcance: 'con su marca', precio: 890, mes: 45 },
+      ],
+    },
+    instagram: {
+      nombre: 'Tienda por Instagram',
+      url: '/para/comercio-y-tienda#precios-instagram',
+      descuento: false,
+      planes: [
+        { nombre: 'Esencial', alcance: 'catálogo y pedidos', precio: 290, mes: 25 },
+        { nombre: 'Profesional', alcance: 'cobra y descuenta solo', precio: 590, mes: 35 },
+        { nombre: 'Completo', alcance: 'con su marca', precio: 890, mes: 45 },
+      ],
+    },
     /* Citas no lleva precio cerrado: la agenda por profesional es lo unico
        del catalogo que todavia no esta construido, asi que el numero sale
        del diagnostico y no de una tabla. */
@@ -123,10 +146,14 @@
       opciones: [
         { v: 'citas', t: 'Servicios con cita',
           ej: 'peluquería, barbería, spa, uñas, odontología, clínica, veterinaria, taller mecánico, fisioterapia, psicología' },
-        { v: 'comercio', t: 'Tienda o comercio',
-          ej: 'farmacia, ropa, zapatos, joyería, ferretería, mascotas, óptica, licorería, repuestos, librería' },
-        { v: 'restaurantes', t: 'Comida',
-          ej: 'restaurante, bar, comida rápida, panadería, heladería, delivery, cocina oculta, food truck' },
+        { v: 'comercio', t: 'Tienda o comercio con local',
+          ej: 'farmacia, zapatería, joyería, ferretería, mascotas, óptica, licorería, repuestos, librería' },
+        { v: 'instagram', t: 'Vendo por Instagram, sin local',
+          ej: 'ropa, calzado, maquillaje, accesorios, bisutería, perfumes' },
+        { v: 'restaurantes', t: 'Restaurante, bar o café',
+          ej: 'restaurante, bar, comida rápida, panadería, heladería, food truck' },
+        { v: 'encargo', t: 'Comida por encargo o delivery',
+          ej: 'tortas, cocadas, pasapalos, hamburguesas de delivery, cocina oculta, dulces' },
         { v: 'hoteles', t: 'Hospedaje',
           ej: 'hotel, posada, cabañas, apartamentos, hospedaje por horas' },
         { v: 'reservas', t: 'Espacios y eventos',
@@ -176,7 +203,7 @@
 
     /* Rubros cuyo sistema ya trae los cobros adentro: si el dolor es cobrar,
        no hay que mandarlos a la capa de pagos, ya la incluyen. */
-    var COBRO_INCLUIDO = ['restaurantes', 'hoteles', 'comercio'];
+    var COBRO_INCLUIDO = ['restaurantes', 'hoteles', 'comercio', 'encargo', 'instagram'];
 
     if (nicho === 'otro') {
       // Sin rubro conocido, manda el dolor. Si el dolor tampoco encaja en algo

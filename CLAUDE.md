@@ -202,8 +202,11 @@ cualquiera.
 
 Desde el 2026-10-31 `/para/restaurantes-y-bares` lleva un **segundo bloque de planes**, `#precios-encargo` (comida por
 encargo y delivery: 290 / 590 / 890 y 25 / 35 / 45 al mes, aprobados por Neri ese día), que sale de `EXTRAS` en
-`~/build-para/precios.py` (misma promo). El panel de prospección lo copia en el arquetipo `comida-por-encargo`. El asistente
-de `/para/#asistente` todavía no lo ofrece.
+`~/build-para/precios.py` (misma promo). El panel de prospección lo copia en el arquetipo `comida-por-encargo`. Y `/para/comercio-y-tienda` lleva
+`#precios-instagram` (tienda por Instagram sin local: los mismos tres planes). El asistente de `/para/#asistente` ofrece
+los dos rubros desde ese día (`encargo` e `instagram` en `NICHOS` y en la primera pregunta de `asistente.js`); el embudo
+`/empezar` todavía no. Los cierres de comercio, restaurantes e integraciones ya no dicen «media hora por videollamada»:
+ofrecen el diagnóstico gratis y la demostración con su marca (regla: nunca proponer llamadas).
 
 ## Diagnóstico gratis y demostración con su marca (desde el 2026-10-28)
 
