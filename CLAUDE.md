@@ -200,6 +200,11 @@ cualquiera.
 
 **Antes de publicar una cifra nueva, preguntarse dónde más vive ese número.**
 
+Desde el 2026-10-31 `/para/restaurantes-y-bares` lleva un **segundo bloque de planes**, `#precios-encargo` (comida por
+encargo y delivery: 290 / 590 / 890 y 25 / 35 / 45 al mes, aprobados por Neri ese día), que sale de `EXTRAS` en
+`~/build-para/precios.py` (misma promo). El panel de prospección lo copia en el arquetipo `comida-por-encargo`. El asistente
+de `/para/#asistente` todavía no lo ofrece.
+
 ## Diagnóstico gratis y demostración con su marca (desde el 2026-10-28)
 
 El diagnóstico técnico **ya no cuesta $250: es gratis**, y viene con la oferta de una demostración con la marca y
