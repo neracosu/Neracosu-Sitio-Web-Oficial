@@ -37,7 +37,7 @@
     var claves = ['rubro', 'actual', 'objetivo', 'tamano'];
     if (n <= 0) return 0;
     for (var i = 0; i < claves.length; i++) if (R[claves[i]] === null || R[claves[i]] === undefined) return Math.min(n, i + 1);
-    return Math.min(n, 7);
+    return Math.min(n, R.enviado ? 7 : 6); // «Recibido» solo si de verdad se envio
   }
 
   /* ---------- telefono ---------- */
@@ -46,19 +46,24 @@
     // El teclado del telefono solo cambia el alto: si el ancho es el mismo, el telefono no se encoge.
     if (!forzar && innerWidth === anchoPrevio) return;
     anchoPrevio = innerWidth;
-    var k = innerWidth < 900 ? Math.min(1, (innerHeight * 0.32) / 620, (innerWidth - 40) / 300) : Math.min(1, (innerHeight * 0.8) / 620);
-    document.documentElement.style.setProperty('--k', k.toFixed(3));
+    // La formula esta en el <script> inline del <head> de empezar.html (corre antes del primer pintado, CLS 0).
+    if (typeof window.ncEscalar === 'function') window.ncEscalar();
   }
   escalar(true); addEventListener('resize', function () { escalar(false); });
 
   var sinMovimiento = matchMedia('(prefers-reduced-motion: reduce)').matches;
   // Acepta el HTML o una funcion que lo arma: la funcion se llama al momento de pintar (220 ms despues),
   // para que el nombre que el visitante escribio mientras tanto no se pise con uno viejo.
+  // Si llegan varios pedidos en 220 ms (hover, volver rapido) pinta solo el ultimo, y nunca uno de un paso ya cerrado.
+  var mostrarSeq = 0;
   function mostrar(h) {
     var armar = function () { return typeof h === 'function' ? h() : h; };
     if (sinMovimiento) { ui.innerHTML = armar(); return; }
+    var s = ++mostrarSeq, g = gen;
     ui.classList.add('sale');
     setTimeout(function () {
+      if (s !== mostrarSeq) return;
+      if (g !== gen) { ui.classList.remove('sale'); return; }
       ui.innerHTML = armar(); ui.classList.remove('sale'); ui.classList.add('entra');
       requestAnimationFrame(function () { requestAnimationFrame(function () { ui.classList.remove('entra'); }); });
     }, 220);
@@ -96,6 +101,7 @@
     return '<span class="ojo">' + n + ' de 4</span><h2>' + titulo + '</h2><p class="ayuda">' + ayuda + '</p>' + opciones(lista);
   }
 
+  var PROMO_TXT = 'Hasta el 31 de diciembre de 2026, el pago único de cualquier plan tiene 40 % de descuento.', PROMO_FIN_ISO = '2027-01-01T04:00:00Z';
   var PASOS = [
     { id: 'portada', render: function () {
       return '<span class="ojo">Cuatro preguntas · un minuto</span>'
@@ -105,6 +111,8 @@
         + '<div class="resp"><span>26 plataformas en producción</span><span>Pagos validados contra el banco</span><span>Le respondo yo, no un vendedor</span></div>';
     }, despues: function () { cicloI = 0; cicloPortada(); chips('<b>Pago validado</b> · Bs 12.450', '<b>Reserva</b> 2:14 a. m.', '<b>Hab. 204</b> · lista'); } },
     { id: 'rubro', clave: 'rubro', render: function () { return pregunta(1, '¿A qué se dedica su negocio?', 'Si el suyo no aparece, elija «otra cosa».', D.RUBROS); },
+      // Al caer directo en #1 (enlace o hash corregido) el telefono no viene pintado por la portada: se enciende aqui.
+      despues: function () { if (!ui.innerHTML.trim()) mostrar(P.portada(0, R.marca)); },
       vista: function (v) { mostrar(P.sistema({ rubro: v, tamano: R.tamano }, R.marca)); var o = D.RUBROS.filter(function (x) { return x.v === v; })[0]; chips('<b>' + esc(o ? o.t : '') + '</b> · sistema real', '', ''); },
       espera: 420 },
     { id: 'actual', clave: 'actual', render: function () { return pregunta(2, '¿Cómo lo lleva hoy?', 'Sin juicio. La mayoría empieza en cuaderno y WhatsApp.', D.ACTUAL); },
@@ -123,7 +131,7 @@
       var h = '<span class="ojo">Lo que le conviene</span><div class="maq" id="maq" data-txt="' + esc(D.fraseResultado(R, s)) + '" data-nombre="' + esc(s.nombre) + '"></div>';
       h += '<div class="ya">' + s.ya.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('') + '</div>';
       if (s.img) h += '<figure class="cap"><img src="/assets/img/portafolio/' + s.img + '-800.webp" width="800" height="450" loading="lazy" alt=""><figcaption>' + esc(s.pie) + '</figcaption></figure>';
-      if (s.slug) h += '<a class="enl" href="/para/' + s.slug + '" target="_blank" rel="noopener">Ver los precios publicados de este sistema</a><p class="promo">Hasta el 31 de diciembre de 2026, el pago único de cualquier plan tiene 40 % de descuento.</p>';
+      if (s.slug) h += '<a class="enl" href="/para/' + s.slug + '" target="_blank" rel="noopener">Ver los precios publicados de este sistema</a><p class="promo">' + PROMO_TXT + '</p>';
       if (d.demo) h += '<h2 class="remate">¿Quiere verlo <span class="it">con su marca</span>?</h2><p class="ayuda">Le armo una demostración con su nombre y sus productos para que la recorra en su teléfono, más el diagnóstico por escrito. Gratis, sin compromiso.</p><button type="button" class="btn-p" data-ir="6">Quiero ver mi demostración</button>';
       else h += '<h2 class="remate">Le entrego el diagnóstico <span class="it">gratis</span>.</h2><p class="ayuda">Reviso cómo trabaja hoy y le digo qué le conviene, en qué orden y cuánto costaría cada fase. Si de ahí sale que no le hace falta un sistema, se lo digo y le ahorro varios miles.</p><button type="button" class="btn-p" data-ir="6">Quiero mi diagnóstico gratis</button><a class="enl" href="/calculadora" target="_blank" rel="noopener">Si prefiere un número ya, la calculadora se lo da en tres pasos</a>';
       return h;
@@ -162,14 +170,15 @@
     }, despues: function () { telefonoSistema(); chips('<b>' + marcaCorta() + '</b> · en marcha', '', '<b>diagnóstico</b> en 7 días'); } }
   ];
 
-  var vencido = new Date() > new Date('2027-01-01T04:00:00Z');
+  // Copia de PROMO_PCT / PROMO_HASTA de ~/build-para/precios.py: si cambia alla, cambia aqui (y en enero de 2027 se quita).
+  var vencido = new Date() > new Date(PROMO_FIN_ISO);
 
   function pintar(dir) {
     var p = PASOS[paso], viejo = panel.firstElementChild, el = document.createElement('div');
     el.className = 'paso' + (sinMovimiento ? '' : ' entra');
     var h = p.render();
     // En la pregunta 1 no hay fila de «Volver» (a la portada se vuelve con el gesto o la tecla): asi cabe entera a 390 px
-    if (paso > 1) h += '<div class="pie"><button type="button" class="atras">← Volver</button><span>' + (paso < 5 ? 'Deslice a la derecha para volver' : '') + '</span></div>';
+    if (paso > 1 && paso < 7) h += '<div class="pie"><button type="button" class="atras">← Volver</button><span>' + (paso < 5 ? 'Deslice a la derecha para volver' : '') + '</span></div>';
     el.innerHTML = h;
     if (vencido) { var pr = el.querySelector('.promo'); if (pr) pr.remove(); }
     if (viejo) { if (sinMovimiento) viejo.remove(); else { viejo.classList.add(dir < 0 ? 'entra' : 'sale'); setTimeout(function () { viejo.remove(); }, 300); } }
@@ -182,8 +191,12 @@
   }
 
   var ignorarHash = false;
-  function ir(n, dir) {
-    if (n < 0 || n >= PASOS.length) return;
+  // desdeHash: la URL ya trae el hash pedido; si hubo que corregirlo se reemplaza sin dejar entrada nueva
+  // (asi «atras» desde gracias no entra en bucle #6 → #7) y sin disparar hashchange.
+  function ir(n, dir, desdeHash) {
+    if (isNaN(n) || n < 0) n = 0;
+    if (n >= PASOS.length) n = PASOS.length - 1;
+    if (envioControl) { envioControl.abort(); envioControl = null; } // cambiar de paso con el envio en vuelo lo cancela
     if (n === 0) { reiniciar(); P.limpiar(raiz); }
     n = pasoPermitido(n);
     // Al avanzar, el efecto del telefono termina solo (el pago llega a «exitoso» ya en la pregunta 4);
@@ -193,8 +206,11 @@
     paso = n; gen++;
     if (n !== 0) clearTimeout(cicloTimer);
     pintar(dir || 1);
-    var hash = n ? '#' + n : '';
-    if (location.hash !== hash && !(n === 0 && !location.hash)) { ignorarHash = true; location.hash = hash || '#0'; }
+    var nuevo = n ? '#' + n : (location.hash ? '#0' : '');
+    if (nuevo && location.hash !== nuevo) {
+      if (desdeHash && window.history && history.replaceState) history.replaceState(null, '', nuevo);
+      else { ignorarHash = true; location.hash = nuevo; } // asignar dispara hashchange: la bandera lo ignora una vez
+    }
   }
   function volver() { if (paso > 0 && paso < 7) ir(paso - 1, -1); }
 
@@ -205,9 +221,9 @@
     R[p.clave] = val; guardar();
     medir('p' + paso);
     if (p.vista) p.vista(val);
-    if (p.al) setTimeout(p.al, Math.min(p.espera, 600));
-    var botones = panel.querySelectorAll('.op'); botones.forEach(function (b) { b.disabled = true; b.classList.toggle('elegida', b.getAttribute('data-v') === String(v)); });
     var g = gen;
+    if (p.al) setTimeout(function () { if (gen === g) p.al(); }, Math.min(p.espera, 600));
+    var botones = panel.querySelectorAll('.op'); botones.forEach(function (b) { b.disabled = true; b.classList.toggle('elegida', b.getAttribute('data-v') === String(v)); });
     setTimeout(function () { if (gen === g && PASOS[paso] === p) ir(paso + 1); }, sinMovimiento ? Math.min(p.espera, 450) : p.espera);
   }
 
@@ -215,7 +231,7 @@
   var URL_SOLICITUD = 'https://prospectos.neracosu.com/api/web/solicitud';
   var CORREO = /^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]{2,}$/; // la misma regla que valida el panel
   var WA = '584222707095';
-  var enviando = false;
+  var enviando = false, envioControl = null;
   function origenEnlace() {
     var q = location.search, m = /[?&]de=([^&#]+)/.exec(q) || /[?&]utm_source=([^&#]+)/.exec(q);
     if (!m) return '';
@@ -252,14 +268,15 @@
     enviando = true; boton.disabled = true; boton.textContent = 'Enviando…';
     f.querySelector('.aviso').hidden = true;
     var control = typeof AbortController === 'function' ? new AbortController() : null;
+    envioControl = control;
     var plazo = control ? setTimeout(function () { control.abort(); }, 12000) : null;
-    var fin = function () { enviando = false; boton.disabled = false; boton.textContent = texto; if (plazo) clearTimeout(plazo); };
-    var respaldo = function (msg) { fin(); avisar(f, esc(msg) + ' Envíemela por WhatsApp con el texto ya escrito:' + botonWhatsApp(resumen)); };
+    var fin = function () { enviando = false; envioControl = null; boton.disabled = false; boton.textContent = texto; if (plazo) clearTimeout(plazo); };
+    var respaldo = function (msg) { fin(); if (!f.isConnected) return; avisar(f, esc(msg) + ' Envíemela por WhatsApp con el texto ya escrito:' + botonWhatsApp(resumen)); };
     fetch(URL_SOLICITUD, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos), signal: control ? control.signal : undefined })
       .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { return { status: res.status, j: j }; }); })
       .then(function (res) {
-        if (res.status === 200 && res.j.ok) { fin(); R.enviado = true; guardar(); medir('enviado'); ir(7); return; }
-        if (res.status === 400 && res.j.mensaje) { fin(); avisar(f, esc(res.j.mensaje)); return; }
+        if (res.status === 200 && res.j.ok) { fin(); R.enviado = true; guardar(); medir('enviado'); if (f.isConnected) ir(7); return; }
+        if (res.status === 400 && res.j.mensaje) { fin(); if (f.isConnected) avisar(f, esc(res.j.mensaje)); return; }
         respaldo(res.j.mensaje || 'No pude guardar su solicitud en este momento.');
       })
       .catch(function () { respaldo('No pude guardar su solicitud en este momento.'); });
@@ -283,6 +300,7 @@
   // Vista previa al pasar el cursor (solo con raton; el paso 3 dispara efectos largos y no se previsualiza)
   panel.addEventListener('mouseover', function (ev) {
     var o = ev.target.closest('.op'); if (!o || !matchMedia('(hover: hover)').matches) return;
+    if (ev.relatedTarget && o.contains(ev.relatedTarget)) return; // ya estaba sobre esta opcion
     var p = PASOS[paso]; if (!p.vista || p.sinVistaPrevia || o.disabled) return;
     var v = o.getAttribute('data-v'); p.vista(/^\d+$/.test(v) ? Number(v) : v);
   });
@@ -308,7 +326,7 @@
   addEventListener('hashchange', function () {
     if (ignorarHash) { ignorarHash = false; return; }
     var n = parseInt((location.hash || '#0').slice(1), 10); if (isNaN(n)) n = 0;
-    if (n !== paso) ir(n, n < paso ? -1 : 1);
+    if (n !== paso) ir(n, n < paso ? -1 : 1, true);
   });
 
   /* ---------- arranque ---------- */
@@ -317,6 +335,7 @@
     try { if (window.Parallax && $('#fondo')) new Parallax($('#fondo'), { relativeInput: false, hoverOnly: false, frictionX: 0.08, frictionY: 0.08, scalarX: 6, scalarY: 6 }); } catch (e) { /* sin parallax */ }
     var n = parseInt((location.hash || '#0').slice(1), 10); if (isNaN(n) || n < 0) n = 0;
     var estatico = panel.querySelector('[data-estatico]');
+    if (n >= PASOS.length) { ir(n, 1, true); return; } // #8 o mas: se corrige la URL y se pinta el paso que toque
     if (n === 0 && estatico) {
       // La portada ya viene en el HTML (sin salto de maquetacion): solo se enciende el telefono.
       paso = 0; marco.setAttribute('data-paso', '0'); prog.style.width = '0%';

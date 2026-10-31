@@ -54,7 +54,8 @@ está en `hoja-de-vida.html` (fichas 10 y 11) y en el chiste de `nera.py` («dev
 `data-counter="24"`, el texto del portafolio y la métrica de «Compruébelo»), `para/index.html` (y su fuente `build-para/body-index.html`),
 `servicios/sistemas-de-gestion.html`, `build-para/seo.py` y la imagen
 `assets/img/og-image.jpg`, que se renderiza desde `build-para/og-card.html`
-con Chromium headless. Si cambia, cambia en todos.
+con Chromium headless, y en `/empezar` dos veces: `empezar.html` (portada estática) y `assets/js/embudo.js` (la misma
+portada cuando se vuelve al inicio). Si cambia, cambia en todos.
 
 ## Terrazas VIP Sport Park reabrió (2026-10-26)
 
@@ -221,13 +222,14 @@ gratis) y cuatro datos (negocio, dónde verlo, WhatsApp y correo, todos menos «
 panel no responde. Sin cifras de proyecto: enlaza a `/para/`. Diseño: `docs/superpowers/specs/2026-10-28-embudo-empezar-design.md`;
 plan: `docs/superpowers/plans/2026-10-28-embudo-empezar-landing.md`.
 
-- Archivos: `empezar.html` (la portada va estática en el HTML y el `--k` del teléfono se calcula en línea en el `<head>`:
-  así el CLS es 0), `assets/js/embudo-decidir.js` (reglas puras, se prueban en Node), `assets/js/embudo-pantallas.js`
+- Archivos: `empezar.html` (la portada va estática en el HTML y el `--k` del teléfono se calcula en línea en el `<head>`
+  con `window.ncEscalar`, que `embudo.js` reutiliza al cambiar el ancho: la fórmula vive solo ahí; así el CLS es 0), `assets/js/embudo-decidir.js` (reglas puras, se prueban en Node), `assets/js/embudo-pantallas.js`
   (pantallas y efectos del teléfono), `assets/js/embudo.js` (motor: pasos en el hash, respuestas en `sessionStorage`
   `nc_embudo`, envío, medición), `assets/css/embudo.css` (**con sus propios tokens: no carga `redesign.css`**, que
   costaba 790 ms bloqueantes). Librerías alojadas en `assets/js/lib/` y `assets/css/lib/` (Atropos 2.0.2, parallax.js
   3.1.0): el CSP no permite CSS desde CDN.
-- **Pruebas:** `~/build-para/pruebas/embudo/` con `node --test --test-concurrency=1` (de a uno: cada archivo levanta
+- **Pruebas:** `~/build-para/pruebas/embudo/` (45 al 2026-10-31; `revision.test.cjs` cubre el hash fuera de rango, la
+  bandera de `hashchange`, el envío en vuelo y las carreras al volver rápido) con `node --test --test-concurrency=1` (de a uno: cada archivo levanta
   `python3 -m http.server` en 8098 sirviendo `public_html`). `publicacion.test.cjs` pega contra el dominio.
 - Medición: la ruta se reporta `/empezar.html`; eventos `paso` (`p1`..`p4`, `resultado`, `datos`, `enviado`) una vez
   por visita; se ven en `prospectos.neracosu.com/web`, bloque «Embudo de /empezar».
@@ -249,7 +251,8 @@ plan: `docs/superpowers/plans/2026-10-28-embudo-empezar-landing.md`.
   para quien contrate hasta el 31 de diciembre de 2026.** La mensualidad no cambia y no se suma a otros descuentos.
   Sale de `PROMO_PCT` y `PROMO_HASTA` en `~/build-para/precios.py` (banda `.promo-banda` y precio de lista tachado en
   cada tarjeta) y de la banda escrita a mano en `body-index.html`. Un script de la banda la esconde al vencer, pero
-  **en enero de 2027 hay que quitarla de las fuentes**. No es escasez inventada: tiene fecha real y la fijó el dueño.
+  **en enero de 2027 hay que quitarla de las fuentes**, también de `assets/js/embudo.js` (`PROMO_TXT` y
+  `PROMO_FIN_ISO`, copia a mano del resultado de `/empezar`). No es escasez inventada: tiene fecha real y la fijó el dueño.
   La home todavía no la menciona.
 
 ## Medición propia y formulario (desde el 2026-10-21)

@@ -228,7 +228,8 @@ cuando el visitante llegue hasta aqui:
   <link rel="preload" href="/assets/fonts/instrument-serif-italica-latin-5a51946d.woff2" as="font" type="font/woff2" crossorigin>
   <script>
     // Escala del telefono antes del primer pintado, para que su alto no salte al cargar el JS
-    (function(){var k=innerWidth<900?Math.min(1,(innerHeight*0.32)/620,(innerWidth-40)/300):Math.min(1,(innerHeight*0.8)/620);document.documentElement.style.setProperty('--k',k.toFixed(3));})();
+    // embudo.js la vuelve a llamar al cambiar el ancho: la formula vive solo aqui
+    window.ncEscalar=function(){var k=innerWidth<900?Math.min(1,(innerHeight*0.32)/620,(innerWidth-40)/300):Math.min(1,(innerHeight*0.8)/620);document.documentElement.style.setProperty('--k',k.toFixed(3));};window.ncEscalar();
   </script>
   <link rel="stylesheet" href="/assets/css/fuentes.css?v=3418de6a">
   <link rel="stylesheet" href="/assets/css/lib/atropos.css?v=2c848dc9">
@@ -284,8 +285,8 @@ cuando el visitante llegue hasta aqui:
   <script src="/assets/js/lib/atropos.min.js?v=8b59b258" defer></script>
   <script src="/assets/js/lib/parallax.min.js?v=bf4d20b2" defer></script>
   <script src="/assets/js/embudo-decidir.js?v=15ac5a68" defer></script>
-  <script src="/assets/js/embudo-pantallas.js?v=7231e032" defer></script>
-  <script src="/assets/js/embudo.js?v=e8a8d1e9" defer></script>
+  <script src="/assets/js/embudo-pantallas.js?v=d42166d2" defer></script>
+  <script src="/assets/js/embudo.js?v=82820e55" defer></script>
   <script src="/assets/js/medir.js?v=1648a6dd" defer></script>
   <script src="/assets/js/nera.js?v=359cd2a4" defer></script>
 </body>

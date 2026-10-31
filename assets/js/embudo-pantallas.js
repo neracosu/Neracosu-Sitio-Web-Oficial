@@ -10,7 +10,8 @@
     return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
   }
   function n(x) { return Number(x).toLocaleString('es-VE'); }
-  function tam(r) { var t = Number(r && r.tamano); return t === 1 || t === 2 ? t : (t === 0 ? 0 : 1); }
+  // Sin responder (null/undefined/'') se muestra el mediano; Number(null) seria 0 y pintaria el chico.
+  function tam(r) { var t = r ? r.tamano : null; if (t === null || t === undefined || t === '') return 1; t = Number(t); return t === 0 || t === 1 || t === 2 ? t : 1; }
 
   function cab(marca, extra) {
     var m = marca ? escapar(String(marca).slice(0, 28)) : 'Su marca aquí';
