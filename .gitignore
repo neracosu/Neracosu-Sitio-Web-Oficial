@@ -110,3 +110,9 @@ gygshopping.app/
 papelcebolla.neracosu.com/
 papelcebolla.app/
 
+
+# --- Propuestas a prospectos: se publican por enlace, nunca al repo ---
+propuesta/
+
+# --- Ya Pague: lo publica ~/conector-pagos (repo neracosu/yapague), no este repo ---
+yapague.app/
