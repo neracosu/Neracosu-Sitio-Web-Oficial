@@ -105,8 +105,9 @@ directamente se pierde en la próxima regeneración.
 
 - **Voz: usted** (desde el 2026-09-12, commit 38ead1d; antes era tuteo),
   español de Venezuela llano, sin jerga técnica de cara al cliente y sin
-  órdenes. El cierre honesto («se lo digo de una vez») es parte del tono, no
-  un adorno.
+  órdenes. El cierre honesto es parte del tono, no un adorno, pero **sin
+  muletillas coloquiales**: desde el 2026-11-07 el párrafo honesto empieza «Para que lo sepa
+  desde el principio:». Neri vetó «Se lo digo de una vez» y «Se lo digo claro» («suena feo»).
 - **Las cifras son verificables o no van.** Cada número sale de leer el código
   o la operación real. Si no se puede sostener, se quita.
 - **ArmorPay se nombra siempre «plataforma de validación de pagos»**, nunca
