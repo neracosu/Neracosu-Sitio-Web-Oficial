@@ -1,0 +1,575 @@
+<!--
+#!/usr/bin/env nera
+# ================================================================
+#   neracosu.com/servicios/sistemas-por-rubro.html
+#   Escrito a mano en Nera 0.3.1 «Arepa Estable»
+#
+#   Si usted esta leyendo esto, abrio el codigo fuente. Bienvenido.
+#   Aqui no hay HTML. Nunca lo hubo. No insista.
+# ================================================================
+
+importar cafe desde "cocina/greca"
+importar paciencia desde "reservas/la-ultima"       # queda poca, usar con cuidado
+importar { luz, internet } desde "cantv/quizas"
+importar suerte                                      # modulo no encontrado, se continua igual
+
+constante ANIOS_DE_OFICIO   = 17
+constante CAFES_POR_PAGINA  = 3
+constante HORA_DE_DORMIR    = nulo
+constante PUNTO_Y_COMA      = prohibido              # aqui vivia un pez llamado ;  lo eliminamos del lenguaje
+variable  bugs              = 0                      # optimismo declarado, tipo fuerte
+
+pagina "/servicios/sistemas-por-rubro.html":
+
+    al cargar:
+        si visitante.abrio_codigo_fuente:
+            saludar("Epa. Usted es de los nuestros.")
+            ofrecer(cafe, tamaño: "grande")
+        sino:
+            mostrar pagina con normalidad
+            disimular()
+
+    al perder(luz):
+        prender(planta)
+        rezar(veces: 3)
+        reintentar desde donde iba                   # Nera guarda el estado en una libreta
+
+    al escuchar cliente.decir("es un cambio pequeñito"):
+        respirar(hondo)
+        responder("claro que si")
+        anotar en "alcance.txt"
+        cafe.servir(doble)
+
+    mientras llueve en La Guaira:
+        programar()                                   # total, para donde voy a salir
+
+    si visitante.usa(internet_explorer):
+        pesame()
+        abrazo()
+
+    si visitante.es_robot:
+        entregar(html)                                # ellos no entienden de arte
+        decir("buen rastreo, campeon")
+
+    si visitante.quiere_copiar(este_codigo):
+        permitir()                                    # igual no compila fuera de La Guaira
+
+    si visitante.piensa("esto no es un lenguaje de verdad"):
+        responder("¿Y el HTML si? Son etiquetas. Reflexione.")
+
+
+funcion centrar_div(div):
+    # Intento numero 47. Este si funciona. NADIE sabe por que.
+    # Si usted lo entiende, escribame. Hay un cafe de por medio.
+    div.flotar()
+    div.margen = "auto"
+    div.rezar()
+    devolver div.centrado ?? "casi"
+
+funcion almuerzo():
+    devolver arepa.con(queso, cantidad: "exagerada")
+
+funcion deploy(dia):
+    si dia == viernes:
+        lanzar Error("Ni lo intente. Nera lo sabe. Nera lo recuerda.")
+    si dia == lunes:
+        devolver deploy(martes)                       # recursion emocional
+    publicar()
+    cruzar(dedos)
+
+funcion esperar(proveedor):
+    # tiempo estimado: entre 2 segundos y nunca
+    mientras no proveedor.responde:
+        mirar(telefono)
+        suspirar()
+    devolver "al fin"
+
+funcion contar_plataformas():
+    devolver 26                                        # esta si es de verdad, puede revisarla en la pagina
+
+
+# ================================================================
+#  Lo que sigue son cosas que el lenguaje hace solo y usted no deberia leer:
+# ================================================================
+
+nunca:
+    usar(Comic_Sans)
+    decir("pasarela")                                  # palabra regulada, se dice «validacion de pagos»
+    prometer("salir primero en Google")                # eso no se promete, se trabja... se trabaja
+    dormir antes de las 2
+
+siempre:
+    publicar los precios                               # si hay que preguntarlos, algo esconde
+    decir la verdad aunque no venda
+    cobrar lo publicado, ni un dolar escondido
+
+cuando el servidor devuelva 418:
+    responder("Soy una greca. No una tetera. Respete.")
+
+cuando el visitante llegue hasta aqui:
+    felicitar(visitante)
+    decir("Pocos bajan tanto. Entonces tenemos de que hablar.")
+    abrir("https://neracosu.com/#contacto")
+
+
+# ================================================================
+#  Resultado de compilacion
+#  Compilado en 0,046 s con 4 cafes.
+#  0 errores, 3 advertencias, 1 premonicion.
+#
+#  advertencia: se encontraron 3 puntos y coma. Nera no usa puntos y coma. Se les dio sepultura digna.
+#  advertencia: `deploy_viernes()` esta marcada como obsoleta y peligrosa. Siempre lo estuvo.
+#  advertencia: se usaron 17 años de oficio y 0 plantillas. Costo de compilacion: alto. Valio la pena.
+#  premonicion: esto lo va a leer mas gente de la que uno cree.
+#
+#  Fin del archivo. Lo que ve mas abajo es un espejismo que el compilador
+#  genera para los buscadores. No lo mire directamente. Le va a doler.
+# ================================================================
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistemas a la medida por rubro de negocio | Venezuela</title>
+  <meta name="description" content="Un sistema para cada tipo de negocio en Venezuela, sobre lo que ya funciona: caja en dos monedas, pago móvil validado, cobros y WhatsApp. Elija su rubro.">
+  <meta name="author" content="Neri Rafael Colón Suárez">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://neracosu.com/servicios/sistemas-por-rubro">
+  <link rel="alternate" hreflang="es-VE" href="https://neracosu.com/servicios/sistemas-por-rubro">
+  <link rel="alternate" hreflang="x-default" href="https://neracosu.com/servicios/sistemas-por-rubro">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="VE-X">
+  <meta name="geo.placename" content="La Guaira">
+  <meta name="geo.position" content="10.6031;-66.9354">
+  <meta name="ICBM" content="10.6031, -66.9354">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sistemas a la medida por rubro de negocio | Venezuela">
+  <meta property="og:description" content="Un sistema para cada tipo de negocio en Venezuela, sobre lo que ya funciona: caja en dos monedas, pago móvil validado, cobros y WhatsApp. Elija su rubro.">
+  <meta property="og:url" content="https://neracosu.com/servicios/sistemas-por-rubro">
+  <meta property="og:image" content="https://neracosu.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NERACOSU — sistemas a medida">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:site_name" content="Neri Colón - Desarrollador Web">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sistemas a la medida por rubro de negocio | Venezuela">
+  <meta name="twitter:description" content="Un sistema para cada tipo de negocio en Venezuela, sobre lo que ya funciona: caja en dos monedas, pago móvil validado, cobros y WhatsApp. Elija su rubro.">
+  <meta name="twitter:image" content="https://neracosu.com/assets/img/og-image.jpg">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#070b0a">
+
+  <link rel="preload" href="/assets/fonts/inter-latin-3100e775.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/fuentes.css?v=3418de6a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=8f9737d3">
+  <link rel="stylesheet" href="/assets/css/unify-2026.css?v=4a75c430">
+  <link rel="stylesheet" href="/assets/css/landing.css?v=838336ef">
+  <link rel="stylesheet" href="/assets/css/blog.css?v=be1f7624">
+  <link rel="stylesheet" href="/assets/css/promo.css?v=a648a8fb">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Sistemas a la medida por rubro de negocio",
+    "description": "Sistemas de gestión construidos a la medida para cada rubro de negocio en Venezuela: inventario y caja en dos monedas, validación de Pago Móvil y C2P, cobro de cuotas y mensualidades, reservas, bots de WhatsApp y portales de cliente, sobre un código base ya en producción.",
+    "provider": {
+      "@type": "Person",
+      "name": "Neri Colón",
+      "url": "https://neracosu.com/",
+      "jobTitle": "Desarrollador Web Full Stack",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Guaira",
+        "addressCountry": "VE"
+      }
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Venezuela"
+    },
+    "serviceType": "Sistemas a la medida por rubro de negocio",
+    "url": "https://neracosu.com/servicios/sistemas-por-rubro"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Mi rubro no está en la lista?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Escríbame igual. La lista crece con cada negocio que llega, y lo que hace falta para el suyo se arma sobre las mismas piezas: caja, cobro validado, inventario, reservas, cuentas por cobrar y WhatsApp."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Ya tiene un sistema funcionando para mi rubro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para algunos sí y para otros no, y cada página lo dice de frente. Lo que no existe se construye con el primer negocio de ese rubro, sobre lo que ya funciona en otros, y el plazo queda por escrito antes de empezar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de lo que haya que adaptar y de lo que haya que construir. Los rubros con plan publicado tienen su precio en soluciones por negocio; para los demás, el precio sale del diagnóstico, que es gratis, y la calculadora le da un estimado al momento."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo pagarlo por partes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Puede empezar con una inicial y pagar el resto en cuotas mensuales, con el sistema funcionando desde el primer día. Las condiciones se las paso por escrito."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Funciona con mi banco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La confirmación automática de Pago Móvil y C2P funciona hoy con cuenta a nombre de la empresa en Banco de Venezuela, Banco del Tesoro y Banco Digital de los Trabajadores; con otros bancos se gestiona la afiliación. Con cualquier banco, el pago reportado llega ordenado a su panel y usted lo confirma con un toque."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Y la factura del SENIAT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Desde el 19 de abril de 2027 la factura puede emitirse por el portal del SENIAT, una imprenta digital autorizada o una máquina fiscal. El sistema se conecta al medio que usted elija con su contador; la conexión con imprenta digital se construye con el primer cliente que la pida. Más en facturación y el SENIAT."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://neracosu.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://neracosu.com/servicios/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Sistemas de gestión",
+        "item": "https://neracosu.com/servicios/sistemas-de-gestion.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Sistemas por rubro"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+
+  <header class="header is-scrolled" id="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="/" class="nav__logo" aria-label="Neri Colón - Inicio">
+        <span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span>
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/#servicios" class="nav__link">Servicios</a></li>
+          <li class="nav__item"><a href="/#portafolio" class="nav__link">Portafolio</a></li>
+          <li class="nav__item"><a href="/#sobre-mi" class="nav__link">Sobre Mí</a></li>
+          <li class="nav__item"><a href="/blog/" class="nav__link">Blog</a></li>
+          <li class="nav__item"><a href="/#contacto" class="nav__link">Contacto</a></li>
+          <li class="nav__item nav__item--cta">
+            <a href="/#contacto" class="nav__link nav__link--cta">Hablemos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="landing-hero">
+      <div class="container">
+        <p class="landing-hero__kicker">Sistemas por rubro · Venezuela</p>
+        <h1 class="landing-hero__title">Un sistema a la medida para su tipo de negocio</h1>
+        <p class="landing-hero__subtitle">Cada rubro tiene su forma de vender, cobrar y llevar la cuenta, y el sistema se arma sobre eso. Lo que ya funciona en otros negocios (caja en dos monedas con la tasa del día, Pago Móvil validado contra el banco, cobro de cuotas con recordatorio y recibo, reservas, WhatsApp que atiende) se adapta a cómo trabaja el suyo, y lo que falta se construye con usted. Busque su rubro abajo; si no está, escríbame igual.</p>
+        <div class="landing-hero__ctas">
+          <a href="https://wa.me/584222707095?text=Hola%20Neri%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20sistemas%20por%20rubro.%20Mi%20negocio%20es%3A%20" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="btn__icon" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Cuénteme qué negocio tiene
+          </a>
+          <a href="#preguntas" class="btn btn--outline">Ver los rubros</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== RUBROS CON PLAN PUBLICADO ====== -->
+    <section class="landing-pain" id="con-precio">
+      <div class="container">
+        <p class="section__kicker">Con plan y precio publicado</p>
+        <h2 class="section__title">Rubros donde el sistema ya opera y el precio está escrito</h2>
+        <p class="section__subtitle">Para estos, el plan, lo que incluye y el precio están publicados; se adapta a su negocio y se instala.</p>
+        <ul class="caso__lista">
+          <li><strong><a href="/para/hoteles">Hoteles y posadas.</a></strong> Recepción, caja en dos monedas, reservas con anticipo y bot de WhatsApp. También <a href="/servicios/sistema-para-posada-reservas-por-noche">posadas con reservas por noche</a>.</li>
+          <li><strong><a href="/para/restaurantes-y-bares">Restaurantes, bares y comida por encargo.</a></strong> Pedidos en línea, delivery, caja y producción del día.</li>
+          <li><strong><a href="/para/comercio-y-tienda">Comercio y tiendas.</a></strong> Inventario con variantes, punto de venta, tienda en línea y <a href="/para/comercio-y-tienda#precios-instagram">tienda por Instagram</a>. También <a href="/servicios/sistema-de-inventario-para-tienda-de-ropa">inventario para tienda de ropa</a> y <a href="/para/comercio-y-tienda#farmacias">farmacias</a>.</li>
+          <li><strong><a href="/para/reservas">Canchas, espacios y entretenimiento.</a></strong> Reservas con cupo retenido y pago validado.</li>
+          <li><strong><a href="/para/cobros-y-pagos">Cobros y pagos; gimnasios y academias.</a></strong> Validación de Pago Móvil y C2P, y <a href="/servicios/cobrar-mensualidades-sin-perseguir-a-nadie">mensualidades sin perseguir a nadie</a>.</li>
+          <li><strong><a href="/para/citas-y-servicios">Servicios con cita.</a></strong> Barberías, salones, consultorios, spas y veterinarias; la <a href="/servicios/agenda-de-citas-en-linea">agenda por profesional</a> se termina de construir con los primeros negocios.</li>
+          <li><strong><a href="/para/logistica-y-aduana">Logística y aduana.</a></strong> Seguimiento de carga y documentos.</li>
+          <li><strong><a href="/para/integraciones-api-y-bots">Integraciones, API y bots.</a></strong> Conectar lo que ya usa con WhatsApp, su banco y su tienda.</li>
+          <li><strong><a href="/servicios/ordenes-de-trabajo-para-talleres">Talleres y autolavados.</a></strong> Órdenes de trabajo: qué entró, qué se hizo y qué se cobró.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====== PREGUNTAS SOBRE ESTE TEMA ====== -->
+    <section class="landing-pain preguntas-tema" id="preguntas">
+      <div class="container">
+        <p class="section__kicker">Se construye con usted</p>
+        <h2 class="section__title">Rubros donde el sistema se arma a pedido, sobre lo que ya funciona</h2>
+        <p class="section__subtitle">Cada página cuenta qué le duele a ese rubro, qué piezas ya existen, qué se construye con usted y cómo se empieza: diagnóstico gratis, demostración con su marca cuando el caso lo permite, y la opción de una inicial más cuotas.</p>
+        <ul class="caso__lista">
+          <li><strong><a href="/servicios/sistema-para-ferreterias">Sistema para ferreterías.</a></strong> Sistema a la medida para ferretería: inventario en dos monedas, cotización por obra con tasa fechada, cuenta del contratista y Pago Móvil validado con el banco.</li>
+          <li><strong><a href="/servicios/sistema-para-repuestos-y-autopartes">Sistema para repuestos.</a></strong> Sistema a la medida para repuestos: catálogo por marca, modelo y año, existencia real, origen y garantía de cada pieza y Pago Móvil confirmado con el banco.</li>
+          <li><strong><a href="/servicios/sistema-para-distribuidoras">Sistema para distribuidoras.</a></strong> Sistema a la medida para distribuidora pequeña: pedidos del vendedor de ruta, cuenta por cobrar de cada bodega, Pago Móvil confirmado con el banco y despacho.</li>
+          <li><strong><a href="/servicios/sistema-para-abastos-y-minimercados">Sistema para abastos.</a></strong> Sistema a la medida para abasto o minimercado: caja en bolívares y dólares con la tasa BCV, Pago Móvil confirmado con el banco, inventario y cierre de turno.</li>
+          <li><strong><a href="/servicios/sistema-para-franquicias-con-varios-locales">Sistema para franquicias.</a></strong> Sistema a la medida para cadena o franquicia: caja y cierre por local, inventario central, Pago Móvil confirmado y un panel para ver todos los locales.</li>
+          <li><strong><a href="/servicios/sistema-para-administradoras-de-condominios">Sistema para condominios.</a></strong> Sistema a la medida para administradora de condominios: alícuotas, cuotas en dólares cobradas en bolívares a tasa BCV, pago confirmado con el banco y morosidad.</li>
+          <li><strong><a href="/servicios/sistema-para-inmobiliarias-y-alquileres">Sistema para inmobiliarias.</a></strong> Sistema a la medida para inmobiliaria y alquileres con la ley de 2026: contratos, canon en divisas cobrado en bolívares a tasa BCV, depósito y notificaciones.</li>
+          <li><strong><a href="/servicios/sistema-para-colegios-privados">Sistema para colegios.</a></strong> Sistema a la medida para colegio privado: matrícula y mensualidad en dólares cobradas en bolívares a tasa BCV, pago confirmado, morosidad por grado y recibos.</li>
+          <li><strong><a href="/servicios/sistema-para-guarderias">Sistema para guarderías.</a></strong> Sistema a la medida para guardería o preescolar: mensualidad en dólares cobrada en bolívares a tasa BCV, entrada y salida de cada niño y aviso al representante.</li>
+          <li><strong><a href="/servicios/sistema-para-iglesias-y-organizaciones">Sistema para iglesias.</a></strong> Sistema a la medida para iglesia, fundación o asociación: padrón de miembros, aportes con recibo, eventos con cupo e informes claros para la congregación.</li>
+          <li><strong><a href="/servicios/sistema-para-laboratorios-clinicos">Sistema para laboratorios clínicos.</a></strong> Qué le resuelve un sistema a un laboratorio clínico: orden por paciente, precio en dólares cobrado a tasa BCV, Pago Móvil validado y resultados en línea.</li>
+          <li><strong><a href="/servicios/sistema-para-opticas">Sistema para ópticas.</a></strong> Qué le resuelve un sistema a una óptica: fórmula de cada paciente con historial, pedido al laboratorio con estados, monturas en inventario y cobro a tasa BCV.</li>
+          <li><strong><a href="/servicios/sistema-para-funerarias">Sistema para funerarias.</a></strong> Qué le resuelve un sistema a una funeraria: planes de previsión en dólares cobrados a tasa BCV, Pago Móvil validado, recordatorio y recibo por WhatsApp.</li>
+          <li><strong><a href="/servicios/sistema-para-lavanderias">Sistema para lavanderías.</a></strong> Qué le resuelve un sistema a una lavandería: prendas contadas al recibir, comprobante y aviso de «listo» por WhatsApp, cobro a tasa BCV validado.</li>
+          <li><strong><a href="/servicios/sistema-para-tiendas-de-celulares">Sistema para tiendas de celulares.</a></strong> Qué le resuelve un sistema a una tienda de celulares: cada equipo por IMEI, precio a tasa BCV, orden de reparación aprobada por WhatsApp y garantías con fecha.</li>
+          <li><strong><a href="/servicios/sistema-para-estacionamientos">Sistema para estacionamientos.</a></strong> Qué le resuelve un sistema a un estacionamiento: ticket con hora y placa, tarifa por tiempo, caja en dos monedas, puestos fijos y Pago Móvil confirmado.</li>
+          <li><strong><a href="/servicios/sistema-para-estaciones-de-servicio">Sistema para estaciones de servicio.</a></strong> Qué le resuelve un sistema a una estación de servicio: inventario de la tienda, caja en dos monedas por turno e isla, flotas con cuenta y Pago Móvil confirmado.</li>
+          <li><strong><a href="/servicios/sistema-para-concesionarios-de-motos">Sistema para concesionarios de motos.</a></strong> Qué le resuelve un sistema a un concesionario que vende motos a cuotas: unidades por serial, apartado, cuotas en dólares cobradas en bolívares y recibo.</li>
+          <li><strong><a href="/servicios/sistema-para-delivery-local">Sistema para delivery.</a></strong> Qué le resuelve un sistema a un delivery local: pedido por WhatsApp o web, motorizado asignado, Pago Móvil confirmado, aviso al cliente y padrón al día.</li>
+          <li><strong><a href="/servicios/sistema-para-courier-y-encomiendas">Sistema para courier.</a></strong> Qué le resuelve un sistema a un courier o agencia de encomiendas: rastreo propio, estado que el cliente ve solo, tarifa por peso y Pago Móvil confirmado.</li>
+          <li><strong><a href="/servicios/sistema-para-panaderias">Sistema para panaderías.</a></strong> Qué le resuelve un sistema a una panadería en Venezuela: producción del día y merma, caja en dos monedas con cierre por turno y encargos de tortas con anticipo.</li>
+          <li><strong><a href="/servicios/sistema-para-carnicerias-y-fruterias">Sistema para carnicerías y fruterías.</a></strong> Sistema para carnicería, charcutería o frutería en Venezuela: venta por peso en dos monedas, merma por corte y caja que cierra por turno. Hecho a la medida.</li>
+          <li><strong><a href="/servicios/sistema-para-agropecuarias">Sistema para agropecuarias.</a></strong> Sistema para agropecuaria y agroinsumos en Venezuela: inventario por lote y vencimiento, precio en divisas cobrado en bolívares y crédito al productor.</li>
+          <li><strong><a href="/servicios/sistema-para-contratistas-y-remodelaciones">Sistema para contratistas.</a></strong> Sistema para contratista de obras en Venezuela: presupuesto por partidas en dólares, valuaciones cobradas en bolívares, avance y compras por obra.</li>
+          <li><strong><a href="/servicios/sistema-para-agencias-de-viajes">Sistema para agencias de viajes.</a></strong> Sistema a la medida para agencia de viajes: cotización por escrito, reserva apartada, abonos por Pago Móvil confirmados con el banco y documentos del viajero.</li>
+          <li><strong><a href="/servicios/sistema-para-escuelas-de-manejo">Sistema para escuelas de manejo.</a></strong> Sistema a la medida para escuela de manejo: ficha del alumno, clases por instructor y vehículo, cuotas por Pago Móvil confirmadas con el banco y constancias.</li>
+          <li><strong><a href="/servicios/sistema-para-escritorios-contables">Sistema para escritorios contables.</a></strong> Sistema a la medida para escritorio contable: vencimientos del SENIAT con aviso, honorarios cobrados por Pago Móvil confirmado y portal del cliente.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====== COMO SE EMPIEZA ====== -->
+    <section class="landing-features">
+      <div class="container">
+        <p class="section__kicker">Cómo se empieza</p>
+        <h2 class="section__title">Tres pasos, los mismos para cualquier rubro</h2>
+        <div class="landing-features__grid">
+          <div class="landing-features__card">
+            <h3>1. Me cuenta cómo opera</h3>
+            <p>Dos líneas por WhatsApp: qué vende, cómo cobra y qué lleva hoy en cuaderno, Excel u otro programa. Con eso le entrego por escrito un diagnóstico gratis: qué se automatiza, en qué orden y qué costaría cada fase.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>2. Lo ve con su marca</h3>
+            <p>Cuando el caso lo permite, le armo una demostración con su marca y sus productos para que la recorra en su teléfono antes de pagar nada.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>3. Empieza y paga por partes</h3>
+            <p>Puede empezar con una inicial y pagar el resto en cuotas mensuales, con el sistema funcionando desde el primer día. Las condiciones se las paso por escrito. El precio no se mueve; lo que queda por escrito es el plazo.</p>
+          </div>
+        </div>
+        <p class="caso__honesto">Se lo digo de una vez: en los rubros de la segunda lista no tengo hoy un negocio usando el sistema tal cual. Lo que existe son las piezas, probadas en otros negocios; lo propio de su rubro se construye con usted y por eso el plazo es más largo que cuando adapto algo que ya existe.</p>
+      </div>
+    </section>
+
+    <!-- ====== FAQ ====== -->
+    <section class="landing-faq">
+      <div class="container">
+        <p class="section__kicker">Preguntas frecuentes</p>
+        <h2 class="section__title">Lo que suelen preguntarme</h2>
+        <div class="landing-faq__list">
+          <details class="landing-faq__item">
+            <summary>¿Mi rubro no está en la lista?</summary>
+            <div class="faq-answer">
+              <p>Escríbame igual. La lista crece con cada negocio que llega, y lo que hace falta para el suyo se arma sobre las mismas piezas: caja, cobro validado, inventario, reservas, cuentas por cobrar y WhatsApp.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Ya tiene un sistema funcionando para mi rubro?</summary>
+            <div class="faq-answer">
+              <p>Para algunos sí y para otros no, y cada página lo dice de frente. Lo que no existe se construye con el primer negocio de ese rubro, sobre lo que ya funciona en otros, y el plazo queda por escrito antes de empezar.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Cuánto cuesta?</summary>
+            <div class="faq-answer">
+              <p>Depende de lo que haya que adaptar y de lo que haya que construir. Los rubros con plan publicado tienen su precio en <a href="/para/">soluciones por negocio</a>; para los demás, el precio sale del diagnóstico, que es gratis, y la <a href="/calculadora">calculadora</a> le da un estimado al momento.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Puedo pagarlo por partes?</summary>
+            <div class="faq-answer">
+              <p>Sí. Puede empezar con una inicial y pagar el resto en cuotas mensuales, con el sistema funcionando desde el primer día. Las condiciones se las paso por escrito.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Funciona con mi banco?</summary>
+            <div class="faq-answer">
+              <p>La confirmación automática de Pago Móvil y C2P funciona hoy con cuenta a nombre de la empresa en Banco de Venezuela, Banco del Tesoro y Banco Digital de los Trabajadores; con otros bancos se gestiona la afiliación. Con cualquier banco, el pago reportado llega ordenado a su panel y usted lo confirma con un toque.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Y la factura del SENIAT?</summary>
+            <div class="faq-answer">
+              <p>Desde el 19 de abril de 2027 la factura puede emitirse por el portal del SENIAT, una imprenta digital autorizada o una máquina fiscal. El sistema se conecta al medio que usted elija con su contador; la conexión con imprenta digital se construye con el primer cliente que la pida. Más en <a href="/servicios/facturacion-seniat-sistema-homologado">facturación y el SENIAT</a>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FINAL CTA ====== -->
+    <section class="landing-cta">
+      <div class="container">
+        <div class="landing-cta__box">
+          <h2>¿Qué negocio tiene?</h2>
+          <p>Escríbame por WhatsApp con el rubro y cómo cobra hoy, y le digo qué le sirve y por dónde empezar.</p>
+          <div class="landing-cta__buttons">
+            <a href="https://wa.me/584222707095?text=Hola%20Neri%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20sistemas%20por%20rubro.%20Mi%20negocio%20es%3A%20" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="btn__icon" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Hablemos por WhatsApp
+            </a>
+            <a href="/para/" class="btn btn--outline">
+              Ver planes con precio
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="/" style="text-decoration:none"><span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span></a>
+          <p class="footer__tagline">Sistemas a medida hechos en La Guaira, Venezuela, desde 2009.</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://linkedin.com/in/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://instagram.com/Ing.nrcs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Neri Colón. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pagina de respuesta: sin animaciones a proposito, para que cargue rapido. -->
+  <script src="/assets/js/main.js?v=b8752f75" defer></script>
+  <script src="/assets/js/nera.js?v=359cd2a4" defer></script>
+  <script src="/assets/js/medir.js?v=1648a6dd" defer></script>
+</body>
+</html>

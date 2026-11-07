@@ -1,0 +1,581 @@
+<!--
+#!/usr/bin/env nera
+# ================================================================
+#   neracosu.com/servicios/sistema-para-ferreterias.html
+#   Escrito a mano en Nera 0.3.1 «Arepa Estable»
+#
+#   Si usted esta leyendo esto, abrio el codigo fuente. Bienvenido.
+#   Aqui no hay HTML. Nunca lo hubo. No insista.
+# ================================================================
+
+importar cafe desde "cocina/greca"
+importar paciencia desde "reservas/la-ultima"       # queda poca, usar con cuidado
+importar { luz, internet } desde "cantv/quizas"
+importar suerte                                      # modulo no encontrado, se continua igual
+
+constante ANIOS_DE_OFICIO   = 17
+constante CAFES_POR_PAGINA  = 3
+constante HORA_DE_DORMIR    = nulo
+constante PUNTO_Y_COMA      = prohibido              # aqui vivia un pez llamado ;  lo eliminamos del lenguaje
+variable  bugs              = 0                      # optimismo declarado, tipo fuerte
+
+pagina "/servicios/sistema-para-ferreterias.html":
+
+    al cargar:
+        si visitante.abrio_codigo_fuente:
+            saludar("Epa. Usted es de los nuestros.")
+            ofrecer(cafe, tamaño: "grande")
+        sino:
+            mostrar pagina con normalidad
+            disimular()
+
+    al perder(luz):
+        prender(planta)
+        rezar(veces: 3)
+        reintentar desde donde iba                   # Nera guarda el estado en una libreta
+
+    al escuchar cliente.decir("es un cambio pequeñito"):
+        respirar(hondo)
+        responder("claro que si")
+        anotar en "alcance.txt"
+        cafe.servir(doble)
+
+    mientras llueve en La Guaira:
+        programar()                                   # total, para donde voy a salir
+
+    si visitante.usa(internet_explorer):
+        pesame()
+        abrazo()
+
+    si visitante.es_robot:
+        entregar(html)                                # ellos no entienden de arte
+        decir("buen rastreo, campeon")
+
+    si visitante.quiere_copiar(este_codigo):
+        permitir()                                    # igual no compila fuera de La Guaira
+
+    si visitante.piensa("esto no es un lenguaje de verdad"):
+        responder("¿Y el HTML si? Son etiquetas. Reflexione.")
+
+
+funcion centrar_div(div):
+    # Intento numero 47. Este si funciona. NADIE sabe por que.
+    # Si usted lo entiende, escribame. Hay un cafe de por medio.
+    div.flotar()
+    div.margen = "auto"
+    div.rezar()
+    devolver div.centrado ?? "casi"
+
+funcion almuerzo():
+    devolver arepa.con(queso, cantidad: "exagerada")
+
+funcion deploy(dia):
+    si dia == viernes:
+        lanzar Error("Ni lo intente. Nera lo sabe. Nera lo recuerda.")
+    si dia == lunes:
+        devolver deploy(martes)                       # recursion emocional
+    publicar()
+    cruzar(dedos)
+
+funcion esperar(proveedor):
+    # tiempo estimado: entre 2 segundos y nunca
+    mientras no proveedor.responde:
+        mirar(telefono)
+        suspirar()
+    devolver "al fin"
+
+funcion contar_plataformas():
+    devolver 26                                        # esta si es de verdad, puede revisarla en la pagina
+
+
+# ================================================================
+#  Lo que sigue son cosas que el lenguaje hace solo y usted no deberia leer:
+# ================================================================
+
+nunca:
+    usar(Comic_Sans)
+    decir("pasarela")                                  # palabra regulada, se dice «validacion de pagos»
+    prometer("salir primero en Google")                # eso no se promete, se trabja... se trabaja
+    dormir antes de las 2
+
+siempre:
+    publicar los precios                               # si hay que preguntarlos, algo esconde
+    decir la verdad aunque no venda
+    cobrar lo publicado, ni un dolar escondido
+
+cuando el servidor devuelva 418:
+    responder("Soy una greca. No una tetera. Respete.")
+
+cuando el visitante llegue hasta aqui:
+    felicitar(visitante)
+    decir("Pocos bajan tanto. Entonces tenemos de que hablar.")
+    abrir("https://neracosu.com/#contacto")
+
+
+# ================================================================
+#  Resultado de compilacion
+#  Compilado en 0,079 s con 3 cafes.
+#  0 errores, 3 advertencias, 1 premonicion.
+#
+#  advertencia: se encontraron 3 puntos y coma. Nera no usa puntos y coma. Se les dio sepultura digna.
+#  advertencia: la cadena "es un cambio pequeñito" aparece 212 veces en el historial.
+#  advertencia: se detecto una arepa sin relleno. Eso no es una arepa, es un pan.
+#  premonicion: esto lo va a leer mas gente de la que uno cree.
+#
+#  Fin del archivo. Lo que ve mas abajo es un espejismo que el compilador
+#  genera para los buscadores. No lo mire directamente. Le va a doler.
+# ================================================================
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema para ferreterías: inventario, obras y contratistas</title>
+  <meta name="description" content="Sistema a la medida para ferretería: inventario en dos monedas, cotización por obra con tasa fechada, cuenta del contratista y Pago Móvil validado con el banco.">
+  <meta name="author" content="Neri Rafael Colón Suárez">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://neracosu.com/servicios/sistema-para-ferreterias">
+  <link rel="alternate" hreflang="es-VE" href="https://neracosu.com/servicios/sistema-para-ferreterias">
+  <link rel="alternate" hreflang="x-default" href="https://neracosu.com/servicios/sistema-para-ferreterias">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="VE-X">
+  <meta name="geo.placename" content="La Guaira">
+  <meta name="geo.position" content="10.6031;-66.9354">
+  <meta name="ICBM" content="10.6031, -66.9354">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sistema para ferreterías: inventario, obras y contratistas">
+  <meta property="og:description" content="Sistema a la medida para ferretería: inventario en dos monedas, cotización por obra con tasa fechada, cuenta del contratista y Pago Móvil validado con el banco.">
+  <meta property="og:url" content="https://neracosu.com/servicios/sistema-para-ferreterias">
+  <meta property="og:image" content="https://neracosu.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NERACOSU — sistemas a medida">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:site_name" content="Neri Colón - Desarrollador Web">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sistema para ferreterías: inventario, obras y contratistas">
+  <meta name="twitter:description" content="Sistema a la medida para ferretería: inventario en dos monedas, cotización por obra con tasa fechada, cuenta del contratista y Pago Móvil validado con el banco.">
+  <meta name="twitter:image" content="https://neracosu.com/assets/img/og-image.jpg">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#070b0a">
+
+  <link rel="preload" href="/assets/fonts/inter-latin-3100e775.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/fuentes.css?v=3418de6a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=8f9737d3">
+  <link rel="stylesheet" href="/assets/css/unify-2026.css?v=4a75c430">
+  <link rel="stylesheet" href="/assets/css/landing.css?v=838336ef">
+  <link rel="stylesheet" href="/assets/css/blog.css?v=be1f7624">
+  <link rel="stylesheet" href="/assets/css/promo.css?v=a648a8fb">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Sistema para ferreterías y materiales de construcción",
+    "description": "Sistema a la medida para ferreterías y depósitos de materiales en Venezuela: inventario de miles de referencias con precios en bolívares y divisas a la tasa BCV, cotización por obra con la tasa fechada, cuenta por cobrar de cada contratista con recordatorio y recibo, Pago Móvil y C2P confirmados contra el banco, pedidos a proveedor y factura por el medio que el negocio elija.",
+    "provider": {
+      "@type": "Person",
+      "name": "Neri Colón",
+      "url": "https://neracosu.com/",
+      "jobTitle": "Desarrollador Web Full Stack",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Guaira",
+        "addressCountry": "VE"
+      }
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Venezuela"
+    },
+    "serviceType": "Sistema para ferreterías y materiales de construcción",
+    "url": "https://neracosu.com/servicios/sistema-para-ferreterias"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Tengo una sola ferretería, de mostrador. ¿Esto es para mí?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de a quién le vende. Si vende de contado y no cotiza obras, lo que necesita es un punto de venta con inventario y caja en dos monedas, y lo cuento en punto de venta para un negocio pequeño. Si cotiza obras, fía a contratistas o maneja miles de referencias en autoservicio, ahí es donde un sistema a la medida se paga: la cotización con la tasa fechada, la cuenta de cada contratista y el pedido al proveedor a tiempo. Lo que no necesita no se le pone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Funciona con mi banco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La confirmación automática del Pago Móvil y del C2P funciona hoy con una cuenta jurídica (a nombre de la empresa) en Banco de Venezuela, Banco del Tesoro o Banco Digital de los Trabajadores. Con otros bancos se gestiona la afiliación, sin plazo garantizado, y mientras tanto el pago le llega ordenado a un panel y usted lo confirma con un toque. Zelle y transferencia siempre se confirman así, porque ni Zelle ni los bancos dan acceso para verificarlos desde fuera."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Y la factura del SENIAT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Desde el 19 de abril de 2027 la factura puede emitirse por el portal del SENIAT, por una imprenta digital autorizada o por máquina fiscal, a elección del negocio. El sistema se conecta al medio que usted elija con su contador: la conexión con máquina fiscal ya funciona (el sistema le manda la orden y guarda lo que devuelve) y la conexión con una imprenta digital se construye con el primer cliente que la pida. No doy consejo fiscal; qué cambió lo resumo en facturación y SENIAT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ya tengo Saint, Profit o A2. ¿Tengo que botarlo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No necesariamente. Muchas ferreterías dejan el administrativo para la contabilidad y ponen encima lo que les falta: la cotización por obra, la cuenta del contratista y el cobro confirmado con el banco. Los datos pasan de un lado a otro por exportación o por conexión directa, según lo que permita su versión; eso se revisa en el diagnóstico. Cómo se hace lo explico en conectar sistemas por API."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo usar la pistola de código de barras que ya tengo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Un lector USB o Bluetooth escribe el código como si fuera un teclado y el sistema lo toma tal cual, en mostrador y en depósito. Leer el código con la cámara del teléfono, para contar inventario caminando por los pasillos, es algo que se construye con usted: hoy no lo tengo en producción. Lo cuento en inventario desde el teléfono."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de cuántas referencias maneja, de si vende a obras y a crédito, de cuántos puntos de cobro tiene y de qué haya que traer del sistema que usa hoy. Los planes de comercio con precio están en comercio y tienda, y para otro alcance puede usar la calculadora. Puede empezar con una inicial y pagar el resto en cuotas mensuales; de qué depende el precio lo explico en cuánto cuesta un sistema."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tarda?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Se entrega por piezas. Primero lo que ya existe (caja en dos monedas, inventario que se descuenta con la venta, cobro confirmado, personal con PIN), para que la ferretería trabaje con el sistema desde el primer día. Después, la cotización por obra, la cuenta del contratista y el pedido al proveedor, cada una con su plazo por escrito antes de empezar. No le prometo una fecha sin haber visto cómo trabaja."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://neracosu.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://neracosu.com/servicios/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Sistemas por rubro",
+        "item": "https://neracosu.com/servicios/sistemas-por-rubro.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Sistema para ferreterías"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+
+  <header class="header is-scrolled" id="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="/" class="nav__logo" aria-label="Neri Colón - Inicio">
+        <span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span>
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/#servicios" class="nav__link">Servicios</a></li>
+          <li class="nav__item"><a href="/#portafolio" class="nav__link">Portafolio</a></li>
+          <li class="nav__item"><a href="/#sobre-mi" class="nav__link">Sobre Mí</a></li>
+          <li class="nav__item"><a href="/blog/" class="nav__link">Blog</a></li>
+          <li class="nav__item"><a href="/#contacto" class="nav__link">Contacto</a></li>
+          <li class="nav__item nav__item--cta">
+            <a href="/#contacto" class="nav__link nav__link--cta">Hablemos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="landing-hero">
+      <div class="container">
+        <p class="landing-hero__kicker">Sistema para ferreterías · Venezuela</p>
+        <h1 class="landing-hero__title">Sistema para ferretería y materiales de construcción: inventario grande, cotización por obra y crédito a contratistas</h1>
+        <p class="landing-hero__subtitle">Un sistema para ferretería encuentra cualquiera de sus miles de referencias en segundos, muestra el precio en bolívares y en dólares con la tasa BCV del día, cotiza una obra completa con la tasa congelada en la fecha, lleva la cuenta de cada contratista que compra a crédito y confirma los Pagos Móviles contra el banco sin mirar capturas. Se lo armo a la medida de cómo trabaja su ferretería, sobre piezas que ya funcionan en otros negocios.</p>
+        <div class="landing-hero__ctas">
+          <a href="https://wa.me/584222707095?text=Hola%20Neri%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20sistema%20para%20ferreter%C3%ADas.%20Mi%20ferreter%C3%ADa%20es%3A%20" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="btn__icon" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Consúlteme por su ferretería
+          </a>
+          <a href="#duele" class="btn btn--outline">Ver qué resuelve</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== LO QUE DUELE ====== -->
+    <section class="landing-pain" id="duele">
+      <div class="container">
+        <p class="section__kicker">Lo que duele en una ferretería</p>
+        <h2 class="section__title">Seis cosas que el mostrador resuelve de memoria y el sistema debería resolver solo</h2>
+        <ul class="caso__lista">
+          <li><strong>Miles de referencias y el vendedor que «sabe dónde está» se vuelve indispensable.</strong> La Cámara Ferretera Nacional cuenta unas 8.000 ferreterías en el país y describe el paso del mostrador tradicional al autoservicio con asesoría (<a href="https://www.el-carabobeno.com/sector-ferretero-venezolano-proyecta-crecer-hasta-20-en-2026-mientras-transforma-sus-negocios/" target="_blank" rel="noopener noreferrer">El Carabobeño, octubre de 2026</a>). En autoservicio, la referencia que no está en el sistema con su pasillo, su precio y su existencia, no se vende.</li>
+          <li><strong>La obra se cotiza en dólares y se paga en bolívares semanas después.</strong> Si la tasa cambió y nadie anotó cuál se usó, la discusión es con el contratista y la pierde la ferretería. La cotización necesita la tasa del día en que se hizo, su vigencia y el saldo claro después de cada abono.</li>
+          <li><strong>El contratista compra a crédito y la cuenta vive en un cuaderno.</strong> Quién debe, desde cuándo, por cuál obra, qué abonó por Pago Móvil y qué falta. El gremio lleva años diciendo que el crédito es su reclamo principal («ir a pulmón es muy complicado», <a href="https://lapatilla.com/2024/06/27/sector-ferretero-pide-mayor-apertura-crediticia-ir-a-pulmon-es-muy-complicado/" target="_blank" rel="noopener noreferrer">La Patilla, 2024</a>); el que sí fía necesita que la cuenta se lleve sola.</li>
+          <li><strong>El pedido al proveedor se hace con meses de anticipación.</strong> Según la misma Cámara Ferretera, los cargamentos que tardaban un mes ahora tardan de dos meses y medio a tres. Lo que se va a acabar hay que saberlo antes de que falte, por referencia y por proveedor, no cuando el cliente pregunta.</li>
+          <li><strong>Los Pagos Móviles del mostrador se verifican mirando capturas.</strong> Y desde agosto de 2026 cada operación rechazada o mal tecleada tiene un costo fijado por el BCV en su tarifario (<a href="https://eldiario.com/2026/08/16/comisiones-bancarias-bcv/" target="_blank" rel="noopener noreferrer">El Diario</a>). Una ferretería con muchas ventas pequeñas al día lo siente.</li>
+          <li><strong>La reconstrucción cambió el ritmo.</strong> Tras el sismo de 2026 el gremio reportó un aumento extraordinario en la demanda de insumos (<a href="https://eldiario.com/2026/08/17/inventario-materiales-reconstruccion/" target="_blank" rel="noopener noreferrer">El Diario, agosto de 2026</a>). Más obras, más cotizaciones, más contratistas a crédito y menos tiempo para llevarlo a mano.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====== LO QUE EXISTE Y LO QUE SE CONSTRUYE ====== -->
+    <section class="landing-features">
+      <div class="container">
+        <p class="section__kicker">Sin letra pequeña</p>
+        <h2 class="section__title">Lo que ya existe y lo que se construye con usted</h2>
+        <p class="section__subtitle">Nada de esto es un producto cerrado. Es una base que ya cobra y despacha en otros negocios, y encima se arman las piezas propias de una ferretería. Le digo cuál es cuál.</p>
+        <div class="landing-features__grid">
+          <div class="landing-features__card">
+            <h3>Ya funciona · Inventario y caja en dos monedas</h3>
+            <p>Un hotel de alta rotación en Valencia, Carabobo, lleva su bodegón con inventario y su caja en bolívares y dólares con cierres por turno; VIP Play, un sport bar en La Guaira, descuenta lo vendido con cada venta. Esa es la base del mostrador. Qué debe tener está en <a href="/servicios/control-de-inventario-para-negocios">control de inventario</a>.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Ya funciona · Pago Móvil y C2P confirmados con el banco</h3>
+            <p>Mi plataforma de validación de pagos busca el movimiento real en el banco y confirma el pago sin capturas; una referencia se acepta una sola vez. Cobra hoy en <a href="https://vipplaysportbar.com" target="_blank" rel="noopener noreferrer">vipplaysportbar.com</a> y <a href="https://terrazasvip.com" target="_blank" rel="noopener noreferrer">terrazasvip.com</a>. Lo explico en <a href="/servicios/validar-pagos-moviles-automaticamente">validar pagos móviles</a>.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Ya funciona · Personal con PIN, bitácora y reportes</h3>
+            <p>Cada vendedor y cada cajero entra con su clave; quién vendió, quién dio un descuento, quién anuló y quién ajustó el inventario queda con nombre y hora. El dueño ve las ventas del día por caja y por vía de pago desde el teléfono. Más en <a href="/servicios/control-de-personal-permisos-y-bitacora">control de personal y bitácora</a>.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Ya funciona · Cotizaciones en línea con precios protegidos</h3>
+            <p>Para Glotracol, un proveedor industrial de Colombia, construí un complemento donde el cliente arma su pedido, pide cotización y ve precios mayoristas solo con un código que le llega por correo. Es la pieza que se adapta para que el contratista arme su lista y pida precio. Lo cuento en <a href="/servicios/tienda-mayorista-b2b-con-cotizaciones">tienda mayorista con cotizaciones</a>.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Se construye · Cotización por obra con la tasa fechada</h3>
+            <p>La lista de materiales por obra, el precio en dólares y su equivalente en bolívares a la tasa BCV del día de la cotización, la vigencia, los abonos y el saldo por obra. Cuando el contratista paga semanas después, el número que se le cobra es el que se le cotizó.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Se construye · La cuenta de cada contratista</h3>
+            <p>Cupo, vencimientos, abonos confirmados con el banco, recordatorio por WhatsApp y recibo. El mecanismo de cobro con vencimiento y recordatorio lo uso hoy en mi propio negocio; para una ferretería se arma con sus plazos y sus obras. El método está en <a href="/servicios/cuentas-por-cobrar-clientes-que-deben">cuentas por cobrar</a>.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Se construye · Pedido a proveedor con tiempo de reposición</h3>
+            <p>Cuánto se vende de cada referencia, cuánto tarda cada proveedor en entregar y una sugerencia de pedido antes de que falte. Con cargamentos de meses, el sistema tiene que mirar hacia adelante, no contar lo que ya se acabó.</p>
+          </div>
+          <div class="landing-features__card">
+            <h3>Se construye · Código de barras con la cámara del teléfono</h3>
+            <p>Para contar inventario y recibir mercancía caminando por los pasillos. La pistola USB que ya tiene funciona desde el primer día; la lectura con la cámara no la tengo hoy en producción y se construye con usted. Más en <a href="/servicios/inventario-desde-el-telefono-con-codigo-de-barras">inventario desde el teléfono</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== COMO SE EMPIEZA ====== -->
+    <section class="landing-pain">
+      <div class="container">
+        <p class="section__kicker">Cómo se empieza</p>
+        <h2 class="section__title">Tres pasos, todos por escrito</h2>
+        <ol class="caso__pasos">
+          <li><strong>Diagnóstico gratis, por escrito.</strong> Me cuenta cómo vende hoy: mostrador o autoservicio, cuántas referencias, si cotiza obras y fía a contratistas, en qué banco recibe y qué sistema usa. Le devuelvo por escrito qué le armaría, en qué orden y qué se reutiliza de lo que ya tiene. Puede empezar en <a href="/empezar">neracosu.com/empezar</a>.</li>
+          <li><strong>Demostración con su marca, cuando el caso lo permite.</strong> Una muestra con el nombre de su ferretería y algunos de sus productos, para que la vea en el teléfono antes de decidir nada.</li>
+          <li><strong>Una inicial y el resto en cuotas.</strong> Puede empezar con una inicial y pagar el resto en cuotas mensuales, con el sistema funcionando desde el primer día; las condiciones se las paso por escrito.</li>
+        </ol>
+        <p class="caso__honesto">Se lo digo de una vez: no tengo hoy una ferretería usando esto. Se construye con la primera, sobre lo que ya funciona en otros negocios: la caja en dos monedas, el inventario que se descuenta con la venta, la validación de pagos contra el banco y el personal con PIN. La cotización por obra, la cuenta del contratista, el pedido al proveedor y el lector con la cámara se arman con usted, y el plazo de cada pieza queda por escrito antes de empezar. Si su ferretería es de mostrador, de contado y con pocas referencias, un <a href="/servicios/punto-de-venta-para-un-negocio-pequeno">punto de venta sencillo</a> puede bastarle, y se lo digo sin problema.</p>
+      </div>
+    </section>
+
+    <!-- ====== FAQ ====== -->
+    <section class="landing-faq">
+      <div class="container">
+        <p class="section__kicker">Preguntas frecuentes</p>
+        <h2 class="section__title">Lo que suelen preguntarme</h2>
+        <div class="landing-faq__list">
+          <details class="landing-faq__item">
+            <summary>Tengo una sola ferretería, de mostrador. ¿Esto es para mí?</summary>
+            <div class="faq-answer">
+              <p>Depende de a quién le vende. Si vende de contado y no cotiza obras, lo que necesita es un punto de venta con inventario y caja en dos monedas, y lo cuento en <a href="/servicios/punto-de-venta-para-un-negocio-pequeno">punto de venta para un negocio pequeño</a>. Si cotiza obras, fía a contratistas o maneja miles de referencias en autoservicio, ahí es donde un sistema a la medida se paga: la cotización con la tasa fechada, la cuenta de cada contratista y el pedido al proveedor a tiempo. Lo que no necesita no se le pone.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Funciona con mi banco?</summary>
+            <div class="faq-answer">
+              <p>La confirmación automática del Pago Móvil y del C2P funciona hoy con una cuenta jurídica (a nombre de la empresa) en Banco de Venezuela, Banco del Tesoro o Banco Digital de los Trabajadores. Con otros bancos se gestiona la afiliación, sin plazo garantizado, y mientras tanto el pago le llega ordenado a un panel y usted lo confirma con un toque. Zelle y transferencia siempre se confirman así, porque ni Zelle ni los bancos dan acceso para verificarlos desde fuera.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Y la factura del SENIAT?</summary>
+            <div class="faq-answer">
+              <p>Desde el 19 de abril de 2027 la factura puede emitirse por el portal del SENIAT, por una imprenta digital autorizada o por máquina fiscal, a elección del negocio. El sistema se conecta al medio que usted elija con su contador: la conexión con máquina fiscal ya funciona (el sistema le manda la orden y guarda lo que devuelve) y la conexión con una imprenta digital se construye con el primer cliente que la pida. No doy consejo fiscal; qué cambió lo resumo en <a href="/servicios/facturacion-seniat-sistema-homologado">facturación y SENIAT</a>.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>Ya tengo Saint, Profit o A2. ¿Tengo que botarlo?</summary>
+            <div class="faq-answer">
+              <p>No necesariamente. Muchas ferreterías dejan el administrativo para la contabilidad y ponen encima lo que les falta: la cotización por obra, la cuenta del contratista y el cobro confirmado con el banco. Los datos pasan de un lado a otro por exportación o por conexión directa, según lo que permita su versión; eso se revisa en el diagnóstico. Cómo se hace lo explico en <a href="/servicios/conectar-sistemas-por-api">conectar sistemas por API</a>.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Puedo usar la pistola de código de barras que ya tengo?</summary>
+            <div class="faq-answer">
+              <p>Sí. Un lector USB o Bluetooth escribe el código como si fuera un teclado y el sistema lo toma tal cual, en mostrador y en depósito. Leer el código con la cámara del teléfono, para contar inventario caminando por los pasillos, es algo que se construye con usted: hoy no lo tengo en producción. Lo cuento en <a href="/servicios/inventario-desde-el-telefono-con-codigo-de-barras">inventario desde el teléfono</a>.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Cuánto cuesta?</summary>
+            <div class="faq-answer">
+              <p>Depende de cuántas referencias maneja, de si vende a obras y a crédito, de cuántos puntos de cobro tiene y de qué haya que traer del sistema que usa hoy. Los planes de comercio con precio están en <a href="/para/comercio-y-tienda">comercio y tienda</a>, y para otro alcance puede usar la <a href="/calculadora">calculadora</a>. Puede empezar con una inicial y pagar el resto en cuotas mensuales; de qué depende el precio lo explico en <a href="/servicios/cuanto-cuesta-un-sistema-para-mi-negocio">cuánto cuesta un sistema</a>.</p>
+            </div>
+          </details>
+          <details class="landing-faq__item">
+            <summary>¿Cuánto tarda?</summary>
+            <div class="faq-answer">
+              <p>Se entrega por piezas. Primero lo que ya existe (caja en dos monedas, inventario que se descuenta con la venta, cobro confirmado, personal con PIN), para que la ferretería trabaje con el sistema desde el primer día. Después, la cotización por obra, la cuenta del contratista y el pedido al proveedor, cada una con su plazo por escrito antes de empezar. No le prometo una fecha sin haber visto cómo trabaja.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FINAL CTA ====== -->
+    <section class="landing-cta">
+      <div class="container">
+        <div class="landing-cta__box">
+          <h2>¿Quiere ver cómo quedaría en su ferretería?</h2>
+          <p>Escríbame por WhatsApp cuántas referencias maneja, si vende a obras y en qué banco recibe, y le digo por escrito qué le armaría. Si además ejecuta obras, vea <a href="/servicios/sistema-para-contratistas-y-remodelaciones">sistema para contratistas</a>; si vende repuestos, <a href="/servicios/sistema-para-repuestos-y-autopartes">sistema para repuestos</a>; si distribuye materiales a otras ferreterías, <a href="/servicios/sistema-para-distribuidoras">sistema para distribuidoras</a>.</p>
+          <div class="landing-cta__buttons">
+            <a href="https://wa.me/584222707095?text=Hola%20Neri%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20sistema%20para%20ferreter%C3%ADas.%20Mi%20ferreter%C3%ADa%20es%3A%20" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="btn__icon" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Hablemos por WhatsApp
+            </a>
+            <a href="/servicios/sistemas-por-rubro" class="btn btn--outline">
+              Ver sistemas por rubro
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="/" style="text-decoration:none"><span class="nav__logo-text">NERACOSU<span class="nav__logo-accent">.</span></span></a>
+          <p class="footer__tagline">Sistemas a medida hechos en La Guaira, Venezuela, desde 2009.</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://linkedin.com/in/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/ingnrcs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://instagram.com/Ing.nrcs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Neri Colón. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pagina de respuesta: sin animaciones a proposito, para que cargue rapido. -->
+  <script src="/assets/js/main.js?v=b8752f75" defer></script>
+  <script src="/assets/js/nera.js?v=359cd2a4" defer></script>
+  <script src="/assets/js/medir.js?v=1648a6dd" defer></script>
+</body>
+</html>
